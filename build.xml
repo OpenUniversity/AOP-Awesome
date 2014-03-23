@@ -1,6 +1,32 @@
 <project>
 	<target name="tools">
 		<mkdir dir="dist"/>
+		<taskdef resource="net/sf/antcontrib/antlib.xml"/>
+
+		<var name="classpath" value=""/>
+                <if>
+                        <isset property="deps"/>
+                        <then>
+                                <for list="${deps}" param="dep">
+                                        <sequential>
+                                                <var name="classpath" value="${classpath}${path.separator}@{dep}"/>
+                                        </sequential>
+                                </for>
+                        </then>
+                </if>
+
+		<var name="inpath" value="libs/aspectjtools-1.7.4.jar${path.separator}frontend/target/frontend-1.0-SNAPSHOT.jar"/>
+                <if>
+                        <isset property="frontends"/>
+                        <then>
+                                <for list="${frontends}" param="frontend">
+                                        <sequential>
+                                                <var name="inpath" value="${inpath}${path.separator}@{frontend}"/>
+                                        </sequential>
+                                </for>
+                        </then>
+                </if>
+
 		<java fork="true" classname="org.aspectj.tools.ajc.Main">
 			<classpath>
                                 <!-- see https://bugs.eclipse.org/bugs/show_bug.cgi?id=430930 -->
@@ -8,10 +34,10 @@
                                 <fileset dir="libs">
 				        <include name="*.jar"/>
 			        </fileset>
-                                <pathelement path="frontend/target/frontend-1.0-SNAPSHOT.jar"/>
+				<pathelement path="${classpath}"/>
 			</classpath>
 
-			<arg line="-inpath libs/aspectjtools-1.7.4.jar"/>
+			<arg line="-inpath ${inpath}"/>
 			<arg line="-outjar dist/awesome_tools.jar"/>
 		</java>
 	</target> 
