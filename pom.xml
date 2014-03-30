@@ -20,6 +20,7 @@
   	<module>coolm</module>
   	<module>frontend</module>
   	<module>coolf</module>
+  	<module>boundedstack</module>
   </modules>
 
  	<build>
