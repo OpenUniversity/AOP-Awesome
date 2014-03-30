@@ -33,5 +33,12 @@
 			<artifactId>aspectjrt</artifactId>
 			<version>1.7.4</version>
 		</dependency>
+		<dependency>
+			<groupId>jrockit</groupId>
+			<artifactId>jrockit</artifactId>
+			<version>1</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/jrockit.jar</systemPath>
+		</dependency>
 	</dependencies>
 </project>

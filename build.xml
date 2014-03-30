@@ -33,7 +33,7 @@
 		<mkdir dir="dist"/>
 		<taskdef resource="net/sf/antcontrib/antlib.xml"/>
 
-		<var name="classpath" value=""/>
+		<var name="classpath" value="platform/libs/jrockit.jar"/>
                 <if>
                         <isset property="deps"/>
                         <then>
