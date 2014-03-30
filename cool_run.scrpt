@@ -1,0 +1,1 @@
+java -cp libs/aspectjrt-1.7.4.jar:dist/woven.jar base.Main
