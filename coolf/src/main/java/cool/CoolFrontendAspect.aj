@@ -35,7 +35,7 @@ public privileged aspect CoolFrontendAspect extends FrontendAspect {
 	@Override
 	protected File convert2java(File input) throws Exception {
 		final TermFactory factory = new TermFactory();
-		final IStrategoTerm tableTerm = new TermReader(factory).parseFromStream(getClass().getResourceAsStream("/resources/cool.tbl"));
+		final IStrategoTerm tableTerm = new TermReader(factory).parseFromStream(getClass().getResourceAsStream("/cool.tbl"));
 		final ParseTable pt = new ParseTable(tableTerm, factory);
 		final SGLR sglr = new SGLR(new TreeBuilder(new TermTreeFactory(new TermFactory()), true), pt);
 		sglr.setUseStructureRecovery(false);
