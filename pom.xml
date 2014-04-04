@@ -21,6 +21,7 @@
   	<module>frontend</module>
   	<module>coolf</module>
   	<module>boundedstack</module>
+  	<module>ejpf</module>
   </modules>
 
  	<build>
