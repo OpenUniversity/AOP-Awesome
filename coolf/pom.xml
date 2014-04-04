@@ -33,7 +33,7 @@
 			<artifactId>strategoxt</artifactId>
 			<version>1</version>
 			<scope>system</scope>
-			<systemPath>${project.basedir}/libs/strategoxt.jar</systemPath>
+			<systemPath>${project.basedir}/../libs/strategoxt.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>org.aspectj</groupId>

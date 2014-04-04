@@ -1,3 +1,3 @@
-ant tools -Ddeps=coolf/libs/strategoxt.jar -Dfrontends=coolf/target/coolf-1.0-SNAPSHOT.jar
+ant tools -Ddeps=libs/strategoxt.jar -Dfrontends=coolf/target/coolf-1.0-SNAPSHOT.jar
 ant weaver -Dmechanisms=coolm/target/coolm-1.0-SNAPSHOT.jar
-java -cp dist/awesome_weaver.jar:dist/awesome_tools.jar:libs/aspectjrt-1.7.4.jar:coolf/libs/strategoxt.jar:libs/commons-io-2.4.jar:libs/asm-4.0.jar org.aspectj.tools.ajc.Main -inpath boundedstack/target/boundedstack-1.0-SNAPSHOT.jar boundedstack/src/main/resources/BoundedStackCoord.cool -outjar dist/woven.jar -1.7
+java -cp dist/awesome_weaver.jar:dist/awesome_tools.jar:libs/aspectjrt-1.7.4.jar:libs/strategoxt.jar:libs/commons-io-2.4.jar:libs/asm-4.0.jar org.aspectj.tools.ajc.Main -inpath boundedstack/target/boundedstack-1.0-SNAPSHOT.jar boundedstack/src/main/resources/BoundedStackCoord.cool -outjar dist/woven.jar -1.7
