@@ -8,6 +8,7 @@ import org.aspectj.apache.bcel.Constants;
 import org.aspectj.bridge.context.CompilationAndWeavingContext;
 import org.aspectj.bridge.context.ContextToken;
 import org.aspectj.weaver.NameMangler;
+import org.aspectj.weaver.ResolvedType;
 import org.aspectj.weaver.Shadow;
 import org.aspectj.weaver.IClassFileProvider;
 import org.aspectj.weaver.bcel.BcelShadow;
@@ -29,7 +30,12 @@ public class MultiMechanism {
 		this.world = world;
 		this.mechanisms = new ArrayList<IMechanism>();
 	}
-	
+
+	public void setInputFilesPreWeaving(List<ResolvedType> files) {
+		for (IMechanism mech:mechanisms) {
+			mech.setInputFilesPreWeaving(files);
+		}
+	}
 
 	public void setInputFiles(IClassFileProvider input) {
 		for (IMechanism mech:mechanisms) 
