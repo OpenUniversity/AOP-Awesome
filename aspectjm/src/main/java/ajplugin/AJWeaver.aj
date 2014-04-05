@@ -3,25 +3,24 @@ package ajplugin;
 
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.HashMap;
 import java.util.Set;
 
 import org.aspectj.apache.bcel.Constants;
 import org.aspectj.apache.bcel.classfile.ConstantPool;
-import org.aspectj.apache.bcel.classfile.Field;
-import org.aspectj.apache.bcel.generic.Instruction;
-import org.aspectj.apache.bcel.generic.FieldInstruction;
-
 import org.aspectj.apache.bcel.generic.FieldGen;
+import org.aspectj.apache.bcel.generic.FieldInstruction;
+import org.aspectj.apache.bcel.generic.Instruction;
 import org.aspectj.apache.bcel.generic.InstructionBranch;
 import org.aspectj.apache.bcel.generic.InstructionCP;
 import org.aspectj.apache.bcel.generic.InstructionConstants;
 import org.aspectj.apache.bcel.generic.InstructionFactory;
 import org.aspectj.apache.bcel.generic.InstructionHandle;
+import org.aspectj.apache.bcel.generic.InstructionLV;
 import org.aspectj.apache.bcel.generic.InstructionList;
 import org.aspectj.apache.bcel.generic.InstructionSelect;
 import org.aspectj.apache.bcel.generic.InstructionTargeter;
@@ -51,12 +50,22 @@ import org.aspectj.weaver.Shadow;
 import org.aspectj.weaver.ShadowMunger;
 import org.aspectj.weaver.UnresolvedType;
 import org.aspectj.weaver.WeaverMessages;
+import org.aspectj.weaver.bcel.BcelAdvice;
+import org.aspectj.weaver.bcel.BcelClassWeaver;
 import org.aspectj.weaver.bcel.BcelClassWeaver.IfaceInitList;
-import org.aspectj.weaver.bcel.*;
+import org.aspectj.weaver.bcel.BcelShadow;
+import org.aspectj.weaver.bcel.BcelWorld;
+import org.aspectj.weaver.bcel.ExceptionRange;
+import org.aspectj.weaver.bcel.LazyClassGen;
+import org.aspectj.weaver.bcel.LazyMethodGen;
+import org.aspectj.weaver.bcel.Range;
+import org.aspectj.weaver.bcel.ShadowRange;
+import org.aspectj.weaver.bcel.Utility;
 
-import awesome.platform.*;
+import awesome.platform.AbstractWeaver;
+import awesome.platform.IEffect;
+import awesome.platform.MultiMechanism;
 
-import com.sun.org.apache.bcel.internal.generic.IndexedInstruction;
 
 
 public aspect AJWeaver extends AbstractWeaver {
@@ -1444,10 +1453,10 @@ public static void transformSynchronizedMethod(
 				}
 			} else if (fresh instanceof InstructionBranch) {
 				dest = ret.append((InstructionBranch) fresh);
-			} else if (fresh.isLocalVariableInstruction() 
-					|| fresh instanceof RET) {
-				IndexedInstruction indexed = (IndexedInstruction) fresh;
-				int oldIndex = indexed.getIndex();
+			} else if (fresh.isLocalVariableInstruction() || fresh instanceof RET) {
+
+				// IndexedInstruction indexed = (IndexedInstruction) fresh;
+				int oldIndex = fresh.getIndex();
 				int freshIndex;
 				if (!frameEnv.hasKey(oldIndex)) {
 					freshIndex = recipient.allocateLocal(2);
@@ -1455,7 +1464,11 @@ public static void transformSynchronizedMethod(
 				} else {
 					freshIndex = frameEnv.get(oldIndex);
 				}
-				indexed.setIndex(freshIndex);
+				if (fresh instanceof RET) {
+					fresh.setIndex(freshIndex);
+				} else {
+					fresh = ((InstructionLV) fresh).setIndexAndCopyIfNecessary(freshIndex);
+				}
 				dest = ret.append(fresh);
 			} else {
 				dest = ret.append(fresh);
