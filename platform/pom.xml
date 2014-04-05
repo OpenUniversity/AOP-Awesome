@@ -38,7 +38,7 @@
 			<artifactId>jrockit</artifactId>
 			<version>1</version>
 			<scope>system</scope>
-			<systemPath>${project.basedir}/libs/jrockit.jar</systemPath>
+			<systemPath>${project.basedir}/../libs/jrockit.jar</systemPath>
 		</dependency>
 	</dependencies>
 </project>
