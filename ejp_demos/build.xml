@@ -1,0 +1,57 @@
+<project>
+  <property name="libs"                  location="../libs"/>
+  <property name="dist"                  location="../dist"/>
+  <property name="aspectjrt"             value="${libs}/aspectjrt-1.7.4.jar"/>
+  <property name="classpath_for_weaving" value="${aspectjrt},${libs}/commons.jar:${dist}/awesome_weaver.jar:${dist}/awesome_tools.jar:${libs}/commons-io-2.4.jar:${libs}/strategoxt.jar"/>
+  <property name="outjar"                value="woven.jar"/>
+
+  <target name="clean">
+    <delete file="woven.jar"/>
+  </target>
+
+  <target name="weave_basics" depends="clean">
+    <java fork="true" classname="org.aspectj.tools.ajc.Main" classpath="${classpath_for_weaving}">
+      <arg line="-1.5 -Xset:pipelineCompilation=false -outjar ${outjar} ex_base/Main.java ex_base/Aspect.aj"/>
+    </java>
+  </target>
+
+  <target name="weave_agent" depends="clean">
+    <java fork="true" classname="org.aspectj.tools.ajc.Main" classpath="${classpath_for_weaving}">
+      <arg line="-1.5 -Xset:pipelineCompilation=false -outjar ${outjar} agent/CompensationRecord.java agent/Main.java agent/Agent.java agent/CardProcessor.java agent/TranConcern.aj agent/Person.java agent/Flight.java agent/Hotel.java"/>
+    </java>
+  </target> 
+
+  <target name="weave_pointcutargs" depends="clean">
+    <java fork="true" classname="org.aspectj.tools.ajc.Main" classpath="${classpath_for_weaving}:${libs}/commons-collections-3.2.1.jar">
+      <arg line="-1.5 -Xset:pipelineCompilation=false -outjar ${outjar} ex_pointcutargs/Main.java ex_pointcutargs/Aspect.aj"/>
+    </java>
+  </target>
+
+  <target name="weave_handles" depends="clean">
+    <java fork="true" classname="org.aspectj.tools.ajc.Main" classpath="${classpath_for_weaving}">
+      <arg line="-1.5 -Xset:pipelineCompilation=false -outjar ${outjar} ex_handles/Main.java ex_handles/Aspect.aj"/>
+    </java>
+  </target>
+
+  <target name="test_policy" depends="clean">
+    <java fork="true" classname="org.aspectj.tools.ajc.Main" classpath="${classpath_for_weaving}">
+      <arg line="-1.5 -Xset:pipelineCompilation=false -outjar ${outjar} ex_policy/Main.java ex_policy/Aspect.aj"/>
+    </java>
+  </target>
+
+  <target name="test_basics" depends="weave_basics">
+    <java classname="ex_base.Main" classpath=".:${outjar}:${aspectjrt}"/>
+  </target>
+
+  <target name="test_agent" depends="weave_agent">
+    <java classname="agent.Main" classpath=".:${outjar}:${aspectjrt}"/>
+  </target>
+
+  <target name="test_pointcutargs" depends="weave_pointcutargs">
+    <java classname="ex_pointcutargs.Main" classpath=".:${outjar}:${aspectjrt}"/>
+  </target>
+
+  <target name="test_handles" depends="weave_handles">
+    <java classname="ex_handles.Main" classpath=".:${outjar}:${aspectjrt}"/>
+  </target> 
+</project>
