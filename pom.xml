@@ -22,6 +22,7 @@
   	<module>coolf</module>
   	<module>boundedstack</module>
   	<module>ejpf</module>
+  	<module>ejpm</module>
   </modules>
 
  	<build>
