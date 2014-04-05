@@ -1546,8 +1546,10 @@ public static void transformSynchronizedMethod(
 							BcelShadow freshShadow = oldShadow.copyInto(
 									recipient, freshEnclosing);
 							List<ShadowMunger> freshMungers = new ArrayList<ShadowMunger>();
-							for (ShadowMunger munger : oldMungers)
-								AJM.addAssociation(freshShadow, munger);
+							if (oldMungers != null) {
+								for (ShadowMunger munger : oldMungers)
+									AJM.addAssociation(freshShadow, munger);
+							}
 
 							ShadowRange freshRange = new ShadowRange(
 									recipient.getBody());
