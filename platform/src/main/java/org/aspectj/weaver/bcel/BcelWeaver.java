@@ -505,6 +505,12 @@ public class BcelWeaver {
 		}
 		needToReweaveWorld = xcutSet.hasChangedSinceLastReset();
 
+		List<ResolvedType> cgl = new ArrayList<ResolvedType>();
+		for (Iterator<UnwovenClassFile> i = addedClasses.iterator(); i.hasNext();) {
+			cgl.add(world.resolve(i.next().getClassName()));
+		}
+		MM.setInputFilesPreWeaving(cgl);
+
 		// update mungers
 		for (Iterator<UnwovenClassFile> i = addedClasses.iterator(); i.hasNext();) {
 			UnwovenClassFile jc = i.next();

@@ -1,7 +1,10 @@
 package awesome.platform;
+import java.util.List;
+
 import org.aspectj.apache.bcel.generic.InstructionList;
 import org.aspectj.apache.bcel.generic.InstructionHandle;
 import org.aspectj.weaver.IClassFileProvider;
+import org.aspectj.weaver.ResolvedType;
 import org.aspectj.weaver.bcel.LazyClassGen;
 import org.aspectj.weaver.bcel.LazyMethodGen;
 import org.aspectj.weaver.bcel.BcelWorld;
@@ -45,5 +48,8 @@ public abstract aspect AbstractWeaver implements IMechanism {
 	
 	public void setInputFiles(IClassFileProvider inputClasses) {
 		this.inputClasses=inputClasses;
+	}
+
+	public void setInputFilesPreWeaving(List<ResolvedType> fiels) {
 	}
 }
