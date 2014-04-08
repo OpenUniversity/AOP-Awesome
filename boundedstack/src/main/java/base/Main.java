@@ -115,7 +115,6 @@ public class Main {
 	 * @return
 	 */
 	static long[] runMultipleThreads(BoundedStack buff, int threadsNum, int ops) {
-		System.out.println("arik runMultipleThreads");
 		long[] result = new long[threadsNum];
 		WriterThread[] threads = new WriterThread[threadsNum];
 		for (int i = 0; i < threadsNum; i++)

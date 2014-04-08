@@ -15,7 +15,7 @@ public abstract class BufferClientThread extends Thread {
 
 	protected BoundedStack shared;
 
-	protected boolean shutdown = false;
+	protected boolean shutdown;
 
 	protected BufferClientThread(BoundedStack shared) {
 		this.shared = shared;
@@ -26,7 +26,7 @@ public abstract class BufferClientThread extends Thread {
 		this.opLimit = opLimit;
 	}
 
-	public synchronized void shutdown() {
+	public void shutdown() {
 		shutdown = true;
 	}
 
@@ -153,9 +153,9 @@ public abstract class BufferClientThread extends Thread {
 	 * on the thread objects. Threads will execute for a while after that.
 	 */
 	static void stopThreads(BufferClientThread[] threads) {
-		for (int i = 0; i < threads.length; i++) {
-			threads[i].shutdown();
-			threads[i].interrupt();
+		for (BufferClientThread thread : threads) {
+			thread.shutdown();
+			thread.interrupt();
 		}
 	}
 
@@ -168,7 +168,7 @@ public abstract class BufferClientThread extends Thread {
 	 */
 	static boolean isAlive(BufferClientThread[] threads) {
 		for (int i = 0; i < threads.length; i++)
-			if (!threads[i].finished) // threads[i].isAlive())
+			if (!threads[i].finished)
 				return true;
 		return false;
 	}
