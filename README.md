@@ -6,7 +6,7 @@ Awesome makes multi-DSAL development feasible by allowing to compose a variety o
 
 Contributions for the project can be submitted in 2 forms:  
 * GerritHub (recommended)  
-Clone the project using one of the methods which are shown [here] (https://review.gerrithub.io/#/admin/projects/OpenUniversity/AOP-Awesome)
+Clone the project using one of the methods which are shown [here] (https://review.gerrithub.io/#/admin/projects/OpenUniversity/AOP-Awesome)  
 Push changes for review by:  
 git push origin HEAD:refs/for/master  
 * GitHub  
