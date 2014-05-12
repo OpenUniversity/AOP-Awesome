@@ -1,4 +1,10 @@
 <project>
+       <taskdef resource="net/sf/antcontrib/antlib.xml">
+         <classpath>
+           <pathelement location="libs/ant-contrib-1.0b3.jar"/>
+         </classpath>
+       </taskdef>
+
 	<target name="weaver">
 		<mkdir dir="dist"/>
 		<taskdef resource="net/sf/antcontrib/antlib.xml"/>
