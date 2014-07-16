@@ -23,6 +23,7 @@
   	<module>boundedstack</module>
   	<module>ejpf</module>
   	<module>ejpm</module>
+  	<module>closuref</module>
   </modules>
 
  	<build>
