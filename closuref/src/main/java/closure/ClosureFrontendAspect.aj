@@ -15,11 +15,11 @@ import org.spoofax.jsglr.client.imploder.TreeBuilder;
 import org.spoofax.jsglr.io.SGLR;
 import org.spoofax.terms.TermFactory;
 import org.spoofax.terms.io.binary.TermReader;
-import org.strategoxt.java_front.pp_java5_to_string_0_0;
 import org.strategoxt.lang.Context;
 
 import awesome.frontend.FrontendAspect;
 import closure.transform.convert_0_0;
+import closure.transform.pp_aspectj_string_0_0;
 
 public aspect ClosureFrontendAspect extends FrontendAspect {
 	private static Logger logger = Logger.getLogger(ClosureFrontendAspect.class.getName());
@@ -45,7 +45,7 @@ public aspect ClosureFrontendAspect extends FrontendAspect {
 	    	logger.info("parsed: " + parsed);
 	    	IStrategoTerm transformed = convert_0_0.instance.invoke(context, parsed);
 	    	logger.info("transformed: " + transformed);
-	    	result = pp_java5_to_string_0_0.instance.invoke(context, transformed);
+	    	result = pp_aspectj_string_0_0.instance.invoke(context, transformed);
 	    }
 	    finally {
 	    	context.setStandAlone(false);
