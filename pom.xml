@@ -25,6 +25,7 @@
   	<module>ejpm</module>
   	<module>closuref</module>
    	<module>closurem</module>
+   	<module>testing</module>
   </modules>
 
  	<build>
