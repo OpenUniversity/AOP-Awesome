@@ -29,7 +29,7 @@ public abstract aspect FrontendAspect {
 		}
 	}
 
-	pointcut parseCommandLine(String[] args): call(void ConfigParser.parseCommandLine(String[])) && args(args);
+	protected pointcut parseCommandLine(String[] args): call(void ConfigParser.parseCommandLine(String[])) && args(args);
 
 	void around(String[] originalArgs): parseCommandLine(originalArgs) {
 		int indexOfInpath = indexOfInPath(originalArgs);
