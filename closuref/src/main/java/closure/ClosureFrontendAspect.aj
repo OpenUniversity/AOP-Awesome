@@ -75,10 +75,12 @@ public aspect ClosureFrontendAspect extends FrontendAspect {
 			}
 
 			String returnType = joinpoint_0_3.instance.getReturnTypeForJoinpoint(joinpointName);
+			String exceptions = joinpoint_0_3.instance.getExceptionForJoinpoint(joinpointName);
 
 			System.out.println("returnType = " + returnType);
+			System.out.println("exceptions = " + exceptions);
 
-			String modifiedJoinpointCall = joinpointCall.replaceFirst("void", returnType);
+			String modifiedJoinpointCall = joinpointCall.replaceFirst("void", returnType) + (exceptions.isEmpty() ? "" : exceptions);
 			input = input.replace(joinpointCall, modifiedJoinpointCall);
 		}
 
