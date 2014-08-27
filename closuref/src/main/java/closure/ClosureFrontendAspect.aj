@@ -61,7 +61,7 @@ public aspect ClosureFrontendAspect extends FrontendAspect {
 		}
 	}
 
-	private static Pattern a = Pattern.compile("@Closure .*? void (.*?)\\((.*?)\\)");
+	private static Pattern a = Pattern.compile("@Closure public void (.*?)\\((.*?)\\)");
 
 	private String fixJoinpointCalls(String input) {
 		Matcher matcher = a.matcher(input);
