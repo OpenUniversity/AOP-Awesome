@@ -1,0 +1,22 @@
+<project>
+  <property name="libs"                  location="../libs"/>
+  <property name="dist"                  location="../dist"/>
+  <property name="aspectjrt"             value="${libs}/aspectjrt-1.7.4.jar"/>
+  <property name="classpath_for_weaving" value="${aspectjrt},${libs}/commons.jar:${dist}/awesome_weaver.jar:${dist}/awesome_tools.jar:${libs}/commons-io-2.4.jar:${libs}/strategoxt.jar"/>
+  <property name="outjar"                value="woven.jar"/>
+
+  <target name="clean">
+    <delete file="woven.jar"/>
+  </target>
+
+  <target name="weave_bonusprogram" depends="clean">
+    <java fork="true" classname="org.aspectj.tools.ajc.Main" classpath="${classpath_for_weaving}">
+      <arg line="-1.5 -Xset:pipelineCompilation=false -outjar ${outjar} /tmp/awesome5304235274886998034/home/ahadas/AOP-Awesome/closures_demos/abctests/cjp/shopping/ShoppingSession.java"/>
+    </java>
+  </target>
+
+  <target name="test_bonusprogram" depends="weave_bonusprogram">
+    <java classname="bonusprogram.Main" classpath=".:${outjar}:${aspectjrt}"/>
+  </target>
+
+</project>
