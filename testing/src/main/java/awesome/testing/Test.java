@@ -11,7 +11,7 @@ public class Test {
 	private String dir = "";
 	private String title;
 	private Compile compile = new Compile();
-	private Run run = new Run();
+	private Run run;
 
 	public Run getRun() {
 		return run;

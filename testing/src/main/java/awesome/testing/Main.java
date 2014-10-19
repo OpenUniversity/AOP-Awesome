@@ -1,7 +1,9 @@
 package awesome.testing;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.security.Permission;
 import java.util.LinkedList;
 import java.util.List;
@@ -53,11 +55,11 @@ public class Main {
 		}
 
 		if (parameters.range != null) {
-			runTests(tests, parameters);
+			doTests(tests, parameters);
 		}
 	}
 
-	private static void runTests(List<Test> tests, Params parameters) {
+	private static void doTests(List<Test> tests, Params parameters) {
 		System.out.println("running tests: " + parameters.range.from + "-" + parameters.range.to + " size = " + tests.size());
 		System.setSecurityManager(new SecurityManager() {
 			@Override
@@ -71,14 +73,44 @@ public class Main {
 			public void checkPermission(Permission perm, Object context) {
 			}
 		});
+
 		for (Test test : tests) {
 			System.out.println("check test: " + test.getNum());
 			if (test.getNum() >= parameters.range.from && test.getNum() <= parameters.range.to)
-				runTest(test, parameters.classpath, parameters.getArguments());
+				doTest(test, parameters.classpath, parameters.getArguments());
 		}
 	}
 
-	private static void runTest(Test test, String classpath, String arguments) {
+	private static void doTest(Test test, String classpath, String arguments) {
+		if (compileTest(test, classpath, arguments) && test.getRun() != null)
+			runTest(test, classpath);
+	}
+
+	private static void runTest(Test test, String classpath) {
+		try {
+			String command = "java " +
+					"-cp " + classpath + File.pathSeparator + "woven.jar" + File.pathSeparator + new File(test.getDir()).getAbsolutePath() + " " +
+					test.getRun().getClazz();
+			System.out.println("running : " + command);
+			Process process = Runtime.getRuntime().exec(command);
+			int exitValue = process.waitFor();
+			System.out.println("result : " + exitValue);
+			if (exitValue != 0) {
+				BufferedReader br = new BufferedReader(new InputStreamReader(process.getErrorStream()));
+				String line;
+				while ((line = br.readLine()) != null)
+					System.out.println(line);
+				System.exit(0);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+	private static boolean compileTest(Test test, String classpath,
+			String arguments) {
 		System.out.println("compiling test: " + test.getNum());
 		try {
 			String command =
@@ -86,17 +118,20 @@ public class Main {
 							classpath + File.pathSeparator + new File(test.getDir()).getAbsolutePath(),
 							arguments,
 							test.getCompile().getFiles());
-			System.out.println("command* = " + command);
 			org.aspectj.tools.ajc.Main.main(command.split(" "));
-			System.out.println("after command = " + test.getNum());
+			return true;
 
 		} catch (SecurityException e) {
 			System.out.println("return value = " + e.getMessage() + " num-of-errs = " + test.getCompile().getNumOfErrorMessages());
 			if (Integer.parseInt(e.getMessage()) != test.getCompile().getNumOfErrorMessages())
 				System.exit(0);
+
+			return true;
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+
+		return false;
 	}
 
 	private static Params getParameters(String[] args) {
