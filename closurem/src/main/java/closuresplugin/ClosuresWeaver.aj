@@ -18,9 +18,11 @@ import org.aspectj.weaver.AnnotationAJ;
 import org.aspectj.weaver.ResolvedMember;
 import org.aspectj.weaver.ResolvedMemberImpl;
 import org.aspectj.weaver.ResolvedType;
+import org.aspectj.weaver.Shadow;
 import org.aspectj.weaver.ShadowMunger;
 import org.aspectj.weaver.UnresolvedType;
 import org.aspectj.weaver.bcel.BcelShadow;
+import org.aspectj.weaver.bcel.LazyClassGen;
 
 import awesome.platform.AbstractWeaver;
 import awesome.platform.IEffect;
@@ -318,5 +320,23 @@ public aspect ClosuresWeaver extends AbstractWeaver {
 				return true;
 			}
 		return false;
+	}
+
+	List<BcelShadow> around(MultiMechanism mm, LazyClassGen clazz):
+		reifyClass(mm, clazz) {
+		List<BcelShadow> shadows = proceed(mm, clazz);
+		for (BcelShadow shadow : shadows) {
+			if (shadow.getKind() == Shadow.StaticInitialization ||
+					shadow.getKind() == Shadow.ExceptionHandler)
+				continue;
+
+			for (AnnotationAJ ann : shadow.getSignature().resolve(world).getAnnotations()) {
+				if (Closure.class.getName().equals(ann.getTypeName())) {
+					shadow.setNullTarget();
+					break;
+				}
+			}
+		}
+		return shadows;
 	}
 }

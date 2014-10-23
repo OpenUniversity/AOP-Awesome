@@ -137,6 +137,8 @@ public class BcelShadow extends Shadow {
 	// from the signature (pr109728) (1.4 declaring type issue)
 	private String actualInstructionTargetType;
 
+	private boolean nullTarget;
+
 	/**
 	 * This generates an unassociated shadow, rooted in a particular method but not rooted to any particular point in the code. It
 	 * should be given to a rooted ShadowRange in the {@link ShadowRange#associateWithShadow(BcelShadow)} method.
@@ -1095,7 +1097,7 @@ public class BcelShadow extends Shadow {
 		} else {
 			il.append(InstructionConstants.ACONST_NULL);
 		}
-		if (hasTarget()) {
+		if (hasTarget() && !nullTarget) {
 			((BcelVar) getTargetVar()).appendLoad(il, fact);
 		} else {
 			il.append(InstructionConstants.ACONST_NULL);
@@ -3645,6 +3647,10 @@ public class BcelShadow extends Shadow {
 
     public BcelVar getThisVarField() {
     	return thisVar;
+    }
+
+    public void setNullTarget() {
+        nullTarget = true;
     }
 }
 
