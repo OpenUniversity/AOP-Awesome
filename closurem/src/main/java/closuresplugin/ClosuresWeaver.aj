@@ -14,8 +14,10 @@ import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.weaver.Advice;
+import org.aspectj.weaver.AdviceKind;
 import org.aspectj.weaver.AnnotationAJ;
 import org.aspectj.weaver.CrosscuttingMembers;
+import org.aspectj.weaver.Member;
 import org.aspectj.weaver.ResolvedMember;
 import org.aspectj.weaver.ResolvedMemberImpl;
 import org.aspectj.weaver.ResolvedType;
@@ -30,6 +32,7 @@ import closures.runtime.Joinpoint;
 import closures.runtime.JoinpointSignature;
 import awesome.platform.AbstractWeaver;
 import awesome.platform.IEffect;
+import awesome.platform.MultiMechanism;
 
 
 public aspect ClosuresWeaver extends AbstractWeaver {
@@ -290,5 +293,35 @@ public aspect ClosuresWeaver extends AbstractWeaver {
 			}
 		}
 		return null;
+	}
+
+	void around(MultiMechanism mm, List effects, BcelShadow shadow):
+        execution(void MultiMechanism.mix(List, BcelShadow))
+        && this(mm) && args(effects, shadow) {
+		if (effects!=null && !effects.isEmpty()) {
+			for (AnnotationAJ ann : shadow.getSignature().resolve(world).getAnnotations())
+					if (Closure.class.getName().equals(ann.getTypeName()))
+						filterAdvice(effects);
+		}
+		proceed(mm, effects, shadow);
+	}
+
+	private void filterAdvice(List<IEffect> effects) {
+		List<IEffect> filteredAdv = new ArrayList<IEffect>();
+		for(IEffect eff:effects)
+			if (eff!=null && (eff instanceof Advice)) {
+				Advice advice = (Advice)eff;
+				if (!isJoinpointAdvice(advice))
+					filteredAdv.add(eff);
+			}
+        effects.removeAll(filteredAdv);
+	}
+
+	boolean isJoinpointAdvice(Advice advice) {
+		for (AnnotationAJ ann : advice.getSignature().getAnnotations())
+			if (JoinpointSignature.class.getName().equals(ann.getTypeName()))  {
+				return true;
+			}
+		return false;
 	}
 }
