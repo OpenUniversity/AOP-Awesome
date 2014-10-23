@@ -14,25 +14,23 @@ import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.weaver.Advice;
-import org.aspectj.weaver.AdviceKind;
 import org.aspectj.weaver.AnnotationAJ;
-import org.aspectj.weaver.CrosscuttingMembers;
-import org.aspectj.weaver.Member;
 import org.aspectj.weaver.ResolvedMember;
 import org.aspectj.weaver.ResolvedMemberImpl;
 import org.aspectj.weaver.ResolvedType;
+import org.aspectj.weaver.Shadow;
+import org.aspectj.weaver.Shadow.Kind;
 import org.aspectj.weaver.ShadowMunger;
 import org.aspectj.weaver.UnresolvedType;
-import org.aspectj.weaver.bcel.BcelMethod;
 import org.aspectj.weaver.bcel.BcelShadow;
-import org.aspectj.weaver.CrosscuttingMembersSet;
+import org.aspectj.weaver.bcel.LazyClassGen;
 
-import closures.runtime.Closure;
-import closures.runtime.Joinpoint;
-import closures.runtime.JoinpointSignature;
 import awesome.platform.AbstractWeaver;
 import awesome.platform.IEffect;
 import awesome.platform.MultiMechanism;
+import closures.runtime.Closure;
+import closures.runtime.Joinpoint;
+import closures.runtime.JoinpointSignature;
 
 
 public aspect ClosuresWeaver extends AbstractWeaver {
@@ -323,5 +321,23 @@ public aspect ClosuresWeaver extends AbstractWeaver {
 				return true;
 			}
 		return false;
+	}
+
+	List<BcelShadow> around(MultiMechanism mm, LazyClassGen clazz):
+		reifyClass(mm, clazz) {
+		List<BcelShadow> shadows = proceed(mm, clazz);
+		for (BcelShadow shadow : shadows) {
+			if (shadow.getKind() == Shadow.StaticInitialization ||
+					shadow.getKind() == Shadow.ExceptionHandler)
+				continue;
+
+			for (AnnotationAJ ann : shadow.getSignature().resolve(world).getAnnotations()) {
+				if (Closure.class.getName().equals(ann.getTypeName())) {
+					shadow.setNullTarget();
+					break;
+				}
+			}
+		}
+		return shadows;
 	}
 }
