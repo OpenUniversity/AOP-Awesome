@@ -1,5 +1,6 @@
 AOP-Awesome
 ===========
+[![Build Status](https://travis-ci.org/OpenUniversity/AOP-Awesome.svg?branch=master)](https://travis-ci.org/OpenUniversity/AOP-Awesome)  
 
 Awesome is an aspect composition framework.  
 Awesome makes multi-DSAL development feasible by allowing to compose a variety of aspect mechanisms, each corresponding to a specific DSAL, into a single multi-mechanism weaver.
