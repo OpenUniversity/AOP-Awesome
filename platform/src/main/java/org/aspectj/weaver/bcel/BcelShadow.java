@@ -1176,8 +1176,13 @@ public class BcelShadow extends Shadow {
 	// ??? need to better understand all the enclosing variants
 	@Override
 	public Member getEnclosingCodeSignature() {
+<<<<<<< HEAD
 	        if (enclosingCodeSignature != null) {
 			return enclosingCodeSignature;
+=======
+		if (matchingSignature2 != null) {
+			return matchingSignature2;
+>>>>>>> 0cebe35... CorrectWithinSemantics test
 		}
 		if (getKind().isEnclosingKind()) {
 			return getSignature();
@@ -3656,10 +3661,16 @@ public class BcelShadow extends Shadow {
         nullTarget = true;
     }
 
+<<<<<<< HEAD
     private Member enclosingCodeSignature;
 
     public void setEnclosingCodeSignature(Member enclosingCodeSignature) {
 	this.enclosingCodeSignature = enclosingCodeSignature;
+=======
+    Member matchingSignature2;
+    public void setEnclosingShaodw(Shadow enclosingShadow) {
+    	matchingSignature2 = enclosingShadow.getMatchingSignature();
+>>>>>>> 0cebe35... CorrectWithinSemantics test
     }
 }
 
