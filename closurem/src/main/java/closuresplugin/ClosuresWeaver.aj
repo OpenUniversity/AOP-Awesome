@@ -30,6 +30,7 @@ import awesome.platform.MultiMechanism;
 import closures.runtime.Closure;
 import closures.runtime.Joinpoint;
 import closures.runtime.JoinpointSignature;
+import closures.runtime.JoinpointWrapper;
 
 
 public aspect ClosuresWeaver extends AbstractWeaver {
@@ -295,23 +296,29 @@ public aspect ClosuresWeaver extends AbstractWeaver {
 	void around(MultiMechanism mm, List effects, BcelShadow shadow):
         execution(void MultiMechanism.mix(List, BcelShadow))
         && this(mm) && args(effects, shadow) {
+		if ((shadow.getKind() == Shadow.PreInitialization || shadow.getKind() == Shadow.Initialization) &&
+				ResolvedType.forName(JoinpointWrapper.class.getName()).equals(shadow.getSignature().getDeclaringType().resolve(world).getSuperclass())) {
+			return;
+		}
+
 		if (effects!=null && !effects.isEmpty()) {
 			for (AnnotationAJ ann : shadow.getSignature().resolve(world).getAnnotations())
-					if (Closure.class.getName().equals(ann.getTypeName()))
-						filterAdvice(effects);
+				if (Closure.class.getName().equals(ann.getTypeName()))
+					filterAdvice(effects, shadow);
 		}
 		proceed(mm, effects, shadow);
 	}
 
-	private void filterAdvice(List<IEffect> effects) {
+	private void filterAdvice(List<IEffect> effects, Shadow shadow) {
 		List<IEffect> filteredAdv = new ArrayList<IEffect>();
-		for(IEffect eff:effects)
-			if (eff!=null && (eff instanceof Advice)) {
-				Advice advice = (Advice)eff;
-				if (!isJoinpointAdvice(advice))
-					filteredAdv.add(eff);
+		for(IEffect effect:effects)
+			if (effect!=null && (effect instanceof Advice)) {
+				Advice advice = (Advice)effect;
+				if (isJoinpointAdvice(advice) || (!shadow.hasThis() ||
+						!ResolvedType.forName(JoinpointWrapper.class.getName()).equals(shadow.getThisType().resolve(world).getSuperclass())))
+					filteredAdv.add(effect);
 			}
-        effects.removeAll(filteredAdv);
+        effects.retainAll(filteredAdv);
 	}
 
 	boolean isJoinpointAdvice(Advice advice) {
@@ -330,7 +337,8 @@ public aspect ClosuresWeaver extends AbstractWeaver {
 		reifyClass(mm, clazz) {
 		List<BcelShadow> shadows = proceed(mm, clazz);
 		List<BcelShadow> closures = new ArrayList<BcelShadow>();
-
+		List<BcelShadow> shadowsToRemove = new ArrayList<BcelShadow>();
+		
 		for (BcelShadow shadow : shadows) {
 			if (shadow.getKind() == Shadow.StaticInitialization ||
 					shadow.getKind() == Shadow.ExceptionHandler)
@@ -363,6 +371,14 @@ public aspect ClosuresWeaver extends AbstractWeaver {
 
 				break;
 			}
+
+		for (BcelShadow shadow : shadows) {
+			if (ResolvedType.forName(JoinpointWrapper.class.getName()).equals(shadow.getSignature().getDeclaringType().resolve(world).getSuperclass()) &&
+					(shadow.getKind() == Shadow.ConstructorCall || shadow.getKind() == Shadow.ConstructorExecution || shadow.getKind() == Shadow.Initialization || shadow.getKind() == Shadow.PreInitialization)) {
+				shadowsToRemove.add(shadow);
+			}
+		}
+		shadows.removeAll(shadowsToRemove);
 
 		for (Map.Entry<ResolvedType, BcelShadow> entry : type2closure.entrySet()) {
 		    Shadow enclosingShadow = type2enclosingShadow.get(entry.getKey());
