@@ -20,11 +20,11 @@ import java.lang.ref.WeakReference;
 
   private static boolean isIniting;
 
+  protected static IStrategoTerm const104;
+
   protected static IStrategoTerm const103;
 
   protected static IStrategoTerm const102;
-
-  protected static IStrategoTerm const101;
 
   protected static IStrategoTerm constCons39;
 
@@ -34,15 +34,15 @@ import java.lang.ref.WeakReference;
 
   protected static IStrategoTerm constCons38;
 
-  protected static IStrategoTerm constId32;
+  protected static IStrategoTerm constId33;
 
-  protected static IStrategoTerm const100;
+  protected static IStrategoTerm const101;
 
   protected static IStrategoTerm constCons37;
 
-  protected static IStrategoTerm constId31;
+  protected static IStrategoTerm constId32;
 
-  protected static IStrategoTerm const99;
+  protected static IStrategoTerm const100;
 
   protected static IStrategoTerm constCons36;
 
@@ -58,9 +58,9 @@ import java.lang.ref.WeakReference;
 
   protected static IStrategoTerm constCons32;
 
-  protected static IStrategoTerm constId30;
+  protected static IStrategoTerm constId31;
 
-  protected static IStrategoTerm const98;
+  protected static IStrategoTerm const99;
 
   protected static IStrategoTerm constCons31;
 
@@ -70,31 +70,37 @@ import java.lang.ref.WeakReference;
 
   protected static IStrategoTerm constCons30;
 
+  protected static IStrategoTerm constId30;
+
+  protected static IStrategoTerm const98;
+
+  protected static IStrategoTerm constCons29;
+
   protected static IStrategoTerm constId29;
 
   protected static IStrategoTerm const97;
 
-  protected static IStrategoTerm constCons29;
+  protected static IStrategoTerm constCons28;
 
   protected static IStrategoTerm constId28;
 
   protected static IStrategoTerm const96;
 
-  protected static IStrategoTerm constCons28;
-
-  protected static IStrategoTerm constId27;
-
   protected static IStrategoTerm const95;
 
   protected static IStrategoTerm const94;
-
-  protected static IStrategoTerm const93;
 
   protected static IStrategoTerm constCons27;
 
   protected static IStrategoTerm constMarkerAnno1;
 
   protected static IStrategoTerm constClassOrInterfaceType10;
+
+  protected static IStrategoTerm constTypeName19;
+
+  protected static IStrategoTerm constId27;
+
+  protected static IStrategoTerm const93;
 
   protected static IStrategoTerm const92;
 
@@ -1669,44 +1675,47 @@ import java.lang.ref.WeakReference;
     constTypeName18 = termFactory.makeAppl(transform._consTypeName_1, new IStrategoTerm[]{transform.constId26});
     constClassOrInterfaceType9 = termFactory.makeAppl(transform._consClassOrInterfaceType_2, new IStrategoTerm[]{transform.constTypeName18, transform.constNone0});
     const92 = termFactory.makeString("in closures..");
-    constClassOrInterfaceType10 = termFactory.makeAppl(transform._consClassOrInterfaceType_2, new IStrategoTerm[]{transform.constTypeName11, transform.constNone0});
+    const93 = termFactory.makeString("JoinpointWrapper");
+    constId27 = termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{transform.const93});
+    constTypeName19 = termFactory.makeAppl(transform._consTypeName_1, new IStrategoTerm[]{transform.constId27});
+    constClassOrInterfaceType10 = termFactory.makeAppl(transform._consClassOrInterfaceType_2, new IStrategoTerm[]{transform.constTypeName19, transform.constNone0});
     constMarkerAnno1 = termFactory.makeAppl(transform._consMarkerAnno_1, new IStrategoTerm[]{transform.constTypeName0});
     constCons27 = (IStrategoTerm)termFactory.makeListCons(transform.constMarkerAnno1, (IStrategoList)transform.constCons20);
-    const93 = termFactory.makeString("in short closures..");
-    const94 = termFactory.makeString("w");
-    const95 = termFactory.makeString("lang");
-    constId27 = termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{transform.const95});
-    constCons28 = (IStrategoTerm)termFactory.makeListCons(transform.constId27, (IStrategoList)transform.constNil0);
-    const96 = termFactory.makeString("aspectj");
+    const94 = termFactory.makeString("in short closures..");
+    const95 = termFactory.makeString("w");
+    const96 = termFactory.makeString("lang");
     constId28 = termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{transform.const96});
-    constCons29 = (IStrategoTerm)termFactory.makeListCons(transform.constId28, (IStrategoList)transform.constCons28);
-    const97 = termFactory.makeString("org");
+    constCons28 = (IStrategoTerm)termFactory.makeListCons(transform.constId28, (IStrategoList)transform.constNil0);
+    const97 = termFactory.makeString("aspectj");
     constId29 = termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{transform.const97});
-    constCons30 = (IStrategoTerm)termFactory.makeListCons(transform.constId29, (IStrategoList)transform.constCons29);
+    constCons29 = (IStrategoTerm)termFactory.makeListCons(transform.constId29, (IStrategoList)transform.constCons28);
+    const98 = termFactory.makeString("org");
+    constId30 = termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{transform.const98});
+    constCons30 = (IStrategoTerm)termFactory.makeListCons(transform.constId30, (IStrategoList)transform.constCons29);
     constPackageName0 = termFactory.makeAppl(transform._consPackageName_1, new IStrategoTerm[]{transform.constCons30});
     constTypeImportOnDemandDec0 = termFactory.makeAppl(transform._consTypeImportOnDemandDec_1, new IStrategoTerm[]{transform.constPackageName0});
     constCons31 = (IStrategoTerm)termFactory.makeListCons(transform.constTypeImportOnDemandDec0, (IStrategoList)transform.constNil0);
-    const98 = termFactory.makeString("annotation");
-    constId30 = termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{transform.const98});
-    constCons32 = (IStrategoTerm)termFactory.makeListCons(transform.constId30, (IStrategoList)transform.constNil0);
-    constCons33 = (IStrategoTerm)termFactory.makeListCons(transform.constId27, (IStrategoList)transform.constCons32);
-    constCons34 = (IStrategoTerm)termFactory.makeListCons(transform.constId28, (IStrategoList)transform.constCons33);
-    constCons35 = (IStrategoTerm)termFactory.makeListCons(transform.constId29, (IStrategoList)transform.constCons34);
+    const99 = termFactory.makeString("annotation");
+    constId31 = termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{transform.const99});
+    constCons32 = (IStrategoTerm)termFactory.makeListCons(transform.constId31, (IStrategoList)transform.constNil0);
+    constCons33 = (IStrategoTerm)termFactory.makeListCons(transform.constId28, (IStrategoList)transform.constCons32);
+    constCons34 = (IStrategoTerm)termFactory.makeListCons(transform.constId29, (IStrategoList)transform.constCons33);
+    constCons35 = (IStrategoTerm)termFactory.makeListCons(transform.constId30, (IStrategoList)transform.constCons34);
     constPackageName1 = termFactory.makeAppl(transform._consPackageName_1, new IStrategoTerm[]{transform.constCons35});
     constTypeImportOnDemandDec1 = termFactory.makeAppl(transform._consTypeImportOnDemandDec_1, new IStrategoTerm[]{transform.constPackageName1});
     constCons36 = (IStrategoTerm)termFactory.makeListCons(transform.constTypeImportOnDemandDec1, (IStrategoList)transform.constCons31);
-    const99 = termFactory.makeString("runtime");
-    constId31 = termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{transform.const99});
-    constCons37 = (IStrategoTerm)termFactory.makeListCons(transform.constId31, (IStrategoList)transform.constNil0);
-    const100 = termFactory.makeString("closures");
+    const100 = termFactory.makeString("runtime");
     constId32 = termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{transform.const100});
-    constCons38 = (IStrategoTerm)termFactory.makeListCons(transform.constId32, (IStrategoList)transform.constCons37);
+    constCons37 = (IStrategoTerm)termFactory.makeListCons(transform.constId32, (IStrategoList)transform.constNil0);
+    const101 = termFactory.makeString("closures");
+    constId33 = termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{transform.const101});
+    constCons38 = (IStrategoTerm)termFactory.makeListCons(transform.constId33, (IStrategoList)transform.constCons37);
     constPackageName2 = termFactory.makeAppl(transform._consPackageName_1, new IStrategoTerm[]{transform.constCons38});
     constTypeImportOnDemandDec2 = termFactory.makeAppl(transform._consTypeImportOnDemandDec_1, new IStrategoTerm[]{transform.constPackageName2});
     constCons39 = (IStrategoTerm)termFactory.makeListCons(transform.constTypeImportOnDemandDec2, (IStrategoList)transform.constCons36);
-    const101 = termFactory.makeString("Internal error: with clause failed unexpectedly in rule 'closures-converter-compilation-unit'");
-    const102 = termFactory.makeString("Internal error: with clause failed unexpectedly in rule 'check-for-change-in-aspect-or-class'");
-    const103 = termFactory.makeString("Internal error: with clause failed unexpectedly in rule 'closures-converter-aspect-or-class'");
+    const102 = termFactory.makeString("Internal error: with clause failed unexpectedly in rule 'closures-converter-compilation-unit'");
+    const103 = termFactory.makeString("Internal error: with clause failed unexpectedly in rule 'check-for-change-in-aspect-or-class'");
+    const104 = termFactory.makeString("Internal error: with clause failed unexpectedly in rule 'closures-converter-aspect-or-class'");
   }
 
   @SuppressWarnings("all") public static class aspectj_to_box_0_0_fragment_4 extends Strategy 
@@ -4769,7 +4778,7 @@ import java.lang.ref.WeakReference;
           term = or_2_0.instance.invoke(context, term, lifted280, lifted290);
           if(term == null)
             break Fail135;
-          term = debug_0_0.instance.invoke(context, transform.const93);
+          term = debug_0_0.instance.invoke(context, transform.const94);
           if(term == null)
             break Fail135;
           if(f_35.value == null)
@@ -4851,7 +4860,7 @@ import java.lang.ref.WeakReference;
         if(term == null)
           break Fail138;
         r_35 = term;
-        term = termFactory.makeTuple(q_35, transform.const94);
+        term = termFactory.makeTuple(q_35, transform.const95);
         term = fopen_0_0.instance.invoke(context, term);
         if(term == null)
           break Fail138;
@@ -5009,7 +5018,7 @@ import java.lang.ref.WeakReference;
             break Fail140;
           p_36 = term;
           u_36 = o_36;
-          term = report_with_failure_0_2.instance.invoke(context, u_36, transform.const101, p_36);
+          term = report_with_failure_0_2.instance.invoke(context, u_36, transform.const102, p_36);
           if(term == null)
             break Fail140;
         }
@@ -5074,7 +5083,7 @@ import java.lang.ref.WeakReference;
                   break Fail145;
                 l_37 = term;
                 o_37 = k_37;
-                term = report_with_failure_0_2.instance.invoke(context, o_37, transform.const102, l_37);
+                term = report_with_failure_0_2.instance.invoke(context, o_37, transform.const103, l_37);
                 if(term == null)
                   break Fail145;
               }
@@ -5119,7 +5128,7 @@ import java.lang.ref.WeakReference;
                 break Fail144;
               b_37 = term;
               e_37 = a_37;
-              term = report_with_failure_0_2.instance.invoke(context, e_37, transform.const102, b_37);
+              term = report_with_failure_0_2.instance.invoke(context, e_37, transform.const103, b_37);
               if(term == null)
                 break Fail144;
             }
@@ -5190,7 +5199,7 @@ import java.lang.ref.WeakReference;
                   break Fail149;
                 h_38 = term;
                 k_38 = g_38;
-                term = report_with_failure_0_2.instance.invoke(context, k_38, transform.const103, h_38);
+                term = report_with_failure_0_2.instance.invoke(context, k_38, transform.const104, h_38);
                 if(term == null)
                   break Fail149;
               }
@@ -5235,7 +5244,7 @@ import java.lang.ref.WeakReference;
                 break Fail148;
               w_37 = term;
               z_37 = v_37;
-              term = report_with_failure_0_2.instance.invoke(context, z_37, transform.const103, w_37);
+              term = report_with_failure_0_2.instance.invoke(context, z_37, transform.const104, w_37);
               if(term == null)
                 break Fail148;
             }
