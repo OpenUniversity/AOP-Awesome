@@ -30,6 +30,7 @@ import awesome.platform.MultiMechanism;
 import closures.runtime.Closure;
 import closures.runtime.Joinpoint;
 import closures.runtime.JoinpointSignature;
+import closures.runtime.JoinpointWrapper;
 
 
 public aspect ClosuresWeaver extends AbstractWeaver {
@@ -295,23 +296,29 @@ public aspect ClosuresWeaver extends AbstractWeaver {
 	void around(MultiMechanism mm, List effects, BcelShadow shadow):
         execution(void MultiMechanism.mix(List, BcelShadow))
         && this(mm) && args(effects, shadow) {
+		if ((shadow.getKind() == Shadow.PreInitialization || shadow.getKind() == Shadow.Initialization) &&
+				ResolvedType.forName(JoinpointWrapper.class.getName()).equals(shadow.getSignature().getDeclaringType().resolve(world).getSuperclass())) {
+			return;
+		}
+
 		if (effects!=null && !effects.isEmpty()) {
 			for (AnnotationAJ ann : shadow.getSignature().resolve(world).getAnnotations())
-					if (Closure.class.getName().equals(ann.getTypeName()))
-						filterAdvice(effects);
+				if (Closure.class.getName().equals(ann.getTypeName()))
+					filterAdvice(effects, shadow);
 		}
 		proceed(mm, effects, shadow);
 	}
 
-	private void filterAdvice(List<IEffect> effects) {
+	private void filterAdvice(List<IEffect> effects, Shadow shadow) {
 		List<IEffect> filteredAdv = new ArrayList<IEffect>();
-		for(IEffect eff:effects)
-			if (eff!=null && (eff instanceof Advice)) {
-				Advice advice = (Advice)eff;
-				if (!isJoinpointAdvice(advice))
-					filteredAdv.add(eff);
+		for(IEffect effect:effects)
+			if (effect!=null && (effect instanceof Advice)) {
+				Advice advice = (Advice)effect;
+				if (isJoinpointAdvice(advice) || (!shadow.hasThis() ||
+						!ResolvedType.forName(JoinpointWrapper.class.getName()).equals(shadow.getThisType().resolve(world).getSuperclass())))
+					filteredAdv.add(effect);
 			}
-        effects.removeAll(filteredAdv);
+        effects.retainAll(filteredAdv);
 	}
 
 	boolean isJoinpointAdvice(Advice advice) {
@@ -322,21 +329,98 @@ public aspect ClosuresWeaver extends AbstractWeaver {
 		return false;
 	}
 
+	Map<ResolvedType, Shadow> type2enclosing = new HashMap<ResolvedType, Shadow>();
+
+	private void addTypeToEnclosing(ResolvedType type, Shadow shadow) {
+		type2enclosing.put(type, shadow);
+	}
+
+	private Shadow getEnclosingForType(ResolvedType type) {
+		return type2enclosing.get(type);
+	}
+
+	Map<ResolvedType, List<BcelShadow>> type2closures= new HashMap<ResolvedType, List<BcelShadow>>();
+
+	private void addTypeToClosures(ResolvedType type, BcelShadow shadow) {
+		if (!type2closures.containsKey(type))
+			type2closures.put(type, new ArrayList<BcelShadow>());
+		type2closures.get(type).add(shadow);
+	}
+
 	List<BcelShadow> around(MultiMechanism mm, LazyClassGen clazz):
 		reifyClass(mm, clazz) {
 		List<BcelShadow> shadows = proceed(mm, clazz);
+		List<BcelShadow> closures = new ArrayList<BcelShadow>();
+		List<BcelShadow> shadowsToRemove = new ArrayList<BcelShadow>();
+		
 		for (BcelShadow shadow : shadows) {
 			if (shadow.getKind() == Shadow.StaticInitialization ||
 					shadow.getKind() == Shadow.ExceptionHandler)
 				continue;
 
+			System.out.println("checked shadow: " + shadow);
+			if (shadow.getKind() == Shadow.ConstructorCall) {
+				System.out.println("putting: " + shadow.getSignature().getDeclaringType().resolve(world));
+				System.out.println("putting2: " + shadow.getEnclosingShadow());
+				addTypeToEnclosing(shadow.getSignature().getDeclaringType().resolve(world), shadow.getEnclosingShadow());
+				continue;
+			}
+
 			for (AnnotationAJ ann : shadow.getSignature().resolve(world).getAnnotations()) {
 				if (Closure.class.getName().equals(ann.getTypeName())) {
+					closures.add(shadow);
 					shadow.setNullTarget();
 					break;
 				}
 			}
 		}
+
+		for (BcelShadow shadow : shadows) {
+//			System.out.println(">>>s test");
+//			System.out.println(">>>declaring type = " + shadow.getSignature().getDeclaringType().resolve(world));
+//			System.out.println(">>>declaring type ann # = " + shadow.getSignature().getDeclaringType().resolve(world).getSuperclass());
+//			System.out.println(">>>has annotation = " + (ResolvedType.forName(JoinpointWrapper.class.getName()).equals(shadow.getSignature().getDeclaringType().resolve(world).getSuperclass())));
+//			System.out.println(">>>kind = " + shadow.getKind());
+			if (ResolvedType.forName(JoinpointWrapper.class.getName()).equals(shadow.getSignature().getDeclaringType().resolve(world).getSuperclass()) &&
+					(shadow.getKind() == Shadow.ConstructorCall || shadow.getKind() == Shadow.ConstructorExecution || shadow.getKind() == Shadow.Initialization || shadow.getKind() == Shadow.PreInitialization)) {
+				System.out.println("removing shadow: " + shadow);
+				shadowsToRemove.add(shadow);
+			}
+//			System.out.println(">>>e test " + (shadowsToRemove.contains(shadow)? "y" : "n"));
+		}
+		shadows.removeAll(shadowsToRemove);
+
+		for(BcelShadow closure: closures) {
+			for(BcelShadow shadow : shadows) {
+				if (closure.equals(shadow.getEnclosingShadow())) {
+					System.out.println("fixing shadow: " + shadow + ", " + closure.getEnclosingType());
+//					System.out.println("value: " + type2shadow.get(closure.getEnclosingType()));
+
+					Shadow enc = getEnclosingForType(closure.getEnclosingType());
+					if (enc != null) {
+						shadow.setEnclosingShaodw(enc);
+						System.out.println("fixing1: " + enc.getMatchingSignature());
+					}
+					else {
+						addTypeToClosures(closure.getEnclosingType(), shadow);
+					}
+
+					break;
+				}
+			}
+		}
+
+		for (Map.Entry<ResolvedType, List<BcelShadow>> entry : type2closures.entrySet()) {
+			Shadow enc = getEnclosingForType(entry.getKey());
+			if (enc != null) {
+				for (BcelShadow closure : entry.getValue()) {
+					System.out.println("fixing2: " + enc.getMatchingSignature());
+					closure.setEnclosingShaodw(enc);
+				}
+				type2closures.remove(entry.getKey());
+			}
+		}
+
 		return shadows;
 	}
 }
