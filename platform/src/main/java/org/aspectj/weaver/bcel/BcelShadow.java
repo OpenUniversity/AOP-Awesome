@@ -1176,6 +1176,9 @@ public class BcelShadow extends Shadow {
 	// ??? need to better understand all the enclosing variants
 	@Override
 	public Member getEnclosingCodeSignature() {
+	        if (enclosingCodeSignature != null) {
+			return enclosingCodeSignature;
+		}
 		if (getKind().isEnclosingKind()) {
 			return getSignature();
 		} else if (getKind() == Shadow.PreInitialization) {
@@ -3651,6 +3654,12 @@ public class BcelShadow extends Shadow {
 
     public void setNullTarget() {
         nullTarget = true;
+    }
+
+    private Member enclosingCodeSignature;
+
+    public void setEnclosingCodeSignature(Member enclosingCodeSignature) {
+	this.enclosingCodeSignature = enclosingCodeSignature;
     }
 }
 

@@ -322,21 +322,56 @@ public aspect ClosuresWeaver extends AbstractWeaver {
 		return false;
 	}
 
+	Map<ResolvedType, Shadow> type2enclosingShadow = new HashMap<ResolvedType, Shadow>();
+
+	Map<ResolvedType, BcelShadow> type2closure = new HashMap<ResolvedType, BcelShadow>();
+
 	List<BcelShadow> around(MultiMechanism mm, LazyClassGen clazz):
 		reifyClass(mm, clazz) {
 		List<BcelShadow> shadows = proceed(mm, clazz);
+		List<BcelShadow> closures = new ArrayList<BcelShadow>();
+
 		for (BcelShadow shadow : shadows) {
 			if (shadow.getKind() == Shadow.StaticInitialization ||
 					shadow.getKind() == Shadow.ExceptionHandler)
 				continue;
 
+			if (shadow.getKind() == Shadow.ConstructorCall) {
+			   type2enclosingShadow.put(shadow.getSignature().getDeclaringType().resolve(world), shadow.getEnclosingShadow());
+			   continue;
+			}
+
 			for (AnnotationAJ ann : shadow.getSignature().resolve(world).getAnnotations()) {
 				if (Closure.class.getName().equals(ann.getTypeName())) {
+					closures.add(shadow);
 					shadow.setNullTarget();
 					break;
 				}
 			}
 		}
+
+		for (BcelShadow closure : closures)
+		    for (BcelShadow shadow : shadows)
+			if (closure.equals(shadow.getEnclosingShadow())) {
+				Shadow closureEnclosingShadow = type2enclosingShadow.get(closure.getEnclosingType());
+				if (closureEnclosingShadow != null ) {
+					shadow.setEnclosingCodeSignature(closureEnclosingShadow.getMatchingSignature());
+				}
+				else {
+					type2closure.put(closure.getEnclosingType(), shadow);
+				}
+
+				break;
+			}
+
+		for (Map.Entry<ResolvedType, BcelShadow> entry : type2closure.entrySet()) {
+		    Shadow enclosingShadow = type2enclosingShadow.get(entry.getKey());
+		    if (enclosingShadow != null) {
+		       entry.getValue().setEnclosingCodeSignature(enclosingShadow.getMatchingSignature());
+		       type2closure.remove(entry.getKey());
+		    }
+		}
+
 		return shadows;
 	}
 }
