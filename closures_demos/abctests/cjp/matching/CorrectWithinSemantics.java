@@ -32,8 +32,8 @@ public aspect CorrectWithinSemantics {
 
 		Tester.check(s1.contains(o),"'within' did not match correct CJP! "+s1);
 		Tester.check(s2.contains(o),"'withincode' did not match correct CJP! "+s2);
-		Tester.check(s3.contains(p),"'within' did not match correct joinpoint within CJP! "+s1);
-		Tester.check(s4.contains(p),"'withincode' did not match correct joinpoint within CJP! "+s2);
+		Tester.check(s3.contains(p),"'within' did not match correct joinpoint within CJP! "+s3);
+		Tester.check(s4.contains(p),"'withincode' did not match correct joinpoint within CJP! "+s4);
 
 		for(Object i: s1) {
 			if(i!=o) {
@@ -50,14 +50,14 @@ public aspect CorrectWithinSemantics {
 		}
 
 		for(Object i: s3) {
-			if(i!=o) {
-				Tester.check(false,"superflous match for 'withincode' (2)");
+			if(i!=p) {
+				Tester.check(false,"superflous match for 'within' (2)");
 				break;
 			}
 		}
 
 		for(Object i: s4) {
-			if(i!=o) {
+			if(i!=p) {
 				Tester.check(false,"superflous match for 'withincode' (2)");
 				break;
 			}
@@ -66,12 +66,12 @@ public aspect CorrectWithinSemantics {
 	
 	joinpoint void JP(C j);
 	
-	before(C o): within(CorrectWithinSemantics) && args(o) && !cflow(adviceexecution()) {
+	before(C o): within(CorrectWithinSemantics) && args(o) && !cflow(adviceexecution()) && !cflow(call(* contains(..))) {
 		s1.add(o);
 		System.err.println(thisJoinPointStaticPart);
 	}
 	
-	before(C o): withincode(* main(..)) && args(o) {
+	before(C o): withincode(* main(..)) && args(o) && !cflow(call(* contains(..))) {
 		s2.add(o);
 	}
 
@@ -83,3 +83,4 @@ public aspect CorrectWithinSemantics {
 		s4.add(o);
 	}
 }
+
