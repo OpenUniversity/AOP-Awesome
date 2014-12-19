@@ -58,9 +58,7 @@ public privileged aspect CoolFrontendAspect extends FrontendAspect {
 		String inputPath = input.getPath();
 		logger.info("input path: " + inputPath);
 		String path = FilenameUtils.removeExtension(inputPath) + ".java";
-		String outputPath = FilenameUtils.concat(
-				getOutputDir().getAbsolutePath(),
-				path.startsWith(File.separator) ? path.substring(1) : path);
+		String outputPath = path.replaceFirst("src", "generated");
 		logger.info("output path: " + outputPath);
 		File output = new File(outputPath);
 		if (output.exists())
