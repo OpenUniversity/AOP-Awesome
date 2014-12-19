@@ -51,7 +51,7 @@
                         </then>
                 </if>
 
-		<var name="inpath" value="libs/aspectjtools-1.7.4.jar${path.separator}frontend/target/frontend-1.0-SNAPSHOT.jar"/>
+		<var name="inpath" value="frontend/target/frontend-1.0-SNAPSHOT.jar"/>
                 <if>
                         <isset property="frontends"/>
                         <then>
