@@ -57,9 +57,7 @@ public aspect EJPFrontendAspect extends FrontendAspect {
 
 		String path = input.getPath();
 		logger.info("input path: " + path);
-		String outputPath = FilenameUtils.concat(
-				getOutputDir().getAbsolutePath(),
-				path.startsWith(File.separator) ? path.substring(1) : path);
+		String outputPath = path.replaceFirst("src", "generated");
 		logger.info("output path: " + outputPath);
 		File output = new File(outputPath);
 		if (output.exists())
