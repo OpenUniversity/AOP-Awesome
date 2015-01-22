@@ -1,9 +1,12 @@
 package coolplugin;
 
+import java.io.File;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.Iterator;
 
+import org.aspectj.weaver.IHasPosition;
+import org.aspectj.weaver.ISourceContext;
 import org.aspectj.weaver.ResolvedMember;
 import org.aspectj.weaver.ResolvedType;
 import org.aspectj.weaver.Member;
@@ -13,6 +16,7 @@ import org.aspectj.weaver.bcel.*;
 //import org.aspectj.apache.bcel.generic.*;
 import org.aspectj.weaver.AnnotationAJ;
 import org.aspectj.apache.bcel.generic.Type;
+import org.aspectj.bridge.ISourceLocation;
 
 
 public class Utils {
@@ -43,6 +47,15 @@ public final static UnresolvedType COOL_Requires_ANNOTATION = UnresolvedType
 
 public final static UnresolvedType COOL_ExternalRef_ANNOTATION = UnresolvedType
 	.forName("cool.runtime.COOLExternalRef");
+
+public final static UnresolvedType COOL_AdditionsLocation_ANNOTATION = UnresolvedType
+.forName("cool.runtime.COOLAdditionsLocation");
+
+public final static UnresolvedType COOL_SelfexLocation_ANNOTATION = UnresolvedType
+.forName("cool.runtime.COOLSelfexLocation");
+
+public final static UnresolvedType COOL_MutexLocation_ANNOTATION = UnresolvedType
+.forName("cool.runtime.COOLMutexLocation");
 
 public final static UnresolvedType[] COOL_Method_Annotations = new UnresolvedType[] {
 	COOL_Lock_ANNOTATION, COOL_Unlock_ANNOTATION,
@@ -98,7 +111,64 @@ public final static UnresolvedType[] COOL_Method_Annotations = new UnresolvedTyp
 		}
 		return result;
 	}
+
+	public static AnnotationGen getAnnotation(ResolvedMember method, UnresolvedType type) {
+		if (method == null)
+			return null;
+
+		AnnotationAJ[] anns = method.getAnnotations();
+		for (AnnotationAJ ann : anns)
+			if (ann.getTypeName().equals(type.getName())) {
+				return ((BcelAnnotation) ann).getBcelAnnotation();
+			}
+		return null;
+	}
+
+	public static ISourceLocation getSourceLocation(ResolvedMember mg, UnresolvedType annotation) {
+		AnnotationGen ann = getAnnotation(mg, annotation);
+		return ann != null ? getSourceLocation(ann) : mg.getSourceLocation();
+	}
 	
+	private static ISourceLocation getSourceLocation(AnnotationGen ann) {
+		final ElementValue filepath = Utils.getAnnotationElementValue(ann, "file");
+		final ElementValue offset = Utils.getAnnotationElementValue(ann, "offset");
+		final ElementValue line = Utils.getAnnotationElementValue(ann, "startLine");
+		final ElementValue endLine = Utils.getAnnotationElementValue(ann, "endLine");
+		final ElementValue column = Utils.getAnnotationElementValue(ann, "column");
+
+		return new ISourceLocation() {
+			File file = new File(filepath.stringifyValue());
+
+			public String getSourceFileName() {
+				return file.getName();
+			}
+
+			public File getSourceFile() {
+				return file;
+			}
+
+			public int getOffset() {
+				return Integer.parseInt(offset.stringifyValue());
+			}
+
+			public int getLine() {
+				return Integer.parseInt(line.stringifyValue());
+			}
+
+			public int getEndLine() {
+				return Integer.parseInt(endLine.stringifyValue());
+			}
+
+			public String getContext() {
+				return null;
+			}
+
+			public int getColumn() {
+				return Integer.parseInt(column.stringifyValue());
+			}
+		};
+	}
+
 	/**
 	 * Returns a COOL annotation on a method, or null if none is present.
 	 * 

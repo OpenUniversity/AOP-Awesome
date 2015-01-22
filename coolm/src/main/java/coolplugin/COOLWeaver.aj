@@ -1,23 +1,34 @@
 package coolplugin;
 
+import java.io.File;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.HashSet;
+
 import org.aspectj.weaver.bcel.*;
+import org.aspectj.weaver.Advice;
+import org.aspectj.weaver.AdviceKind;
+import org.aspectj.weaver.AjAttribute;
+import org.aspectj.weaver.IHasPosition;
+import org.aspectj.weaver.ISourceContext;
 import org.aspectj.weaver.Member;
 import org.aspectj.weaver.ResolvedMember;
 import org.aspectj.weaver.ResolvedMemberImpl;
 import org.aspectj.weaver.MemberImpl;
 import org.aspectj.weaver.Shadow;
+import org.aspectj.weaver.ShadowMunger;
+import org.aspectj.weaver.SourceContextImpl;
 import org.aspectj.weaver.UnresolvedType;
 import org.aspectj.weaver.ResolvedType;
 import org.aspectj.apache.bcel.classfile.annotation.*;
 import org.aspectj.weaver.AnnotationAJ;
+import org.aspectj.weaver.bcel.BcelAdvice;
 import org.aspectj.weaver.bcel.BcelMethod;
 import org.aspectj.weaver.bcel.BcelShadow;
 import org.aspectj.weaver.bcel.LazyClassGen;
@@ -26,8 +37,11 @@ import org.aspectj.weaver.IClassFileProvider;
 import org.aspectj.weaver.bcel.UnwovenClassFile;
 import org.aspectj.weaver.bcel.BcelWorld;
 import org.aspectj.weaver.bcel.BcelObjectType;
+import org.aspectj.weaver.patterns.Pointcut;
 import org.aspectj.apache.bcel.generic.*;
 import org.aspectj.apache.bcel.classfile.ConstantPool;
+import org.aspectj.bridge.ISourceLocation;
+import org.aspectj.bridge.SourceLocation;
 
 import awesome.platform.AbstractWeaver;
 import awesome.platform.IEffect;
@@ -160,7 +174,7 @@ public privileged aspect COOLWeaver extends AbstractWeaver {
 		// not interested in non-advisable classes
 		if (aspectClass == null)
 		{
-			return null;
+			return new ArrayList<IEffect>();
 		}
 
 		//System.out.println("*** Matching a shadow "+
@@ -199,6 +213,65 @@ public privileged aspect COOLWeaver extends AbstractWeaver {
 					List<IEffect> result = new ArrayList<IEffect>();
 					result.add(lockAdv);
 					result.add(unlockAdv);
+					System.out.println("arik 6723");
+					/*AjAttribute.AdviceAttribute adviceAttribute = 
+							new AjAttribute.AdviceAttribute(
+									AdviceKind.After,
+									Pointcut.fromString("call(* foo(..))"), 0, 0, 0,
+									new ISourceContext() {
+										
+										public void tidy() {
+										}
+										
+										public ISourceLocation makeSourceLocation(int line, int offset) {
+											return new SourceLocation(new File("/home/ahadas/test_work/boundedstack/src/base/BoundedStackCoord.cool"), 12);
+										}
+										
+										public ISourceLocation makeSourceLocation(IHasPosition position) {
+											return new SourceLocation(new File("/home/ahadas/test_work/boundedstack/src/base/BoundedStackCoord.cool"), 12);
+										}
+										
+										public int getOffset() {
+											return 0;
+										}
+									}
+							);
+					result.add(new BcelAdvice(adviceAttribute, Pointcut.fromString("call(* foo(..))"), tgtMemberSig, aspectClass.resolve(world)) {
+						
+						public int compareTo(Object other) {
+							return 0;
+						}
+						
+						@Override
+						public void specializeOn(Shadow shadow) {
+						}
+						
+						@Override
+						public ShadowMunger parameterizeWith(ResolvedType declaringType,
+								Map<String, UnresolvedType> typeVariableMap) {
+							return null;
+						}
+						
+						@Override
+						public boolean mustCheckExceptions() {
+							return false;
+						}
+						
+						@Override
+						public boolean implementOn(Shadow shadow) {
+							return true;
+						}
+						
+						@Override
+						public Collection<ResolvedType> getThrownExceptions() {
+							return null;
+						}
+						
+						@Override
+						public boolean hasDynamicTests() {
+							return false;
+						}
+					});*/
 					return result;					
 				}
 			}
@@ -211,7 +284,7 @@ public privileged aspect COOLWeaver extends AbstractWeaver {
 		} else if (shadow.getKind() == Shadow.Initialization) {
 			// System.out.println("INITIALIZATION SHADOW!!!");
 		}
-		return null;
+		return new ArrayList<IEffect>();
 	}	/**
 		 * Nothing to be done here for a COOL mechanism.
 		 * 
@@ -299,7 +372,8 @@ public privileged aspect COOLWeaver extends AbstractWeaver {
 	 * field.
 	 */
 	public void setInputFiles(IClassFileProvider input) {
-		System.err.println("setInputFiles " + input);
+		System.out.println("setInputFiles " + input);
+//		new Throwable().printStackTrace();
 		
 		super.setInputFiles(input);
 		if (typeMunger == null)
@@ -317,7 +391,7 @@ public privileged aspect COOLWeaver extends AbstractWeaver {
 			UnwovenClassFile classFile = (UnwovenClassFile) i.next();
 			UnresolvedType clazz = Utils.getUnresolvedType(classFile);
 			allClasses.add(clazz);
-			System.err.println("class file " + classFile + "; class '" + clazz + "'");
+			System.out.println("class file " + classFile + "; class '" + clazz + "'");
 		}
 		
 	
@@ -331,7 +405,7 @@ public privileged aspect COOLWeaver extends AbstractWeaver {
 			// System.out.println("YES");
 			if (targetType != null) {
 				// $$$ YA
-				System.err.println("Looking for '" + targetType + "'");
+				System.out.println("Looking for '" + targetType + "'");
 				/*if (!(allClasses.contains(targetType))) {
 					System.err
 							.println("COOL warning: target class "
@@ -362,7 +436,7 @@ public privileged aspect COOLWeaver extends AbstractWeaver {
 		}
 	}
 
-private void mapAdvice(ResolvedType clazz, UnresolvedType targetType) {
+	private void mapAdvice(ResolvedType clazz, UnresolvedType targetType) {
 		ResolvedMember[] methods = clazz.getDeclaredMethods();
 		for (ResolvedMember mg : methods) {
 			AnnotationGen ann = Utils.getCOOLAnnotation(mg);
@@ -371,8 +445,13 @@ private void mapAdvice(ResolvedType clazz, UnresolvedType targetType) {
 			String typeName = ann.getTypeName();
 			if (typeName.equals(Utils.COOL_Lock_ANNOTATION.getName())) {
 				Member target = buildTargetMember(ann, targetType);
-				IEffect lockEffect = new COOLLockEffect(clazz.getName(),
+				COOLLockEffect lockEffect = new COOLLockEffect(clazz.getName(),
 						mg.getName(), target, typeMunger.getCoordFieldName(targetType));
+				lockEffect.setSourceLocations(new ISourceLocation[] {
+						Utils.getSourceLocation(mg, Utils.COOL_AdditionsLocation_ANNOTATION),
+						Utils.getSourceLocation(mg, Utils.COOL_SelfexLocation_ANNOTATION),
+						Utils.getSourceLocation(mg, Utils.COOL_MutexLocation_ANNOTATION)
+				});
 				lockMapping.put(target, lockEffect);
 			} else if (typeName.equals(Utils.COOL_Unlock_ANNOTATION.getName())) {
 				Member target = buildTargetMember(ann, targetType);
@@ -381,7 +460,9 @@ private void mapAdvice(ResolvedType clazz, UnresolvedType targetType) {
 				unlockMapping.put(target, unlockEffect);
 			}
 		}
-	}	/** Builds a target member of a COOL's advice */
+	}
+
+    /** Builds a target member of a COOL's advice */
 	private Member buildTargetMember(AnnotationGen ann, UnresolvedType targetType) {
 		ElementValue methodNameVal = Utils.getAnnotationElementValue(ann,
 				"methodName");
