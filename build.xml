@@ -76,6 +76,13 @@
 			<arg line="-inpath ${inpath}"/>
 			<arg line="-outjar dist/awesome_tools.jar"/>
 		</java>
+
+                <jar destfile="dist/awesome_tools.jar" update="yes">
+                        <zipfileset src="libs/strategoxt.jar" includes="org/**"/>
+                        <zipfileset src="libs/org.objectweb.asm_3.3.1.v201105211655.jar" includes="org/**"/>
+                        <zipfileset src="libs/jdtcore-for-aspectj.jar" includes="org/**"/>
+                        <zipfileset src="libs/commons-io-2.4.jar" includes="org/**"/>
+                </jar>
 	</target> 
 
 	<target name="clean">
