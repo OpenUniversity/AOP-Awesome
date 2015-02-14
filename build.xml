@@ -82,6 +82,22 @@
                         <zipfileset src="libs/org.objectweb.asm_3.3.1.v201105211655.jar" includes="org/**"/>
                         <zipfileset src="libs/jdtcore-for-aspectj.jar" includes="org/**"/>
                         <zipfileset src="libs/commons-io-2.4.jar" includes="org/**"/>
+
+                        <manifest>
+                                <attribute name="Bundle-ActivationPolicy" value="lazy"/>
+                                <attribute name="Bundle-ClassPath" value="."/>
+                                <attribute name="Eclipse-BundleShape" value="jar"/>
+                                <attribute name="Bundle-Name" value="AspectJ"/>
+                                <attribute name="Created-By" value="1.7.0_21-b11 (Oracle Corporation)"/>
+                                <attribute name="Require-Bundle" value='org.apache.ant,org.eclipse.core.resources,org.eclipse.core.runtime,org.eclipse.core.runtime.compatibility,org.eclipse.text,org.aspectj.weaver;bundle-version="1.7.3.20130613144500-a";visibility :=reexport'/>
+                                <attribute name="Ant-Version" value="Apache Ant 1.8.2"/>
+                                <attribute name="Bundle-Vendor" value="Eclipse AspectJ Development Tools"/>
+                                <attribute name="Bundle-Version" value="1.7.3.20130613144500-a"/>
+                                <attribute name="Bundle-ManifestVersion" value="2"/>
+                                <attribute name="Bundle-Activator" value="org.eclipse.core.internal.compatibility.PluginActivator"/>
+                                <attribute name="Bundle-SymbolicName" value="org.aspectj.ajde; singleton:=true"/>
+                                <attribute name="Export-Package" value="org.aspectj.ajde.core,org.aspectj.ajde.core.internal,org.aspectj.ajdt.ajc,org.aspectj.ajdt.compiler,org.aspectj.ajdt.core,org.aspectj.ajdt.core.dom,org.aspectj.ajdt.internal.compiler,org.aspectj.ajdt.internal.compiler.ast,org.aspectj.ajdt.internal.compiler.lookup,org.aspectj.ajdt.internal.compiler.parser,org.aspectj.ajdt.internal.compiler.problem,org.aspectj.ajdt.internal.core.builder,org.aspectj.org.eclipse.jdt.core,org.aspectj.org.eclipse.jdt.core.compiler,org.aspectj.org.eclipse.jdt.core.dom,org.aspectj.org.eclipse.jdt.core.dom.rewrite,org.aspectj.org.eclipse.jdt.core.eval,org.aspectj.org.eclipse.jdt.core.formatter,org.aspectj.org.eclipse.jdt.core.jdom,org.aspectj.org.eclipse.jdt.core.search,org.aspectj.org.eclipse.jdt.core.util,org.aspectj.org.eclipse.jdt.internal.codeassist,org.aspectj.org.eclipse.jdt.internal.codeassist.complete,org.aspectj.org.eclipse.jdt.internal.codeassist.impl,org.aspectj.org.eclipse.jdt.internal.codeassist.select,org.aspectj.org.eclipse.jdt.internal.compiler,org.aspectj.org.eclipse.jdt.internal.compiler.ast,org.aspectj.org.eclipse.jdt.internal.compiler.batch,org.aspectj.org.eclipse.jdt.internal.compiler.classfmt,org.aspectj.org.eclipse.jdt.internal.compiler.codegen,org.aspectj.org.eclipse.jdt.internal.compiler.env,org.aspectj.org.eclipse.jdt.internal.compiler.flow,org.aspectj.org.eclipse.jdt.internal.compiler.impl,org.aspectj.org.eclipse.jdt.internal.compiler.lookup,org.aspectj.org.eclipse.jdt.internal.compiler.parser,org.aspectj.org.eclipse.jdt.internal.compiler.parser.diagnose,org.aspectj.org.eclipse.jdt.internal.compiler.problem,org.aspectj.org.eclipse.jdt.internal.compiler.util,org.aspectj.org.eclipse.jdt.internal.core,org.aspectj.org.eclipse.jdt.internal.core.builder,org.aspectj.org.eclipse.jdt.internal.core.dom.rewrite,org.aspectj.org.eclipse.jdt.internal.core.eval,org.aspectj.org.eclipse.jdt.internal.core.hierarchy,org.aspectj.org.eclipse.jdt.internal.core.index,org.aspectj.org.eclipse.jdt.internal.core.jdom,org.aspectj.org.eclipse.jdt.internal.core.search,org.aspectj.org.eclipse.jdt.internal.core.search.indexing,org.aspectj.org.eclipse.jdt.internal.core.search.matching,org.aspectj.org.eclipse.jdt.internal.core.search.processing,org.aspectj.org.eclipse.jdt.internal.core.util,org.aspectj.org.eclipse.jdt.internal.eval,org.aspectj.org.eclipse.jdt.internal.formatter,org.aspectj.org.eclipse.jdt.internal.formatter.align,org.aspectj.org.eclipse.jdt.internal.formatter.comment,org.aspectj.org.eclipse.jdt.internal.formatter.old,org.aspectj.tools.ajc,org.aspectj.tools.ajdoc,org.aspectj.tools.ant.taskdefs,org.aspectj.tools.ant.taskdefs.compilers"/>
+                        </manifest>
                 </jar>
 	</target> 
 
