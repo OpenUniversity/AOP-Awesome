@@ -33,6 +33,27 @@
 			<arg line="-inpath ${inpath}"/>
                         <arg line="-outjar dist/awesome_weaver.jar"/>
 		</java>
+
+                <jar destfile="dist/awesome_weaver.jar" update="yes">
+                        <manifest>
+                                 <attribute name="Bundle-ClassPath" value="."/>
+                                 <attribute name="Implementation-Version" value="1.7.2"/>
+                                 <attribute name="Eclipse-BundleShape" value="jar"/>
+                                 <attribute name="Bundle-Name" value="AspectJ Weaver"/>
+                                 <attribute name="Created-By" value="1.7.0_21-b11 (Oracle Corporation)"/>
+                                 <attribute name="Premain-Class" value="org.aspectj.weaver.loadtime.Agent"/>
+                                 <attribute name="Bundle-RequiredExecutionEnvironment" value="J2SE-1.5"/>
+                                 <attribute name="Require-Bundle" value='org.aspectj.runtime;bundle-version="1.7.3";visibility:=reexport'/>
+                                 <attribute name="Bundle-Vendor" value="Eclipse AspectJ Development Tools"/>
+                                 <attribute name="Ant-Version" value="Apache Ant 1.8.2"/>
+                                 <attribute name="Implementation-Vendor" value="aspectj.org"/>
+                                 <attribute name="Bundle-Version" value="1.7.3.20130613144500-a"/>
+                                 <attribute name="Bundle-ManifestVersion" value="2"/>
+                                 <attribute name="Bundle-SymbolicName" value="org.aspectj.weaver"/>
+                                 <attribute name="Can-Redefine-Classes" value="true"/>
+                                 <attribute name="Export-Package" value='org.aspectj.apache.bcel;version="1.7.3",org.aspectj.apache.bcel.classfile;version="1.7.3",org.aspectj.apache.bcel.classfile.annotation;version="1.7.3",org.aspectj.apache.bcel.generic;version="1.7.3",org.aspectj.apache.bcel.util;version="1.7.3",org.aspectj.asm;version="1.7.3",org.aspectj.asm.internal;version="1.7.3",org.aspectj.bridge;version="1.7.3",org.aspectj.bridge.context;version="1.7.3",org.aspectj.util;version="1.7.3",org.aspectj.weaver;version="1.7.3",org.aspectj.weaver.ast;version="1.7.3",org.aspectj.weaver.bcel;version="1.7.3",org.aspectj.weaver.internal.tools;version="1.7.3",org.aspectj.weaver.loadtime;version="1.7.3",org.aspectj.weaver.loadtime.definition;version="1.7.3",org.aspectj.weaver.model;version="1.7.3",org.aspectj.weaver.patterns;version="1.7.3",org.aspectj.weaver.reflect;version="1.7.3",org.aspectj.weaver.tools;version="1.7.3"'/>
+                        </manifest>
+                </jar>
 	</target>
 
 	<target name="tools">
