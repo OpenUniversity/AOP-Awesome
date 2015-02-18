@@ -20,11 +20,11 @@ import java.lang.ref.WeakReference;
 
   private static boolean isIniting;
 
+  protected static IStrategoTerm const113;
+
   protected static IStrategoTerm const112;
 
   protected static IStrategoTerm const111;
-
-  protected static IStrategoTerm const110;
 
   protected static IStrategoTerm constCons45;
 
@@ -35,6 +35,8 @@ import java.lang.ref.WeakReference;
   protected static IStrategoTerm constCons44;
 
   protected static IStrategoTerm constId26;
+
+  protected static IStrategoTerm const110;
 
   protected static IStrategoTerm constCons43;
 
@@ -1520,20 +1522,20 @@ import java.lang.ref.WeakReference;
     constId8 = termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{transform.const10});
     constBlock0 = termFactory.makeAppl(transform._consBlock_1, new IStrategoTerm[]{transform.constNil0});
     const13 = termFactory.makeString("Internal error: with clause failed unexpectedly in rule 'remove-vars-decs-from-local-var-dec-stm'");
-    const14 = termFactory.makeString("ejp.runtime.ClassAnno");
+    const14 = termFactory.makeString("ejps.runtime.ClassAnno");
     constId9 = termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{transform.const14});
     constTypeName4 = termFactory.makeAppl(transform._consTypeName_1, new IStrategoTerm[]{transform.constId9});
     const15 = termFactory.makeString("*");
     constNamePattern0 = termFactory.makeAppl(transform._consNamePattern_1, new IStrategoTerm[]{transform.const15});
     constRefTypePattern0 = termFactory.makeAppl(transform._consRefTypePattern_1, new IStrategoTerm[]{transform.constNamePattern0});
-    const16 = termFactory.makeString("ejp.runtime.MethodAnno");
+    const16 = termFactory.makeString("ejps.runtime.MethodAnno");
     constId10 = termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{transform.const16});
     constTypeName5 = termFactory.makeAppl(transform._consTypeName_1, new IStrategoTerm[]{transform.constId10});
     constModPattern0 = termFactory.makeAppl(transform._consModPattern_1, new IStrategoTerm[]{transform.constNil0});
     constMemberName0 = termFactory.makeAppl(transform._consMemberName_1, new IStrategoTerm[]{transform.const15});
     constFormalWildcard0 = termFactory.makeAppl(transform._consFormalWildcard_0, NO_TERMS);
     constCons2 = (IStrategoTerm)termFactory.makeListCons(transform.constFormalWildcard0, (IStrategoList)transform.constNil0);
-    const17 = termFactory.makeString("ejp.runtime.EjpBlockAnno");
+    const17 = termFactory.makeString("ejps.runtime.EjpBlockAnno");
     constId11 = termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{transform.const17});
     constTypeName6 = termFactory.makeAppl(transform._consTypeName_1, new IStrategoTerm[]{transform.constId11});
     const18 = termFactory.makeString("nomatch$");
@@ -1614,7 +1616,7 @@ import java.lang.ref.WeakReference;
     constLit3 = termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{transform.constString3});
     constElemValPair1 = termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId19, transform.constLit3});
     constCons16 = (IStrategoTerm)termFactory.makeListCons(transform.constElemValPair1, (IStrategoList)transform.constNil0);
-    const37 = termFactory.makeString("@withincode(anno) && @withincode(ejp.runtime.ExplicitScopedJoinPoint) && ");
+    const37 = termFactory.makeString("@withincode(anno) && @withincode(ejps.runtime.ExplicitScopedJoinPoint) && ");
     const38 = termFactory.makeString("ejp");
     constChars4 = termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{transform.const38});
     constCons17 = (IStrategoTerm)termFactory.makeListCons(transform.constChars4, (IStrategoList)transform.constNil0);
@@ -1627,7 +1629,7 @@ import java.lang.ref.WeakReference;
     constId23 = termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{transform.const39});
     constParam1 = termFactory.makeAppl(transform._consParam_3, new IStrategoTerm[]{transform.constNil0, transform.constClassOrInterfaceType1, transform.constId23});
     constCons19 = (IStrategoTerm)termFactory.makeListCons(transform.constParam1, (IStrategoList)transform.constNil0);
-    const40 = termFactory.makeString("@withincode(anno) && !@withincode(ejp.runtime.ExplicitScopedJoinPoint) && ");
+    const40 = termFactory.makeString("@withincode(anno) && !@withincode(ejps.runtime.ExplicitScopedJoinPoint) && ");
     const41 = termFactory.makeString("method");
     constChars5 = termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{transform.const41});
     constCons20 = (IStrategoTerm)termFactory.makeListCons(transform.constChars5, (IStrategoList)transform.constNil0);
@@ -1861,21 +1863,22 @@ import java.lang.ref.WeakReference;
     const109 = termFactory.makeString("runtime");
     constId25 = termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{transform.const109});
     constCons43 = (IStrategoTerm)termFactory.makeListCons(transform.constId25, (IStrategoList)transform.constNil0);
-    constId26 = termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{transform.const38});
+    const110 = termFactory.makeString("ejps");
+    constId26 = termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{transform.const110});
     constCons44 = (IStrategoTerm)termFactory.makeListCons(transform.constId26, (IStrategoList)transform.constCons43);
     constPackageName0 = termFactory.makeAppl(transform._consPackageName_1, new IStrategoTerm[]{transform.constCons44});
     constTypeImportOnDemandDec0 = termFactory.makeAppl(transform._consTypeImportOnDemandDec_1, new IStrategoTerm[]{transform.constPackageName0});
     constCons45 = (IStrategoTerm)termFactory.makeListCons(transform.constTypeImportOnDemandDec0, (IStrategoList)transform.constNil0);
-    const110 = termFactory.makeString("Internal error: with clause failed unexpectedly in rule 'ejp-converter-compilation-unit'");
-    const111 = termFactory.makeString("Internal error: with clause failed unexpectedly in rule 'check-for-change-in-aspect-or-class'");
-    const112 = termFactory.makeString("Internal error: with clause failed unexpectedly in rule 'ejp-converter-aspect-or-class'");
+    const111 = termFactory.makeString("Internal error: with clause failed unexpectedly in rule 'ejp-converter-compilation-unit'");
+    const112 = termFactory.makeString("Internal error: with clause failed unexpectedly in rule 'check-for-change-in-aspect-or-class'");
+    const113 = termFactory.makeString("Internal error: with clause failed unexpectedly in rule 'ejp-converter-aspect-or-class'");
   }
 
   @SuppressWarnings("all") public static class fetch_0_1 extends Strategy 
   { 
     public static fetch_0_1 instance = new fetch_0_1();
 
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm o_71)
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm u_71)
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("fetch_0_1");
@@ -1891,7 +1894,7 @@ import java.lang.ref.WeakReference;
             { 
               IStrategoTerm z_11 = null;
               z_11 = term.getSubterm(0);
-              term = this.invoke(context, z_11, o_71);
+              term = this.invoke(context, z_11, u_71);
               if(term == null)
                 break Fail1;
               if(true)
@@ -1907,7 +1910,7 @@ import java.lang.ref.WeakReference;
               { 
                 IStrategoTerm x_11 = null;
                 x_11 = term.getSubterm(0);
-                term = this.invoke(context, x_11, o_71);
+                term = this.invoke(context, x_11, u_71);
                 if(term == null)
                   break Fail2;
                 if(true)
@@ -1926,7 +1929,7 @@ import java.lang.ref.WeakReference;
                   u_11 = term.getSubterm(0);
                   v_11 = term.getSubterm(1);
                   term = termFactory.makeAppl(transform._consAmbName_2, new IStrategoTerm[]{u_11, v_11});
-                  term = this.invoke(context, term, o_71);
+                  term = this.invoke(context, term, u_71);
                   if(term == null)
                     break Fail3;
                   if(true)
@@ -1945,7 +1948,7 @@ import java.lang.ref.WeakReference;
                     IStrategoTerm arg1 = term.getSubterm(1);
                     if(arg1.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg1).getConstructor())
                       break Fail4;
-                    term = this.invoke(context, s_11, o_71);
+                    term = this.invoke(context, s_11, u_71);
                     if(term == null)
                       break Fail4;
                     if(true)
@@ -1961,7 +1964,7 @@ import java.lang.ref.WeakReference;
                     { 
                       IStrategoTerm p_11 = null;
                       p_11 = term.getSubterm(0);
-                      term = this.invoke(context, p_11, o_71);
+                      term = this.invoke(context, p_11, u_71);
                       if(term == null)
                         break Fail5;
                       if(true)
@@ -1973,7 +1976,7 @@ import java.lang.ref.WeakReference;
                   { 
                     IStrategoTerm n_11 = null;
                     n_11 = term.getSubterm(0);
-                    term = iset_add_0_1.instance.invoke(context, o_71, n_11);
+                    term = iset_add_0_1.instance.invoke(context, u_71, n_11);
                     if(term == null)
                       break Fail0;
                   }
@@ -2085,13 +2088,13 @@ import java.lang.ref.WeakReference;
   { 
     public static ejp_to_java_0_4 instance = new ejp_to_java_0_4();
 
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm ref_r_71, IStrategoTerm ref_s_71, IStrategoTerm ref_t_71, IStrategoTerm ref_u_71)
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm ref_v_71, IStrategoTerm ref_w_71, IStrategoTerm ref_x_71, IStrategoTerm ref_y_71)
     { 
       ITermFactory termFactory = context.getFactory();
-      TermReference r_71 = new TermReference(ref_r_71);
-      TermReference s_71 = new TermReference(ref_s_71);
-      TermReference t_71 = new TermReference(ref_t_71);
-      TermReference u_71 = new TermReference(ref_u_71);
+      TermReference v_71 = new TermReference(ref_v_71);
+      TermReference w_71 = new TermReference(ref_w_71);
+      TermReference x_71 = new TermReference(ref_x_71);
+      TermReference y_71 = new TermReference(ref_y_71);
       context.push("ejp_to_java_0_4");
       Fail7:
       { 
@@ -2146,10 +2149,10 @@ import java.lang.ref.WeakReference;
                   r_18 = term;
                   term = q_18;
                   lifted2 lifted210 = new lifted2();
-                  lifted210.r_71 = r_71;
-                  lifted210.s_71 = s_71;
-                  lifted210.t_71 = t_71;
-                  lifted210.u_71 = u_71;
+                  lifted210.v_71 = v_71;
+                  lifted210.w_71 = w_71;
+                  lifted210.x_71 = x_71;
+                  lifted210.y_71 = y_71;
                   term = SRTS_all.instance.invoke(context, term, lifted210);
                   if(term == null)
                     break Fail8;
@@ -2178,10 +2181,10 @@ import java.lang.ref.WeakReference;
               r_18 = term;
               term = q_18;
               lifted4 lifted410 = new lifted4();
-              lifted410.r_71 = r_71;
+              lifted410.v_71 = v_71;
               lifted410.p_18 = p_18;
-              lifted410.t_71 = t_71;
-              lifted410.u_71 = u_71;
+              lifted410.x_71 = x_71;
+              lifted410.y_71 = y_71;
               term = SRTS_all.instance.invoke(context, term, lifted410);
               if(term == null)
                 break Fail8;
@@ -2225,7 +2228,7 @@ import java.lang.ref.WeakReference;
               t_17 = arg7.getSubterm(0);
               term = q_17;
               lifted6 lifted610 = new lifted6();
-              lifted610.r_71 = r_71;
+              lifted610.v_71 = v_71;
               term = SRTS_all.instance.invoke(context, term, lifted610);
               if(term == null)
                 break Fail10;
@@ -2244,10 +2247,10 @@ import java.lang.ref.WeakReference;
                     term = termFactory.makeAppl(transform._consMethodDecHead_6, new IStrategoTerm[]{l_17, n_17, o_17, p_17, q_17, r_17});
                     u_17 = term;
                     lifted9 lifted90 = new lifted9();
-                    lifted90.r_71 = r_71;
-                    lifted90.s_71 = s_71;
-                    lifted90.t_71 = t_71;
-                    lifted90.u_71 = u_71;
+                    lifted90.v_71 = v_71;
+                    lifted90.w_71 = w_71;
+                    lifted90.x_71 = x_71;
+                    lifted90.y_71 = y_71;
                     term = allow_extends_1_1.instance.invoke(context, term, lifted90, t_17);
                     if(term == null)
                       break Fail10;
@@ -2275,10 +2278,10 @@ import java.lang.ref.WeakReference;
                 term = termFactory.makeAppl(transform._consMethodDecHead_6, new IStrategoTerm[]{term, n_17, o_17, p_17, q_17, r_17});
                 u_17 = term;
                 lifted10 lifted100 = new lifted10();
-                lifted100.r_71 = r_71;
-                lifted100.s_71 = s_71;
+                lifted100.v_71 = v_71;
+                lifted100.w_71 = w_71;
                 lifted100.s_17 = s_17;
-                lifted100.u_71 = u_71;
+                lifted100.y_71 = y_71;
                 term = allow_extends_1_1.instance.invoke(context, term, lifted100, t_17);
                 if(term == null)
                   break Fail10;
@@ -2301,10 +2304,10 @@ import java.lang.ref.WeakReference;
                 d_17 = term.getSubterm(0);
                 term = d_17;
                 lifted11 lifted111 = new lifted11();
-                lifted111.r_71 = r_71;
-                lifted111.s_71 = s_71;
-                lifted111.t_71 = t_71;
-                lifted111.u_71 = u_71;
+                lifted111.v_71 = v_71;
+                lifted111.w_71 = w_71;
+                lifted111.x_71 = x_71;
+                lifted111.y_71 = y_71;
                 term = SRTS_all.instance.invoke(context, term, lifted111);
                 if(term == null)
                   break Fail12;
@@ -2338,12 +2341,12 @@ import java.lang.ref.WeakReference;
                   v_16 = arg12.getSubterm(2);
                   term = v_16;
                   lifted13 lifted130 = new lifted13();
-                  lifted130.r_71 = r_71;
+                  lifted130.v_71 = v_71;
                   lifted130.s_16 = s_16;
                   lifted130.u_16 = u_16;
-                  lifted130.s_71 = s_71;
-                  lifted130.t_71 = t_71;
-                  lifted130.u_71 = u_71;
+                  lifted130.w_71 = w_71;
+                  lifted130.x_71 = x_71;
+                  lifted130.y_71 = y_71;
                   term = map_1_0.instance.invoke(context, term, lifted130);
                   if(term == null)
                     break Fail13;
@@ -2378,7 +2381,7 @@ import java.lang.ref.WeakReference;
                     term = z_15;
                     lifted14 lifted140 = new lifted14();
                     lifted140.y_15 = y_15;
-                    lifted140.u_71 = u_71;
+                    lifted140.y_71 = y_71;
                     term = SRTS_all.instance.invoke(context, term, lifted140);
                     if(term == null)
                       break Fail14;
@@ -2411,7 +2414,7 @@ import java.lang.ref.WeakReference;
                       term = f_15;
                       lifted16 lifted160 = new lifted16();
                       lifted160.d_15 = d_15;
-                      lifted160.u_71 = u_71;
+                      lifted160.y_71 = y_71;
                       term = SRTS_all.instance.invoke(context, term, lifted160);
                       if(term == null)
                         break Fail15;
@@ -2441,7 +2444,7 @@ import java.lang.ref.WeakReference;
                           v_14 = arg16.getSubterm(0);
                           w_14 = arg16.getSubterm(1);
                           term = termFactory.makeAppl(transform._consEJPCall_2, new IStrategoTerm[]{v_14, w_14});
-                          term = ejp_call_to_method_invokation_0_4.instance.invoke(context, term, r_71.value, s_71.value, t_71.value, u_71.value);
+                          term = ejp_call_to_method_invokation_0_4.instance.invoke(context, term, v_71.value, w_71.value, x_71.value, y_71.value);
                           if(term == null)
                             break Fail16;
                           term = termFactory.makeAppl(transform._consExprStm_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consAssign_2, new IStrategoTerm[]{u_14, term})});
@@ -2464,7 +2467,7 @@ import java.lang.ref.WeakReference;
                             k_14 = arg17.getSubterm(0);
                             l_14 = arg17.getSubterm(1);
                             term = termFactory.makeAppl(transform._consEJPCall_2, new IStrategoTerm[]{k_14, l_14});
-                            term = ejp_call_to_method_invokation_0_4.instance.invoke(context, term, r_71.value, s_71.value, t_71.value, u_71.value);
+                            term = ejp_call_to_method_invokation_0_4.instance.invoke(context, term, v_71.value, w_71.value, x_71.value, y_71.value);
                             if(term == null)
                               break Fail17;
                             term = termFactory.makeAppl(transform._consExprStm_1, new IStrategoTerm[]{term});
@@ -2497,7 +2500,7 @@ import java.lang.ref.WeakReference;
                                 break Fail18;
                               c_14 = term;
                               term = termFactory.makeAppl(transform._consScopedEJPCall_3, new IStrategoTerm[]{z_13, a_14, termFactory.makeAppl(transform._consBlock_1, new IStrategoTerm[]{b_14})});
-                              term = scoped_ejp_to_java_0_4.instance.invoke(context, term, r_71.value, s_71.value, t_71.value, u_71.value);
+                              term = scoped_ejp_to_java_0_4.instance.invoke(context, term, v_71.value, w_71.value, x_71.value, y_71.value);
                               if(term == null)
                                 break Fail18;
                               term = termFactory.makeTuple((IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consExprStm_1, new IStrategoTerm[]{c_14}), (IStrategoList)transform.constNil0), term);
@@ -2534,7 +2537,7 @@ import java.lang.ref.WeakReference;
                               break Fail7;
                             o_13 = term;
                             term = termFactory.makeAppl(transform._consScopedEJPCall_3, new IStrategoTerm[]{i_13, m_13, termFactory.makeAppl(transform._consBlock_1, new IStrategoTerm[]{n_13})});
-                            term = scoped_ejp_to_java_0_4.instance.invoke(context, term, r_71.value, s_71.value, t_71.value, u_71.value);
+                            term = scoped_ejp_to_java_0_4.instance.invoke(context, term, v_71.value, w_71.value, x_71.value, y_71.value);
                             if(term == null)
                               break Fail7;
                             term = termFactory.makeTuple((IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consExprStm_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consAssign_2, new IStrategoTerm[]{h_13, o_13})}), (IStrategoList)transform.constNil0), term);
@@ -2625,7 +2628,7 @@ import java.lang.ref.WeakReference;
   { 
     public static convert_var_dec_by_ejp_call_0_6 instance = new convert_var_dec_by_ejp_call_0_6();
 
-    public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm v_71, IStrategoTerm w_71, IStrategoTerm x_71, IStrategoTerm y_71, IStrategoTerm z_71, IStrategoTerm a_72)
+    public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm z_71, IStrategoTerm a_72, IStrategoTerm b_72, IStrategoTerm c_72, IStrategoTerm d_72, IStrategoTerm e_72)
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("convert_var_dec_by_ejp_call_0_6");
@@ -2649,10 +2652,10 @@ import java.lang.ref.WeakReference;
               p_20 = arg28.getSubterm(0);
               q_20 = arg28.getSubterm(1);
               term = termFactory.makeAppl(transform._consEJPCall_2, new IStrategoTerm[]{p_20, q_20});
-              term = ejp_call_to_method_invokation_0_4.instance.invoke(context, term, v_71, y_71, z_71, a_72);
+              term = ejp_call_to_method_invokation_0_4.instance.invoke(context, term, z_71, c_72, d_72, e_72);
               if(term == null)
                 break Fail22;
-              term = (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consLocalVarDecStm_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consLocalVarDec_3, new IStrategoTerm[]{w_71, x_71, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consVarDec_2, new IStrategoTerm[]{o_20, term}), (IStrategoList)transform.constNil0)})}), (IStrategoList)transform.constNil0);
+              term = (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consLocalVarDecStm_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consLocalVarDec_3, new IStrategoTerm[]{a_72, b_72, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consVarDec_2, new IStrategoTerm[]{o_20, term}), (IStrategoList)transform.constNil0)})}), (IStrategoList)transform.constNil0);
               if(true)
                 break Success17;
             }
@@ -2676,15 +2679,15 @@ import java.lang.ref.WeakReference;
               break Fail21;
             d_20 = arg30.getSubterm(0);
             term = termFactory.makeAppl(transform._consEJPCall_2, new IStrategoTerm[]{b_20, c_20});
-            term = ejp_call_to_method_invokation_0_4.instance.invoke(context, term, v_71, y_71, z_71, a_72);
+            term = ejp_call_to_method_invokation_0_4.instance.invoke(context, term, z_71, c_72, d_72, e_72);
             if(term == null)
               break Fail21;
             e_20 = term;
             term = termFactory.makeAppl(transform._consScopedEJPCall_3, new IStrategoTerm[]{b_20, c_20, termFactory.makeAppl(transform._consBlock_1, new IStrategoTerm[]{d_20})});
-            term = scoped_ejp_to_java_0_4.instance.invoke(context, term, v_71, y_71, z_71, a_72);
+            term = scoped_ejp_to_java_0_4.instance.invoke(context, term, z_71, c_72, d_72, e_72);
             if(term == null)
               break Fail21;
-            term = termFactory.makeTuple((IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consLocalVarDecStm_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consLocalVarDec_3, new IStrategoTerm[]{w_71, x_71, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consVarDec_2, new IStrategoTerm[]{a_20, e_20}), (IStrategoList)transform.constNil0)})}), (IStrategoList)transform.constNil0), term);
+            term = termFactory.makeTuple((IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consLocalVarDecStm_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consLocalVarDec_3, new IStrategoTerm[]{a_72, b_72, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consVarDec_2, new IStrategoTerm[]{a_20, e_20}), (IStrategoList)transform.constNil0)})}), (IStrategoList)transform.constNil0), term);
             term = conc_0_0.instance.invoke(context, term);
             if(term == null)
               break Fail21;
@@ -2714,9 +2717,9 @@ import java.lang.ref.WeakReference;
   { 
     public static add_local_vars_0_1 instance = new add_local_vars_0_1();
 
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm ref_b_72)
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm ref_f_72)
     { 
-      TermReference b_72 = new TermReference(ref_b_72);
+      TermReference f_72 = new TermReference(ref_f_72);
       context.push("add_local_vars_0_1");
       Fail23:
       { 
@@ -2742,7 +2745,7 @@ import java.lang.ref.WeakReference;
             b_21 = term;
             term = z_20;
             lifted20 lifted200 = new lifted20();
-            lifted200.b_72 = b_72;
+            lifted200.f_72 = f_72;
             lifted200.a_21 = a_21;
             term = SRTS_all.instance.invoke(context, term, lifted200);
             if(term == null)
@@ -2766,7 +2769,7 @@ import java.lang.ref.WeakReference;
             break Fail23;
           term = u_20.value;
           lifted26 lifted260 = new lifted26();
-          lifted260.b_72 = b_72;
+          lifted260.f_72 = f_72;
           term = SRTS_all.instance.invoke(context, term, lifted260);
           if(term == null)
             break Fail23;
@@ -3248,7 +3251,7 @@ import java.lang.ref.WeakReference;
       Fail38:
       { 
         IStrategoTerm d_25 = null;
-        TermReference f_25 = new TermReference();
+        IStrategoTerm f_25 = null;
         IStrategoTerm g_25 = null;
         IStrategoTerm h_25 = null;
         TermReference i_25 = new TermReference();
@@ -3264,10 +3267,10 @@ import java.lang.ref.WeakReference;
         TermReference v_25 = new TermReference();
         IStrategoTerm w_25 = null;
         IStrategoTerm z_25 = null;
-        IStrategoTerm u_27 = null;
-        IStrategoTerm v_27 = null;
-        IStrategoTerm w_27 = null;
-        IStrategoTerm x_27 = null;
+        IStrategoTerm p_27 = null;
+        IStrategoTerm q_27 = null;
+        IStrategoTerm r_27 = null;
+        IStrategoTerm t_27 = null;
         if(term.getTermType() != IStrategoTerm.APPL || transform._consScopedEJPCall_3 != ((IStrategoAppl)term).getConstructor())
           break Fail38;
         if(v_25.value == null)
@@ -3286,14 +3289,14 @@ import java.lang.ref.WeakReference;
         { 
           Fail39:
           { 
+            IStrategoTerm f_26 = null;
+            IStrategoTerm g_26 = null;
             IStrategoTerm j_26 = null;
-            IStrategoTerm k_26 = null;
-            IStrategoTerm n_26 = null;
-            IStrategoTerm p_26 = null;
-            IStrategoTerm v_26 = null;
-            IStrategoTerm x_26 = null;
-            IStrategoTerm z_26 = null;
-            IStrategoTerm o_27 = null;
+            IStrategoTerm l_26 = null;
+            IStrategoTerm o_26 = null;
+            IStrategoTerm s_26 = null;
+            IStrategoTerm u_26 = null;
+            IStrategoTerm h_27 = null;
             term = random_string_0_0.instance.invoke(context, term);
             if(term == null)
               break Fail39;
@@ -3316,21 +3319,11 @@ import java.lang.ref.WeakReference;
             term = try_1_0.instance.invoke(context, term, lifted450);
             if(term == null)
               break Fail39;
-            term = new_iset_0_0.instance.invoke(context, term);
+            term = get_vars_in_block_0_0.instance.invoke(context, g_25);
             if(term == null)
               break Fail39;
-            if(f_25.value == null)
-              f_25.value = term;
-            else
-              if(f_25.value != term && !f_25.value.match(term))
-                break Fail39;
-            term = g_25;
-            lifted46 lifted460 = new lifted46();
-            lifted460.f_25 = f_25;
-            term = topdown_1_0.instance.invoke(context, term, lifted460);
-            if(term == null)
-              break Fail39;
-            term = new_hashtable_0_0.instance.invoke(context, term);
+            f_25 = term;
+            term = get_inner_scoped_vars_0_0.instance.invoke(context, g_25);
             if(term == null)
               break Fail39;
             if(s_25.value == null)
@@ -3338,43 +3331,40 @@ import java.lang.ref.WeakReference;
             else
               if(s_25.value != term && !s_25.value.match(term))
                 break Fail39;
-            term = get_inner_scoped_vars_0_1.instance.invoke(context, g_25, s_25.value);
-            if(term == null)
-              break Fail39;
             term = new_iset_0_0.instance.invoke(context, term);
             if(term == null)
               break Fail39;
-            j_26 = term;
+            f_26 = term;
             term = hashtable_keys_0_0.instance.invoke(context, z_24);
             if(term == null)
               break Fail39;
-            term = iset_addlist_0_1.instance.invoke(context, j_26, term);
+            term = iset_addlist_0_1.instance.invoke(context, f_26, term);
             if(term == null)
               break Fail39;
-            term = iset_isect_0_1.instance.invoke(context, term, f_25.value);
+            term = iset_isect_0_1.instance.invoke(context, term, f_25);
             if(term == null)
               break Fail39;
             r_25 = term;
             term = new_iset_0_0.instance.invoke(context, term);
             if(term == null)
               break Fail39;
-            k_26 = term;
+            g_26 = term;
             h_25 = term;
-            n_26 = k_26;
+            j_26 = g_26;
             term = iset_elements_0_0.instance.invoke(context, r_25);
             if(term == null)
               break Fail39;
-            term = iset_addlist_0_1.instance.invoke(context, n_26, term);
+            term = iset_addlist_0_1.instance.invoke(context, j_26, term);
             if(term == null)
               break Fail39;
             term = h_25;
-            p_26 = h_25;
+            l_26 = h_25;
             if(s_25.value == null)
               break Fail39;
             term = hashtable_keys_0_0.instance.invoke(context, s_25.value);
             if(term == null)
               break Fail39;
-            term = iset_addlist_0_1.instance.invoke(context, p_26, term);
+            term = iset_addlist_0_1.instance.invoke(context, l_26, term);
             if(term == null)
               break Fail39;
             term = gen_auxilary_class_name_0_0.instance.invoke(context, term);
@@ -3384,22 +3374,22 @@ import java.lang.ref.WeakReference;
             term = my_hashtable_union_0_1.instance.invoke(context, z_24, s_25.value);
             if(term == null)
               break Fail39;
-            z_26 = term;
+            u_26 = term;
             term = remove_scoped_ejp_var_decs_0_0.instance.invoke(context, g_25);
             if(term == null)
               break Fail39;
-            x_26 = term;
-            term = z_26;
-            lifted48 lifted480 = new lifted48();
-            lifted480.s_25 = s_25;
-            lifted480.a_25 = a_25;
-            lifted480.b_25 = b_25;
-            lifted480.c_25 = c_25;
-            term = allow_extends_1_1.instance.invoke(context, term, lifted480, x_26);
+            s_26 = term;
+            term = u_26;
+            lifted46 lifted460 = new lifted46();
+            lifted460.s_25 = s_25;
+            lifted460.a_25 = a_25;
+            lifted460.b_25 = b_25;
+            lifted460.c_25 = c_25;
+            term = allow_extends_1_1.instance.invoke(context, term, lifted460, s_26);
             if(term == null)
               break Fail39;
-            v_26 = term;
-            term = gen_auxilery_class_0_5.instance.invoke(context, v_26, h_25, z_24, v_25.value, l_25, i_25.value);
+            o_26 = term;
+            term = gen_auxilery_class_0_5.instance.invoke(context, o_26, h_25, z_24, v_25.value, l_25, i_25.value);
             if(term == null)
               break Fail39;
             k_25 = term;
@@ -3418,13 +3408,13 @@ import java.lang.ref.WeakReference;
             if(term == null)
               break Fail39;
             o_25 = term;
-            o_27 = term;
+            h_27 = term;
             if(s_25.value == null)
               break Fail39;
             term = my_hashtable_remove_0_1.instance.invoke(context, s_25.value, r_25);
             if(term == null)
               break Fail39;
-            term = gen_after_call_assignments_with_declarations_0_2.instance.invoke(context, o_27, term, u_25);
+            term = gen_after_call_assignments_with_declarations_0_2.instance.invoke(context, h_27, term, u_25);
             if(term == null)
               break Fail39;
             t_25 = term;
@@ -3438,47 +3428,123 @@ import java.lang.ref.WeakReference;
           term = term20;
           IStrategoTerm x_25 = null;
           IStrategoTerm y_25 = null;
-          IStrategoTerm t_27 = null;
+          IStrategoTerm o_27 = null;
           x_25 = term;
           term = context.invokePrimitive("SSL_stacktrace_get_all_frame_names", term, NO_STRATEGIES, NO_TERMS);
           if(term == null)
             break Fail38;
           y_25 = term;
-          t_27 = x_25;
-          term = report_with_failure_0_2.instance.invoke(context, t_27, transform.const9, y_25);
+          o_27 = x_25;
+          term = report_with_failure_0_2.instance.invoke(context, o_27, transform.const9, y_25);
           if(term == null)
             break Fail38;
         }
         term = z_25;
-        v_27 = z_25;
-        x_27 = term;
+        q_27 = z_25;
+        t_27 = term;
         if(o_25 == null || t_25 == null)
           break Fail38;
         term = termFactory.makeTuple(o_25, termFactory.annotateTerm(t_25, checkListAnnos(termFactory, transform.constNil0)));
         term = make$Conc_0_0.instance.invoke(context, term);
         if(term == null)
           break Fail38;
-        w_27 = term;
-        term = x_27;
+        r_27 = term;
+        term = t_27;
         if(n_25 == null || w_25 == null)
           break Fail38;
         IStrategoList list0;
-        list0 = checkListTail(w_27);
+        list0 = checkListTail(r_27);
         if(list0 == null)
           break Fail38;
         term = termFactory.makeTuple(n_25, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consExprStm_1, new IStrategoTerm[]{w_25}), list0));
         term = make$Conc_0_0.instance.invoke(context, term);
         if(term == null)
           break Fail38;
-        u_27 = term;
-        term = v_27;
+        p_27 = term;
+        term = q_27;
         if(k_25 == null || m_25 == null)
           break Fail38;
         IStrategoList list1;
-        list1 = checkListTail(u_27);
+        list1 = checkListTail(p_27);
         if(list1 == null)
           break Fail38;
         term = (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consClassDecStm_1, new IStrategoTerm[]{k_25}), termFactory.makeListCons(m_25, list1));
+        context.popOnSuccess();
+        if(true)
+          return term;
+      }
+      context.popOnFailure();
+      return null;
+    }
+  }
+
+  @SuppressWarnings("all") public static class get_vars_in_block_0_0 extends Strategy 
+  { 
+    public static get_vars_in_block_0_0 instance = new get_vars_in_block_0_0();
+
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
+    { 
+      context.push("get_vars_in_block_0_0");
+      Fail40:
+      { 
+        IStrategoTerm u_27 = null;
+        TermReference v_27 = new TermReference();
+        u_27 = term;
+        term = new_iset_0_0.instance.invoke(context, term);
+        if(term == null)
+          break Fail40;
+        if(v_27.value == null)
+          v_27.value = term;
+        else
+          if(v_27.value != term && !v_27.value.match(term))
+            break Fail40;
+        term = u_27;
+        lifted47 lifted470 = new lifted47();
+        lifted470.v_27 = v_27;
+        term = topdown_1_0.instance.invoke(context, term, lifted470);
+        if(term == null)
+          break Fail40;
+        if(v_27.value == null)
+          break Fail40;
+        term = v_27.value;
+        context.popOnSuccess();
+        if(true)
+          return term;
+      }
+      context.popOnFailure();
+      return null;
+    }
+  }
+
+  @SuppressWarnings("all") public static class get_inner_scoped_vars_0_0 extends Strategy 
+  { 
+    public static get_inner_scoped_vars_0_0 instance = new get_inner_scoped_vars_0_0();
+
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
+    { 
+      context.push("get_inner_scoped_vars_0_0");
+      Fail41:
+      { 
+        IStrategoTerm a_28 = null;
+        TermReference b_28 = new TermReference();
+        a_28 = term;
+        term = new_hashtable_0_0.instance.invoke(context, term);
+        if(term == null)
+          break Fail41;
+        if(b_28.value == null)
+          b_28.value = term;
+        else
+          if(b_28.value != term && !b_28.value.match(term))
+            break Fail41;
+        term = a_28;
+        lifted49 lifted490 = new lifted49();
+        lifted490.b_28 = b_28;
+        term = SRTS_all.instance.invoke(context, term, lifted490);
+        if(term == null)
+          break Fail41;
+        if(b_28.value == null)
+          break Fail41;
+        term = b_28.value;
         context.popOnSuccess();
         if(true)
           return term;
@@ -3492,31 +3558,31 @@ import java.lang.ref.WeakReference;
   { 
     public static handle_pointcutargs_0_2 instance = new handle_pointcutargs_0_2();
 
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm ref_y_27, IStrategoTerm ref_z_27)
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm ref_g_28, IStrategoTerm ref_i_28)
     { 
-      TermReference y_27 = new TermReference(ref_y_27);
-      TermReference z_27 = new TermReference(ref_z_27);
+      TermReference g_28 = new TermReference(ref_g_28);
+      TermReference i_28 = new TermReference(ref_i_28);
       context.push("handle_pointcutargs_0_2");
-      Fail40:
+      Fail42:
       { 
-        IStrategoTerm a_28 = null;
+        IStrategoTerm j_28 = null;
         if(term.getTermType() != IStrategoTerm.APPL || transform._consSome_1 != ((IStrategoAppl)term).getConstructor())
-          break Fail40;
+          break Fail42;
         IStrategoTerm arg60 = term.getSubterm(0);
         if(arg60.getTermType() != IStrategoTerm.APPL || transform._consPointcutargs_1 != ((IStrategoAppl)arg60).getConstructor())
-          break Fail40;
-        a_28 = arg60.getSubterm(0);
-        term = a_28;
-        lifted49 lifted490 = new lifted49();
-        lifted490.z_27 = z_27;
-        term = map_1_0.instance.invoke(context, term, lifted490);
+          break Fail42;
+        j_28 = arg60.getSubterm(0);
+        term = j_28;
+        lifted51 lifted511 = new lifted51();
+        lifted511.i_28 = i_28;
+        term = map_1_0.instance.invoke(context, term, lifted511);
         if(term == null)
-          break Fail40;
-        lifted50 lifted500 = new lifted50();
-        lifted500.y_27 = y_27;
-        term = map_1_0.instance.invoke(context, term, lifted500);
+          break Fail42;
+        lifted52 lifted520 = new lifted52();
+        lifted520.g_28 = g_28;
+        term = map_1_0.instance.invoke(context, term, lifted520);
         if(term == null)
-          break Fail40;
+          break Fail42;
         context.popOnSuccess();
         if(true)
           return term;
@@ -3530,86 +3596,56 @@ import java.lang.ref.WeakReference;
   { 
     public static handle_pointcutarg_helper_0_1 instance = new handle_pointcutarg_helper_0_1();
 
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm c_28)
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm l_28)
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("handle_pointcutarg_helper_0_1");
-      Fail41:
+      Fail43:
       { 
-        IStrategoTerm e_28 = null;
-        IStrategoTerm f_28 = null;
-        IStrategoTerm g_28 = null;
-        IStrategoTerm i_28 = null;
-        IStrategoTerm j_28 = null;
-        IStrategoTerm k_28 = null;
         IStrategoTerm n_28 = null;
-        IStrategoTerm l_28 = null;
         IStrategoTerm p_28 = null;
+        IStrategoTerm q_28 = null;
+        IStrategoTerm s_28 = null;
+        IStrategoTerm t_28 = null;
+        IStrategoTerm u_28 = null;
+        IStrategoTerm z_28 = null;
+        IStrategoTerm x_28 = null;
+        IStrategoTerm a_29 = null;
         if(term.getTermType() != IStrategoTerm.APPL || transform._consPointcutarg_3 != ((IStrategoAppl)term).getConstructor())
-          break Fail41;
+          break Fail43;
         IStrategoTerm arg61 = term.getSubterm(0);
         if(arg61.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg61).getConstructor())
-          break Fail41;
-        g_28 = arg61.getSubterm(0);
-        j_28 = term.getSubterm(1);
-        i_28 = term.getSubterm(2);
-        term = c_28;
+          break Fail43;
+        q_28 = arg61.getSubterm(0);
+        t_28 = term.getSubterm(1);
+        s_28 = term.getSubterm(2);
+        term = l_28;
         if(term.getTermType() != IStrategoTerm.APPL || transform._consExplicitJoinPoint_3 != ((IStrategoAppl)term).getConstructor())
-          break Fail41;
-        e_28 = term.getSubterm(0);
+          break Fail43;
+        n_28 = term.getSubterm(0);
         IStrategoTerm arg62 = term.getSubterm(1);
         if(arg62.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg62).getConstructor())
-          break Fail41;
-        f_28 = arg62.getSubterm(0);
-        n_28 = term;
-        term = pp_aspectj_string_0_0.instance.invoke(context, e_28);
+          break Fail43;
+        p_28 = arg62.getSubterm(0);
+        z_28 = term;
+        term = pp_aspectj_string_0_0.instance.invoke(context, n_28);
         if(term == null)
-          break Fail41;
-        k_28 = term;
-        p_28 = n_28;
-        term = pp_aspectj_string_0_0.instance.invoke(context, i_28);
+          break Fail43;
+        u_28 = term;
+        a_29 = z_28;
+        term = pp_aspectj_string_0_0.instance.invoke(context, s_28);
         if(term == null)
-          break Fail41;
-        l_28 = term;
-        term = p_28;
+          break Fail43;
+        x_28 = term;
+        term = a_29;
         term = random_string_0_0.instance.invoke(context, term);
         if(term == null)
-          break Fail41;
+          break Fail43;
         term = (IStrategoTerm)termFactory.makeListCons(transform.const10, termFactory.makeListCons(term, (IStrategoList)transform.constNil0));
         term = concat_strings_0_0.instance.invoke(context, term);
         if(term == null)
-          break Fail41;
-        term = termFactory.makeAppl(transform._consMethodDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consMethodDecHead_6, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consAnno_2, new IStrategoTerm[]{transform.constTypeName3, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId4, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{k_28}), (IStrategoList)transform.constNil0)})})}), termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId3, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{f_28}), (IStrategoList)transform.constNil0)})})}), termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId8, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{g_28}), (IStrategoList)transform.constNil0)})})}), termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId7, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{l_28}), (IStrategoList)transform.constNil0)})})}), (IStrategoList)transform.constNil0))))}), (IStrategoList)transform.constNil0), transform.constNone0, transform.constVoid0, termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{term}), j_28, transform.constNone0}), transform.constBlock0});
-        context.popOnSuccess();
-        if(true)
-          return term;
-      }
-      context.popOnFailure();
-      return null;
-    }
-  }
-
-  @SuppressWarnings("all") public static class get_inner_scoped_vars_0_1 extends Strategy 
-  { 
-    public static get_inner_scoped_vars_0_1 instance = new get_inner_scoped_vars_0_1();
-
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm ref_u_28)
-    { 
-      TermReference u_28 = new TermReference(ref_u_28);
-      context.push("get_inner_scoped_vars_0_1");
-      Fail42:
-      { 
-        IStrategoTerm x_28 = null;
-        IStrategoTerm y_28 = null;
-        y_28 = term;
-        x_28 = term;
-        term = y_28;
-        lifted51 lifted511 = new lifted51();
-        lifted511.u_28 = u_28;
-        term = SRTS_all.instance.invoke(context, term, lifted511);
-        if(term == null)
-          break Fail42;
-        term = x_28;
+          break Fail43;
+        term = termFactory.makeAppl(transform._consMethodDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consMethodDecHead_6, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consAnno_2, new IStrategoTerm[]{transform.constTypeName3, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId4, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{u_28}), (IStrategoList)transform.constNil0)})})}), termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId3, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{p_28}), (IStrategoList)transform.constNil0)})})}), termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId8, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{q_28}), (IStrategoList)transform.constNil0)})})}), termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId7, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{x_28}), (IStrategoList)transform.constNil0)})})}), (IStrategoList)transform.constNil0))))}), (IStrategoList)transform.constNil0), transform.constNone0, transform.constVoid0, termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{term}), t_28, transform.constNone0}), transform.constBlock0});
         context.popOnSuccess();
         if(true)
           return term;
@@ -3626,48 +3662,48 @@ import java.lang.ref.WeakReference;
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       context.push("remove_vars_decs_from_local_var_dec_stm_0_0");
-      Fail43:
+      Fail44:
       { 
-        IStrategoTerm e_29 = null;
-        IStrategoTerm f_29 = null;
         IStrategoTerm i_29 = null;
+        IStrategoTerm j_29 = null;
+        IStrategoTerm m_29 = null;
         if(term.getTermType() != IStrategoTerm.APPL || transform._consLocalVarDecStm_1 != ((IStrategoAppl)term).getConstructor())
-          break Fail43;
+          break Fail44;
         IStrategoTerm arg63 = term.getSubterm(0);
         if(arg63.getTermType() != IStrategoTerm.APPL || transform._consLocalVarDec_3 != ((IStrategoAppl)arg63).getConstructor())
-          break Fail43;
-        e_29 = arg63.getSubterm(2);
-        i_29 = term;
+          break Fail44;
+        i_29 = arg63.getSubterm(2);
+        m_29 = term;
         IStrategoTerm term21 = term;
         Success21:
         { 
-          Fail44:
+          Fail45:
           { 
-            term = allow_extends_1_1.instance.invoke(context, term, remove_var_dec_0_0.instance, e_29);
+            term = allow_extends_1_1.instance.invoke(context, term, remove_var_dec_0_0.instance, i_29);
             if(term == null)
-              break Fail44;
-            f_29 = term;
+              break Fail45;
+            j_29 = term;
             if(true)
               break Success21;
           }
           term = term21;
-          IStrategoTerm g_29 = null;
-          IStrategoTerm h_29 = null;
-          IStrategoTerm m_29 = null;
-          g_29 = term;
+          IStrategoTerm k_29 = null;
+          IStrategoTerm l_29 = null;
+          IStrategoTerm q_29 = null;
+          k_29 = term;
           term = context.invokePrimitive("SSL_stacktrace_get_all_frame_names", term, NO_STRATEGIES, NO_TERMS);
           if(term == null)
-            break Fail43;
-          h_29 = term;
-          m_29 = g_29;
-          term = report_with_failure_0_2.instance.invoke(context, m_29, transform.const13, h_29);
+            break Fail44;
+          l_29 = term;
+          q_29 = k_29;
+          term = report_with_failure_0_2.instance.invoke(context, q_29, transform.const13, l_29);
           if(term == null)
-            break Fail43;
+            break Fail44;
         }
-        term = i_29;
-        if(f_29 == null)
-          break Fail43;
-        term = f_29;
+        term = m_29;
+        if(j_29 == null)
+          break Fail44;
+        term = j_29;
         context.popOnSuccess();
         if(true)
           return term;
@@ -3684,7 +3720,7 @@ import java.lang.ref.WeakReference;
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       ITermFactory termFactory = context.getFactory();
-      Fail45:
+      Fail46:
       { 
         IStrategoTerm term22 = term;
         IStrategoConstructor cons4 = term.getTermType() == IStrategoTerm.APPL ? ((IStrategoAppl)term).getConstructor() : null;
@@ -3692,7 +3728,7 @@ import java.lang.ref.WeakReference;
         { 
           if(cons4 == transform._consVarDec_1)
           { 
-            Fail46:
+            Fail47:
             { 
               term = transform.constNone0;
               if(true)
@@ -3702,15 +3738,15 @@ import java.lang.ref.WeakReference;
           }
           if(cons4 == transform._consVarDec_2)
           { 
-            IStrategoTerm n_29 = null;
-            IStrategoTerm o_29 = null;
-            n_29 = term.getSubterm(0);
-            o_29 = term.getSubterm(1);
-            term = termFactory.makeAppl(transform._consExprStm_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consAssign_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consExprName_1, new IStrategoTerm[]{n_29}), o_29})});
+            IStrategoTerm r_29 = null;
+            IStrategoTerm s_29 = null;
+            r_29 = term.getSubterm(0);
+            s_29 = term.getSubterm(1);
+            term = termFactory.makeAppl(transform._consExprStm_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consAssign_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consExprName_1, new IStrategoTerm[]{r_29}), s_29})});
           }
           else
           { 
-            break Fail45;
+            break Fail46;
           }
         }
         if(true)
@@ -3726,10 +3762,10 @@ import java.lang.ref.WeakReference;
   { 
     public static pointcutarg_0_3 instance = new pointcutarg_0_3();
 
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm c_72, IStrategoTerm d_72, IStrategoTerm e_72)
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm g_72, IStrategoTerm h_72, IStrategoTerm i_72)
     { 
       ITermFactory termFactory = context.getFactory();
-      Fail47:
+      Fail48:
       { 
         IStrategoTerm term23 = term;
         IStrategoConstructor cons5 = term.getTermType() == IStrategoTerm.APPL ? ((IStrategoAppl)term).getConstructor() : null;
@@ -3737,9 +3773,9 @@ import java.lang.ref.WeakReference;
         { 
           if(cons5 == transform._consThisClass_0)
           { 
-            Fail48:
+            Fail49:
             { 
-              term = termFactory.makeAppl(transform._consWithin_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consAnnoTypePattern_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consAnnoPattern_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consSimpleAnnoPatternValue_2, new IStrategoTerm[]{transform.constTypeName4, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consDeci_1, new IStrategoTerm[]{c_72})})}), (IStrategoList)transform.constNil0)}), transform.constRefTypePattern0})});
+              term = termFactory.makeAppl(transform._consWithin_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consAnnoTypePattern_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consAnnoPattern_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consSimpleAnnoPatternValue_2, new IStrategoTerm[]{transform.constTypeName4, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consDeci_1, new IStrategoTerm[]{g_72})})}), (IStrategoList)transform.constNil0)}), transform.constRefTypePattern0})});
               if(true)
                 break Success23;
             }
@@ -3749,9 +3785,9 @@ import java.lang.ref.WeakReference;
           { 
             if(cons5 == transform._consThisMethod_0)
             { 
-              Fail49:
+              Fail50:
               { 
-                term = termFactory.makeAppl(transform._consMethodPattern_6, new IStrategoTerm[]{termFactory.makeAppl(transform._consAnnoPattern_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consSimpleAnnoPatternValue_2, new IStrategoTerm[]{transform.constTypeName5, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consDeci_1, new IStrategoTerm[]{d_72})})}), (IStrategoList)transform.constNil0)}), transform.constModPattern0, transform.constRefTypePattern0, transform.constMemberName0, transform.constCons2, transform.constNone0});
+                term = termFactory.makeAppl(transform._consMethodPattern_6, new IStrategoTerm[]{termFactory.makeAppl(transform._consAnnoPattern_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consSimpleAnnoPatternValue_2, new IStrategoTerm[]{transform.constTypeName5, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consDeci_1, new IStrategoTerm[]{h_72})})}), (IStrategoList)transform.constNil0)}), transform.constModPattern0, transform.constRefTypePattern0, transform.constMemberName0, transform.constCons2, transform.constNone0});
                 if(true)
                   break Success24;
               }
@@ -3759,11 +3795,11 @@ import java.lang.ref.WeakReference;
             }
             if(cons5 == transform._consThisBlock_0)
             { 
-              term = termFactory.makeAppl(transform._consMethodPattern_6, new IStrategoTerm[]{termFactory.makeAppl(transform._consAnnoPattern_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consSimpleAnnoPatternValue_2, new IStrategoTerm[]{transform.constTypeName6, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consDeci_1, new IStrategoTerm[]{e_72})})}), (IStrategoList)transform.constNil0)}), transform.constModPattern0, transform.constRefTypePattern0, transform.constMemberName0, transform.constCons2, transform.constNone0});
+              term = termFactory.makeAppl(transform._consMethodPattern_6, new IStrategoTerm[]{termFactory.makeAppl(transform._consAnnoPattern_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consSimpleAnnoPatternValue_2, new IStrategoTerm[]{transform.constTypeName6, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consDeci_1, new IStrategoTerm[]{i_72})})}), (IStrategoList)transform.constNil0)}), transform.constModPattern0, transform.constRefTypePattern0, transform.constMemberName0, transform.constCons2, transform.constNone0});
             }
             else
             { 
-              break Fail47;
+              break Fail48;
             }
           }
         }
@@ -3784,7 +3820,7 @@ import java.lang.ref.WeakReference;
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("gen__ejp__name_0_0");
-      Fail50:
+      Fail51:
       { 
         IStrategoTerm term25 = term;
         IStrategoConstructor cons6 = term.getTermType() == IStrategoTerm.APPL ? ((IStrategoAppl)term).getConstructor() : null;
@@ -3792,7 +3828,7 @@ import java.lang.ref.WeakReference;
         { 
           if(cons6 == transform._consMemberName_1)
           { 
-            Fail51:
+            Fail52:
             { 
               if(true)
                 break Success25;
@@ -3801,40 +3837,40 @@ import java.lang.ref.WeakReference;
           }
           if(cons6 == transform._consMemberName_2)
           { 
-            IStrategoTerm z_29 = null;
-            IStrategoTerm a_30 = null;
+            IStrategoTerm d_30 = null;
+            IStrategoTerm e_30 = null;
             IStrategoTerm arg67 = term.getSubterm(0);
             if(arg67.getTermType() != IStrategoTerm.APPL || transform._consRefTypePattern_1 != ((IStrategoAppl)arg67).getConstructor())
-              break Fail50;
-            z_29 = arg67.getSubterm(0);
-            a_30 = term.getSubterm(1);
+              break Fail51;
+            d_30 = arg67.getSubterm(0);
+            e_30 = term.getSubterm(1);
             Success26:
             { 
-              Fail52:
+              Fail53:
               { 
-                IStrategoTerm b_30 = null;
-                b_30 = term;
-                term = termFactory.makeTuple(transform.constNamePattern0, z_29);
+                IStrategoTerm j_30 = null;
+                j_30 = term;
+                term = termFactory.makeTuple(transform.constNamePattern0, d_30);
                 term = equal_0_0.instance.invoke(context, term);
                 if(term == null)
-                  break Fail52;
-                term = b_30;
+                  break Fail53;
+                term = j_30;
                 { 
-                  term = termFactory.makeAppl(transform._consMemberName_1, new IStrategoTerm[]{a_30});
+                  term = termFactory.makeAppl(transform._consMemberName_1, new IStrategoTerm[]{e_30});
                   if(true)
                     break Success26;
                 }
               }
-              term = termFactory.makeAppl(transform._consMemberName_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consRefTypePattern_1, new IStrategoTerm[]{z_29}), a_30});
+              term = termFactory.makeAppl(transform._consMemberName_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consRefTypePattern_1, new IStrategoTerm[]{d_30}), e_30});
               term = pp_aspectj_string_0_0.instance.invoke(context, term);
               if(term == null)
-                break Fail50;
+                break Fail51;
               term = termFactory.makeAppl(transform._consMemberName_1, new IStrategoTerm[]{term});
             }
           }
           else
           { 
-            break Fail50;
+            break Fail51;
           }
         }
         context.popOnSuccess();
@@ -3854,7 +3890,7 @@ import java.lang.ref.WeakReference;
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("typename__2__ambname_0_0");
-      Fail53:
+      Fail54:
       { 
         IStrategoTerm term27 = term;
         IStrategoConstructor cons7 = term.getTermType() == IStrategoTerm.APPL ? ((IStrategoAppl)term).getConstructor() : null;
@@ -3862,11 +3898,11 @@ import java.lang.ref.WeakReference;
         { 
           if(cons7 == transform._consTypeName_1)
           { 
-            Fail54:
+            Fail55:
             { 
-              IStrategoTerm n_33 = null;
-              n_33 = term.getSubterm(0);
-              term = termFactory.makeAppl(transform._consAmbName_1, new IStrategoTerm[]{n_33});
+              IStrategoTerm v_33 = null;
+              v_33 = term.getSubterm(0);
+              term = termFactory.makeAppl(transform._consAmbName_1, new IStrategoTerm[]{v_33});
               if(true)
                 break Success27;
             }
@@ -3876,16 +3912,16 @@ import java.lang.ref.WeakReference;
           { 
             if(cons7 == transform._consTypeName_2)
             { 
-              Fail55:
+              Fail56:
               { 
-                IStrategoTerm f_33 = null;
-                IStrategoTerm k_33 = null;
-                f_33 = term.getSubterm(0);
-                k_33 = term.getSubterm(1);
-                term = this.invoke(context, f_33);
+                IStrategoTerm n_33 = null;
+                IStrategoTerm s_33 = null;
+                n_33 = term.getSubterm(0);
+                s_33 = term.getSubterm(1);
+                term = this.invoke(context, n_33);
                 if(term == null)
-                  break Fail55;
-                term = termFactory.makeAppl(transform._consAmbName_2, new IStrategoTerm[]{term, k_33});
+                  break Fail56;
+                term = termFactory.makeAppl(transform._consAmbName_2, new IStrategoTerm[]{term, s_33});
                 if(true)
                   break Success28;
               }
@@ -3895,11 +3931,11 @@ import java.lang.ref.WeakReference;
             { 
               if(cons7 == transform._consPackageOrTypeName_1)
               { 
-                Fail56:
+                Fail57:
                 { 
-                  IStrategoTerm e_33 = null;
-                  e_33 = term.getSubterm(0);
-                  term = termFactory.makeAppl(transform._consAmbName_1, new IStrategoTerm[]{e_33});
+                  IStrategoTerm m_33 = null;
+                  m_33 = term.getSubterm(0);
+                  term = termFactory.makeAppl(transform._consAmbName_1, new IStrategoTerm[]{m_33});
                   if(true)
                     break Success29;
                 }
@@ -3907,18 +3943,18 @@ import java.lang.ref.WeakReference;
               }
               if(cons7 == transform._consPackageOrTypeName_2)
               { 
-                IStrategoTerm n_31 = null;
-                IStrategoTerm e_32 = null;
-                n_31 = term.getSubterm(0);
-                e_32 = term.getSubterm(1);
-                term = this.invoke(context, n_31);
+                IStrategoTerm e_33 = null;
+                IStrategoTerm f_33 = null;
+                e_33 = term.getSubterm(0);
+                f_33 = term.getSubterm(1);
+                term = this.invoke(context, e_33);
                 if(term == null)
-                  break Fail53;
-                term = termFactory.makeAppl(transform._consAmbName_2, new IStrategoTerm[]{term, e_32});
+                  break Fail54;
+                term = termFactory.makeAppl(transform._consAmbName_2, new IStrategoTerm[]{term, f_33});
               }
               else
               { 
-                break Fail53;
+                break Fail54;
               }
             }
           }
@@ -3940,15 +3976,15 @@ import java.lang.ref.WeakReference;
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("gen__nomatch__pointcut__name_0_0");
-      Fail57:
+      Fail58:
       { 
         term = random_string_0_0.instance.invoke(context, term);
         if(term == null)
-          break Fail57;
+          break Fail58;
         term = (IStrategoTerm)termFactory.makeListCons(transform.const18, termFactory.makeListCons(term, (IStrategoList)transform.constNil0));
         term = concat_strings_0_0.instance.invoke(context, term);
         if(term == null)
-          break Fail57;
+          break Fail58;
         context.popOnSuccess();
         if(true)
           return term;
@@ -3962,11 +3998,11 @@ import java.lang.ref.WeakReference;
   { 
     public static gen__ejpscope__method__name_0_2 instance = new gen__ejpscope__method__name_0_2();
 
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm f_72, IStrategoTerm g_72)
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm j_72, IStrategoTerm k_72)
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("gen__ejpscope__method__name_0_2");
-      Fail58:
+      Fail59:
       { 
         IStrategoTerm term30 = term;
         IStrategoConstructor cons8 = term.getTermType() == IStrategoTerm.APPL ? ((IStrategoAppl)term).getConstructor() : null;
@@ -3974,41 +4010,41 @@ import java.lang.ref.WeakReference;
         { 
           if(cons8 == transform._consMemberName_1)
           { 
-            Fail59:
+            Fail60:
             { 
-              IStrategoTerm a_34 = null;
-              IStrategoTerm b_34 = null;
-              a_34 = term.getSubterm(0);
+              IStrategoTerm e_34 = null;
+              IStrategoTerm f_34 = null;
+              e_34 = term.getSubterm(0);
               Success31:
               { 
-                Fail60:
+                Fail61:
                 { 
-                  IStrategoTerm c_34 = null;
-                  c_34 = term;
-                  term = f_72;
+                  IStrategoTerm g_34 = null;
+                  g_34 = term;
+                  term = j_72;
                   if(term.getTermType() != IStrategoTerm.APPL || transform._consNone_0 != ((IStrategoAppl)term).getConstructor())
-                    break Fail60;
-                  term = c_34;
+                    break Fail61;
+                  term = g_34;
                   { 
-                    term = (IStrategoTerm)termFactory.makeListCons(transform.const20, termFactory.makeListCons(g_72, termFactory.makeListCons(transform.const19, termFactory.makeListCons(a_34, (IStrategoList)transform.constNil0))));
+                    term = (IStrategoTerm)termFactory.makeListCons(transform.const20, termFactory.makeListCons(k_72, termFactory.makeListCons(transform.const19, termFactory.makeListCons(e_34, (IStrategoList)transform.constNil0))));
                     term = concat_strings_0_0.instance.invoke(context, term);
                     if(term == null)
-                      break Fail59;
-                    b_34 = term;
+                      break Fail60;
+                    f_34 = term;
                     if(true)
                       break Success31;
                   }
                 }
-                term = convert_package_name_0_0.instance.invoke(context, f_72);
+                term = convert_package_name_0_0.instance.invoke(context, j_72);
                 if(term == null)
-                  break Fail59;
-                term = (IStrategoTerm)termFactory.makeListCons(transform.const20, termFactory.makeListCons(term, termFactory.makeListCons(g_72, termFactory.makeListCons(transform.const19, termFactory.makeListCons(a_34, (IStrategoList)transform.constNil0)))));
+                  break Fail60;
+                term = (IStrategoTerm)termFactory.makeListCons(transform.const20, termFactory.makeListCons(term, termFactory.makeListCons(k_72, termFactory.makeListCons(transform.const19, termFactory.makeListCons(e_34, (IStrategoList)transform.constNil0)))));
                 term = concat_strings_0_0.instance.invoke(context, term);
                 if(term == null)
-                  break Fail59;
-                b_34 = term;
+                  break Fail60;
+                f_34 = term;
               }
-              term = termFactory.makeAppl(transform._consMemberName_2, new IStrategoTerm[]{transform.constRefTypePattern0, b_34});
+              term = termFactory.makeAppl(transform._consMemberName_2, new IStrategoTerm[]{transform.constRefTypePattern0, f_34});
               if(true)
                 break Success30;
             }
@@ -4018,11 +4054,11 @@ import java.lang.ref.WeakReference;
           { 
             term = gen__ejpscope__method__name_0_0.instance.invoke(context, term);
             if(term == null)
-              break Fail58;
+              break Fail59;
           }
           else
           { 
-            break Fail58;
+            break Fail59;
           }
         }
         context.popOnSuccess();
@@ -4041,18 +4077,18 @@ import java.lang.ref.WeakReference;
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       context.push("convert_package_name_0_0");
-      Fail61:
+      Fail62:
       { 
-        IStrategoTerm f_34 = null;
+        IStrategoTerm j_34 = null;
         if(term.getTermType() != IStrategoTerm.APPL || transform._consPackageName_1 != ((IStrategoAppl)term).getConstructor())
-          break Fail61;
-        f_34 = term.getSubterm(0);
-        term = map_1_0.instance.invoke(context, f_34, lifted54.instance);
+          break Fail62;
+        j_34 = term.getSubterm(0);
+        term = map_1_0.instance.invoke(context, j_34, lifted54.instance);
         if(term == null)
-          break Fail61;
+          break Fail62;
         term = concat_strings_0_0.instance.invoke(context, term);
         if(term == null)
-          break Fail61;
+          break Fail62;
         context.popOnSuccess();
         if(true)
           return term;
@@ -4070,7 +4106,7 @@ import java.lang.ref.WeakReference;
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("gen__ejpscope__method__name_0_0");
-      Fail62:
+      Fail63:
       { 
         IStrategoTerm term32 = term;
         IStrategoConstructor cons9 = term.getTermType() == IStrategoTerm.APPL ? ((IStrategoAppl)term).getConstructor() : null;
@@ -4078,22 +4114,22 @@ import java.lang.ref.WeakReference;
         { 
           if(cons9 == transform._consExplicitJoinPoint_3)
           { 
-            Fail63:
+            Fail64:
             { 
-              IStrategoTerm q_34 = null;
-              IStrategoTerm r_34 = null;
-              q_34 = term.getSubterm(0);
+              IStrategoTerm u_34 = null;
+              IStrategoTerm v_34 = null;
+              u_34 = term.getSubterm(0);
               IStrategoTerm arg70 = term.getSubterm(1);
               if(arg70.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg70).getConstructor())
-                break Fail63;
-              r_34 = arg70.getSubterm(0);
-              term = gen__ejpscope__method__name__helper_0_0.instance.invoke(context, q_34);
+                break Fail64;
+              v_34 = arg70.getSubterm(0);
+              term = gen__ejpscope__method__name__helper_0_0.instance.invoke(context, u_34);
               if(term == null)
-                break Fail63;
-              term = (IStrategoTerm)termFactory.makeListCons(transform.const20, termFactory.makeListCons(term, termFactory.makeListCons(transform.const19, termFactory.makeListCons(r_34, (IStrategoList)transform.constNil0))));
+                break Fail64;
+              term = (IStrategoTerm)termFactory.makeListCons(transform.const20, termFactory.makeListCons(term, termFactory.makeListCons(transform.const19, termFactory.makeListCons(v_34, (IStrategoList)transform.constNil0))));
               term = concat_strings_0_0.instance.invoke(context, term);
               if(term == null)
-                break Fail63;
+                break Fail64;
               if(true)
                 break Success32;
             }
@@ -4101,47 +4137,47 @@ import java.lang.ref.WeakReference;
           }
           if(cons9 == transform._consMemberName_2)
           { 
-            IStrategoTerm h_34 = null;
-            IStrategoTerm i_34 = null;
+            IStrategoTerm l_34 = null;
+            IStrategoTerm m_34 = null;
             IStrategoTerm arg72 = term.getSubterm(0);
             if(arg72.getTermType() != IStrategoTerm.APPL || transform._consRefTypePattern_1 != ((IStrategoAppl)arg72).getConstructor())
-              break Fail62;
-            h_34 = arg72.getSubterm(0);
-            i_34 = term.getSubterm(1);
+              break Fail63;
+            l_34 = arg72.getSubterm(0);
+            m_34 = term.getSubterm(1);
             Success33:
             { 
-              Fail64:
+              Fail65:
               { 
-                IStrategoTerm j_34 = null;
-                j_34 = term;
-                term = termFactory.makeTuple(transform.constNamePattern0, h_34);
+                IStrategoTerm n_34 = null;
+                n_34 = term;
+                term = termFactory.makeTuple(transform.constNamePattern0, l_34);
                 term = equal_0_0.instance.invoke(context, term);
                 if(term == null)
-                  break Fail64;
-                term = j_34;
+                  break Fail65;
+                term = n_34;
                 { 
-                  term = (IStrategoTerm)termFactory.makeListCons(transform.const20, termFactory.makeListCons(i_34, (IStrategoList)transform.constNil0));
+                  term = (IStrategoTerm)termFactory.makeListCons(transform.const20, termFactory.makeListCons(m_34, (IStrategoList)transform.constNil0));
                   term = concat_strings_0_0.instance.invoke(context, term);
                   if(term == null)
-                    break Fail62;
+                    break Fail63;
                   term = termFactory.makeAppl(transform._consMemberName_1, new IStrategoTerm[]{term});
                   if(true)
                     break Success33;
                 }
               }
-              term = gen__ejpscope__method__name__helper_0_0.instance.invoke(context, h_34);
+              term = gen__ejpscope__method__name__helper_0_0.instance.invoke(context, l_34);
               if(term == null)
-                break Fail62;
-              term = (IStrategoTerm)termFactory.makeListCons(transform.const20, termFactory.makeListCons(term, termFactory.makeListCons(transform.const19, termFactory.makeListCons(i_34, (IStrategoList)transform.constNil0))));
+                break Fail63;
+              term = (IStrategoTerm)termFactory.makeListCons(transform.const20, termFactory.makeListCons(term, termFactory.makeListCons(transform.const19, termFactory.makeListCons(m_34, (IStrategoList)transform.constNil0))));
               term = concat_strings_0_0.instance.invoke(context, term);
               if(term == null)
-                break Fail62;
+                break Fail63;
               term = termFactory.makeAppl(transform._consMemberName_1, new IStrategoTerm[]{term});
             }
           }
           else
           { 
-            break Fail62;
+            break Fail63;
           }
         }
         context.popOnSuccess();
@@ -4161,7 +4197,7 @@ import java.lang.ref.WeakReference;
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("gen__ejpscope__method__name__helper_0_0");
-      Fail65:
+      Fail66:
       { 
         IStrategoTerm term34 = term;
         IStrategoConstructor cons10 = term.getTermType() == IStrategoTerm.APPL ? ((IStrategoAppl)term).getConstructor() : null;
@@ -4169,11 +4205,11 @@ import java.lang.ref.WeakReference;
         { 
           if(cons10 == transform._consId_1)
           { 
-            Fail66:
+            Fail67:
             { 
-              IStrategoTerm j_35 = null;
-              j_35 = term.getSubterm(0);
-              term = j_35;
+              IStrategoTerm n_35 = null;
+              n_35 = term.getSubterm(0);
+              term = n_35;
               if(true)
                 break Success34;
             }
@@ -4183,14 +4219,14 @@ import java.lang.ref.WeakReference;
           { 
             if(cons10 == transform._consTypeName_1)
             { 
-              Fail67:
+              Fail68:
               { 
-                IStrategoTerm i_35 = null;
+                IStrategoTerm m_35 = null;
                 IStrategoTerm arg73 = term.getSubterm(0);
                 if(arg73.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg73).getConstructor())
-                  break Fail67;
-                i_35 = arg73.getSubterm(0);
-                term = i_35;
+                  break Fail68;
+                m_35 = arg73.getSubterm(0);
+                term = m_35;
                 if(true)
                   break Success35;
               }
@@ -4200,22 +4236,22 @@ import java.lang.ref.WeakReference;
             { 
               if(cons10 == transform._consTypeName_2)
               { 
-                Fail68:
+                Fail69:
                 { 
-                  IStrategoTerm e_35 = null;
-                  IStrategoTerm f_35 = null;
-                  e_35 = term.getSubterm(0);
+                  IStrategoTerm i_35 = null;
+                  IStrategoTerm j_35 = null;
+                  i_35 = term.getSubterm(0);
                   IStrategoTerm arg74 = term.getSubterm(1);
                   if(arg74.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg74).getConstructor())
-                    break Fail68;
-                  f_35 = arg74.getSubterm(0);
-                  term = this.invoke(context, e_35);
+                    break Fail69;
+                  j_35 = arg74.getSubterm(0);
+                  term = this.invoke(context, i_35);
                   if(term == null)
-                    break Fail68;
-                  term = (IStrategoTerm)termFactory.makeListCons(term, termFactory.makeListCons(transform.const19, termFactory.makeListCons(f_35, (IStrategoList)transform.constNil0)));
+                    break Fail69;
+                  term = (IStrategoTerm)termFactory.makeListCons(term, termFactory.makeListCons(transform.const19, termFactory.makeListCons(j_35, (IStrategoList)transform.constNil0)));
                   term = concat_strings_0_0.instance.invoke(context, term);
                   if(term == null)
-                    break Fail68;
+                    break Fail69;
                   if(true)
                     break Success36;
                 }
@@ -4225,22 +4261,22 @@ import java.lang.ref.WeakReference;
               { 
                 if(cons10 == transform._consPackageOrTypeName_2)
                 { 
-                  Fail69:
+                  Fail70:
                   { 
-                    IStrategoTerm a_35 = null;
-                    IStrategoTerm b_35 = null;
-                    a_35 = term.getSubterm(0);
+                    IStrategoTerm e_35 = null;
+                    IStrategoTerm f_35 = null;
+                    e_35 = term.getSubterm(0);
                     IStrategoTerm arg75 = term.getSubterm(1);
                     if(arg75.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg75).getConstructor())
-                      break Fail69;
-                    b_35 = arg75.getSubterm(0);
-                    term = this.invoke(context, a_35);
+                      break Fail70;
+                    f_35 = arg75.getSubterm(0);
+                    term = this.invoke(context, e_35);
                     if(term == null)
-                      break Fail69;
-                    term = (IStrategoTerm)termFactory.makeListCons(term, termFactory.makeListCons(transform.const19, termFactory.makeListCons(b_35, (IStrategoList)transform.constNil0)));
+                      break Fail70;
+                    term = (IStrategoTerm)termFactory.makeListCons(term, termFactory.makeListCons(transform.const19, termFactory.makeListCons(f_35, (IStrategoList)transform.constNil0)));
                     term = concat_strings_0_0.instance.invoke(context, term);
                     if(term == null)
-                      break Fail69;
+                      break Fail70;
                     if(true)
                       break Success37;
                   }
@@ -4250,14 +4286,14 @@ import java.lang.ref.WeakReference;
                 { 
                   if(cons10 == transform._consPackageOrTypeName_1)
                   { 
-                    Fail70:
+                    Fail71:
                     { 
-                      IStrategoTerm z_34 = null;
+                      IStrategoTerm d_35 = null;
                       IStrategoTerm arg76 = term.getSubterm(0);
                       if(arg76.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg76).getConstructor())
-                        break Fail70;
-                      z_34 = arg76.getSubterm(0);
-                      term = z_34;
+                        break Fail71;
+                      d_35 = arg76.getSubterm(0);
+                      term = d_35;
                       if(true)
                         break Success38;
                     }
@@ -4267,11 +4303,11 @@ import java.lang.ref.WeakReference;
                   { 
                     if(cons10 == transform._consNamePattern_1)
                     { 
-                      Fail71:
+                      Fail72:
                       { 
-                        IStrategoTerm y_34 = null;
-                        y_34 = term.getSubterm(0);
-                        term = y_34;
+                        IStrategoTerm c_35 = null;
+                        c_35 = term.getSubterm(0);
+                        term = c_35;
                         if(true)
                           break Success39;
                       }
@@ -4279,21 +4315,21 @@ import java.lang.ref.WeakReference;
                     }
                     if(cons10 == transform._consNamePattern_2)
                     { 
-                      IStrategoTerm u_34 = null;
-                      IStrategoTerm v_34 = null;
-                      u_34 = term.getSubterm(0);
-                      v_34 = term.getSubterm(1);
-                      term = this.invoke(context, u_34);
+                      IStrategoTerm y_34 = null;
+                      IStrategoTerm z_34 = null;
+                      y_34 = term.getSubterm(0);
+                      z_34 = term.getSubterm(1);
+                      term = this.invoke(context, y_34);
                       if(term == null)
-                        break Fail65;
-                      term = (IStrategoTerm)termFactory.makeListCons(term, termFactory.makeListCons(transform.const19, termFactory.makeListCons(v_34, (IStrategoList)transform.constNil0)));
+                        break Fail66;
+                      term = (IStrategoTerm)termFactory.makeListCons(term, termFactory.makeListCons(transform.const19, termFactory.makeListCons(z_34, (IStrategoList)transform.constNil0)));
                       term = concat_strings_0_0.instance.invoke(context, term);
                       if(term == null)
-                        break Fail65;
+                        break Fail66;
                     }
                     else
                     { 
-                      break Fail65;
+                      break Fail66;
                     }
                   }
                 }
@@ -4317,17 +4353,17 @@ import java.lang.ref.WeakReference;
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       context.push("random_string_0_0");
-      Fail72:
+      Fail73:
       { 
         term = next_random_0_0.instance.invoke(context, term);
         if(term == null)
-          break Fail72;
+          break Fail73;
         term = abs_0_0.instance.invoke(context, term);
         if(term == null)
-          break Fail72;
+          break Fail73;
         term = int_to_string_0_0.instance.invoke(context, term);
         if(term == null)
-          break Fail72;
+          break Fail73;
         context.popOnSuccess();
         if(true)
           return term;
@@ -4345,15 +4381,15 @@ import java.lang.ref.WeakReference;
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("gen_auxilary_class_name_0_0");
-      Fail73:
+      Fail74:
       { 
         term = random_string_0_0.instance.invoke(context, term);
         if(term == null)
-          break Fail73;
+          break Fail74;
         term = (IStrategoTerm)termFactory.makeListCons(transform.const1, termFactory.makeListCons(term, (IStrategoList)transform.constNil0));
         term = concat_strings_0_0.instance.invoke(context, term);
         if(term == null)
-          break Fail73;
+          break Fail74;
         context.popOnSuccess();
         if(true)
           return term;
@@ -4367,28 +4403,28 @@ import java.lang.ref.WeakReference;
   { 
     public static my_hashtable_remove_0_1 instance = new my_hashtable_remove_0_1();
 
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm t_35)
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm x_35)
     { 
       context.push("my_hashtable_remove_0_1");
-      Fail74:
+      Fail75:
       { 
-        TermReference u_35 = new TermReference();
-        if(u_35.value == null)
-          u_35.value = term;
+        TermReference y_35 = new TermReference();
+        if(y_35.value == null)
+          y_35.value = term;
         else
-          if(u_35.value != term && !u_35.value.match(term))
-            break Fail74;
-        term = iset_elements_0_0.instance.invoke(context, t_35);
+          if(y_35.value != term && !y_35.value.match(term))
+            break Fail75;
+        term = iset_elements_0_0.instance.invoke(context, x_35);
         if(term == null)
-          break Fail74;
+          break Fail75;
         lifted55 lifted550 = new lifted55();
-        lifted550.u_35 = u_35;
+        lifted550.y_35 = y_35;
         term = map_1_0.instance.invoke(context, term, lifted550);
         if(term == null)
-          break Fail74;
-        if(u_35.value == null)
-          break Fail74;
-        term = u_35.value;
+          break Fail75;
+        if(y_35.value == null)
+          break Fail75;
+        term = y_35.value;
         context.popOnSuccess();
         if(true)
           return term;
@@ -4402,32 +4438,32 @@ import java.lang.ref.WeakReference;
   { 
     public static my_hashtable_union_0_1 instance = new my_hashtable_union_0_1();
 
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm ref_y_35)
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm ref_c_36)
     { 
-      TermReference y_35 = new TermReference(ref_y_35);
+      TermReference c_36 = new TermReference(ref_c_36);
       context.push("my_hashtable_union_0_1");
-      Fail75:
+      Fail76:
       { 
-        TermReference z_35 = new TermReference();
-        if(z_35.value == null)
-          z_35.value = term;
+        TermReference d_36 = new TermReference();
+        if(d_36.value == null)
+          d_36.value = term;
         else
-          if(z_35.value != term && !z_35.value.match(term))
-            break Fail75;
-        if(y_35.value == null)
-          break Fail75;
-        term = hashtable_keys_0_0.instance.invoke(context, y_35.value);
+          if(d_36.value != term && !d_36.value.match(term))
+            break Fail76;
+        if(c_36.value == null)
+          break Fail76;
+        term = hashtable_keys_0_0.instance.invoke(context, c_36.value);
         if(term == null)
-          break Fail75;
+          break Fail76;
         lifted56 lifted560 = new lifted56();
-        lifted560.y_35 = y_35;
-        lifted560.z_35 = z_35;
+        lifted560.c_36 = c_36;
+        lifted560.d_36 = d_36;
         term = map_1_0.instance.invoke(context, term, lifted560);
         if(term == null)
-          break Fail75;
-        if(z_35.value == null)
-          break Fail75;
-        term = z_35.value;
+          break Fail76;
+        if(d_36.value == null)
+          break Fail76;
+        term = d_36.value;
         context.popOnSuccess();
         if(true)
           return term;
@@ -4441,24 +4477,24 @@ import java.lang.ref.WeakReference;
   { 
     public static my_hashtable_union_helper_0_2 instance = new my_hashtable_union_helper_0_2();
 
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm d_36, IStrategoTerm e_36)
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm h_36, IStrategoTerm i_36)
     { 
       context.push("my_hashtable_union_helper_0_2");
-      Fail76:
+      Fail77:
       { 
-        IStrategoTerm f_36 = null;
         IStrategoTerm j_36 = null;
-        f_36 = term;
-        term = hashtable_remove_0_1.instance.invoke(context, e_36, term);
+        IStrategoTerm n_36 = null;
+        j_36 = term;
+        term = hashtable_remove_0_1.instance.invoke(context, i_36, term);
         if(term == null)
-          break Fail76;
-        j_36 = e_36;
-        term = hashtable_get_0_1.instance.invoke(context, d_36, f_36);
+          break Fail77;
+        n_36 = i_36;
+        term = hashtable_get_0_1.instance.invoke(context, h_36, j_36);
         if(term == null)
-          break Fail76;
-        term = hashtable_put_0_2.instance.invoke(context, j_36, f_36, term);
+          break Fail77;
+        term = hashtable_put_0_2.instance.invoke(context, n_36, j_36, term);
         if(term == null)
-          break Fail76;
+          break Fail77;
         context.popOnSuccess();
         if(true)
           return term;
@@ -4472,51 +4508,51 @@ import java.lang.ref.WeakReference;
   { 
     public static add_key_to_multiple_values_table_0_2 instance = new add_key_to_multiple_values_table_0_2();
 
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm k_36, IStrategoTerm l_36)
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm o_36, IStrategoTerm p_36)
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("add_key_to_multiple_values_table_0_2");
-      Fail77:
+      Fail78:
       { 
-        IStrategoTerm m_36 = null;
-        m_36 = term;
+        IStrategoTerm q_36 = null;
+        q_36 = term;
         Success40:
         { 
-          Fail78:
+          Fail79:
           { 
-            IStrategoTerm n_36 = null;
-            n_36 = term;
-            term = hashtable_keys_0_0.instance.invoke(context, m_36);
+            IStrategoTerm r_36 = null;
+            r_36 = term;
+            term = hashtable_keys_0_0.instance.invoke(context, q_36);
             if(term == null)
-              break Fail78;
-            term = termFactory.makeTuple(k_36, term);
+              break Fail79;
+            term = termFactory.makeTuple(o_36, term);
             term = elem_0_0.instance.invoke(context, term);
             if(term == null)
-              break Fail78;
-            term = n_36;
+              break Fail79;
+            term = r_36;
             { 
-              IStrategoTerm t_36 = null;
-              t_36 = m_36;
-              term = hashtable_get_0_1.instance.invoke(context, m_36, k_36);
+              IStrategoTerm x_36 = null;
+              x_36 = q_36;
+              term = hashtable_get_0_1.instance.invoke(context, q_36, o_36);
               if(term == null)
-                break Fail77;
-              term = termFactory.makeTuple(term, (IStrategoTerm)termFactory.makeListCons(l_36, (IStrategoList)transform.constNil0));
+                break Fail78;
+              term = termFactory.makeTuple(term, (IStrategoTerm)termFactory.makeListCons(p_36, (IStrategoList)transform.constNil0));
               term = conc_0_0.instance.invoke(context, term);
               if(term == null)
-                break Fail77;
-              term = hashtable_put_0_2.instance.invoke(context, t_36, k_36, term);
+                break Fail78;
+              term = hashtable_put_0_2.instance.invoke(context, x_36, o_36, term);
               if(term == null)
-                break Fail77;
+                break Fail78;
               if(true)
                 break Success40;
             }
           }
-          IStrategoTerm x_36 = null;
-          x_36 = m_36;
-          term = (IStrategoTerm)termFactory.makeListCons(l_36, (IStrategoList)transform.constNil0);
-          term = hashtable_put_0_2.instance.invoke(context, x_36, k_36, term);
+          IStrategoTerm b_37 = null;
+          b_37 = q_36;
+          term = (IStrategoTerm)termFactory.makeListCons(p_36, (IStrategoList)transform.constNil0);
+          term = hashtable_put_0_2.instance.invoke(context, b_37, o_36, term);
           if(term == null)
-            break Fail77;
+            break Fail78;
         }
         context.popOnSuccess();
         if(true)
@@ -4531,14 +4567,14 @@ import java.lang.ref.WeakReference;
   { 
     public static allow_extends_1_1 instance = new allow_extends_1_1();
 
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, Strategy z_36, IStrategoTerm y_36)
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, Strategy d_37, IStrategoTerm c_37)
     { 
       context.push("allow_extends_1_1");
-      Fail79:
+      Fail80:
       { 
-        term = allow_extends_2_1.instance.invoke(context, term, z_36, _Id.instance, y_36);
+        term = allow_extends_2_1.instance.invoke(context, term, d_37, _Id.instance, c_37);
         if(term == null)
-          break Fail79;
+          break Fail80;
         context.popOnSuccess();
         if(true)
           return term;
@@ -4552,21 +4588,21 @@ import java.lang.ref.WeakReference;
   { 
     public static allow_extends_2_1 instance = new allow_extends_2_1();
 
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, Strategy d_37, Strategy e_37, IStrategoTerm c_37)
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, Strategy h_37, Strategy i_37, IStrategoTerm g_37)
     { 
       context.push("allow_extends_2_1");
-      Fail80:
+      Fail81:
       { 
-        term = c_37;
+        term = g_37;
         lifted58 lifted580 = new lifted58();
-        lifted580.d_37 = d_37;
-        lifted580.e_37 = e_37;
+        lifted580.h_37 = h_37;
+        lifted580.i_37 = i_37;
         term = SRTS_all.instance.invoke(context, term, lifted580);
         if(term == null)
-          break Fail80;
+          break Fail81;
         term = concat_0_0.instance.invoke(context, term);
         if(term == null)
-          break Fail80;
+          break Fail81;
         context.popOnSuccess();
         if(true)
           return term;
@@ -4580,52 +4616,52 @@ import java.lang.ref.WeakReference;
   { 
     public static allow_extends_helper_2_0 instance = new allow_extends_helper_2_0();
 
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, Strategy j_37, Strategy k_37)
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, Strategy n_37, Strategy o_37)
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("allow_extends_helper_2_0");
-      Fail81:
+      Fail82:
       { 
-        IStrategoTerm f_37 = null;
-        IStrategoTerm g_37 = null;
-        g_37 = term;
+        IStrategoTerm j_37 = null;
+        IStrategoTerm k_37 = null;
+        k_37 = term;
         Success41:
         { 
-          Fail82:
+          Fail83:
           { 
-            IStrategoTerm h_37 = null;
-            h_37 = term;
-            term = j_37.invoke(context, g_37);
+            IStrategoTerm l_37 = null;
+            l_37 = term;
+            term = n_37.invoke(context, k_37);
             if(term == null)
-              break Fail82;
-            f_37 = term;
-            term = h_37;
+              break Fail83;
+            j_37 = term;
+            term = l_37;
             { 
               Success42:
               { 
-                Fail83:
+                Fail84:
                 { 
-                  IStrategoTerm i_37 = null;
-                  i_37 = term;
-                  term = is_list_0_0.instance.invoke(context, f_37);
+                  IStrategoTerm m_37 = null;
+                  m_37 = term;
+                  term = is_list_0_0.instance.invoke(context, j_37);
                   if(term == null)
-                    break Fail83;
-                  term = i_37;
+                    break Fail84;
+                  term = m_37;
                   { 
-                    term = f_37;
+                    term = j_37;
                     if(true)
                       break Success42;
                   }
                 }
-                term = (IStrategoTerm)termFactory.makeListCons(f_37, (IStrategoList)transform.constNil0);
+                term = (IStrategoTerm)termFactory.makeListCons(j_37, (IStrategoList)transform.constNil0);
               }
               if(true)
                 break Success41;
             }
           }
-          term = k_37.invoke(context, g_37);
+          term = o_37.invoke(context, k_37);
           if(term == null)
-            break Fail81;
+            break Fail82;
           term = (IStrategoTerm)termFactory.makeListCons(term, (IStrategoList)transform.constNil0);
         }
         context.popOnSuccess();
@@ -4645,29 +4681,29 @@ import java.lang.ref.WeakReference;
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("fetch_type_0_0");
-      Fail84:
+      Fail85:
       { 
-        IStrategoTerm p_37 = null;
-        IStrategoTerm q_37 = null;
-        IStrategoTerm r_37 = null;
-        p_37 = term;
-        r_37 = term;
-        q_37 = term;
-        term = r_37;
+        IStrategoTerm t_37 = null;
+        IStrategoTerm u_37 = null;
+        IStrategoTerm v_37 = null;
+        t_37 = term;
+        v_37 = term;
+        u_37 = term;
+        term = v_37;
         IStrategoTerm term43 = term;
         Success43:
         { 
-          Fail85:
+          Fail86:
           { 
-            IStrategoTerm s_37 = null;
-            s_37 = term;
-            term = q_37;
+            IStrategoTerm w_37 = null;
+            w_37 = term;
+            term = u_37;
             if(term.getTermType() != IStrategoTerm.APPL || transform._consLit_1 != ((IStrategoAppl)term).getConstructor())
-              break Fail85;
+              break Fail86;
             IStrategoTerm arg77 = term.getSubterm(0);
             if(arg77.getTermType() != IStrategoTerm.APPL || transform._consString_1 != ((IStrategoAppl)arg77).getConstructor())
-              break Fail85;
-            term = s_37;
+              break Fail86;
+            term = w_37;
             { 
               term = transform.constLit0;
               if(true)
@@ -4677,26 +4713,26 @@ import java.lang.ref.WeakReference;
           term = term43;
           Success44:
           { 
-            Fail86:
+            Fail87:
             { 
-              IStrategoTerm t_37 = null;
-              t_37 = term;
-              term = q_37;
+              IStrategoTerm x_37 = null;
+              x_37 = term;
+              term = u_37;
               if(term.getTermType() != IStrategoTerm.APPL || transform._consLit_1 != ((IStrategoAppl)term).getConstructor())
-                break Fail86;
+                break Fail87;
               IStrategoTerm arg79 = term.getSubterm(0);
               if(arg79.getTermType() != IStrategoTerm.APPL || transform._consChar_1 != ((IStrategoAppl)arg79).getConstructor())
-                break Fail86;
-              term = t_37;
+                break Fail87;
+              term = x_37;
               { 
                 term = transform.constLit1;
                 if(true)
                   break Success44;
               }
             }
-            term = pp_java5_to_string_0_0.instance.invoke(context, p_37);
+            term = pp_java5_to_string_0_0.instance.invoke(context, t_37);
             if(term == null)
-              break Fail84;
+              break Fail85;
             term = termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{term}), (IStrategoList)transform.constNil0)})});
           }
         }
@@ -4713,52 +4749,52 @@ import java.lang.ref.WeakReference;
   { 
     public static ejp_to_ajc_0_3 instance = new ejp_to_ajc_0_3();
 
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm ref_h_72, IStrategoTerm i_72, IStrategoTerm j_72)
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm ref_l_72, IStrategoTerm m_72, IStrategoTerm n_72)
     { 
       ITermFactory termFactory = context.getFactory();
-      TermReference h_72 = new TermReference(ref_h_72);
+      TermReference l_72 = new TermReference(ref_l_72);
       context.push("ejp_to_ajc_0_3");
-      Fail87:
+      Fail88:
       { 
         IStrategoTerm term45 = term;
         Success45:
         { 
-          Fail88:
+          Fail89:
           { 
-            IStrategoTerm g_44 = null;
-            IStrategoTerm h_44 = null;
-            IStrategoTerm i_44 = null;
-            IStrategoTerm j_44 = null;
             IStrategoTerm k_44 = null;
             IStrategoTerm l_44 = null;
             IStrategoTerm m_44 = null;
+            IStrategoTerm n_44 = null;
+            IStrategoTerm o_44 = null;
+            IStrategoTerm p_44 = null;
+            IStrategoTerm q_44 = null;
             if(term.getTermType() != IStrategoTerm.APPL || transform._consExplicitJoinPointPattern_1 != ((IStrategoAppl)term).getConstructor())
-              break Fail88;
+              break Fail89;
             IStrategoTerm arg81 = term.getSubterm(0);
             if(arg81.getTermType() != IStrategoTerm.APPL || transform._consMethodPattern_6 != ((IStrategoAppl)arg81).getConstructor())
-              break Fail88;
+              break Fail89;
             IStrategoTerm arg82 = arg81.getSubterm(0);
             if(arg82.getTermType() != IStrategoTerm.APPL || transform._consAnnoPattern_1 != ((IStrategoAppl)arg82).getConstructor())
-              break Fail88;
-            g_44 = arg82.getSubterm(0);
+              break Fail89;
+            k_44 = arg82.getSubterm(0);
             IStrategoTerm arg83 = arg81.getSubterm(1);
             if(arg83.getTermType() != IStrategoTerm.APPL || transform._consModPattern_1 != ((IStrategoAppl)arg83).getConstructor())
-              break Fail88;
-            h_44 = arg83.getSubterm(0);
-            i_44 = arg81.getSubterm(2);
-            j_44 = arg81.getSubterm(3);
-            k_44 = arg81.getSubterm(4);
-            l_44 = arg81.getSubterm(5);
-            term = termFactory.makeTuple(g_44, transform.constCons6);
+              break Fail89;
+            l_44 = arg83.getSubterm(0);
+            m_44 = arg81.getSubterm(2);
+            n_44 = arg81.getSubterm(3);
+            o_44 = arg81.getSubterm(4);
+            p_44 = arg81.getSubterm(5);
+            term = termFactory.makeTuple(k_44, transform.constCons6);
             term = conc_0_0.instance.invoke(context, term);
             if(term == null)
-              break Fail88;
-            m_44 = term;
-            term = termFactory.makeTuple(h_44, transform.constCons7);
+              break Fail89;
+            q_44 = term;
+            term = termFactory.makeTuple(l_44, transform.constCons7);
             term = conc_0_0.instance.invoke(context, term);
             if(term == null)
-              break Fail88;
-            term = termFactory.makeAppl(transform._consMethodPattern_6, new IStrategoTerm[]{termFactory.makeAppl(transform._consAnnoPattern_1, new IStrategoTerm[]{m_44}), termFactory.makeAppl(transform._consModPattern_1, new IStrategoTerm[]{term}), i_44, j_44, k_44, l_44});
+              break Fail89;
+            term = termFactory.makeAppl(transform._consMethodPattern_6, new IStrategoTerm[]{termFactory.makeAppl(transform._consAnnoPattern_1, new IStrategoTerm[]{q_44}), termFactory.makeAppl(transform._consModPattern_1, new IStrategoTerm[]{term}), m_44, n_44, o_44, p_44});
             if(true)
               break Success45;
           }
@@ -4766,23 +4802,23 @@ import java.lang.ref.WeakReference;
           IStrategoTerm term46 = term;
           Success46:
           { 
-            Fail89:
+            Fail90:
             { 
-              IStrategoTerm x_43 = null;
-              IStrategoTerm y_43 = null;
-              IStrategoTerm z_43 = null;
-              z_43 = term;
-              x_43 = term;
-              term = or_2_0.instance.invoke(context, z_43, lifted59.instance, lifted60.instance);
+              IStrategoTerm b_44 = null;
+              IStrategoTerm c_44 = null;
+              IStrategoTerm d_44 = null;
+              d_44 = term;
+              b_44 = term;
+              term = or_2_0.instance.invoke(context, d_44, lifted59.instance, lifted60.instance);
               if(term == null)
-                break Fail89;
-              term = x_43;
+                break Fail90;
+              term = b_44;
               if(term.getTermType() != IStrategoTerm.APPL || transform._consExplicitJoinPointPattern_1 != ((IStrategoAppl)term).getConstructor())
-                break Fail89;
-              y_43 = term.getSubterm(0);
-              term = gen__ejp__name_0_0.instance.invoke(context, y_43);
+                break Fail90;
+              c_44 = term.getSubterm(0);
+              term = gen__ejp__name_0_0.instance.invoke(context, c_44);
               if(term == null)
-                break Fail89;
+                break Fail90;
               term = termFactory.makeAppl(transform._consMethodPattern_6, new IStrategoTerm[]{transform.constAnnoPattern0, transform.constModPattern0, transform.constRefTypePattern0, term, transform.constCons2, transform.constNone0});
               if(true)
                 break Success46;
@@ -4791,42 +4827,42 @@ import java.lang.ref.WeakReference;
             IStrategoTerm term47 = term;
             Success47:
             { 
-              Fail90:
+              Fail91:
               { 
-                IStrategoTerm k_43 = null;
-                IStrategoTerm l_43 = null;
-                IStrategoTerm m_43 = null;
-                IStrategoTerm n_43 = null;
                 IStrategoTerm o_43 = null;
                 IStrategoTerm p_43 = null;
                 IStrategoTerm q_43 = null;
+                IStrategoTerm r_43 = null;
+                IStrategoTerm s_43 = null;
+                IStrategoTerm t_43 = null;
+                IStrategoTerm u_43 = null;
                 if(term.getTermType() != IStrategoTerm.APPL || transform._consNotExplicitJoinPointPattern_1 != ((IStrategoAppl)term).getConstructor())
-                  break Fail90;
+                  break Fail91;
                 IStrategoTerm arg89 = term.getSubterm(0);
                 if(arg89.getTermType() != IStrategoTerm.APPL || transform._consMethodPattern_6 != ((IStrategoAppl)arg89).getConstructor())
-                  break Fail90;
+                  break Fail91;
                 IStrategoTerm arg90 = arg89.getSubterm(0);
                 if(arg90.getTermType() != IStrategoTerm.APPL || transform._consAnnoPattern_1 != ((IStrategoAppl)arg90).getConstructor())
-                  break Fail90;
-                k_43 = arg90.getSubterm(0);
+                  break Fail91;
+                o_43 = arg90.getSubterm(0);
                 IStrategoTerm arg91 = arg89.getSubterm(1);
                 if(arg91.getTermType() != IStrategoTerm.APPL || transform._consModPattern_1 != ((IStrategoAppl)arg91).getConstructor())
-                  break Fail90;
-                l_43 = arg91.getSubterm(0);
-                m_43 = arg89.getSubterm(2);
-                n_43 = arg89.getSubterm(3);
-                o_43 = arg89.getSubterm(4);
-                p_43 = arg89.getSubterm(5);
-                term = termFactory.makeTuple(k_43, transform.constCons8);
+                  break Fail91;
+                p_43 = arg91.getSubterm(0);
+                q_43 = arg89.getSubterm(2);
+                r_43 = arg89.getSubterm(3);
+                s_43 = arg89.getSubterm(4);
+                t_43 = arg89.getSubterm(5);
+                term = termFactory.makeTuple(o_43, transform.constCons8);
                 term = conc_0_0.instance.invoke(context, term);
                 if(term == null)
-                  break Fail90;
-                q_43 = term;
-                term = termFactory.makeTuple(l_43, transform.constCons7);
+                  break Fail91;
+                u_43 = term;
+                term = termFactory.makeTuple(p_43, transform.constCons7);
                 term = conc_0_0.instance.invoke(context, term);
                 if(term == null)
-                  break Fail90;
-                term = termFactory.makeAppl(transform._consMethodPattern_6, new IStrategoTerm[]{termFactory.makeAppl(transform._consAnnoPattern_1, new IStrategoTerm[]{q_43}), termFactory.makeAppl(transform._consModPattern_1, new IStrategoTerm[]{term}), m_43, n_43, o_43, p_43});
+                  break Fail91;
+                term = termFactory.makeAppl(transform._consMethodPattern_6, new IStrategoTerm[]{termFactory.makeAppl(transform._consAnnoPattern_1, new IStrategoTerm[]{u_43}), termFactory.makeAppl(transform._consModPattern_1, new IStrategoTerm[]{term}), q_43, r_43, s_43, t_43});
                 if(true)
                   break Success47;
               }
@@ -4834,23 +4870,23 @@ import java.lang.ref.WeakReference;
               IStrategoTerm term48 = term;
               Success48:
               { 
-                Fail91:
+                Fail92:
                 { 
-                  IStrategoTerm b_43 = null;
-                  IStrategoTerm c_43 = null;
-                  IStrategoTerm d_43 = null;
-                  d_43 = term;
-                  b_43 = term;
-                  term = or_2_0.instance.invoke(context, d_43, lifted61.instance, lifted62.instance);
+                  IStrategoTerm f_43 = null;
+                  IStrategoTerm g_43 = null;
+                  IStrategoTerm h_43 = null;
+                  h_43 = term;
+                  f_43 = term;
+                  term = or_2_0.instance.invoke(context, h_43, lifted61.instance, lifted62.instance);
                   if(term == null)
-                    break Fail91;
-                  term = b_43;
+                    break Fail92;
+                  term = f_43;
                   if(term.getTermType() != IStrategoTerm.APPL || transform._consNotExplicitJoinPointPattern_1 != ((IStrategoAppl)term).getConstructor())
-                    break Fail91;
-                  c_43 = term.getSubterm(0);
-                  term = gen__ejp__name_0_0.instance.invoke(context, c_43);
+                    break Fail92;
+                  g_43 = term.getSubterm(0);
+                  term = gen__ejp__name_0_0.instance.invoke(context, g_43);
                   if(term == null)
-                    break Fail91;
+                    break Fail92;
                   term = termFactory.makeAppl(transform._consMethodPattern_6, new IStrategoTerm[]{transform.constAnnoPattern1, transform.constModPattern0, transform.constRefTypePattern0, term, transform.constCons2, transform.constNone0});
                   if(true)
                     break Success48;
@@ -4859,38 +4895,38 @@ import java.lang.ref.WeakReference;
                 IStrategoTerm term49 = term;
                 Success49:
                 { 
-                  Fail92:
+                  Fail93:
                   { 
-                    IStrategoTerm o_42 = null;
-                    IStrategoTerm p_42 = null;
-                    IStrategoTerm q_42 = null;
-                    IStrategoTerm r_42 = null;
                     IStrategoTerm s_42 = null;
                     IStrategoTerm t_42 = null;
                     IStrategoTerm u_42 = null;
+                    IStrategoTerm v_42 = null;
+                    IStrategoTerm w_42 = null;
+                    IStrategoTerm x_42 = null;
+                    IStrategoTerm y_42 = null;
                     if(term.getTermType() != IStrategoTerm.APPL || transform._consExplicitJoinPointScopePattern_1 != ((IStrategoAppl)term).getConstructor())
-                      break Fail92;
+                      break Fail93;
                     IStrategoTerm arg97 = term.getSubterm(0);
                     if(arg97.getTermType() != IStrategoTerm.APPL || transform._consMethodPattern_6 != ((IStrategoAppl)arg97).getConstructor())
-                      break Fail92;
+                      break Fail93;
                     IStrategoTerm arg98 = arg97.getSubterm(0);
                     if(arg98.getTermType() != IStrategoTerm.APPL || transform._consAnnoPattern_1 != ((IStrategoAppl)arg98).getConstructor())
-                      break Fail92;
-                    o_42 = arg98.getSubterm(0);
-                    p_42 = arg97.getSubterm(1);
-                    q_42 = arg97.getSubterm(2);
-                    r_42 = arg97.getSubterm(3);
-                    s_42 = arg97.getSubterm(4);
-                    t_42 = arg97.getSubterm(5);
-                    term = termFactory.makeTuple(o_42, transform.constCons9);
+                      break Fail93;
+                    s_42 = arg98.getSubterm(0);
+                    t_42 = arg97.getSubterm(1);
+                    u_42 = arg97.getSubterm(2);
+                    v_42 = arg97.getSubterm(3);
+                    w_42 = arg97.getSubterm(4);
+                    x_42 = arg97.getSubterm(5);
+                    term = termFactory.makeTuple(s_42, transform.constCons9);
                     term = conc_0_0.instance.invoke(context, term);
                     if(term == null)
-                      break Fail92;
-                    u_42 = term;
-                    term = gen__ejpscope__method__name_0_2.instance.invoke(context, r_42, i_72, j_72);
+                      break Fail93;
+                    y_42 = term;
+                    term = gen__ejpscope__method__name_0_2.instance.invoke(context, v_42, m_72, n_72);
                     if(term == null)
-                      break Fail92;
-                    term = termFactory.makeAppl(transform._consMethodPattern_6, new IStrategoTerm[]{termFactory.makeAppl(transform._consAnnoPattern_1, new IStrategoTerm[]{u_42}), p_42, q_42, term, s_42, t_42});
+                      break Fail93;
+                    term = termFactory.makeAppl(transform._consMethodPattern_6, new IStrategoTerm[]{termFactory.makeAppl(transform._consAnnoPattern_1, new IStrategoTerm[]{y_42}), t_42, u_42, term, w_42, x_42});
                     if(true)
                       break Success49;
                   }
@@ -4898,23 +4934,23 @@ import java.lang.ref.WeakReference;
                   IStrategoTerm term50 = term;
                   Success50:
                   { 
-                    Fail93:
+                    Fail94:
                     { 
-                      IStrategoTerm f_42 = null;
-                      IStrategoTerm g_42 = null;
-                      IStrategoTerm h_42 = null;
-                      h_42 = term;
-                      f_42 = term;
-                      term = or_2_0.instance.invoke(context, h_42, lifted63.instance, lifted64.instance);
+                      IStrategoTerm j_42 = null;
+                      IStrategoTerm k_42 = null;
+                      IStrategoTerm l_42 = null;
+                      l_42 = term;
+                      j_42 = term;
+                      term = or_2_0.instance.invoke(context, l_42, lifted63.instance, lifted64.instance);
                       if(term == null)
-                        break Fail93;
-                      term = f_42;
+                        break Fail94;
+                      term = j_42;
                       if(term.getTermType() != IStrategoTerm.APPL || transform._consExplicitJoinPointScopePattern_1 != ((IStrategoAppl)term).getConstructor())
-                        break Fail93;
-                      g_42 = term.getSubterm(0);
-                      term = gen__ejpscope__method__name_0_2.instance.invoke(context, g_42, i_72, j_72);
+                        break Fail94;
+                      k_42 = term.getSubterm(0);
+                      term = gen__ejpscope__method__name_0_2.instance.invoke(context, k_42, m_72, n_72);
                       if(term == null)
-                        break Fail93;
+                        break Fail94;
                       term = termFactory.makeAppl(transform._consMethodPattern_6, new IStrategoTerm[]{transform.constAnnoPattern2, transform.constModPattern0, transform.constRefTypePattern0, term, transform.constCons2, transform.constNone0});
                       if(true)
                         break Success50;
@@ -4923,38 +4959,38 @@ import java.lang.ref.WeakReference;
                     IStrategoTerm term51 = term;
                     Success51:
                     { 
-                      Fail94:
+                      Fail95:
                       { 
-                        IStrategoTerm s_41 = null;
-                        IStrategoTerm t_41 = null;
-                        IStrategoTerm u_41 = null;
-                        IStrategoTerm v_41 = null;
                         IStrategoTerm w_41 = null;
                         IStrategoTerm x_41 = null;
                         IStrategoTerm y_41 = null;
+                        IStrategoTerm z_41 = null;
+                        IStrategoTerm a_42 = null;
+                        IStrategoTerm b_42 = null;
+                        IStrategoTerm c_42 = null;
                         if(term.getTermType() != IStrategoTerm.APPL || transform._consNotExplicitJoinPointScopePattern_1 != ((IStrategoAppl)term).getConstructor())
-                          break Fail94;
+                          break Fail95;
                         IStrategoTerm arg104 = term.getSubterm(0);
                         if(arg104.getTermType() != IStrategoTerm.APPL || transform._consMethodPattern_6 != ((IStrategoAppl)arg104).getConstructor())
-                          break Fail94;
+                          break Fail95;
                         IStrategoTerm arg105 = arg104.getSubterm(0);
                         if(arg105.getTermType() != IStrategoTerm.APPL || transform._consAnnoPattern_1 != ((IStrategoAppl)arg105).getConstructor())
-                          break Fail94;
-                        s_41 = arg105.getSubterm(0);
-                        t_41 = arg104.getSubterm(1);
-                        u_41 = arg104.getSubterm(2);
-                        v_41 = arg104.getSubterm(3);
-                        w_41 = arg104.getSubterm(4);
-                        x_41 = arg104.getSubterm(5);
-                        term = termFactory.makeTuple(s_41, transform.constCons10);
+                          break Fail95;
+                        w_41 = arg105.getSubterm(0);
+                        x_41 = arg104.getSubterm(1);
+                        y_41 = arg104.getSubterm(2);
+                        z_41 = arg104.getSubterm(3);
+                        a_42 = arg104.getSubterm(4);
+                        b_42 = arg104.getSubterm(5);
+                        term = termFactory.makeTuple(w_41, transform.constCons10);
                         term = conc_0_0.instance.invoke(context, term);
                         if(term == null)
-                          break Fail94;
-                        y_41 = term;
-                        term = gen__ejpscope__method__name_0_2.instance.invoke(context, v_41, i_72, j_72);
+                          break Fail95;
+                        c_42 = term;
+                        term = gen__ejpscope__method__name_0_2.instance.invoke(context, z_41, m_72, n_72);
                         if(term == null)
-                          break Fail94;
-                        term = termFactory.makeAppl(transform._consMethodPattern_6, new IStrategoTerm[]{termFactory.makeAppl(transform._consAnnoPattern_1, new IStrategoTerm[]{y_41}), t_41, u_41, term, w_41, x_41});
+                          break Fail95;
+                        term = termFactory.makeAppl(transform._consMethodPattern_6, new IStrategoTerm[]{termFactory.makeAppl(transform._consAnnoPattern_1, new IStrategoTerm[]{c_42}), x_41, y_41, term, a_42, b_42});
                         if(true)
                           break Success51;
                       }
@@ -4962,33 +4998,33 @@ import java.lang.ref.WeakReference;
                       IStrategoTerm term52 = term;
                       Success52:
                       { 
-                        Fail95:
+                        Fail96:
                         { 
-                          IStrategoTerm j_41 = null;
-                          IStrategoTerm k_41 = null;
-                          IStrategoTerm l_41 = null;
-                          l_41 = term;
-                          j_41 = term;
-                          term = or_2_0.instance.invoke(context, l_41, lifted65.instance, lifted66.instance);
+                          IStrategoTerm n_41 = null;
+                          IStrategoTerm o_41 = null;
+                          IStrategoTerm p_41 = null;
+                          p_41 = term;
+                          n_41 = term;
+                          term = or_2_0.instance.invoke(context, p_41, lifted65.instance, lifted66.instance);
                           if(term == null)
-                            break Fail95;
-                          term = j_41;
+                            break Fail96;
+                          term = n_41;
                           if(term.getTermType() != IStrategoTerm.APPL || transform._consNotExplicitJoinPointScopePattern_1 != ((IStrategoAppl)term).getConstructor())
-                            break Fail95;
-                          k_41 = term.getSubterm(0);
-                          term = gen__ejpscope__method__name_0_2.instance.invoke(context, k_41, i_72, j_72);
+                            break Fail96;
+                          o_41 = term.getSubterm(0);
+                          term = gen__ejpscope__method__name_0_2.instance.invoke(context, o_41, m_72, n_72);
                           if(term == null)
-                            break Fail95;
+                            break Fail96;
                           term = termFactory.makeAppl(transform._consMethodPattern_6, new IStrategoTerm[]{transform.constAnnoPattern3, transform.constModPattern0, transform.constRefTypePattern0, term, transform.constCons2, transform.constNone0});
                           if(true)
                             break Success52;
                         }
                         term = term52;
                         ejp_to_ajc_0_3_fragment_0 ejp_to_ajc_0_3_fragment_00 = new ejp_to_ajc_0_3_fragment_0();
-                        ejp_to_ajc_0_3_fragment_00.h_72 = h_72;
+                        ejp_to_ajc_0_3_fragment_00.l_72 = l_72;
                         term = ejp_to_ajc_0_3_fragment_00.invoke(context, term);
                         if(term == null)
-                          break Fail87;
+                          break Fail88;
                       }
                     }
                   }
@@ -5010,69 +5046,69 @@ import java.lang.ref.WeakReference;
   { 
     public static gen_pointcutargs_pointcuts_0_1 instance = new gen_pointcutargs_pointcuts_0_1();
 
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm k_72)
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm o_72)
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("gen_pointcutargs_pointcuts_0_1");
-      Fail96:
+      Fail97:
       { 
         IStrategoTerm term58 = term;
         Success53:
         { 
-          Fail97:
+          Fail98:
           { 
-            TermReference s_44 = new TermReference();
-            IStrategoTerm t_44 = null;
-            IStrategoTerm w_44 = null;
+            TermReference w_44 = new TermReference();
+            IStrategoTerm x_44 = null;
+            IStrategoTerm a_45 = null;
+            IStrategoTerm c_45 = null;
+            IStrategoTerm d_45 = null;
             IStrategoTerm y_44 = null;
-            IStrategoTerm z_44 = null;
-            IStrategoTerm u_44 = null;
             if(term.getTermType() != IStrategoTerm.TUPLE || term.getSubtermCount() != 2)
-              break Fail97;
+              break Fail98;
             IStrategoTerm arg120 = term.getSubterm(0);
             if(arg120.getTermType() != IStrategoTerm.APPL || transform._consSome_1 != ((IStrategoAppl)arg120).getConstructor())
-              break Fail97;
+              break Fail98;
             IStrategoTerm arg121 = arg120.getSubterm(0);
             if(arg121.getTermType() != IStrategoTerm.APPL || transform._consPointcutargsDec_1 != ((IStrategoAppl)arg121).getConstructor())
-              break Fail97;
-            t_44 = arg121.getSubterm(0);
-            w_44 = term.getSubterm(1);
-            term = w_44;
+              break Fail98;
+            x_44 = arg121.getSubterm(0);
+            a_45 = term.getSubterm(1);
+            term = a_45;
             lifted68 lifted680 = new lifted68();
             lifted67 lifted670 = new lifted67();
-            lifted680.s_44 = s_44;
-            lifted670.s_44 = s_44;
+            lifted680.w_44 = w_44;
+            lifted670.w_44 = w_44;
             term = or_2_0.instance.invoke(context, term, lifted670, lifted680);
             if(term == null)
-              break Fail97;
-            term = k_72;
-            y_44 = k_72;
-            if(s_44.value == null)
-              break Fail97;
-            term = s_44.value;
+              break Fail98;
+            term = o_72;
+            c_45 = o_72;
+            if(w_44.value == null)
+              break Fail98;
+            term = w_44.value;
             if(term.getTermType() != IStrategoTerm.APPL || transform._consExplicitJoinPointDeclarator_3 != ((IStrategoAppl)term).getConstructor())
-              break Fail97;
+              break Fail98;
             IStrategoTerm arg125 = term.getSubterm(1);
             if(arg125.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg125).getConstructor())
-              break Fail97;
-            u_44 = arg125.getSubterm(0);
-            z_44 = u_44;
-            term = map_1_0.instance.invoke(context, t_44, lifted69.instance);
+              break Fail98;
+            y_44 = arg125.getSubterm(0);
+            d_45 = y_44;
+            term = map_1_0.instance.invoke(context, x_44, lifted69.instance);
             if(term == null)
-              break Fail97;
-            term = termFactory.makeAppl(transform._consAspectDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consAspectDecHead_6, new IStrategoTerm[]{transform.constCons23, termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{z_44}), transform.constNone0, transform.constNone0, transform.constNone0, transform.constNone0}), termFactory.makeAppl(transform._consAspectBody_1, new IStrategoTerm[]{term})});
-            term = iset_add_0_1.instance.invoke(context, y_44, term);
+              break Fail98;
+            term = termFactory.makeAppl(transform._consAspectDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consAspectDecHead_6, new IStrategoTerm[]{transform.constCons23, termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{d_45}), transform.constNone0, transform.constNone0, transform.constNone0, transform.constNone0}), termFactory.makeAppl(transform._consAspectBody_1, new IStrategoTerm[]{term})});
+            term = iset_add_0_1.instance.invoke(context, c_45, term);
             if(term == null)
-              break Fail97;
+              break Fail98;
             if(true)
               break Success53;
           }
           term = term58;
           if(term.getTermType() != IStrategoTerm.TUPLE || term.getSubtermCount() != 2)
-            break Fail96;
+            break Fail97;
           IStrategoTerm arg127 = term.getSubterm(0);
           if(arg127.getTermType() != IStrategoTerm.APPL || transform._consNone_0 != ((IStrategoAppl)arg127).getConstructor())
-            break Fail96;
+            break Fail97;
         }
         context.popOnSuccess();
         if(true)
@@ -5090,15 +5126,15 @@ import java.lang.ref.WeakReference;
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       ITermFactory termFactory = context.getFactory();
-      Fail98:
+      Fail99:
       { 
-        IStrategoTerm d_45 = null;
-        IStrategoTerm e_45 = null;
+        IStrategoTerm h_45 = null;
+        IStrategoTerm i_45 = null;
         if(term.getTermType() != IStrategoTerm.APPL || transform._consPointcutargDec_2 != ((IStrategoAppl)term).getConstructor())
-          break Fail98;
-        d_45 = term.getSubterm(0);
-        e_45 = term.getSubterm(1);
-        term = termFactory.makeAppl(transform._consPointcutDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consPointcutDecHead_3, new IStrategoTerm[]{transform.constCons24, d_45, e_45}), transform.constNoPointcutBody0});
+          break Fail99;
+        h_45 = term.getSubterm(0);
+        i_45 = term.getSubterm(1);
+        term = termFactory.makeAppl(transform._consPointcutDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consPointcutDecHead_3, new IStrategoTerm[]{transform.constCons24, h_45, i_45}), transform.constNoPointcutBody0});
         if(true)
           return term;
       }
@@ -5112,43 +5148,43 @@ import java.lang.ref.WeakReference;
   { 
     public static gen_method_head_0_3 instance = new gen_method_head_0_3();
 
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm f_45, IStrategoTerm g_45, IStrategoTerm h_45)
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm j_45, IStrategoTerm k_45, IStrategoTerm l_45)
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("gen_method_head_0_3");
-      Fail99:
+      Fail100:
       { 
-        TermReference i_45 = new TermReference();
-        IStrategoTerm j_45 = null;
-        TermReference k_45 = new TermReference();
-        IStrategoTerm l_45 = null;
-        IStrategoTerm m_45 = null;
+        TermReference m_45 = new TermReference();
         IStrategoTerm n_45 = null;
-        term = f_45;
+        TermReference o_45 = new TermReference();
+        IStrategoTerm p_45 = null;
+        IStrategoTerm q_45 = null;
+        IStrategoTerm r_45 = null;
+        term = j_45;
         lifted71 lifted711 = new lifted71();
         lifted70 lifted700 = new lifted70();
-        lifted711.k_45 = k_45;
-        lifted711.i_45 = i_45;
-        lifted700.k_45 = k_45;
-        lifted700.i_45 = i_45;
+        lifted711.o_45 = o_45;
+        lifted711.m_45 = m_45;
+        lifted700.o_45 = o_45;
+        lifted700.m_45 = m_45;
         term = or_2_0.instance.invoke(context, term, lifted700, lifted711);
         if(term == null)
-          break Fail99;
-        if(i_45.value == null)
-          break Fail99;
-        term = i_45.value;
+          break Fail100;
+        if(m_45.value == null)
+          break Fail100;
+        term = m_45.value;
         if(term.getTermType() != IStrategoTerm.APPL || transform._consExplicitJoinPointDeclarator_3 != ((IStrategoAppl)term).getConstructor())
-          break Fail99;
-        l_45 = term.getSubterm(0);
-        m_45 = term.getSubterm(1);
-        n_45 = term.getSubterm(2);
-        term = gen_ejp_annotation_0_1.instance.invoke(context, term, g_45);
+          break Fail100;
+        p_45 = term.getSubterm(0);
+        q_45 = term.getSubterm(1);
+        r_45 = term.getSubterm(2);
+        term = gen_ejp_annotation_0_1.instance.invoke(context, term, k_45);
         if(term == null)
-          break Fail99;
-        j_45 = term;
-        if(k_45.value == null)
-          break Fail99;
-        term = termFactory.makeAppl(transform._consMethodDecHead_6, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(j_45, termFactory.makeListCons(k_45.value, (IStrategoList)transform.constCons7)), transform.constNone0, l_45, m_45, n_45, h_45});
+          break Fail100;
+        n_45 = term;
+        if(o_45.value == null)
+          break Fail100;
+        term = termFactory.makeAppl(transform._consMethodDecHead_6, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(n_45, termFactory.makeListCons(o_45.value, (IStrategoList)transform.constCons7)), transform.constNone0, p_45, q_45, r_45, l_45});
         context.popOnSuccess();
         if(true)
           return term;
@@ -5162,18 +5198,18 @@ import java.lang.ref.WeakReference;
   { 
     public static gen_ejp_annotation_0_1 instance = new gen_ejp_annotation_0_1();
 
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm q_45)
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm u_45)
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("gen_ejp_annotation_0_1");
-      Fail100:
+      Fail101:
       { 
-        term = fetch_handles_list_0_0.instance.invoke(context, q_45);
+        term = fetch_handles_list_0_0.instance.invoke(context, u_45);
         if(term == null)
-          break Fail100;
+          break Fail101;
         term = map_1_0.instance.invoke(context, term, lifted72.instance);
         if(term == null)
-          break Fail100;
+          break Fail101;
         term = termFactory.makeAppl(transform._consAnno_2, new IStrategoTerm[]{transform.constTypeName7, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId24, termFactory.makeAppl(transform._consElemValArrayInit_1, new IStrategoTerm[]{term})}), (IStrategoList)transform.constNil0)});
         context.popOnSuccess();
         if(true)
@@ -5188,35 +5224,35 @@ import java.lang.ref.WeakReference;
   { 
     public static gen_method_body_0_2 instance = new gen_method_body_0_2();
 
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm w_45, IStrategoTerm x_45)
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm a_46, IStrategoTerm b_46)
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("gen_method_body_0_2");
-      Fail101:
+      Fail102:
       { 
         Success54:
         { 
-          Fail102:
+          Fail103:
           { 
-            IStrategoTerm y_45 = null;
-            y_45 = term;
-            term = termFactory.makeTuple(w_45, transform.constNone0);
+            IStrategoTerm c_46 = null;
+            c_46 = term;
+            term = termFactory.makeTuple(a_46, transform.constNone0);
             term = equal_0_0.instance.invoke(context, term);
             if(term == null)
-              break Fail102;
-            term = y_45;
+              break Fail103;
+            term = c_46;
             { 
-              term = get_default_return_value_for_return_type_0_0.instance.invoke(context, x_45);
+              term = get_default_return_value_for_return_type_0_0.instance.invoke(context, b_46);
               if(term == null)
-                break Fail101;
+                break Fail102;
               term = termFactory.makeAppl(transform._consBlock_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consReturn_1, new IStrategoTerm[]{term}), (IStrategoList)transform.constNil0)});
               if(true)
                 break Success54;
             }
           }
-          term = fetch_default_value_0_0.instance.invoke(context, w_45);
+          term = fetch_default_value_0_0.instance.invoke(context, a_46);
           if(term == null)
-            break Fail101;
+            break Fail102;
           term = termFactory.makeAppl(transform._consBlock_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consReturn_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consSome_1, new IStrategoTerm[]{term})}), (IStrategoList)transform.constNil0)});
         }
         context.popOnSuccess();
@@ -5234,26 +5270,26 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail103:
+      Fail104:
       { 
-        IStrategoTerm d_46 = null;
-        IStrategoTerm e_46 = null;
-        IStrategoTerm f_46 = null;
-        d_46 = term;
-        f_46 = term;
-        e_46 = d_46;
-        term = f_46;
+        IStrategoTerm h_46 = null;
+        IStrategoTerm i_46 = null;
+        IStrategoTerm j_46 = null;
+        h_46 = term;
+        j_46 = term;
+        i_46 = h_46;
+        term = j_46;
         IStrategoTerm term60 = term;
         Success55:
         { 
-          Fail104:
+          Fail105:
           { 
-            IStrategoTerm g_46 = null;
-            g_46 = term;
-            term = e_46;
+            IStrategoTerm k_46 = null;
+            k_46 = term;
+            term = i_46;
             if(term.getTermType() != IStrategoTerm.APPL || transform._consVoid_0 != ((IStrategoAppl)term).getConstructor())
-              break Fail104;
-            term = g_46;
+              break Fail105;
+            term = k_46;
             { 
               term = transform.constNone0;
               if(true)
@@ -5264,14 +5300,14 @@ import java.lang.ref.WeakReference;
           IStrategoTerm term61 = term;
           Success56:
           { 
-            Fail105:
+            Fail106:
             { 
-              IStrategoTerm h_46 = null;
-              h_46 = term;
-              term = e_46;
+              IStrategoTerm l_46 = null;
+              l_46 = term;
+              term = i_46;
               if(term.getTermType() != IStrategoTerm.APPL || transform._consInt_0 != ((IStrategoAppl)term).getConstructor())
-                break Fail105;
-              term = h_46;
+                break Fail106;
+              term = l_46;
               { 
                 term = transform.constSome0;
                 if(true)
@@ -5282,14 +5318,14 @@ import java.lang.ref.WeakReference;
             IStrategoTerm term62 = term;
             Success57:
             { 
-              Fail106:
+              Fail107:
               { 
-                IStrategoTerm i_46 = null;
-                i_46 = term;
-                term = e_46;
-                if(term.getTermType() != IStrategoTerm.APPL || transform._consLong_0 != ((IStrategoAppl)term).getConstructor())
-                  break Fail106;
+                IStrategoTerm m_46 = null;
+                m_46 = term;
                 term = i_46;
+                if(term.getTermType() != IStrategoTerm.APPL || transform._consLong_0 != ((IStrategoAppl)term).getConstructor())
+                  break Fail107;
+                term = m_46;
                 { 
                   term = transform.constSome0;
                   if(true)
@@ -5300,14 +5336,14 @@ import java.lang.ref.WeakReference;
               IStrategoTerm term63 = term;
               Success58:
               { 
-                Fail107:
+                Fail108:
                 { 
-                  IStrategoTerm j_46 = null;
-                  j_46 = term;
-                  term = e_46;
+                  IStrategoTerm n_46 = null;
+                  n_46 = term;
+                  term = i_46;
                   if(term.getTermType() != IStrategoTerm.APPL || transform._consShort_0 != ((IStrategoAppl)term).getConstructor())
-                    break Fail107;
-                  term = j_46;
+                    break Fail108;
+                  term = n_46;
                   { 
                     term = transform.constSome0;
                     if(true)
@@ -5318,14 +5354,14 @@ import java.lang.ref.WeakReference;
                 IStrategoTerm term64 = term;
                 Success59:
                 { 
-                  Fail108:
+                  Fail109:
                   { 
-                    IStrategoTerm k_46 = null;
-                    k_46 = term;
-                    term = e_46;
+                    IStrategoTerm o_46 = null;
+                    o_46 = term;
+                    term = i_46;
                     if(term.getTermType() != IStrategoTerm.APPL || transform._consByte_0 != ((IStrategoAppl)term).getConstructor())
-                      break Fail108;
-                    term = k_46;
+                      break Fail109;
+                    term = o_46;
                     { 
                       term = transform.constSome0;
                       if(true)
@@ -5336,14 +5372,14 @@ import java.lang.ref.WeakReference;
                   IStrategoTerm term65 = term;
                   Success60:
                   { 
-                    Fail109:
+                    Fail110:
                     { 
-                      IStrategoTerm l_46 = null;
-                      l_46 = term;
-                      term = e_46;
+                      IStrategoTerm p_46 = null;
+                      p_46 = term;
+                      term = i_46;
                       if(term.getTermType() != IStrategoTerm.APPL || transform._consDouble_0 != ((IStrategoAppl)term).getConstructor())
-                        break Fail109;
-                      term = l_46;
+                        break Fail110;
+                      term = p_46;
                       { 
                         term = transform.constSome0;
                         if(true)
@@ -5354,14 +5390,14 @@ import java.lang.ref.WeakReference;
                     IStrategoTerm term66 = term;
                     Success61:
                     { 
-                      Fail110:
+                      Fail111:
                       { 
-                        IStrategoTerm m_46 = null;
-                        m_46 = term;
-                        term = e_46;
+                        IStrategoTerm q_46 = null;
+                        q_46 = term;
+                        term = i_46;
                         if(term.getTermType() != IStrategoTerm.APPL || transform._consFloat_0 != ((IStrategoAppl)term).getConstructor())
-                          break Fail110;
-                        term = m_46;
+                          break Fail111;
+                        term = q_46;
                         { 
                           term = transform.constSome0;
                           if(true)
@@ -5371,14 +5407,14 @@ import java.lang.ref.WeakReference;
                       term = term66;
                       Success62:
                       { 
-                        Fail111:
+                        Fail112:
                         { 
-                          IStrategoTerm n_46 = null;
-                          n_46 = term;
-                          term = e_46;
+                          IStrategoTerm r_46 = null;
+                          r_46 = term;
+                          term = i_46;
                           if(term.getTermType() != IStrategoTerm.APPL || transform._consBoolean_0 != ((IStrategoAppl)term).getConstructor())
-                            break Fail111;
-                          term = n_46;
+                            break Fail112;
+                          term = r_46;
                           { 
                             term = transform.constSome1;
                             if(true)
@@ -5409,7 +5445,7 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail112:
+      Fail113:
       { 
         IStrategoTerm term68 = term;
         IStrategoConstructor cons15 = term.getTermType() == IStrategoTerm.APPL ? ((IStrategoAppl)term).getConstructor() : null;
@@ -5417,14 +5453,14 @@ import java.lang.ref.WeakReference;
         { 
           if(cons15 == transform._consSome_1)
           { 
-            Fail113:
+            Fail114:
             { 
-              IStrategoTerm q_46 = null;
+              IStrategoTerm u_46 = null;
               IStrategoTerm arg130 = term.getSubterm(0);
               if(arg130.getTermType() != IStrategoTerm.APPL || transform._consExplicitJoinPointInitializer_1 != ((IStrategoAppl)arg130).getConstructor())
-                break Fail113;
-              q_46 = arg130.getSubterm(0);
-              term = q_46;
+                break Fail114;
+              u_46 = arg130.getSubterm(0);
+              term = u_46;
               if(true)
                 break Success63;
             }
@@ -5436,7 +5472,7 @@ import java.lang.ref.WeakReference;
           }
           else
           { 
-            break Fail112;
+            break Fail113;
           }
         }
         if(true)
@@ -5454,7 +5490,7 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail114:
+      Fail115:
       { 
         IStrategoTerm term69 = term;
         IStrategoConstructor cons16 = term.getTermType() == IStrategoTerm.APPL ? ((IStrategoAppl)term).getConstructor() : null;
@@ -5462,14 +5498,14 @@ import java.lang.ref.WeakReference;
         { 
           if(cons16 == transform._consSome_1)
           { 
-            Fail115:
+            Fail116:
             { 
-              IStrategoTerm r_46 = null;
+              IStrategoTerm v_46 = null;
               IStrategoTerm arg131 = term.getSubterm(0);
               if(arg131.getTermType() != IStrategoTerm.APPL || transform._consHandles_1 != ((IStrategoAppl)arg131).getConstructor())
-                break Fail115;
-              r_46 = arg131.getSubterm(0);
-              term = r_46;
+                break Fail116;
+              v_46 = arg131.getSubterm(0);
+              term = v_46;
               if(true)
                 break Success64;
             }
@@ -5481,7 +5517,7 @@ import java.lang.ref.WeakReference;
           }
           else
           { 
-            break Fail114;
+            break Fail115;
           }
         }
         if(true)
@@ -5499,7 +5535,7 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail116:
+      Fail117:
       { 
         IStrategoTerm term70 = term;
         IStrategoConstructor cons17 = term.getTermType() == IStrategoTerm.APPL ? ((IStrategoAppl)term).getConstructor() : null;
@@ -5507,7 +5543,7 @@ import java.lang.ref.WeakReference;
         { 
           if(cons17 == transform._consExplicitJoinPointDeclaration_5)
           { 
-            Fail117:
+            Fail118:
             { 
               term = transform.constNone0;
               if(true)
@@ -5519,7 +5555,7 @@ import java.lang.ref.WeakReference;
           { 
             if(cons17 == transform._consDecNoMatch_4)
             { 
-              Fail118:
+              Fail119:
               { 
                 term = transform.constNone0;
                 if(true)
@@ -5531,7 +5567,7 @@ import java.lang.ref.WeakReference;
             { 
               if(cons17 == transform._consExplicitJoinPointPattern_1)
               { 
-                Fail119:
+                Fail120:
                 { 
                   term = transform.constNone0;
                   if(true)
@@ -5543,7 +5579,7 @@ import java.lang.ref.WeakReference;
               { 
                 if(cons17 == transform._consNotExplicitJoinPointPattern_1)
                 { 
-                  Fail120:
+                  Fail121:
                   { 
                     term = transform.constNone0;
                     if(true)
@@ -5555,7 +5591,7 @@ import java.lang.ref.WeakReference;
                 { 
                   if(cons17 == transform._consExplicitJoinPointScopePattern_1)
                   { 
-                    Fail121:
+                    Fail122:
                     { 
                       term = transform.constNone0;
                       if(true)
@@ -5569,7 +5605,7 @@ import java.lang.ref.WeakReference;
                   }
                   else
                   { 
-                    break Fail116;
+                    break Fail117;
                   }
                 }
               }
@@ -5593,7 +5629,7 @@ import java.lang.ref.WeakReference;
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("aspectj_to_box_0_0_fragment_4");
-      Fail122:
+      Fail123:
       { 
         IStrategoTerm term75 = term;
         IStrategoConstructor cons18 = term.getTermType() == IStrategoTerm.APPL ? ((IStrategoAppl)term).getConstructor() : null;
@@ -5601,11 +5637,11 @@ import java.lang.ref.WeakReference;
         { 
           if(cons18 == transform._consInitExec_1)
           { 
-            Fail123:
+            Fail124:
             { 
-              IStrategoTerm x_56 = null;
-              x_56 = term.getSubterm(0);
-              term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX0, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(x_56, (IStrategoList)transform.constCons26)))});
+              IStrategoTerm b_57 = null;
+              b_57 = term.getSubterm(0);
+              term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX0, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(b_57, (IStrategoList)transform.constCons26)))});
               if(true)
                 break Success70;
             }
@@ -5615,11 +5651,11 @@ import java.lang.ref.WeakReference;
           { 
             if(cons18 == transform._consPreInitExec_1)
             { 
-              Fail124:
+              Fail125:
               { 
-                IStrategoTerm v_56 = null;
-                v_56 = term.getSubterm(0);
-                term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX1, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(v_56, (IStrategoList)transform.constCons26)))});
+                IStrategoTerm a_57 = null;
+                a_57 = term.getSubterm(0);
+                term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX1, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(a_57, (IStrategoList)transform.constCons26)))});
                 if(true)
                   break Success71;
               }
@@ -5629,11 +5665,11 @@ import java.lang.ref.WeakReference;
             { 
               if(cons18 == transform._consStaticInitExec_1)
               { 
-                Fail125:
+                Fail126:
                 { 
-                  IStrategoTerm u_56 = null;
-                  u_56 = term.getSubterm(0);
-                  term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX2, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(u_56, (IStrategoList)transform.constCons26)))});
+                  IStrategoTerm z_56 = null;
+                  z_56 = term.getSubterm(0);
+                  term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX2, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(z_56, (IStrategoList)transform.constCons26)))});
                   if(true)
                     break Success72;
                 }
@@ -5643,11 +5679,11 @@ import java.lang.ref.WeakReference;
               { 
                 if(cons18 == transform._consGetField_1)
                 { 
-                  Fail126:
+                  Fail127:
                   { 
-                    IStrategoTerm t_56 = null;
-                    t_56 = term.getSubterm(0);
-                    term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX3, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(t_56, (IStrategoList)transform.constCons26)))});
+                    IStrategoTerm y_56 = null;
+                    y_56 = term.getSubterm(0);
+                    term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX3, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(y_56, (IStrategoList)transform.constCons26)))});
                     if(true)
                       break Success73;
                   }
@@ -5657,11 +5693,11 @@ import java.lang.ref.WeakReference;
                 { 
                   if(cons18 == transform._consSetField_1)
                   { 
-                    Fail127:
+                    Fail128:
                     { 
-                      IStrategoTerm s_56 = null;
-                      s_56 = term.getSubterm(0);
-                      term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX4, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(s_56, (IStrategoList)transform.constCons26)))});
+                      IStrategoTerm x_56 = null;
+                      x_56 = term.getSubterm(0);
+                      term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX4, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(x_56, (IStrategoList)transform.constCons26)))});
                       if(true)
                         break Success74;
                     }
@@ -5671,11 +5707,11 @@ import java.lang.ref.WeakReference;
                   { 
                     if(cons18 == transform._consHandler_1)
                     { 
-                      Fail128:
+                      Fail129:
                       { 
-                        IStrategoTerm q_56 = null;
-                        q_56 = term.getSubterm(0);
-                        term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX5, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(q_56, (IStrategoList)transform.constCons26)))});
+                        IStrategoTerm v_56 = null;
+                        v_56 = term.getSubterm(0);
+                        term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX5, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(v_56, (IStrategoList)transform.constCons26)))});
                         if(true)
                           break Success75;
                       }
@@ -5685,7 +5721,7 @@ import java.lang.ref.WeakReference;
                     { 
                       if(cons18 == transform._consAdviceExec_0)
                       { 
-                        Fail129:
+                        Fail130:
                         { 
                           term = transform.constH0;
                           if(true)
@@ -5697,11 +5733,11 @@ import java.lang.ref.WeakReference;
                       { 
                         if(cons18 == transform._consWithin_1)
                         { 
-                          Fail130:
+                          Fail131:
                           { 
-                            IStrategoTerm p_56 = null;
-                            p_56 = term.getSubterm(0);
-                            term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX7, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(p_56, (IStrategoList)transform.constCons26)))});
+                            IStrategoTerm u_56 = null;
+                            u_56 = term.getSubterm(0);
+                            term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX7, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(u_56, (IStrategoList)transform.constCons26)))});
                             if(true)
                               break Success77;
                           }
@@ -5711,11 +5747,11 @@ import java.lang.ref.WeakReference;
                         { 
                           if(cons18 == transform._consWithinCode_1)
                           { 
-                            Fail131:
+                            Fail132:
                             { 
-                              IStrategoTerm o_56 = null;
-                              o_56 = term.getSubterm(0);
-                              term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX8, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(o_56, (IStrategoList)transform.constCons26)))});
+                              IStrategoTerm t_56 = null;
+                              t_56 = term.getSubterm(0);
+                              term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX8, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(t_56, (IStrategoList)transform.constCons26)))});
                               if(true)
                                 break Success78;
                             }
@@ -5725,11 +5761,11 @@ import java.lang.ref.WeakReference;
                           { 
                             if(cons18 == transform._consCFlow_1)
                             { 
-                              Fail132:
+                              Fail133:
                               { 
-                                IStrategoTerm n_56 = null;
-                                n_56 = term.getSubterm(0);
-                                term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX9, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(n_56, (IStrategoList)transform.constCons26)))});
+                                IStrategoTerm s_56 = null;
+                                s_56 = term.getSubterm(0);
+                                term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX9, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(s_56, (IStrategoList)transform.constCons26)))});
                                 if(true)
                                   break Success79;
                               }
@@ -5739,11 +5775,11 @@ import java.lang.ref.WeakReference;
                             { 
                               if(cons18 == transform._consCFlowBelow_1)
                               { 
-                                Fail133:
+                                Fail134:
                                 { 
-                                  IStrategoTerm m_56 = null;
-                                  m_56 = term.getSubterm(0);
-                                  term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX10, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(m_56, (IStrategoList)transform.constCons26)))});
+                                  IStrategoTerm q_56 = null;
+                                  q_56 = term.getSubterm(0);
+                                  term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX10, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(q_56, (IStrategoList)transform.constCons26)))});
                                   if(true)
                                     break Success80;
                                 }
@@ -5753,11 +5789,11 @@ import java.lang.ref.WeakReference;
                               { 
                                 if(cons18 == transform._consIf_1)
                                 { 
-                                  Fail134:
+                                  Fail135:
                                   { 
-                                    IStrategoTerm l_56 = null;
-                                    l_56 = term.getSubterm(0);
-                                    term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX11, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(l_56, (IStrategoList)transform.constCons26)))});
+                                    IStrategoTerm p_56 = null;
+                                    p_56 = term.getSubterm(0);
+                                    term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX11, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(p_56, (IStrategoList)transform.constCons26)))});
                                     if(true)
                                       break Success81;
                                   }
@@ -5767,11 +5803,11 @@ import java.lang.ref.WeakReference;
                                 { 
                                   if(cons18 == transform._consThis_1)
                                   { 
-                                    Fail135:
+                                    Fail136:
                                     { 
-                                      IStrategoTerm k_56 = null;
-                                      k_56 = term.getSubterm(0);
-                                      term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX12, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(k_56, (IStrategoList)transform.constCons26)))});
+                                      IStrategoTerm o_56 = null;
+                                      o_56 = term.getSubterm(0);
+                                      term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX12, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(o_56, (IStrategoList)transform.constCons26)))});
                                       if(true)
                                         break Success82;
                                     }
@@ -5781,11 +5817,11 @@ import java.lang.ref.WeakReference;
                                   { 
                                     if(cons18 == transform._consTarget_1)
                                     { 
-                                      Fail136:
+                                      Fail137:
                                       { 
-                                        IStrategoTerm j_56 = null;
-                                        j_56 = term.getSubterm(0);
-                                        term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX13, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(j_56, (IStrategoList)transform.constCons26)))});
+                                        IStrategoTerm n_56 = null;
+                                        n_56 = term.getSubterm(0);
+                                        term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX13, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(n_56, (IStrategoList)transform.constCons26)))});
                                         if(true)
                                           break Success83;
                                       }
@@ -5795,13 +5831,13 @@ import java.lang.ref.WeakReference;
                                     { 
                                       if(cons18 == transform._consArgs_1)
                                       { 
-                                        Fail137:
+                                        Fail138:
                                         { 
-                                          IStrategoTerm e_56 = null;
-                                          e_56 = term.getSubterm(0);
-                                          term = list_to_args_0_0.instance.invoke(context, e_56);
+                                          IStrategoTerm k_56 = null;
+                                          k_56 = term.getSubterm(0);
+                                          term = list_to_args_0_0.instance.invoke(context, k_56);
                                           if(term == null)
-                                            break Fail137;
+                                            break Fail138;
                                           term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX14, termFactory.makeListCons(term, (IStrategoList)transform.constNil0))});
                                           if(true)
                                             break Success84;
@@ -5812,16 +5848,16 @@ import java.lang.ref.WeakReference;
                                       { 
                                         if(cons18 == transform._consNamedPointcut_2)
                                         { 
-                                          Fail138:
+                                          Fail139:
                                           { 
-                                            IStrategoTerm z_55 = null;
-                                            IStrategoTerm b_56 = null;
-                                            z_55 = term.getSubterm(0);
-                                            b_56 = term.getSubterm(1);
-                                            term = list_to_args_0_0.instance.invoke(context, b_56);
+                                            IStrategoTerm e_56 = null;
+                                            IStrategoTerm f_56 = null;
+                                            e_56 = term.getSubterm(0);
+                                            f_56 = term.getSubterm(1);
+                                            term = list_to_args_0_0.instance.invoke(context, f_56);
                                             if(term == null)
-                                              break Fail138;
-                                            term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(z_55, termFactory.makeListCons(term, (IStrategoList)transform.constNil0))});
+                                              break Fail139;
+                                            term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(e_56, termFactory.makeListCons(term, (IStrategoList)transform.constNil0))});
                                             if(true)
                                               break Success85;
                                           }
@@ -5831,11 +5867,11 @@ import java.lang.ref.WeakReference;
                                         { 
                                           if(cons18 == transform._consAtThis_1)
                                           { 
-                                            Fail139:
+                                            Fail140:
                                             { 
-                                              IStrategoTerm y_55 = null;
-                                              y_55 = term.getSubterm(0);
-                                              term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS17, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(y_55, (IStrategoList)transform.constCons26)))});
+                                              IStrategoTerm d_56 = null;
+                                              d_56 = term.getSubterm(0);
+                                              term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS17, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(d_56, (IStrategoList)transform.constCons26)))});
                                               if(true)
                                                 break Success86;
                                             }
@@ -5845,11 +5881,11 @@ import java.lang.ref.WeakReference;
                                           { 
                                             if(cons18 == transform._consAtTarget_1)
                                             { 
-                                              Fail140:
+                                              Fail141:
                                               { 
-                                                IStrategoTerm x_55 = null;
-                                                x_55 = term.getSubterm(0);
-                                                term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS18, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(x_55, (IStrategoList)transform.constCons26)))});
+                                                IStrategoTerm c_56 = null;
+                                                c_56 = term.getSubterm(0);
+                                                term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS18, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(c_56, (IStrategoList)transform.constCons26)))});
                                                 if(true)
                                                   break Success87;
                                               }
@@ -5857,7 +5893,7 @@ import java.lang.ref.WeakReference;
                                             }
                                             term = aspectj_to_box_0_0_fragment_3.instance.invoke(context, term);
                                             if(term == null)
-                                              break Fail122;
+                                              break Fail123;
                                           }
                                         }
                                       }
@@ -5893,7 +5929,7 @@ import java.lang.ref.WeakReference;
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("aspectj_to_box_0_0_fragment_3");
-      Fail141:
+      Fail142:
       { 
         IStrategoTerm term93 = term;
         IStrategoConstructor cons19 = term.getTermType() == IStrategoTerm.APPL ? ((IStrategoAppl)term).getConstructor() : null;
@@ -5901,11 +5937,11 @@ import java.lang.ref.WeakReference;
         { 
           if(cons19 == transform._consAtWithin_1)
           { 
-            Fail142:
+            Fail143:
             { 
-              IStrategoTerm u_55 = null;
-              u_55 = term.getSubterm(0);
-              term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS19, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(u_55, (IStrategoList)transform.constCons26)))});
+              IStrategoTerm b_56 = null;
+              b_56 = term.getSubterm(0);
+              term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS19, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(b_56, (IStrategoList)transform.constCons26)))});
               if(true)
                 break Success88;
             }
@@ -5915,11 +5951,11 @@ import java.lang.ref.WeakReference;
           { 
             if(cons19 == transform._consAtWithinCode_1)
             { 
-              Fail143:
+              Fail144:
               { 
-                IStrategoTerm t_55 = null;
-                t_55 = term.getSubterm(0);
-                term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS20, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(t_55, (IStrategoList)transform.constCons26)))});
+                IStrategoTerm z_55 = null;
+                z_55 = term.getSubterm(0);
+                term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS20, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(z_55, (IStrategoList)transform.constCons26)))});
                 if(true)
                   break Success89;
               }
@@ -5929,11 +5965,11 @@ import java.lang.ref.WeakReference;
             { 
               if(cons19 == transform._consAtAnno_1)
               { 
-                Fail144:
+                Fail145:
                 { 
-                  IStrategoTerm s_55 = null;
-                  s_55 = term.getSubterm(0);
-                  term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS21, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(s_55, (IStrategoList)transform.constCons26)))});
+                  IStrategoTerm y_55 = null;
+                  y_55 = term.getSubterm(0);
+                  term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS21, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(y_55, (IStrategoList)transform.constCons26)))});
                   if(true)
                     break Success90;
                 }
@@ -5943,13 +5979,13 @@ import java.lang.ref.WeakReference;
               { 
                 if(cons19 == transform._consAtArgs_1)
                 { 
-                  Fail145:
+                  Fail146:
                   { 
-                    IStrategoTerm p_55 = null;
-                    p_55 = term.getSubterm(0);
-                    term = list_to_args_0_0.instance.invoke(context, p_55);
+                    IStrategoTerm t_55 = null;
+                    t_55 = term.getSubterm(0);
+                    term = list_to_args_0_0.instance.invoke(context, t_55);
                     if(term == null)
-                      break Fail145;
+                      break Fail146;
                     term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS22, termFactory.makeListCons(term, (IStrategoList)transform.constNil0))});
                     if(true)
                       break Success91;
@@ -5960,11 +5996,11 @@ import java.lang.ref.WeakReference;
                 { 
                   if(cons19 == transform._consPointcutName_1)
                   { 
-                    Fail146:
+                    Fail147:
                     { 
-                      IStrategoTerm o_55 = null;
-                      o_55 = term.getSubterm(0);
-                      term = o_55;
+                      IStrategoTerm s_55 = null;
+                      s_55 = term.getSubterm(0);
+                      term = s_55;
                       if(true)
                         break Success92;
                     }
@@ -5974,13 +6010,13 @@ import java.lang.ref.WeakReference;
                   { 
                     if(cons19 == transform._consPointcutName_2)
                     { 
-                      Fail147:
+                      Fail148:
                       { 
-                        IStrategoTerm k_55 = null;
-                        IStrategoTerm n_55 = null;
-                        k_55 = term.getSubterm(0);
-                        n_55 = term.getSubterm(1);
-                        term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(k_55, termFactory.makeListCons(transform.constS23, termFactory.makeListCons(n_55, (IStrategoList)transform.constNil0)))});
+                        IStrategoTerm q_55 = null;
+                        IStrategoTerm r_55 = null;
+                        q_55 = term.getSubterm(0);
+                        r_55 = term.getSubterm(1);
+                        term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(q_55, termFactory.makeListCons(transform.constS23, termFactory.makeListCons(r_55, (IStrategoList)transform.constNil0)))});
                         if(true)
                           break Success93;
                       }
@@ -5990,13 +6026,13 @@ import java.lang.ref.WeakReference;
                     { 
                       if(cons19 == transform._consPointcutDec_2)
                       { 
-                        Fail148:
+                        Fail149:
                         { 
-                          IStrategoTerm i_55 = null;
-                          IStrategoTerm j_55 = null;
-                          i_55 = term.getSubterm(0);
-                          j_55 = term.getSubterm(1);
-                          term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, (IStrategoTerm)termFactory.makeListCons(i_55, termFactory.makeListCons(j_55, (IStrategoList)transform.constNil0))});
+                          IStrategoTerm o_55 = null;
+                          IStrategoTerm p_55 = null;
+                          o_55 = term.getSubterm(0);
+                          p_55 = term.getSubterm(1);
+                          term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, (IStrategoTerm)termFactory.makeListCons(o_55, termFactory.makeListCons(p_55, (IStrategoList)transform.constNil0))});
                           if(true)
                             break Success94;
                         }
@@ -6006,23 +6042,23 @@ import java.lang.ref.WeakReference;
                       { 
                         if(cons19 == transform._consPointcutDecHead_3)
                         { 
-                          Fail149:
+                          Fail150:
                           { 
-                            IStrategoTerm z_54 = null;
-                            IStrategoTerm a_55 = null;
-                            IStrategoTerm d_55 = null;
-                            IStrategoTerm e_55 = null;
-                            z_54 = term.getSubterm(0);
-                            a_55 = term.getSubterm(1);
-                            d_55 = term.getSubterm(2);
-                            term = list_to_args_0_0.instance.invoke(context, d_55);
+                            IStrategoTerm f_55 = null;
+                            IStrategoTerm g_55 = null;
+                            IStrategoTerm h_55 = null;
+                            IStrategoTerm i_55 = null;
+                            f_55 = term.getSubterm(0);
+                            g_55 = term.getSubterm(1);
+                            h_55 = term.getSubterm(2);
+                            term = list_to_args_0_0.instance.invoke(context, h_55);
                             if(term == null)
-                              break Fail149;
-                            e_55 = term;
-                            term = termFactory.makeTuple(z_54, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX15, termFactory.makeListCons(a_55, termFactory.makeListCons(e_55, (IStrategoList)transform.constNil0))));
+                              break Fail150;
+                            i_55 = term;
+                            term = termFactory.makeTuple(f_55, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX15, termFactory.makeListCons(g_55, termFactory.makeListCons(i_55, (IStrategoList)transform.constNil0))));
                             term = make$Conc_0_0.instance.invoke(context, term);
                             if(term == null)
-                              break Fail149;
+                              break Fail150;
                             term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, term});
                             if(true)
                               break Success95;
@@ -6033,11 +6069,11 @@ import java.lang.ref.WeakReference;
                         { 
                           if(cons19 == transform._consPointcutBody_1)
                           { 
-                            Fail150:
+                            Fail151:
                             { 
-                              IStrategoTerm y_54 = null;
-                              y_54 = term.getSubterm(0);
-                              term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS26, termFactory.makeListCons(y_54, (IStrategoList)transform.constCons30))});
+                              IStrategoTerm e_55 = null;
+                              e_55 = term.getSubterm(0);
+                              term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS26, termFactory.makeListCons(e_55, (IStrategoList)transform.constCons30))});
                               if(true)
                                 break Success96;
                             }
@@ -6047,7 +6083,7 @@ import java.lang.ref.WeakReference;
                           { 
                             if(cons19 == transform._consNoPointcutBody_0)
                             { 
-                              Fail151:
+                              Fail152:
                               { 
                                 term = transform.constFBOX16;
                                 if(true)
@@ -6059,11 +6095,11 @@ import java.lang.ref.WeakReference;
                             { 
                               if(cons19 == transform._consRefTypePattern_1)
                               { 
-                                Fail152:
+                                Fail153:
                                 { 
-                                  IStrategoTerm x_54 = null;
-                                  x_54 = term.getSubterm(0);
-                                  term = x_54;
+                                  IStrategoTerm d_55 = null;
+                                  d_55 = term.getSubterm(0);
+                                  term = d_55;
                                   if(true)
                                     break Success98;
                                 }
@@ -6073,11 +6109,11 @@ import java.lang.ref.WeakReference;
                               { 
                                 if(cons19 == transform._consPrimTypePattern_1)
                                 { 
-                                  Fail153:
+                                  Fail154:
                                   { 
-                                    IStrategoTerm w_54 = null;
-                                    w_54 = term.getSubterm(0);
-                                    term = w_54;
+                                    IStrategoTerm a_55 = null;
+                                    a_55 = term.getSubterm(0);
+                                    term = a_55;
                                     if(true)
                                       break Success99;
                                   }
@@ -6087,11 +6123,11 @@ import java.lang.ref.WeakReference;
                                 { 
                                   if(cons19 == transform._consSubtype_1)
                                   { 
-                                    Fail154:
+                                    Fail155:
                                     { 
-                                      IStrategoTerm v_54 = null;
-                                      v_54 = term.getSubterm(0);
-                                      term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(v_54, (IStrategoList)transform.constCons31)});
+                                      IStrategoTerm z_54 = null;
+                                      z_54 = term.getSubterm(0);
+                                      term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(z_54, (IStrategoList)transform.constCons31)});
                                       if(true)
                                         break Success100;
                                     }
@@ -6101,13 +6137,13 @@ import java.lang.ref.WeakReference;
                                   { 
                                     if(cons19 == transform._consGenericTypePattern_2)
                                     { 
-                                      Fail155:
+                                      Fail156:
                                       { 
-                                        IStrategoTerm t_54 = null;
-                                        IStrategoTerm u_54 = null;
-                                        t_54 = term.getSubterm(0);
-                                        u_54 = term.getSubterm(1);
-                                        term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(t_54, termFactory.makeListCons(u_54, (IStrategoList)transform.constNil0))});
+                                        IStrategoTerm x_54 = null;
+                                        IStrategoTerm y_54 = null;
+                                        x_54 = term.getSubterm(0);
+                                        y_54 = term.getSubterm(1);
+                                        term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(x_54, termFactory.makeListCons(y_54, (IStrategoList)transform.constNil0))});
                                         if(true)
                                           break Success101;
                                       }
@@ -6117,13 +6153,13 @@ import java.lang.ref.WeakReference;
                                     { 
                                       if(cons19 == transform._consGenericSubtypePattern_2)
                                       { 
-                                        Fail156:
+                                        Fail157:
                                         { 
-                                          IStrategoTerm p_54 = null;
-                                          IStrategoTerm s_54 = null;
-                                          p_54 = term.getSubterm(0);
-                                          s_54 = term.getSubterm(1);
-                                          term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(p_54, termFactory.makeListCons(s_54, (IStrategoList)transform.constCons31))});
+                                          IStrategoTerm v_54 = null;
+                                          IStrategoTerm w_54 = null;
+                                          v_54 = term.getSubterm(0);
+                                          w_54 = term.getSubterm(1);
+                                          term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(v_54, termFactory.makeListCons(w_54, (IStrategoList)transform.constCons31))});
                                           if(true)
                                             break Success102;
                                         }
@@ -6133,19 +6169,19 @@ import java.lang.ref.WeakReference;
                                       { 
                                         if(cons19 == transform._consAnnoTypePattern_2)
                                         { 
-                                          Fail157:
+                                          Fail158:
                                           { 
-                                            IStrategoTerm l_54 = null;
-                                            IStrategoTerm m_54 = null;
+                                            IStrategoTerm p_54 = null;
+                                            IStrategoTerm s_54 = null;
                                             IStrategoTerm arg145 = term.getSubterm(0);
                                             if(arg145.getTermType() != IStrategoTerm.APPL || transform._consAnnoPattern_1 != ((IStrategoAppl)arg145).getConstructor())
-                                              break Fail157;
-                                            l_54 = arg145.getSubterm(0);
-                                            m_54 = term.getSubterm(1);
-                                            term = termFactory.makeTuple(l_54, (IStrategoTerm)termFactory.makeListCons(m_54, (IStrategoList)transform.constNil0));
+                                              break Fail158;
+                                            p_54 = arg145.getSubterm(0);
+                                            s_54 = term.getSubterm(1);
+                                            term = termFactory.makeTuple(p_54, (IStrategoTerm)termFactory.makeListCons(s_54, (IStrategoList)transform.constNil0));
                                             term = make$Conc_0_0.instance.invoke(context, term);
                                             if(term == null)
-                                              break Fail157;
+                                              break Fail158;
                                             term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, term}), (IStrategoList)transform.constNil0)});
                                             if(true)
                                               break Success103;
@@ -6156,11 +6192,11 @@ import java.lang.ref.WeakReference;
                                         { 
                                           if(cons19 == transform._consNamePattern_1)
                                           { 
-                                            Fail158:
+                                            Fail159:
                                             { 
-                                              IStrategoTerm k_54 = null;
-                                              k_54 = term.getSubterm(0);
-                                              term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consS_1, new IStrategoTerm[]{k_54}), (IStrategoList)transform.constNil0)});
+                                              IStrategoTerm o_54 = null;
+                                              o_54 = term.getSubterm(0);
+                                              term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consS_1, new IStrategoTerm[]{o_54}), (IStrategoList)transform.constNil0)});
                                               if(true)
                                                 break Success104;
                                             }
@@ -6170,13 +6206,13 @@ import java.lang.ref.WeakReference;
                                           { 
                                             if(cons19 == transform._consNamePattern_2)
                                             { 
-                                              Fail159:
+                                              Fail160:
                                               { 
-                                                IStrategoTerm i_54 = null;
-                                                IStrategoTerm j_54 = null;
-                                                i_54 = term.getSubterm(0);
-                                                j_54 = term.getSubterm(1);
-                                                term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(i_54, termFactory.makeListCons(transform.constFBOX17, termFactory.makeListCons(termFactory.makeAppl(transform._consS_1, new IStrategoTerm[]{j_54}), (IStrategoList)transform.constNil0)))});
+                                                IStrategoTerm m_54 = null;
+                                                IStrategoTerm n_54 = null;
+                                                m_54 = term.getSubterm(0);
+                                                n_54 = term.getSubterm(1);
+                                                term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(m_54, termFactory.makeListCons(transform.constFBOX17, termFactory.makeListCons(termFactory.makeAppl(transform._consS_1, new IStrategoTerm[]{n_54}), (IStrategoList)transform.constNil0)))});
                                                 if(true)
                                                   break Success105;
                                               }
@@ -6186,13 +6222,13 @@ import java.lang.ref.WeakReference;
                                             { 
                                               if(cons19 == transform._consWildcardNamePattern_2)
                                               { 
-                                                Fail160:
+                                                Fail161:
                                                 { 
-                                                  IStrategoTerm e_54 = null;
-                                                  IStrategoTerm f_54 = null;
-                                                  e_54 = term.getSubterm(0);
-                                                  f_54 = term.getSubterm(1);
-                                                  term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(e_54, termFactory.makeListCons(transform.constFBOX18, termFactory.makeListCons(termFactory.makeAppl(transform._consS_1, new IStrategoTerm[]{f_54}), (IStrategoList)transform.constNil0)))});
+                                                  IStrategoTerm k_54 = null;
+                                                  IStrategoTerm l_54 = null;
+                                                  k_54 = term.getSubterm(0);
+                                                  l_54 = term.getSubterm(1);
+                                                  term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(k_54, termFactory.makeListCons(transform.constFBOX18, termFactory.makeListCons(termFactory.makeAppl(transform._consS_1, new IStrategoTerm[]{l_54}), (IStrategoList)transform.constNil0)))});
                                                   if(true)
                                                     break Success106;
                                                 }
@@ -6202,7 +6238,7 @@ import java.lang.ref.WeakReference;
                                               { 
                                                 if(cons19 == transform._consFormalWildcard_0)
                                                 { 
-                                                  Fail161:
+                                                  Fail162:
                                                   { 
                                                     term = transform.constS28;
                                                     if(true)
@@ -6214,11 +6250,11 @@ import java.lang.ref.WeakReference;
                                                 { 
                                                   if(cons19 == transform._consVarArityParamPattern_1)
                                                   { 
-                                                    Fail162:
+                                                    Fail163:
                                                     { 
-                                                      IStrategoTerm d_54 = null;
-                                                      d_54 = term.getSubterm(0);
-                                                      term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, (IStrategoTerm)termFactory.makeListCons(d_54, (IStrategoList)transform.constCons32)});
+                                                      IStrategoTerm j_54 = null;
+                                                      j_54 = term.getSubterm(0);
+                                                      term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, (IStrategoTerm)termFactory.makeListCons(j_54, (IStrategoList)transform.constCons32)});
                                                       if(true)
                                                         break Success108;
                                                     }
@@ -6228,11 +6264,11 @@ import java.lang.ref.WeakReference;
                                                   { 
                                                     if(cons19 == transform._consRegularTypePattern_1)
                                                     { 
-                                                      Fail163:
+                                                      Fail164:
                                                       { 
-                                                        IStrategoTerm c_54 = null;
-                                                        c_54 = term.getSubterm(0);
-                                                        term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(c_54, (IStrategoList)transform.constNil0)});
+                                                        IStrategoTerm i_54 = null;
+                                                        i_54 = term.getSubterm(0);
+                                                        term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(i_54, (IStrategoList)transform.constNil0)});
                                                         if(true)
                                                           break Success109;
                                                       }
@@ -6242,7 +6278,7 @@ import java.lang.ref.WeakReference;
                                                     { 
                                                       if(cons19 == transform._consWildcard_0)
                                                       { 
-                                                        Fail164:
+                                                        Fail165:
                                                         { 
                                                           term = transform.constS30;
                                                           if(true)
@@ -6254,7 +6290,7 @@ import java.lang.ref.WeakReference;
                                                       { 
                                                         if(cons19 == transform._consDotWildcard_0)
                                                         { 
-                                                          Fail165:
+                                                          Fail166:
                                                           { 
                                                             term = transform.constS28;
                                                             if(true)
@@ -6266,11 +6302,11 @@ import java.lang.ref.WeakReference;
                                                         { 
                                                           if(cons19 == transform._consSimpleNamePattern_1)
                                                           { 
-                                                            Fail166:
+                                                            Fail167:
                                                             { 
-                                                              IStrategoTerm b_54 = null;
-                                                              b_54 = term.getSubterm(0);
-                                                              term = b_54;
+                                                              IStrategoTerm f_54 = null;
+                                                              f_54 = term.getSubterm(0);
+                                                              term = f_54;
                                                               if(true)
                                                                 break Success112;
                                                             }
@@ -6280,53 +6316,53 @@ import java.lang.ref.WeakReference;
                                                           { 
                                                             if(cons19 == transform._consMethodPattern_6)
                                                             { 
-                                                              Fail167:
+                                                              Fail168:
                                                               { 
-                                                                IStrategoTerm p_53 = null;
-                                                                IStrategoTerm q_53 = null;
-                                                                IStrategoTerm r_53 = null;
-                                                                IStrategoTerm s_53 = null;
                                                                 IStrategoTerm t_53 = null;
                                                                 IStrategoTerm u_53 = null;
                                                                 IStrategoTerm v_53 = null;
                                                                 IStrategoTerm w_53 = null;
                                                                 IStrategoTerm x_53 = null;
                                                                 IStrategoTerm y_53 = null;
+                                                                IStrategoTerm z_53 = null;
+                                                                IStrategoTerm a_54 = null;
+                                                                IStrategoTerm b_54 = null;
+                                                                IStrategoTerm c_54 = null;
                                                                 IStrategoTerm arg146 = term.getSubterm(0);
                                                                 if(arg146.getTermType() != IStrategoTerm.APPL || transform._consAnnoPattern_1 != ((IStrategoAppl)arg146).getConstructor())
-                                                                  break Fail167;
-                                                                r_53 = arg146.getSubterm(0);
+                                                                  break Fail168;
+                                                                v_53 = arg146.getSubterm(0);
                                                                 IStrategoTerm arg147 = term.getSubterm(1);
                                                                 if(arg147.getTermType() != IStrategoTerm.APPL || transform._consModPattern_1 != ((IStrategoAppl)arg147).getConstructor())
-                                                                  break Fail167;
-                                                                s_53 = arg147.getSubterm(0);
-                                                                p_53 = term.getSubterm(2);
-                                                                q_53 = term.getSubterm(3);
-                                                                u_53 = term.getSubterm(4);
-                                                                w_53 = term.getSubterm(5);
-                                                                y_53 = term;
-                                                                term = termFactory.makeTuple(r_53, s_53);
+                                                                  break Fail168;
+                                                                w_53 = arg147.getSubterm(0);
+                                                                t_53 = term.getSubterm(2);
+                                                                u_53 = term.getSubterm(3);
+                                                                y_53 = term.getSubterm(4);
+                                                                a_54 = term.getSubterm(5);
+                                                                c_54 = term;
+                                                                term = termFactory.makeTuple(v_53, w_53);
                                                                 term = conc_0_0.instance.invoke(context, term);
                                                                 if(term == null)
-                                                                  break Fail167;
-                                                                t_53 = term;
-                                                                term = list_to_args_0_0.instance.invoke(context, u_53);
-                                                                if(term == null)
-                                                                  break Fail167;
-                                                                v_53 = term;
-                                                                term = option_to_boxes_0_0.instance.invoke(context, w_53);
-                                                                if(term == null)
-                                                                  break Fail167;
+                                                                  break Fail168;
                                                                 x_53 = term;
-                                                                term = y_53;
+                                                                term = list_to_args_0_0.instance.invoke(context, y_53);
+                                                                if(term == null)
+                                                                  break Fail168;
+                                                                z_53 = term;
+                                                                term = option_to_boxes_0_0.instance.invoke(context, a_54);
+                                                                if(term == null)
+                                                                  break Fail168;
+                                                                b_54 = term;
+                                                                term = c_54;
                                                                 IStrategoList list2;
-                                                                list2 = checkListTail(x_53);
+                                                                list2 = checkListTail(b_54);
                                                                 if(list2 == null)
-                                                                  break Fail167;
-                                                                term = termFactory.makeTuple(t_53, (IStrategoTerm)termFactory.makeListCons(p_53, termFactory.makeListCons(termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(q_53, termFactory.makeListCons(v_53, (IStrategoList)transform.constNil0))}), list2)));
+                                                                  break Fail168;
+                                                                term = termFactory.makeTuple(x_53, (IStrategoTerm)termFactory.makeListCons(t_53, termFactory.makeListCons(termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(u_53, termFactory.makeListCons(z_53, (IStrategoList)transform.constNil0))}), list2)));
                                                                 term = make$Conc_0_0.instance.invoke(context, term);
                                                                 if(term == null)
-                                                                  break Fail167;
+                                                                  break Fail168;
                                                                 term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, term});
                                                                 if(true)
                                                                   break Success113;
@@ -6337,39 +6373,39 @@ import java.lang.ref.WeakReference;
                                                             { 
                                                               if(cons19 == transform._consConstrPattern_5)
                                                               { 
-                                                                Fail168:
+                                                                Fail169:
                                                                 { 
-                                                                  IStrategoTerm f_53 = null;
-                                                                  IStrategoTerm g_53 = null;
-                                                                  IStrategoTerm h_53 = null;
-                                                                  IStrategoTerm i_53 = null;
                                                                   IStrategoTerm j_53 = null;
                                                                   IStrategoTerm k_53 = null;
                                                                   IStrategoTerm l_53 = null;
+                                                                  IStrategoTerm m_53 = null;
+                                                                  IStrategoTerm n_53 = null;
+                                                                  IStrategoTerm o_53 = null;
+                                                                  IStrategoTerm p_53 = null;
                                                                   IStrategoTerm arg148 = term.getSubterm(0);
                                                                   if(arg148.getTermType() != IStrategoTerm.APPL || transform._consAnnoPattern_1 != ((IStrategoAppl)arg148).getConstructor())
-                                                                    break Fail168;
-                                                                  h_53 = arg148.getSubterm(0);
+                                                                    break Fail169;
+                                                                  l_53 = arg148.getSubterm(0);
                                                                   IStrategoTerm arg149 = term.getSubterm(1);
                                                                   if(arg149.getTermType() != IStrategoTerm.APPL || transform._consModPattern_1 != ((IStrategoAppl)arg149).getConstructor())
-                                                                    break Fail168;
-                                                                  i_53 = arg149.getSubterm(0);
-                                                                  f_53 = term.getSubterm(2);
-                                                                  k_53 = term.getSubterm(3);
-                                                                  g_53 = term.getSubterm(4);
-                                                                  term = termFactory.makeTuple(h_53, i_53);
+                                                                    break Fail169;
+                                                                  m_53 = arg149.getSubterm(0);
+                                                                  j_53 = term.getSubterm(2);
+                                                                  o_53 = term.getSubterm(3);
+                                                                  k_53 = term.getSubterm(4);
+                                                                  term = termFactory.makeTuple(l_53, m_53);
                                                                   term = conc_0_0.instance.invoke(context, term);
                                                                   if(term == null)
-                                                                    break Fail168;
-                                                                  j_53 = term;
-                                                                  term = list_to_args_0_0.instance.invoke(context, k_53);
+                                                                    break Fail169;
+                                                                  n_53 = term;
+                                                                  term = list_to_args_0_0.instance.invoke(context, o_53);
                                                                   if(term == null)
-                                                                    break Fail168;
-                                                                  l_53 = term;
-                                                                  term = termFactory.makeTuple(j_53, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(f_53, termFactory.makeListCons(l_53, (IStrategoList)transform.constNil0))}), termFactory.makeListCons(g_53, (IStrategoList)transform.constNil0)));
+                                                                    break Fail169;
+                                                                  p_53 = term;
+                                                                  term = termFactory.makeTuple(n_53, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(j_53, termFactory.makeListCons(p_53, (IStrategoList)transform.constNil0))}), termFactory.makeListCons(k_53, (IStrategoList)transform.constNil0)));
                                                                   term = make$Conc_0_0.instance.invoke(context, term);
                                                                   if(term == null)
-                                                                    break Fail168;
+                                                                    break Fail169;
                                                                   term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, term});
                                                                   if(true)
                                                                     break Success114;
@@ -6378,7 +6414,7 @@ import java.lang.ref.WeakReference;
                                                               }
                                                               term = aspectj_to_box_0_0_fragment_2.instance.invoke(context, term);
                                                               if(term == null)
-                                                                break Fail141;
+                                                                break Fail142;
                                                             }
                                                           }
                                                         }
@@ -6423,7 +6459,7 @@ import java.lang.ref.WeakReference;
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("aspectj_to_box_0_0_fragment_2");
-      Fail169:
+      Fail170:
       { 
         IStrategoTerm term120 = term;
         IStrategoConstructor cons20 = term.getTermType() == IStrategoTerm.APPL ? ((IStrategoAppl)term).getConstructor() : null;
@@ -6431,32 +6467,32 @@ import java.lang.ref.WeakReference;
         { 
           if(cons20 == transform._consFieldPattern_4)
           { 
-            Fail170:
+            Fail171:
             { 
-              IStrategoTerm x_52 = null;
-              IStrategoTerm y_52 = null;
-              IStrategoTerm z_52 = null;
-              IStrategoTerm a_53 = null;
               IStrategoTerm b_53 = null;
+              IStrategoTerm c_53 = null;
+              IStrategoTerm d_53 = null;
+              IStrategoTerm e_53 = null;
+              IStrategoTerm f_53 = null;
               IStrategoTerm arg150 = term.getSubterm(0);
               if(arg150.getTermType() != IStrategoTerm.APPL || transform._consAnnoPattern_1 != ((IStrategoAppl)arg150).getConstructor())
-                break Fail170;
-              z_52 = arg150.getSubterm(0);
+                break Fail171;
+              d_53 = arg150.getSubterm(0);
               IStrategoTerm arg151 = term.getSubterm(1);
               if(arg151.getTermType() != IStrategoTerm.APPL || transform._consModPattern_1 != ((IStrategoAppl)arg151).getConstructor())
-                break Fail170;
-              a_53 = arg151.getSubterm(0);
-              x_52 = term.getSubterm(2);
-              y_52 = term.getSubterm(3);
-              term = termFactory.makeTuple(z_52, a_53);
+                break Fail171;
+              e_53 = arg151.getSubterm(0);
+              b_53 = term.getSubterm(2);
+              c_53 = term.getSubterm(3);
+              term = termFactory.makeTuple(d_53, e_53);
               term = conc_0_0.instance.invoke(context, term);
               if(term == null)
-                break Fail170;
-              b_53 = term;
-              term = termFactory.makeTuple(b_53, (IStrategoTerm)termFactory.makeListCons(x_52, termFactory.makeListCons(y_52, (IStrategoList)transform.constNil0)));
+                break Fail171;
+              f_53 = term;
+              term = termFactory.makeTuple(f_53, (IStrategoTerm)termFactory.makeListCons(b_53, termFactory.makeListCons(c_53, (IStrategoList)transform.constNil0)));
               term = make$Conc_0_0.instance.invoke(context, term);
               if(term == null)
-                break Fail170;
+                break Fail171;
               term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, term});
               if(true)
                 break Success115;
@@ -6467,11 +6503,11 @@ import java.lang.ref.WeakReference;
           { 
             if(cons20 == transform._consMemberName_1)
             { 
-              Fail171:
+              Fail172:
               { 
-                IStrategoTerm w_52 = null;
-                w_52 = term.getSubterm(0);
-                term = termFactory.makeAppl(transform._consS_1, new IStrategoTerm[]{w_52});
+                IStrategoTerm a_53 = null;
+                a_53 = term.getSubterm(0);
+                term = termFactory.makeAppl(transform._consS_1, new IStrategoTerm[]{a_53});
                 if(true)
                   break Success116;
               }
@@ -6481,13 +6517,13 @@ import java.lang.ref.WeakReference;
             { 
               if(cons20 == transform._consMemberName_2)
               { 
-                Fail172:
+                Fail173:
                 { 
-                  IStrategoTerm u_52 = null;
-                  IStrategoTerm v_52 = null;
-                  u_52 = term.getSubterm(0);
-                  v_52 = term.getSubterm(1);
-                  term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(u_52, termFactory.makeListCons(transform.constS23, termFactory.makeListCons(termFactory.makeAppl(transform._consS_1, new IStrategoTerm[]{v_52}), (IStrategoList)transform.constNil0)))});
+                  IStrategoTerm y_52 = null;
+                  IStrategoTerm z_52 = null;
+                  y_52 = term.getSubterm(0);
+                  z_52 = term.getSubterm(1);
+                  term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(y_52, termFactory.makeListCons(transform.constS23, termFactory.makeListCons(termFactory.makeAppl(transform._consS_1, new IStrategoTerm[]{z_52}), (IStrategoList)transform.constNil0)))});
                   if(true)
                     break Success117;
                 }
@@ -6497,13 +6533,13 @@ import java.lang.ref.WeakReference;
               { 
                 if(cons20 == transform._consWildcardMemberName_2)
                 { 
-                  Fail173:
+                  Fail174:
                   { 
-                    IStrategoTerm s_52 = null;
-                    IStrategoTerm t_52 = null;
-                    s_52 = term.getSubterm(0);
-                    t_52 = term.getSubterm(1);
-                    term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(s_52, termFactory.makeListCons(transform.constS28, termFactory.makeListCons(termFactory.makeAppl(transform._consS_1, new IStrategoTerm[]{t_52}), (IStrategoList)transform.constNil0)))});
+                    IStrategoTerm w_52 = null;
+                    IStrategoTerm x_52 = null;
+                    w_52 = term.getSubterm(0);
+                    x_52 = term.getSubterm(1);
+                    term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(w_52, termFactory.makeListCons(transform.constS28, termFactory.makeListCons(termFactory.makeAppl(transform._consS_1, new IStrategoTerm[]{x_52}), (IStrategoList)transform.constNil0)))});
                     if(true)
                       break Success118;
                   }
@@ -6513,7 +6549,7 @@ import java.lang.ref.WeakReference;
                 { 
                   if(cons20 == transform._consConstrName_0)
                   { 
-                    Fail174:
+                    Fail175:
                     { 
                       term = transform.constFBOX19;
                       if(true)
@@ -6525,11 +6561,11 @@ import java.lang.ref.WeakReference;
                   { 
                     if(cons20 == transform._consConstrName_1)
                     { 
-                      Fail175:
+                      Fail176:
                       { 
-                        IStrategoTerm r_52 = null;
-                        r_52 = term.getSubterm(0);
-                        term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(r_52, (IStrategoList)transform.constCons34)});
+                        IStrategoTerm v_52 = null;
+                        v_52 = term.getSubterm(0);
+                        term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(v_52, (IStrategoList)transform.constCons34)});
                         if(true)
                           break Success120;
                       }
@@ -6539,11 +6575,11 @@ import java.lang.ref.WeakReference;
                     { 
                       if(cons20 == transform._consWildcardConstrName_1)
                       { 
-                        Fail176:
+                        Fail177:
                         { 
-                          IStrategoTerm q_52 = null;
-                          q_52 = term.getSubterm(0);
-                          term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(q_52, (IStrategoList)transform.constCons35)});
+                          IStrategoTerm u_52 = null;
+                          u_52 = term.getSubterm(0);
+                          term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(u_52, (IStrategoList)transform.constCons35)});
                           if(true)
                             break Success121;
                         }
@@ -6553,11 +6589,11 @@ import java.lang.ref.WeakReference;
                       { 
                         if(cons20 == transform._consNot_1)
                         { 
-                          Fail177:
+                          Fail178:
                           { 
-                            IStrategoTerm p_52 = null;
-                            p_52 = term.getSubterm(0);
-                            term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS32, termFactory.makeListCons(p_52, (IStrategoList)transform.constNil0))});
+                            IStrategoTerm t_52 = null;
+                            t_52 = term.getSubterm(0);
+                            term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS32, termFactory.makeListCons(t_52, (IStrategoList)transform.constNil0))});
                             if(true)
                               break Success122;
                           }
@@ -6567,11 +6603,11 @@ import java.lang.ref.WeakReference;
                         { 
                           if(cons20 == transform._consModPattern_1)
                           { 
-                            Fail178:
+                            Fail179:
                             { 
-                              IStrategoTerm o_52 = null;
-                              o_52 = term.getSubterm(0);
-                              term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, o_52});
+                              IStrategoTerm s_52 = null;
+                              s_52 = term.getSubterm(0);
+                              term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, s_52});
                               if(true)
                                 break Success123;
                             }
@@ -6581,13 +6617,13 @@ import java.lang.ref.WeakReference;
                           { 
                             if(cons20 == transform._consThrowsPattern_1)
                             { 
-                              Fail179:
+                              Fail180:
                               { 
-                                IStrategoTerm l_52 = null;
-                                l_52 = term.getSubterm(0);
-                                term = separate_by_comma_0_0.instance.invoke(context, l_52);
+                                IStrategoTerm p_52 = null;
+                                p_52 = term.getSubterm(0);
+                                term = separate_by_comma_0_0.instance.invoke(context, p_52);
                                 if(term == null)
-                                  break Fail179;
+                                  break Fail180;
                                 term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX20, termFactory.makeListCons(term, (IStrategoList)transform.constNil0))});
                                 if(true)
                                   break Success124;
@@ -6598,11 +6634,11 @@ import java.lang.ref.WeakReference;
                             { 
                               if(cons20 == transform._consNotThrowsCondition_1)
                               { 
-                                Fail180:
+                                Fail181:
                                 { 
-                                  IStrategoTerm k_52 = null;
-                                  k_52 = term.getSubterm(0);
-                                  term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS32, termFactory.makeListCons(k_52, (IStrategoList)transform.constNil0))});
+                                  IStrategoTerm o_52 = null;
+                                  o_52 = term.getSubterm(0);
+                                  term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS32, termFactory.makeListCons(o_52, (IStrategoList)transform.constNil0))});
                                   if(true)
                                     break Success125;
                                 }
@@ -6612,14 +6648,14 @@ import java.lang.ref.WeakReference;
                               { 
                                 if(cons20 == transform._consThrowsCondition_1)
                                 { 
-                                  Fail181:
+                                  Fail182:
                                   { 
-                                    IStrategoTerm f_52 = null;
-                                    f_52 = term.getSubterm(0);
-                                    term = has_leftmost_not_0_0.instance.invoke(context, f_52);
+                                    IStrategoTerm m_52 = null;
+                                    m_52 = term.getSubterm(0);
+                                    term = has_leftmost_not_0_0.instance.invoke(context, m_52);
                                     if(term == null)
-                                      break Fail181;
-                                    term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS1, termFactory.makeListCons(f_52, (IStrategoList)transform.constCons26))});
+                                      break Fail182;
+                                    term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS1, termFactory.makeListCons(m_52, (IStrategoList)transform.constCons26))});
                                     if(true)
                                       break Success126;
                                   }
@@ -6629,29 +6665,29 @@ import java.lang.ref.WeakReference;
                                 { 
                                   if(cons20 == transform._consThrowsCondition_1)
                                   { 
-                                    Fail182:
+                                    Fail183:
                                     { 
-                                      IStrategoTerm d_52 = null;
-                                      d_52 = term.getSubterm(0);
-                                      term = d_52;
+                                      IStrategoTerm k_52 = null;
+                                      k_52 = term.getSubterm(0);
+                                      term = k_52;
                                       IStrategoTerm term133 = term;
                                       Success128:
                                       { 
-                                        Fail183:
+                                        Fail184:
                                         { 
                                           term = has_leftmost_not_0_0.instance.invoke(context, term);
                                           if(term == null)
-                                            break Fail183;
+                                            break Fail184;
                                           { 
                                             if(true)
-                                              break Fail182;
+                                              break Fail183;
                                             if(true)
                                               break Success128;
                                           }
                                         }
                                         term = term133;
                                       }
-                                      term = d_52;
+                                      term = k_52;
                                       if(true)
                                         break Success127;
                                     }
@@ -6661,11 +6697,11 @@ import java.lang.ref.WeakReference;
                                   { 
                                     if(cons20 == transform._consSimpleAnnoPatternExact_1)
                                     { 
-                                      Fail184:
+                                      Fail185:
                                       { 
-                                        IStrategoTerm c_52 = null;
-                                        c_52 = term.getSubterm(0);
-                                        term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS34, termFactory.makeListCons(c_52, (IStrategoList)transform.constNil0))});
+                                        IStrategoTerm g_52 = null;
+                                        g_52 = term.getSubterm(0);
+                                        term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS34, termFactory.makeListCons(g_52, (IStrategoList)transform.constNil0))});
                                         if(true)
                                           break Success129;
                                       }
@@ -6675,11 +6711,11 @@ import java.lang.ref.WeakReference;
                                     { 
                                       if(cons20 == transform._consSimpleAnnoPattern_1)
                                       { 
-                                        Fail185:
+                                        Fail186:
                                         { 
-                                          IStrategoTerm b_52 = null;
-                                          b_52 = term.getSubterm(0);
-                                          term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS34, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(b_52, (IStrategoList)transform.constCons26)))});
+                                          IStrategoTerm f_52 = null;
+                                          f_52 = term.getSubterm(0);
+                                          term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS34, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(f_52, (IStrategoList)transform.constCons26)))});
                                           if(true)
                                             break Success130;
                                         }
@@ -6689,13 +6725,13 @@ import java.lang.ref.WeakReference;
                                       { 
                                         if(cons20 == transform._consSimpleAnnoPatternValue_2)
                                         { 
-                                          Fail186:
+                                          Fail187:
                                           { 
-                                            IStrategoTerm z_51 = null;
-                                            IStrategoTerm a_52 = null;
-                                            z_51 = term.getSubterm(0);
-                                            a_52 = term.getSubterm(1);
-                                            term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS34, termFactory.makeListCons(z_51, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(a_52, (IStrategoList)transform.constCons26))))});
+                                            IStrategoTerm d_52 = null;
+                                            IStrategoTerm e_52 = null;
+                                            d_52 = term.getSubterm(0);
+                                            e_52 = term.getSubterm(1);
+                                            term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS34, termFactory.makeListCons(d_52, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(e_52, (IStrategoList)transform.constCons26))))});
                                             if(true)
                                               break Success131;
                                           }
@@ -6705,11 +6741,11 @@ import java.lang.ref.WeakReference;
                                         { 
                                           if(cons20 == transform._consNotComp_1)
                                           { 
-                                            Fail187:
+                                            Fail188:
                                             { 
-                                              IStrategoTerm y_51 = null;
-                                              y_51 = term.getSubterm(0);
-                                              term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS32, termFactory.makeListCons(y_51, (IStrategoList)transform.constNil0))});
+                                              IStrategoTerm c_52 = null;
+                                              c_52 = term.getSubterm(0);
+                                              term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constS32, termFactory.makeListCons(c_52, (IStrategoList)transform.constNil0))});
                                               if(true)
                                                 break Success132;
                                             }
@@ -6719,13 +6755,13 @@ import java.lang.ref.WeakReference;
                                           { 
                                             if(cons20 == transform._consAndComp_2)
                                             { 
-                                              Fail188:
+                                              Fail189:
                                               { 
-                                                IStrategoTerm w_51 = null;
-                                                IStrategoTerm x_51 = null;
-                                                w_51 = term.getSubterm(0);
-                                                x_51 = term.getSubterm(1);
-                                                term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, (IStrategoTerm)termFactory.makeListCons(w_51, termFactory.makeListCons(transform.constS35, termFactory.makeListCons(x_51, (IStrategoList)transform.constNil0)))});
+                                                IStrategoTerm a_52 = null;
+                                                IStrategoTerm b_52 = null;
+                                                a_52 = term.getSubterm(0);
+                                                b_52 = term.getSubterm(1);
+                                                term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, (IStrategoTerm)termFactory.makeListCons(a_52, termFactory.makeListCons(transform.constS35, termFactory.makeListCons(b_52, (IStrategoList)transform.constNil0)))});
                                                 if(true)
                                                   break Success133;
                                               }
@@ -6735,13 +6771,13 @@ import java.lang.ref.WeakReference;
                                             { 
                                               if(cons20 == transform._consOrComp_2)
                                               { 
-                                                Fail189:
+                                                Fail190:
                                                 { 
-                                                  IStrategoTerm u_51 = null;
-                                                  IStrategoTerm v_51 = null;
-                                                  u_51 = term.getSubterm(0);
-                                                  v_51 = term.getSubterm(1);
-                                                  term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, (IStrategoTerm)termFactory.makeListCons(u_51, termFactory.makeListCons(transform.constS36, termFactory.makeListCons(v_51, (IStrategoList)transform.constNil0)))});
+                                                  IStrategoTerm y_51 = null;
+                                                  IStrategoTerm z_51 = null;
+                                                  y_51 = term.getSubterm(0);
+                                                  z_51 = term.getSubterm(1);
+                                                  term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, (IStrategoTerm)termFactory.makeListCons(y_51, termFactory.makeListCons(transform.constS36, termFactory.makeListCons(z_51, (IStrategoList)transform.constNil0)))});
                                                   if(true)
                                                     break Success134;
                                                 }
@@ -6751,16 +6787,16 @@ import java.lang.ref.WeakReference;
                                               { 
                                                 if(cons20 == transform._consIntertypeMethodDec_2)
                                                 { 
-                                                  Fail190:
+                                                  Fail191:
                                                   { 
-                                                    IStrategoTerm s_51 = null;
-                                                    IStrategoTerm t_51 = null;
-                                                    s_51 = term.getSubterm(0);
+                                                    IStrategoTerm w_51 = null;
+                                                    IStrategoTerm x_51 = null;
+                                                    w_51 = term.getSubterm(0);
                                                     IStrategoTerm arg152 = term.getSubterm(1);
-                                                    t_51 = arg152;
+                                                    x_51 = arg152;
                                                     if(arg152.getTermType() != IStrategoTerm.APPL || transform._consBlock_1 != ((IStrategoAppl)arg152).getConstructor())
-                                                      break Fail190;
-                                                    term = termFactory.makeAppl(transform._consV_2, new IStrategoTerm[]{transform.constCons36, (IStrategoTerm)termFactory.makeListCons(s_51, termFactory.makeListCons(t_51, (IStrategoList)transform.constNil0))});
+                                                      break Fail191;
+                                                    term = termFactory.makeAppl(transform._consV_2, new IStrategoTerm[]{transform.constCons36, (IStrategoTerm)termFactory.makeListCons(w_51, termFactory.makeListCons(x_51, (IStrategoList)transform.constNil0))});
                                                     if(true)
                                                       break Success135;
                                                   }
@@ -6770,14 +6806,14 @@ import java.lang.ref.WeakReference;
                                                 { 
                                                   if(cons20 == transform._consIntertypeMethodDec_2)
                                                   { 
-                                                    Fail191:
+                                                    Fail192:
                                                     { 
-                                                      IStrategoTerm r_51 = null;
-                                                      r_51 = term.getSubterm(0);
+                                                      IStrategoTerm v_51 = null;
+                                                      v_51 = term.getSubterm(0);
                                                       IStrategoTerm arg154 = term.getSubterm(1);
                                                       if(arg154.getTermType() != IStrategoTerm.APPL || transform._consNoMethodBody_0 != ((IStrategoAppl)arg154).getConstructor())
-                                                        break Fail191;
-                                                      term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(r_51, (IStrategoList)transform.constCons30)});
+                                                        break Fail192;
+                                                      term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(v_51, (IStrategoList)transform.constCons30)});
                                                       if(true)
                                                         break Success136;
                                                     }
@@ -6787,12 +6823,8 @@ import java.lang.ref.WeakReference;
                                                   { 
                                                     if(cons20 == transform._consIntertypeMethodDecHead_8)
                                                     { 
-                                                      Fail192:
+                                                      Fail193:
                                                       { 
-                                                        IStrategoTerm u_50 = null;
-                                                        IStrategoTerm v_50 = null;
-                                                        IStrategoTerm w_50 = null;
-                                                        IStrategoTerm x_50 = null;
                                                         IStrategoTerm y_50 = null;
                                                         IStrategoTerm z_50 = null;
                                                         IStrategoTerm a_51 = null;
@@ -6803,61 +6835,65 @@ import java.lang.ref.WeakReference;
                                                         IStrategoTerm f_51 = null;
                                                         IStrategoTerm h_51 = null;
                                                         IStrategoTerm i_51 = null;
+                                                        IStrategoTerm l_51 = null;
+                                                        IStrategoTerm n_51 = null;
                                                         IStrategoTerm o_51 = null;
                                                         IStrategoTerm p_51 = null;
-                                                        e_51 = term.getSubterm(0);
-                                                        z_50 = term.getSubterm(1);
-                                                        u_50 = term.getSubterm(2);
-                                                        v_50 = term.getSubterm(3);
-                                                        a_51 = term.getSubterm(4);
+                                                        IStrategoTerm t_51 = null;
+                                                        IStrategoTerm u_51 = null;
+                                                        l_51 = term.getSubterm(0);
+                                                        d_51 = term.getSubterm(1);
+                                                        y_50 = term.getSubterm(2);
+                                                        z_50 = term.getSubterm(3);
+                                                        e_51 = term.getSubterm(4);
                                                         IStrategoTerm arg155 = term.getSubterm(5);
                                                         if(arg155.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg155).getConstructor())
-                                                          break Fail192;
-                                                        w_50 = arg155.getSubterm(0);
-                                                        x_50 = term.getSubterm(6);
-                                                        c_51 = term.getSubterm(7);
-                                                        i_51 = term;
-                                                        term = list_to_args_0_0.instance.invoke(context, x_50);
+                                                          break Fail193;
+                                                        a_51 = arg155.getSubterm(0);
+                                                        b_51 = term.getSubterm(6);
+                                                        h_51 = term.getSubterm(7);
+                                                        p_51 = term;
+                                                        term = list_to_args_0_0.instance.invoke(context, b_51);
                                                         if(term == null)
-                                                          break Fail192;
-                                                        y_50 = term;
-                                                        term = type_params_to_boxes_0_0.instance.invoke(context, z_50);
+                                                          break Fail193;
+                                                        c_51 = term;
+                                                        term = type_params_to_boxes_0_0.instance.invoke(context, d_51);
                                                         if(term == null)
-                                                          break Fail192;
+                                                          break Fail193;
+                                                        n_51 = term;
+                                                        term = type_params_to_boxes_0_0.instance.invoke(context, e_51);
+                                                        if(term == null)
+                                                          break Fail193;
                                                         f_51 = term;
-                                                        term = type_params_to_boxes_0_0.instance.invoke(context, a_51);
+                                                        term = option_to_boxes_0_0.instance.invoke(context, h_51);
                                                         if(term == null)
-                                                          break Fail192;
-                                                        b_51 = term;
-                                                        term = option_to_boxes_0_0.instance.invoke(context, c_51);
-                                                        if(term == null)
-                                                          break Fail192;
-                                                        d_51 = term;
-                                                        term = termFactory.makeTuple(e_51, f_51);
+                                                          break Fail193;
+                                                        i_51 = term;
+                                                        term = termFactory.makeTuple(l_51, n_51);
                                                         term = conc_0_0.instance.invoke(context, term);
                                                         if(term == null)
-                                                          break Fail192;
-                                                        h_51 = term;
-                                                        term = i_51;
-                                                        p_51 = term;
-                                                        term = termFactory.makeTuple(b_51, (IStrategoTerm)termFactory.makeListCons(transform.constS23, termFactory.makeListCons(termFactory.makeAppl(transform._consS_1, new IStrategoTerm[]{w_50}), termFactory.makeListCons(y_50, (IStrategoList)transform.constNil0))));
-                                                        term = make$Conc_0_0.instance.invoke(context, term);
-                                                        if(term == null)
-                                                          break Fail192;
+                                                          break Fail193;
                                                         o_51 = term;
                                                         term = p_51;
-                                                        IStrategoList list4;
-                                                        IStrategoList list3;
-                                                        list3 = checkListTail(d_51);
-                                                        if(list3 == null)
-                                                          break Fail192;
-                                                        list4 = checkListTail(o_51);
-                                                        if(list4 == null)
-                                                          break Fail192;
-                                                        term = termFactory.makeTuple(h_51, (IStrategoTerm)termFactory.makeListCons(u_50, termFactory.makeListCons(termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(v_50, list4)}), list3)));
+                                                        u_51 = term;
+                                                        term = termFactory.makeTuple(f_51, (IStrategoTerm)termFactory.makeListCons(transform.constS23, termFactory.makeListCons(termFactory.makeAppl(transform._consS_1, new IStrategoTerm[]{a_51}), termFactory.makeListCons(c_51, (IStrategoList)transform.constNil0))));
                                                         term = make$Conc_0_0.instance.invoke(context, term);
                                                         if(term == null)
-                                                          break Fail192;
+                                                          break Fail193;
+                                                        t_51 = term;
+                                                        term = u_51;
+                                                        IStrategoList list4;
+                                                        IStrategoList list3;
+                                                        list3 = checkListTail(i_51);
+                                                        if(list3 == null)
+                                                          break Fail193;
+                                                        list4 = checkListTail(t_51);
+                                                        if(list4 == null)
+                                                          break Fail193;
+                                                        term = termFactory.makeTuple(o_51, (IStrategoTerm)termFactory.makeListCons(y_50, termFactory.makeListCons(termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(z_50, list4)}), list3)));
+                                                        term = make$Conc_0_0.instance.invoke(context, term);
+                                                        if(term == null)
+                                                          break Fail193;
                                                         term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, term});
                                                         if(true)
                                                           break Success137;
@@ -6868,13 +6904,13 @@ import java.lang.ref.WeakReference;
                                                     { 
                                                       if(cons20 == transform._consIntertypeConstrDec_2)
                                                       { 
-                                                        Fail193:
+                                                        Fail194:
                                                         { 
-                                                          IStrategoTerm s_50 = null;
-                                                          IStrategoTerm t_50 = null;
-                                                          s_50 = term.getSubterm(0);
-                                                          t_50 = term.getSubterm(1);
-                                                          term = termFactory.makeAppl(transform._consV_2, new IStrategoTerm[]{transform.constCons36, (IStrategoTerm)termFactory.makeListCons(s_50, termFactory.makeListCons(t_50, (IStrategoList)transform.constNil0))});
+                                                          IStrategoTerm w_50 = null;
+                                                          IStrategoTerm x_50 = null;
+                                                          w_50 = term.getSubterm(0);
+                                                          x_50 = term.getSubterm(1);
+                                                          term = termFactory.makeAppl(transform._consV_2, new IStrategoTerm[]{transform.constCons36, (IStrategoTerm)termFactory.makeListCons(w_50, termFactory.makeListCons(x_50, (IStrategoList)transform.constNil0))});
                                                           if(true)
                                                             break Success138;
                                                         }
@@ -6882,7 +6918,7 @@ import java.lang.ref.WeakReference;
                                                       }
                                                       term = aspectj_to_box_0_0_fragment_1.instance.invoke(context, term);
                                                       if(term == null)
-                                                        break Fail169;
+                                                        break Fail170;
                                                     }
                                                   }
                                                 }
@@ -6923,7 +6959,7 @@ import java.lang.ref.WeakReference;
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("aspectj_to_box_0_0_fragment_1");
-      Fail194:
+      Fail195:
       { 
         IStrategoTerm term144 = term;
         IStrategoConstructor cons21 = term.getTermType() == IStrategoTerm.APPL ? ((IStrategoAppl)term).getConstructor() : null;
@@ -6931,12 +6967,8 @@ import java.lang.ref.WeakReference;
         { 
           if(cons21 == transform._consIntertypeConstrDecHead_6)
           { 
-            Fail195:
+            Fail196:
             { 
-              IStrategoTerm c_50 = null;
-              IStrategoTerm d_50 = null;
-              IStrategoTerm e_50 = null;
-              IStrategoTerm f_50 = null;
               IStrategoTerm g_50 = null;
               IStrategoTerm h_50 = null;
               IStrategoTerm i_50 = null;
@@ -6945,56 +6977,60 @@ import java.lang.ref.WeakReference;
               IStrategoTerm l_50 = null;
               IStrategoTerm m_50 = null;
               IStrategoTerm n_50 = null;
+              IStrategoTerm o_50 = null;
+              IStrategoTerm p_50 = null;
               IStrategoTerm q_50 = null;
               IStrategoTerm r_50 = null;
-              k_50 = term.getSubterm(0);
-              f_50 = term.getSubterm(1);
-              c_50 = term.getSubterm(2);
-              g_50 = term.getSubterm(3);
-              d_50 = term.getSubterm(4);
-              i_50 = term.getSubterm(5);
-              n_50 = term;
-              term = list_to_args_0_0.instance.invoke(context, d_50);
+              IStrategoTerm u_50 = null;
+              IStrategoTerm v_50 = null;
+              o_50 = term.getSubterm(0);
+              j_50 = term.getSubterm(1);
+              g_50 = term.getSubterm(2);
+              k_50 = term.getSubterm(3);
+              h_50 = term.getSubterm(4);
+              m_50 = term.getSubterm(5);
+              r_50 = term;
+              term = list_to_args_0_0.instance.invoke(context, h_50);
               if(term == null)
-                break Fail195;
-              e_50 = term;
-              term = type_params_to_boxes_0_0.instance.invoke(context, f_50);
+                break Fail196;
+              i_50 = term;
+              term = type_params_to_boxes_0_0.instance.invoke(context, j_50);
               if(term == null)
-                break Fail195;
+                break Fail196;
+              p_50 = term;
+              term = type_params_to_boxes_0_0.instance.invoke(context, k_50);
+              if(term == null)
+                break Fail196;
               l_50 = term;
-              term = type_params_to_boxes_0_0.instance.invoke(context, g_50);
+              term = option_to_boxes_0_0.instance.invoke(context, m_50);
               if(term == null)
-                break Fail195;
-              h_50 = term;
-              term = option_to_boxes_0_0.instance.invoke(context, i_50);
-              if(term == null)
-                break Fail195;
-              j_50 = term;
-              term = termFactory.makeTuple(k_50, l_50);
+                break Fail196;
+              n_50 = term;
+              term = termFactory.makeTuple(o_50, p_50);
               term = conc_0_0.instance.invoke(context, term);
               if(term == null)
-                break Fail195;
-              m_50 = term;
-              term = n_50;
-              r_50 = term;
-              term = termFactory.makeTuple(h_50, (IStrategoTerm)termFactory.makeListCons(transform.constS23, termFactory.makeListCons(transform.constFBOX19, termFactory.makeListCons(e_50, (IStrategoList)transform.constNil0))));
-              term = make$Conc_0_0.instance.invoke(context, term);
-              if(term == null)
-                break Fail195;
+                break Fail196;
               q_50 = term;
               term = r_50;
-              IStrategoList list6;
-              IStrategoList list5;
-              list5 = checkListTail(j_50);
-              if(list5 == null)
-                break Fail195;
-              list6 = checkListTail(q_50);
-              if(list6 == null)
-                break Fail195;
-              term = termFactory.makeTuple(m_50, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(c_50, list6)}), list5));
+              v_50 = term;
+              term = termFactory.makeTuple(l_50, (IStrategoTerm)termFactory.makeListCons(transform.constS23, termFactory.makeListCons(transform.constFBOX19, termFactory.makeListCons(i_50, (IStrategoList)transform.constNil0))));
               term = make$Conc_0_0.instance.invoke(context, term);
               if(term == null)
-                break Fail195;
+                break Fail196;
+              u_50 = term;
+              term = v_50;
+              IStrategoList list6;
+              IStrategoList list5;
+              list5 = checkListTail(n_50);
+              if(list5 == null)
+                break Fail196;
+              list6 = checkListTail(u_50);
+              if(list6 == null)
+                break Fail196;
+              term = termFactory.makeTuple(q_50, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(g_50, list6)}), list5));
+              term = make$Conc_0_0.instance.invoke(context, term);
+              if(term == null)
+                break Fail196;
               term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, term});
               if(true)
                 break Success139;
@@ -7005,43 +7041,43 @@ import java.lang.ref.WeakReference;
           { 
             if(cons21 == transform._consIntertypeFieldDec_5)
             { 
-              Fail196:
+              Fail197:
               { 
-                IStrategoTerm r_49 = null;
-                IStrategoTerm s_49 = null;
-                IStrategoTerm t_49 = null;
-                IStrategoTerm u_49 = null;
                 IStrategoTerm v_49 = null;
                 IStrategoTerm w_49 = null;
                 IStrategoTerm x_49 = null;
+                IStrategoTerm y_49 = null;
+                IStrategoTerm z_49 = null;
                 IStrategoTerm a_50 = null;
                 IStrategoTerm b_50 = null;
-                r_49 = term.getSubterm(0);
-                s_49 = term.getSubterm(1);
-                t_49 = term.getSubterm(2);
-                v_49 = term.getSubterm(3);
-                u_49 = term.getSubterm(4);
-                x_49 = term;
-                term = option_to_boxes_0_0.instance.invoke(context, v_49);
-                if(term == null)
-                  break Fail196;
-                w_49 = term;
-                term = x_49;
+                IStrategoTerm e_50 = null;
+                IStrategoTerm f_50 = null;
+                v_49 = term.getSubterm(0);
+                w_49 = term.getSubterm(1);
+                x_49 = term.getSubterm(2);
+                z_49 = term.getSubterm(3);
+                y_49 = term.getSubterm(4);
                 b_50 = term;
-                term = termFactory.makeTuple(w_49, (IStrategoTerm)termFactory.makeListCons(transform.constS23, termFactory.makeListCons(u_49, (IStrategoList)transform.constCons30)));
-                term = make$Conc_0_0.instance.invoke(context, term);
+                term = option_to_boxes_0_0.instance.invoke(context, z_49);
                 if(term == null)
-                  break Fail196;
+                  break Fail197;
                 a_50 = term;
                 term = b_50;
-                IStrategoList list7;
-                list7 = checkListTail(a_50);
-                if(list7 == null)
-                  break Fail196;
-                term = termFactory.makeTuple(r_49, (IStrategoTerm)termFactory.makeListCons(s_49, termFactory.makeListCons(termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(t_49, list7)}), (IStrategoList)transform.constNil0)));
+                f_50 = term;
+                term = termFactory.makeTuple(a_50, (IStrategoTerm)termFactory.makeListCons(transform.constS23, termFactory.makeListCons(y_49, (IStrategoList)transform.constCons30)));
                 term = make$Conc_0_0.instance.invoke(context, term);
                 if(term == null)
-                  break Fail196;
+                  break Fail197;
+                e_50 = term;
+                term = f_50;
+                IStrategoList list7;
+                list7 = checkListTail(e_50);
+                if(list7 == null)
+                  break Fail197;
+                term = termFactory.makeTuple(v_49, (IStrategoTerm)termFactory.makeListCons(w_49, termFactory.makeListCons(termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(x_49, list7)}), (IStrategoList)transform.constNil0)));
+                term = make$Conc_0_0.instance.invoke(context, term);
+                if(term == null)
+                  break Fail197;
                 term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, term});
                 if(true)
                   break Success140;
@@ -7052,44 +7088,44 @@ import java.lang.ref.WeakReference;
             { 
               if(cons21 == transform._consAdviceDec_5)
               { 
-                Fail197:
+                Fail198:
                 { 
-                  IStrategoTerm g_49 = null;
-                  IStrategoTerm h_49 = null;
-                  IStrategoTerm i_49 = null;
-                  IStrategoTerm j_49 = null;
                   IStrategoTerm k_49 = null;
                   IStrategoTerm l_49 = null;
                   IStrategoTerm m_49 = null;
+                  IStrategoTerm n_49 = null;
+                  IStrategoTerm o_49 = null;
                   IStrategoTerm p_49 = null;
                   IStrategoTerm q_49 = null;
-                  g_49 = term.getSubterm(0);
-                  h_49 = term.getSubterm(1);
-                  k_49 = term.getSubterm(2);
-                  i_49 = term.getSubterm(3);
-                  j_49 = term.getSubterm(4);
-                  m_49 = term;
-                  term = option_to_boxes_0_0.instance.invoke(context, k_49);
-                  if(term == null)
-                    break Fail197;
-                  l_49 = term;
-                  term = m_49;
+                  IStrategoTerm t_49 = null;
+                  IStrategoTerm u_49 = null;
+                  k_49 = term.getSubterm(0);
+                  l_49 = term.getSubterm(1);
+                  o_49 = term.getSubterm(2);
+                  m_49 = term.getSubterm(3);
+                  n_49 = term.getSubterm(4);
                   q_49 = term;
-                  term = termFactory.makeTuple(l_49, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX21, termFactory.makeListCons(i_49, (IStrategoList)transform.constNil0)));
-                  term = make$Conc_0_0.instance.invoke(context, term);
+                  term = option_to_boxes_0_0.instance.invoke(context, o_49);
                   if(term == null)
-                    break Fail197;
+                    break Fail198;
                   p_49 = term;
                   term = q_49;
-                  IStrategoList list8;
-                  list8 = checkListTail(p_49);
-                  if(list8 == null)
-                    break Fail197;
-                  term = termFactory.makeTuple(g_49, (IStrategoTerm)termFactory.makeListCons(h_49, list8));
+                  u_49 = term;
+                  term = termFactory.makeTuple(p_49, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX21, termFactory.makeListCons(m_49, (IStrategoList)transform.constNil0)));
                   term = make$Conc_0_0.instance.invoke(context, term);
                   if(term == null)
-                    break Fail197;
-                  term = termFactory.makeAppl(transform._consV_2, new IStrategoTerm[]{transform.constCons36, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, term}), termFactory.makeListCons(j_49, (IStrategoList)transform.constNil0))});
+                    break Fail198;
+                  t_49 = term;
+                  term = u_49;
+                  IStrategoList list8;
+                  list8 = checkListTail(t_49);
+                  if(list8 == null)
+                    break Fail198;
+                  term = termFactory.makeTuple(k_49, (IStrategoTerm)termFactory.makeListCons(l_49, list8));
+                  term = make$Conc_0_0.instance.invoke(context, term);
+                  if(term == null)
+                    break Fail198;
+                  term = termFactory.makeAppl(transform._consV_2, new IStrategoTerm[]{transform.constCons36, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, term}), termFactory.makeListCons(n_49, (IStrategoList)transform.constNil0))});
                   if(true)
                     break Success141;
                 }
@@ -7099,13 +7135,13 @@ import java.lang.ref.WeakReference;
               { 
                 if(cons21 == transform._consBefore_1)
                 { 
-                  Fail198:
+                  Fail199:
                   { 
-                    IStrategoTerm d_49 = null;
-                    d_49 = term.getSubterm(0);
-                    term = separate_by_comma_0_0.instance.invoke(context, d_49);
+                    IStrategoTerm h_49 = null;
+                    h_49 = term.getSubterm(0);
+                    term = separate_by_comma_0_0.instance.invoke(context, h_49);
                     if(term == null)
-                      break Fail198;
+                      break Fail199;
                     term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX24, termFactory.makeListCons(transform.constFBOX23, termFactory.makeListCons(term, (IStrategoList)transform.constCons37)))});
                     if(true)
                       break Success142;
@@ -7116,16 +7152,16 @@ import java.lang.ref.WeakReference;
                 { 
                   if(cons21 == transform._consAfter_2)
                   { 
-                    Fail199:
+                    Fail200:
                     { 
-                      IStrategoTerm z_48 = null;
-                      IStrategoTerm a_49 = null;
-                      a_49 = term.getSubterm(0);
-                      z_48 = term.getSubterm(1);
-                      term = separate_by_comma_0_0.instance.invoke(context, a_49);
+                      IStrategoTerm d_49 = null;
+                      IStrategoTerm e_49 = null;
+                      e_49 = term.getSubterm(0);
+                      d_49 = term.getSubterm(1);
+                      term = separate_by_comma_0_0.instance.invoke(context, e_49);
                       if(term == null)
-                        break Fail199;
-                      term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX25, termFactory.makeListCons(transform.constFBOX23, termFactory.makeListCons(term, (IStrategoList)transform.constCons37)))}), termFactory.makeListCons(z_48, (IStrategoList)transform.constNil0))});
+                        break Fail200;
+                      term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX25, termFactory.makeListCons(transform.constFBOX23, termFactory.makeListCons(term, (IStrategoList)transform.constCons37)))}), termFactory.makeListCons(d_49, (IStrategoList)transform.constNil0))});
                       if(true)
                         break Success143;
                     }
@@ -7135,16 +7171,16 @@ import java.lang.ref.WeakReference;
                   { 
                     if(cons21 == transform._consAround_2)
                     { 
-                      Fail200:
+                      Fail201:
                       { 
-                        IStrategoTerm v_48 = null;
-                        IStrategoTerm w_48 = null;
-                        v_48 = term.getSubterm(0);
-                        w_48 = term.getSubterm(1);
-                        term = separate_by_comma_0_0.instance.invoke(context, w_48);
+                        IStrategoTerm z_48 = null;
+                        IStrategoTerm a_49 = null;
+                        z_48 = term.getSubterm(0);
+                        a_49 = term.getSubterm(1);
+                        term = separate_by_comma_0_0.instance.invoke(context, a_49);
                         if(term == null)
-                          break Fail200;
-                        term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, (IStrategoTerm)termFactory.makeListCons(v_48, termFactory.makeListCons(termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX26, termFactory.makeListCons(transform.constFBOX23, termFactory.makeListCons(term, (IStrategoList)transform.constCons37)))}), (IStrategoList)transform.constNil0))});
+                          break Fail201;
+                        term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, (IStrategoTerm)termFactory.makeListCons(z_48, termFactory.makeListCons(termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX26, termFactory.makeListCons(transform.constFBOX23, termFactory.makeListCons(term, (IStrategoList)transform.constCons37)))}), (IStrategoList)transform.constNil0))});
                         if(true)
                           break Success144;
                       }
@@ -7154,7 +7190,7 @@ import java.lang.ref.WeakReference;
                     { 
                       if(cons21 == transform._consReturning_0)
                       { 
-                        Fail201:
+                        Fail202:
                         { 
                           term = transform.constFBOX27;
                           if(true)
@@ -7166,11 +7202,11 @@ import java.lang.ref.WeakReference;
                       { 
                         if(cons21 == transform._consReturning_1)
                         { 
-                          Fail202:
+                          Fail203:
                           { 
-                            IStrategoTerm u_48 = null;
-                            u_48 = term.getSubterm(0);
-                            term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX27, termFactory.makeListCons(transform.constFBOX23, termFactory.makeListCons(u_48, (IStrategoList)transform.constCons37)))});
+                            IStrategoTerm y_48 = null;
+                            y_48 = term.getSubterm(0);
+                            term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX27, termFactory.makeListCons(transform.constFBOX23, termFactory.makeListCons(y_48, (IStrategoList)transform.constCons37)))});
                             if(true)
                               break Success146;
                           }
@@ -7180,7 +7216,7 @@ import java.lang.ref.WeakReference;
                         { 
                           if(cons21 == transform._consThrowing_0)
                           { 
-                            Fail203:
+                            Fail204:
                             { 
                               term = transform.constFBOX28;
                               if(true)
@@ -7192,11 +7228,11 @@ import java.lang.ref.WeakReference;
                           { 
                             if(cons21 == transform._consThrowing_1)
                             { 
-                              Fail204:
+                              Fail205:
                               { 
-                                IStrategoTerm t_48 = null;
-                                t_48 = term.getSubterm(0);
-                                term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX28, termFactory.makeListCons(transform.constFBOX23, termFactory.makeListCons(t_48, (IStrategoList)transform.constCons37)))});
+                                IStrategoTerm x_48 = null;
+                                x_48 = term.getSubterm(0);
+                                term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX28, termFactory.makeListCons(transform.constFBOX23, termFactory.makeListCons(x_48, (IStrategoList)transform.constCons37)))});
                                 if(true)
                                   break Success148;
                               }
@@ -7206,18 +7242,18 @@ import java.lang.ref.WeakReference;
                             { 
                               if(cons21 == transform._consDecParent_3)
                               { 
-                                Fail205:
+                                Fail206:
                                 { 
-                                  IStrategoTerm o_48 = null;
-                                  IStrategoTerm p_48 = null;
-                                  IStrategoTerm q_48 = null;
-                                  o_48 = term.getSubterm(0);
-                                  p_48 = term.getSubterm(1);
-                                  q_48 = term.getSubterm(2);
-                                  term = termFactory.makeTuple(o_48, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX30, termFactory.makeListCons(transform.constFBOX29, termFactory.makeListCons(transform.constFBOX21, termFactory.makeListCons(p_48, termFactory.makeListCons(q_48, (IStrategoList)transform.constCons38))))));
+                                  IStrategoTerm s_48 = null;
+                                  IStrategoTerm t_48 = null;
+                                  IStrategoTerm u_48 = null;
+                                  s_48 = term.getSubterm(0);
+                                  t_48 = term.getSubterm(1);
+                                  u_48 = term.getSubterm(2);
+                                  term = termFactory.makeTuple(s_48, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX30, termFactory.makeListCons(transform.constFBOX29, termFactory.makeListCons(transform.constFBOX21, termFactory.makeListCons(t_48, termFactory.makeListCons(u_48, (IStrategoList)transform.constCons38))))));
                                   term = make$Conc_0_0.instance.invoke(context, term);
                                   if(term == null)
-                                    break Fail205;
+                                    break Fail206;
                                   term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, term});
                                   if(true)
                                     break Success149;
@@ -7228,18 +7264,18 @@ import java.lang.ref.WeakReference;
                               { 
                                 if(cons21 == transform._consDecWarning_3)
                                 { 
-                                  Fail206:
+                                  Fail207:
                                   { 
-                                    IStrategoTerm j_48 = null;
-                                    IStrategoTerm k_48 = null;
-                                    IStrategoTerm l_48 = null;
-                                    j_48 = term.getSubterm(0);
-                                    k_48 = term.getSubterm(1);
-                                    l_48 = term.getSubterm(2);
-                                    term = termFactory.makeTuple(j_48, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX30, termFactory.makeListCons(transform.constFBOX31, termFactory.makeListCons(transform.constFBOX21, termFactory.makeListCons(k_48, termFactory.makeListCons(transform.constFBOX21, termFactory.makeListCons(l_48, (IStrategoList)transform.constCons38)))))));
+                                    IStrategoTerm n_48 = null;
+                                    IStrategoTerm o_48 = null;
+                                    IStrategoTerm p_48 = null;
+                                    n_48 = term.getSubterm(0);
+                                    o_48 = term.getSubterm(1);
+                                    p_48 = term.getSubterm(2);
+                                    term = termFactory.makeTuple(n_48, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX30, termFactory.makeListCons(transform.constFBOX31, termFactory.makeListCons(transform.constFBOX21, termFactory.makeListCons(o_48, termFactory.makeListCons(transform.constFBOX21, termFactory.makeListCons(p_48, (IStrategoList)transform.constCons38)))))));
                                     term = make$Conc_0_0.instance.invoke(context, term);
                                     if(term == null)
-                                      break Fail206;
+                                      break Fail207;
                                     term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, term});
                                     if(true)
                                       break Success150;
@@ -7248,7 +7284,7 @@ import java.lang.ref.WeakReference;
                                 }
                                 term = aspectj_to_box_0_0_fragment_0.instance.invoke(context, term);
                                 if(term == null)
-                                  break Fail194;
+                                  break Fail195;
                               }
                             }
                           }
@@ -7278,7 +7314,7 @@ import java.lang.ref.WeakReference;
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("aspectj_to_box_0_0_fragment_0");
-      Fail207:
+      Fail208:
       { 
         IStrategoTerm term156 = term;
         IStrategoConstructor cons22 = term.getTermType() == IStrategoTerm.APPL ? ((IStrategoAppl)term).getConstructor() : null;
@@ -7286,13 +7322,13 @@ import java.lang.ref.WeakReference;
         { 
           if(cons22 == transform._consDecError_2)
           { 
-            Fail208:
+            Fail209:
             { 
-              IStrategoTerm h_48 = null;
-              IStrategoTerm i_48 = null;
-              h_48 = term.getSubterm(0);
-              i_48 = term.getSubterm(1);
-              term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX30, termFactory.makeListCons(transform.constFBOX32, termFactory.makeListCons(transform.constFBOX21, termFactory.makeListCons(h_48, termFactory.makeListCons(transform.constFBOX21, termFactory.makeListCons(i_48, (IStrategoList)transform.constCons38))))))});
+              IStrategoTerm l_48 = null;
+              IStrategoTerm m_48 = null;
+              l_48 = term.getSubterm(0);
+              m_48 = term.getSubterm(1);
+              term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX30, termFactory.makeListCons(transform.constFBOX32, termFactory.makeListCons(transform.constFBOX21, termFactory.makeListCons(l_48, termFactory.makeListCons(transform.constFBOX21, termFactory.makeListCons(m_48, (IStrategoList)transform.constCons38))))))});
               if(true)
                 break Success151;
             }
@@ -7302,13 +7338,13 @@ import java.lang.ref.WeakReference;
           { 
             if(cons22 == transform._consDecSoft_2)
             { 
-              Fail209:
+              Fail210:
               { 
-                IStrategoTerm f_48 = null;
-                IStrategoTerm g_48 = null;
-                f_48 = term.getSubterm(0);
-                g_48 = term.getSubterm(1);
-                term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX30, termFactory.makeListCons(transform.constFBOX33, termFactory.makeListCons(transform.constFBOX21, termFactory.makeListCons(f_48, termFactory.makeListCons(transform.constFBOX21, termFactory.makeListCons(g_48, (IStrategoList)transform.constCons38))))))});
+                IStrategoTerm j_48 = null;
+                IStrategoTerm k_48 = null;
+                j_48 = term.getSubterm(0);
+                k_48 = term.getSubterm(1);
+                term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX30, termFactory.makeListCons(transform.constFBOX33, termFactory.makeListCons(transform.constFBOX21, termFactory.makeListCons(j_48, termFactory.makeListCons(transform.constFBOX21, termFactory.makeListCons(k_48, (IStrategoList)transform.constCons38))))))});
                 if(true)
                   break Success152;
               }
@@ -7318,21 +7354,21 @@ import java.lang.ref.WeakReference;
             { 
               if(cons22 == transform._consDecPrecedence_2)
               { 
-                Fail210:
+                Fail211:
                 { 
-                  IStrategoTerm z_47 = null;
-                  IStrategoTerm a_48 = null;
-                  IStrategoTerm b_48 = null;
-                  z_47 = term.getSubterm(0);
-                  a_48 = term.getSubterm(1);
-                  term = separate_by_comma_0_0.instance.invoke(context, a_48);
+                  IStrategoTerm d_48 = null;
+                  IStrategoTerm e_48 = null;
+                  IStrategoTerm f_48 = null;
+                  d_48 = term.getSubterm(0);
+                  e_48 = term.getSubterm(1);
+                  term = separate_by_comma_0_0.instance.invoke(context, e_48);
                   if(term == null)
-                    break Fail210;
-                  b_48 = term;
-                  term = termFactory.makeTuple(z_47, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX30, termFactory.makeListCons(transform.constFBOX34, termFactory.makeListCons(transform.constFBOX21, termFactory.makeListCons(b_48, (IStrategoList)transform.constCons38)))));
+                    break Fail211;
+                  f_48 = term;
+                  term = termFactory.makeTuple(d_48, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX30, termFactory.makeListCons(transform.constFBOX34, termFactory.makeListCons(transform.constFBOX21, termFactory.makeListCons(f_48, (IStrategoList)transform.constCons38)))));
                   term = make$Conc_0_0.instance.invoke(context, term);
                   if(term == null)
-                    break Fail210;
+                    break Fail211;
                   term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, term});
                   if(true)
                     break Success153;
@@ -7343,20 +7379,20 @@ import java.lang.ref.WeakReference;
               { 
                 if(cons22 == transform._consDecAnno_4)
                 { 
-                  Fail211:
+                  Fail212:
                   { 
-                    IStrategoTerm t_47 = null;
-                    IStrategoTerm u_47 = null;
-                    IStrategoTerm v_47 = null;
-                    IStrategoTerm w_47 = null;
-                    t_47 = term.getSubterm(0);
-                    u_47 = term.getSubterm(1);
-                    v_47 = term.getSubterm(2);
-                    w_47 = term.getSubterm(3);
-                    term = termFactory.makeTuple(t_47, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX30, termFactory.makeListCons(u_47, termFactory.makeListCons(transform.constS26, termFactory.makeListCons(v_47, termFactory.makeListCons(transform.constS26, termFactory.makeListCons(w_47, (IStrategoList)transform.constCons30)))))));
+                    IStrategoTerm x_47 = null;
+                    IStrategoTerm y_47 = null;
+                    IStrategoTerm z_47 = null;
+                    IStrategoTerm a_48 = null;
+                    x_47 = term.getSubterm(0);
+                    y_47 = term.getSubterm(1);
+                    z_47 = term.getSubterm(2);
+                    a_48 = term.getSubterm(3);
+                    term = termFactory.makeTuple(x_47, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX30, termFactory.makeListCons(y_47, termFactory.makeListCons(transform.constS26, termFactory.makeListCons(z_47, termFactory.makeListCons(transform.constS26, termFactory.makeListCons(a_48, (IStrategoList)transform.constCons30)))))));
                     term = make$Conc_0_0.instance.invoke(context, term);
                     if(term == null)
-                      break Fail211;
+                      break Fail212;
                     term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, term});
                     if(true)
                       break Success154;
@@ -7367,7 +7403,7 @@ import java.lang.ref.WeakReference;
                 { 
                   if(cons22 == transform._consDecAnnoType_0)
                   { 
-                    Fail212:
+                    Fail213:
                     { 
                       term = transform.constS48;
                       if(true)
@@ -7379,7 +7415,7 @@ import java.lang.ref.WeakReference;
                   { 
                     if(cons22 == transform._consDecAnnoConstructor_0)
                     { 
-                      Fail213:
+                      Fail214:
                       { 
                         term = transform.constS49;
                         if(true)
@@ -7391,7 +7427,7 @@ import java.lang.ref.WeakReference;
                     { 
                       if(cons22 == transform._consDecAnnoMethod_0)
                       { 
-                        Fail214:
+                        Fail215:
                         { 
                           term = transform.constS50;
                           if(true)
@@ -7403,7 +7439,7 @@ import java.lang.ref.WeakReference;
                       { 
                         if(cons22 == transform._consDecAnnoField_0)
                         { 
-                          Fail215:
+                          Fail216:
                           { 
                             term = transform.constS51;
                             if(true)
@@ -7415,13 +7451,13 @@ import java.lang.ref.WeakReference;
                         { 
                           if(cons22 == transform._consAspectDec_2)
                           { 
-                            Fail216:
+                            Fail217:
                             { 
-                              IStrategoTerm r_47 = null;
-                              IStrategoTerm s_47 = null;
-                              r_47 = term.getSubterm(0);
-                              s_47 = term.getSubterm(1);
-                              term = termFactory.makeAppl(transform._consV_2, new IStrategoTerm[]{transform.constCons36, (IStrategoTerm)termFactory.makeListCons(r_47, termFactory.makeListCons(s_47, (IStrategoList)transform.constNil0))});
+                              IStrategoTerm v_47 = null;
+                              IStrategoTerm w_47 = null;
+                              v_47 = term.getSubterm(0);
+                              w_47 = term.getSubterm(1);
+                              term = termFactory.makeAppl(transform._consV_2, new IStrategoTerm[]{transform.constCons36, (IStrategoTerm)termFactory.makeListCons(v_47, termFactory.makeListCons(w_47, (IStrategoList)transform.constNil0))});
                               if(true)
                                 break Success159;
                             }
@@ -7431,12 +7467,8 @@ import java.lang.ref.WeakReference;
                           { 
                             if(cons22 == transform._consAspectDecHead_6)
                             { 
-                              Fail217:
+                              Fail218:
                               { 
-                                IStrategoTerm y_46 = null;
-                                IStrategoTerm z_46 = null;
-                                IStrategoTerm a_47 = null;
-                                IStrategoTerm b_47 = null;
                                 IStrategoTerm c_47 = null;
                                 IStrategoTerm d_47 = null;
                                 IStrategoTerm e_47 = null;
@@ -7444,55 +7476,59 @@ import java.lang.ref.WeakReference;
                                 IStrategoTerm g_47 = null;
                                 IStrategoTerm h_47 = null;
                                 IStrategoTerm i_47 = null;
+                                IStrategoTerm j_47 = null;
+                                IStrategoTerm k_47 = null;
                                 IStrategoTerm l_47 = null;
                                 IStrategoTerm m_47 = null;
-                                y_46 = term.getSubterm(0);
-                                z_46 = term.getSubterm(1);
-                                a_47 = term.getSubterm(2);
-                                c_47 = term.getSubterm(3);
-                                e_47 = term.getSubterm(4);
-                                g_47 = term.getSubterm(5);
-                                i_47 = term;
-                                term = option_to_boxes_0_0.instance.invoke(context, a_47);
-                                if(term == null)
-                                  break Fail217;
-                                b_47 = term;
-                                term = option_to_boxes_0_0.instance.invoke(context, c_47);
-                                if(term == null)
-                                  break Fail217;
-                                d_47 = term;
+                                IStrategoTerm p_47 = null;
+                                IStrategoTerm q_47 = null;
+                                c_47 = term.getSubterm(0);
+                                d_47 = term.getSubterm(1);
+                                e_47 = term.getSubterm(2);
+                                g_47 = term.getSubterm(3);
+                                i_47 = term.getSubterm(4);
+                                k_47 = term.getSubterm(5);
+                                m_47 = term;
                                 term = option_to_boxes_0_0.instance.invoke(context, e_47);
                                 if(term == null)
-                                  break Fail217;
+                                  break Fail218;
                                 f_47 = term;
                                 term = option_to_boxes_0_0.instance.invoke(context, g_47);
                                 if(term == null)
-                                  break Fail217;
+                                  break Fail218;
                                 h_47 = term;
-                                term = i_47;
-                                m_47 = term;
-                                term = termFactory.makeTuple(f_47, h_47);
-                                term = make$Conc_0_0.instance.invoke(context, term);
+                                term = option_to_boxes_0_0.instance.invoke(context, i_47);
                                 if(term == null)
-                                  break Fail217;
-                                term = termFactory.makeTuple(d_47, term);
-                                term = make$Conc_0_0.instance.invoke(context, term);
+                                  break Fail218;
+                                j_47 = term;
+                                term = option_to_boxes_0_0.instance.invoke(context, k_47);
                                 if(term == null)
-                                  break Fail217;
-                                term = termFactory.makeTuple(b_47, term);
-                                term = make$Conc_0_0.instance.invoke(context, term);
-                                if(term == null)
-                                  break Fail217;
+                                  break Fail218;
                                 l_47 = term;
                                 term = m_47;
-                                IStrategoList list9;
-                                list9 = checkListTail(l_47);
-                                if(list9 == null)
-                                  break Fail217;
-                                term = termFactory.makeTuple(y_46, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX35, termFactory.makeListCons(z_46, list9)));
+                                q_47 = term;
+                                term = termFactory.makeTuple(j_47, l_47);
                                 term = make$Conc_0_0.instance.invoke(context, term);
                                 if(term == null)
-                                  break Fail217;
+                                  break Fail218;
+                                term = termFactory.makeTuple(h_47, term);
+                                term = make$Conc_0_0.instance.invoke(context, term);
+                                if(term == null)
+                                  break Fail218;
+                                term = termFactory.makeTuple(f_47, term);
+                                term = make$Conc_0_0.instance.invoke(context, term);
+                                if(term == null)
+                                  break Fail218;
+                                p_47 = term;
+                                term = q_47;
+                                IStrategoList list9;
+                                list9 = checkListTail(p_47);
+                                if(list9 == null)
+                                  break Fail218;
+                                term = termFactory.makeTuple(c_47, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX35, termFactory.makeListCons(d_47, list9)));
+                                term = make$Conc_0_0.instance.invoke(context, term);
+                                if(term == null)
+                                  break Fail218;
                                 term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons29, term});
                                 if(true)
                                   break Success160;
@@ -7503,11 +7539,11 @@ import java.lang.ref.WeakReference;
                             { 
                               if(cons22 == transform._consPerTarget_1)
                               { 
-                                Fail218:
+                                Fail219:
                                 { 
-                                  IStrategoTerm x_46 = null;
-                                  x_46 = term.getSubterm(0);
-                                  term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX36, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(x_46, (IStrategoList)transform.constCons26)))});
+                                  IStrategoTerm b_47 = null;
+                                  b_47 = term.getSubterm(0);
+                                  term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX36, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(b_47, (IStrategoList)transform.constCons26)))});
                                   if(true)
                                     break Success161;
                                 }
@@ -7517,11 +7553,11 @@ import java.lang.ref.WeakReference;
                               { 
                                 if(cons22 == transform._consPerThis_1)
                                 { 
-                                  Fail219:
+                                  Fail220:
                                   { 
-                                    IStrategoTerm w_46 = null;
-                                    w_46 = term.getSubterm(0);
-                                    term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX37, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(w_46, (IStrategoList)transform.constCons26)))});
+                                    IStrategoTerm a_47 = null;
+                                    a_47 = term.getSubterm(0);
+                                    term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX37, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(a_47, (IStrategoList)transform.constCons26)))});
                                     if(true)
                                       break Success162;
                                   }
@@ -7531,11 +7567,11 @@ import java.lang.ref.WeakReference;
                                 { 
                                   if(cons22 == transform._consPerCFlow_1)
                                   { 
-                                    Fail220:
+                                    Fail221:
                                     { 
-                                      IStrategoTerm v_46 = null;
-                                      v_46 = term.getSubterm(0);
-                                      term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX38, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(v_46, (IStrategoList)transform.constCons26)))});
+                                      IStrategoTerm z_46 = null;
+                                      z_46 = term.getSubterm(0);
+                                      term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX38, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(z_46, (IStrategoList)transform.constCons26)))});
                                       if(true)
                                         break Success163;
                                     }
@@ -7545,11 +7581,11 @@ import java.lang.ref.WeakReference;
                                   { 
                                     if(cons22 == transform._consPerCFlowBelow_1)
                                     { 
-                                      Fail221:
+                                      Fail222:
                                       { 
-                                        IStrategoTerm u_46 = null;
-                                        u_46 = term.getSubterm(0);
-                                        term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX39, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(u_46, (IStrategoList)transform.constCons26)))});
+                                        IStrategoTerm y_46 = null;
+                                        y_46 = term.getSubterm(0);
+                                        term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX39, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(y_46, (IStrategoList)transform.constCons26)))});
                                         if(true)
                                           break Success164;
                                       }
@@ -7559,11 +7595,11 @@ import java.lang.ref.WeakReference;
                                     { 
                                       if(cons22 == transform._consPerTypeWithin_1)
                                       { 
-                                        Fail222:
+                                        Fail223:
                                         { 
-                                          IStrategoTerm t_46 = null;
-                                          t_46 = term.getSubterm(0);
-                                          term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX40, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(t_46, (IStrategoList)transform.constCons26)))});
+                                          IStrategoTerm x_46 = null;
+                                          x_46 = term.getSubterm(0);
+                                          term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX40, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(x_46, (IStrategoList)transform.constCons26)))});
                                           if(true)
                                             break Success165;
                                         }
@@ -7573,7 +7609,7 @@ import java.lang.ref.WeakReference;
                                       { 
                                         if(cons22 == transform._consIsSingleton_0)
                                         { 
-                                          Fail223:
+                                          Fail224:
                                           { 
                                             term = transform.constFBOX41;
                                             if(true)
@@ -7585,11 +7621,11 @@ import java.lang.ref.WeakReference;
                                         { 
                                           if(cons22 == transform._consAspectBody_1)
                                           { 
-                                            Fail224:
+                                            Fail225:
                                             { 
-                                              IStrategoTerm s_46 = null;
-                                              s_46 = term.getSubterm(0);
-                                              term = termFactory.makeAppl(transform._consV_2, new IStrategoTerm[]{transform.constNil0, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consV_2, new IStrategoTerm[]{transform.constCons41, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX43, termFactory.makeListCons(termFactory.makeAppl(transform._consV_2, new IStrategoTerm[]{transform.constCons42, s_46}), (IStrategoList)transform.constNil0))}), (IStrategoList)transform.constCons39)});
+                                              IStrategoTerm w_46 = null;
+                                              w_46 = term.getSubterm(0);
+                                              term = termFactory.makeAppl(transform._consV_2, new IStrategoTerm[]{transform.constNil0, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consV_2, new IStrategoTerm[]{transform.constCons41, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX43, termFactory.makeListCons(termFactory.makeAppl(transform._consV_2, new IStrategoTerm[]{transform.constCons42, w_46}), (IStrategoList)transform.constNil0))}), (IStrategoList)transform.constCons39)});
                                               if(true)
                                                 break Success167;
                                             }
@@ -7599,7 +7635,7 @@ import java.lang.ref.WeakReference;
                                           { 
                                             if(cons22 == transform._consPrivileged_0)
                                             { 
-                                              Fail225:
+                                              Fail226:
                                               { 
                                                 term = transform.constFBOX44;
                                                 if(true)
@@ -7613,7 +7649,7 @@ import java.lang.ref.WeakReference;
                                             }
                                             else
                                             { 
-                                              break Fail207;
+                                              break Fail208;
                                             }
                                           }
                                         }
@@ -7650,7 +7686,7 @@ import java.lang.ref.WeakReference;
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("aspectj_to_box_0_0");
-      Fail226:
+      Fail227:
       { 
         IStrategoTerm term174 = term;
         IStrategoConstructor cons23 = term.getTermType() == IStrategoTerm.APPL ? ((IStrategoAppl)term).getConstructor() : null;
@@ -7658,11 +7694,11 @@ import java.lang.ref.WeakReference;
         { 
           if(cons23 == transform._consCall_1)
           { 
-            Fail227:
+            Fail228:
             { 
-              IStrategoTerm z_56 = null;
-              z_56 = term.getSubterm(0);
-              term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX46, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(z_56, (IStrategoList)transform.constCons26)))});
+              IStrategoTerm f_57 = null;
+              f_57 = term.getSubterm(0);
+              term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX46, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(f_57, (IStrategoList)transform.constCons26)))});
               if(true)
                 break Success169;
             }
@@ -7672,11 +7708,11 @@ import java.lang.ref.WeakReference;
           { 
             if(cons23 == transform._consExec_1)
             { 
-              Fail228:
+              Fail229:
               { 
-                IStrategoTerm y_56 = null;
-                y_56 = term.getSubterm(0);
-                term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX47, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(y_56, (IStrategoList)transform.constCons26)))});
+                IStrategoTerm c_57 = null;
+                c_57 = term.getSubterm(0);
+                term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{transform.constCons25, (IStrategoTerm)termFactory.makeListCons(transform.constFBOX47, termFactory.makeListCons(transform.constS1, termFactory.makeListCons(c_57, (IStrategoList)transform.constCons26)))});
                 if(true)
                   break Success170;
               }
@@ -7684,7 +7720,7 @@ import java.lang.ref.WeakReference;
             }
             term = aspectj_to_box_0_0_fragment_4.instance.invoke(context, term);
             if(term == null)
-              break Fail226;
+              break Fail227;
           }
         }
         context.popOnSuccess();
@@ -7703,11 +7739,11 @@ import java.lang.ref.WeakReference;
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       context.push("has_leftmost_not_0_0");
-      Fail229:
+      Fail230:
       { 
-        term = a_57.instance.invoke(context, term);
+        term = g_57.instance.invoke(context, term);
         if(term == null)
-          break Fail229;
+          break Fail230;
         context.popOnSuccess();
         if(true)
           return term;
@@ -7724,7 +7760,7 @@ import java.lang.ref.WeakReference;
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       ITermFactory termFactory = context.getFactory();
-      Fail230:
+      Fail231:
       { 
         IStrategoTerm term178 = term;
         IStrategoConstructor cons24 = term.getTermType() == IStrategoTerm.APPL ? ((IStrategoAppl)term).getConstructor() : null;
@@ -7732,11 +7768,11 @@ import java.lang.ref.WeakReference;
         { 
           if(cons24 == transform._consSome_1)
           { 
-            Fail231:
+            Fail232:
             { 
-              IStrategoTerm b_57 = null;
-              b_57 = term.getSubterm(0);
-              term = b_57;
+              IStrategoTerm h_57 = null;
+              h_57 = term.getSubterm(0);
+              term = h_57;
               term = (IStrategoTerm)termFactory.makeListCons(term, (IStrategoList)transform.constNil0);
               if(true)
                 break Success171;
@@ -7749,7 +7785,7 @@ import java.lang.ref.WeakReference;
           }
           else
           { 
-            break Fail230;
+            break Fail231;
           }
         }
         if(true)
@@ -7768,16 +7804,16 @@ import java.lang.ref.WeakReference;
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       context.push("pp_aspectj_string_0_0");
-      Fail232:
+      Fail233:
       { 
-        IStrategoTerm h_57 = null;
+        IStrategoTerm l_57 = null;
         term = pp_java5_to_abox_1_0.instance.invoke(context, term, lifted76.instance);
         if(term == null)
-          break Fail232;
-        h_57 = term;
-        term = box2text_string_0_1.instance.invoke(context, h_57, transform.const107);
+          break Fail233;
+        l_57 = term;
+        term = box2text_string_0_1.instance.invoke(context, l_57, transform.const107);
         if(term == null)
-          break Fail232;
+          break Fail233;
         context.popOnSuccess();
         if(true)
           return term;
@@ -7794,11 +7830,11 @@ import java.lang.ref.WeakReference;
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       context.push("main_0_0");
-      Fail233:
+      Fail234:
       { 
         term = handle_io_0_0.instance.invoke(context, term);
         if(term == null)
-          break Fail233;
+          break Fail234;
         context.popOnSuccess();
         if(true)
           return term;
@@ -7816,57 +7852,57 @@ import java.lang.ref.WeakReference;
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("handle_io_0_0");
-      Fail234:
+      Fail235:
       { 
-        IStrategoTerm n_57 = null;
-        IStrategoTerm o_57 = null;
-        IStrategoTerm p_57 = null;
-        IStrategoTerm q_57 = null;
+        IStrategoTerm r_57 = null;
         IStrategoTerm s_57 = null;
-        IStrategoTerm x_57 = null;
+        IStrategoTerm t_57 = null;
         IStrategoTerm u_57 = null;
+        IStrategoTerm w_57 = null;
+        IStrategoTerm d_58 = null;
+        IStrategoTerm y_57 = null;
         if(term.getTermType() != IStrategoTerm.LIST || ((IStrategoList)term).isEmpty())
-          break Fail234;
-        n_57 = ((IStrategoList)term).tail();
-        term = debug_0_0.instance.invoke(context, n_57);
+          break Fail235;
+        r_57 = ((IStrategoList)term).tail();
+        term = debug_0_0.instance.invoke(context, r_57);
         if(term == null)
-          break Fail234;
-        term = n_57;
+          break Fail235;
+        term = r_57;
         if(term.getTermType() != IStrategoTerm.LIST || ((IStrategoList)term).isEmpty())
-          break Fail234;
-        s_57 = ((IStrategoList)term).head();
-        term = s_57;
+          break Fail235;
+        w_57 = ((IStrategoList)term).head();
+        term = w_57;
         term = $Read$From$File_0_0.instance.invoke(context, term);
         if(term == null)
-          break Fail234;
-        o_57 = term;
-        term = n_57;
+          break Fail235;
+        s_57 = term;
+        term = r_57;
         if(term.getTermType() != IStrategoTerm.LIST || ((IStrategoList)term).isEmpty())
-          break Fail234;
-        x_57 = ((IStrategoList)term).tail();
-        term = x_57;
+          break Fail235;
+        d_58 = ((IStrategoList)term).tail();
+        term = d_58;
         if(term.getTermType() != IStrategoTerm.LIST || ((IStrategoList)term).isEmpty())
-          break Fail234;
-        u_57 = ((IStrategoList)term).head();
-        p_57 = u_57;
-        term = convert_0_0.instance.invoke(context, o_57);
+          break Fail235;
+        y_57 = ((IStrategoList)term).head();
+        t_57 = y_57;
+        term = convert_0_0.instance.invoke(context, s_57);
         if(term == null)
-          break Fail234;
+          break Fail235;
         term = pp_aspectj_string_0_0.instance.invoke(context, term);
         if(term == null)
-          break Fail234;
-        q_57 = term;
-        term = termFactory.makeTuple(p_57, transform.const108);
+          break Fail235;
+        u_57 = term;
+        term = termFactory.makeTuple(t_57, transform.const108);
         term = fopen_0_0.instance.invoke(context, term);
         if(term == null)
-          break Fail234;
-        term = termFactory.makeTuple(q_57, term);
+          break Fail235;
+        term = termFactory.makeTuple(u_57, term);
         term = fputs_0_0.instance.invoke(context, term);
         if(term == null)
-          break Fail234;
+          break Fail235;
         term = fclose_0_0.instance.invoke(context, term);
         if(term == null)
-          break Fail234;
+          break Fail235;
         context.popOnSuccess();
         if(true)
           return term;
@@ -7883,11 +7919,11 @@ import java.lang.ref.WeakReference;
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       context.push("convert_0_0");
-      Fail235:
+      Fail236:
       { 
         term = try_1_0.instance.invoke(context, term, ejp_converter_compilation_unit_0_0.instance);
         if(term == null)
-          break Fail235;
+          break Fail236;
         context.popOnSuccess();
         if(true)
           return term;
@@ -7905,48 +7941,48 @@ import java.lang.ref.WeakReference;
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("ejp_converter_compilation_unit_0_0");
-      Fail236:
+      Fail237:
       { 
-        IStrategoTerm h_58 = null;
-        IStrategoTerm j_58 = null;
-        IStrategoTerm k_58 = null;
-        IStrategoTerm l_58 = null;
-        TermReference m_58 = new TermReference();
+        IStrategoTerm m_58 = null;
         IStrategoTerm q_58 = null;
         IStrategoTerm r_58 = null;
-        IStrategoTerm z_58 = null;
+        IStrategoTerm t_58 = null;
+        TermReference u_58 = new TermReference();
+        IStrategoTerm v_58 = null;
+        IStrategoTerm w_58 = null;
+        IStrategoTerm d_59 = null;
         if(term.getTermType() != IStrategoTerm.APPL || transform._consCompilationUnit_3 != ((IStrategoAppl)term).getConstructor())
-          break Fail236;
-        j_58 = term.getSubterm(0);
-        k_58 = term.getSubterm(1);
-        q_58 = term.getSubterm(2);
-        z_58 = term;
+          break Fail237;
+        q_58 = term.getSubterm(0);
+        r_58 = term.getSubterm(1);
+        v_58 = term.getSubterm(2);
+        d_59 = term;
         IStrategoTerm term180 = term;
         Success172:
         { 
-          Fail237:
+          Fail238:
           { 
             IStrategoTerm term181 = term;
             Success173:
             { 
-              Fail238:
+              Fail239:
               { 
-                IStrategoTerm t_58 = null;
-                IStrategoTerm a_59 = null;
-                t_58 = term;
-                term = SRTS_all.instance.invoke(context, q_58, lifted78.instance);
+                IStrategoTerm z_58 = null;
+                IStrategoTerm e_59 = null;
+                z_58 = term;
+                term = SRTS_all.instance.invoke(context, v_58, lifted78.instance);
                 if(term == null)
-                  break Fail238;
-                a_59 = term;
-                h_58 = q_58;
-                term = a_59;
-                if(term != h_58 && !h_58.match(term))
-                  break Fail238;
-                term = t_58;
+                  break Fail239;
+                e_59 = term;
+                m_58 = v_58;
+                term = e_59;
+                if(term != m_58 && !m_58.match(term))
+                  break Fail239;
+                term = z_58;
                 { 
-                  l_58 = k_58;
-                  term = q_58;
-                  r_58 = q_58;
+                  t_58 = r_58;
+                  term = v_58;
+                  w_58 = v_58;
                   if(true)
                     break Success173;
                 }
@@ -7954,74 +7990,74 @@ import java.lang.ref.WeakReference;
               term = term181;
               Success174:
               { 
-                Fail239:
+                Fail240:
                 { 
-                  IStrategoTerm u_58 = null;
-                  u_58 = term;
-                  term = j_58;
+                  IStrategoTerm a_59 = null;
+                  a_59 = term;
+                  term = q_58;
                   if(term.getTermType() != IStrategoTerm.APPL || transform._consSome_1 != ((IStrategoAppl)term).getConstructor())
-                    break Fail239;
+                    break Fail240;
                   IStrategoTerm arg156 = term.getSubterm(0);
                   if(arg156.getTermType() != IStrategoTerm.APPL || transform._consPackageDec_2 != ((IStrategoAppl)arg156).getConstructor())
-                    break Fail239;
-                  term = u_58;
+                    break Fail240;
+                  term = a_59;
                   { 
-                    term = j_58;
+                    term = q_58;
                     if(term.getTermType() != IStrategoTerm.APPL || transform._consSome_1 != ((IStrategoAppl)term).getConstructor())
-                      break Fail237;
+                      break Fail238;
                     IStrategoTerm arg159 = term.getSubterm(0);
                     if(arg159.getTermType() != IStrategoTerm.APPL || transform._consPackageDec_2 != ((IStrategoAppl)arg159).getConstructor())
-                      break Fail237;
-                    if(m_58.value == null)
-                      m_58.value = arg159.getSubterm(1);
+                      break Fail238;
+                    if(u_58.value == null)
+                      u_58.value = arg159.getSubterm(1);
                     else
-                      if(m_58.value != arg159.getSubterm(1) && !m_58.value.match(arg159.getSubterm(1)))
-                        break Fail237;
+                      if(u_58.value != arg159.getSubterm(1) && !u_58.value.match(arg159.getSubterm(1)))
+                        break Fail238;
                     if(true)
                       break Success174;
                   }
                 }
                 term = transform.constNone0;
-                if(m_58.value == null)
-                  m_58.value = term;
+                if(u_58.value == null)
+                  u_58.value = term;
                 else
-                  if(m_58.value != term && !m_58.value.match(term))
-                    break Fail237;
+                  if(u_58.value != term && !u_58.value.match(term))
+                    break Fail238;
               }
-              term = termFactory.makeTuple(k_58, transform.constCons45);
+              term = termFactory.makeTuple(r_58, transform.constCons45);
               term = conc_0_0.instance.invoke(context, term);
               if(term == null)
-                break Fail237;
-              l_58 = term;
-              term = q_58;
+                break Fail238;
+              t_58 = term;
+              term = v_58;
               lifted80 lifted800 = new lifted80();
-              lifted800.m_58 = m_58;
+              lifted800.u_58 = u_58;
               term = SRTS_all.instance.invoke(context, term, lifted800);
               if(term == null)
-                break Fail237;
-              r_58 = term;
+                break Fail238;
+              w_58 = term;
             }
             if(true)
               break Success172;
           }
           term = term180;
-          IStrategoTerm v_58 = null;
-          IStrategoTerm w_58 = null;
-          IStrategoTerm d_59 = null;
-          v_58 = term;
+          IStrategoTerm b_59 = null;
+          IStrategoTerm c_59 = null;
+          IStrategoTerm h_59 = null;
+          b_59 = term;
           term = context.invokePrimitive("SSL_stacktrace_get_all_frame_names", term, NO_STRATEGIES, NO_TERMS);
           if(term == null)
-            break Fail236;
-          w_58 = term;
-          d_59 = v_58;
-          term = report_with_failure_0_2.instance.invoke(context, d_59, transform.const110, w_58);
+            break Fail237;
+          c_59 = term;
+          h_59 = b_59;
+          term = report_with_failure_0_2.instance.invoke(context, h_59, transform.const111, c_59);
           if(term == null)
-            break Fail236;
+            break Fail237;
         }
-        term = z_58;
-        if(l_58 == null || r_58 == null)
-          break Fail236;
-        term = termFactory.makeAppl(transform._consCompilationUnit_3, new IStrategoTerm[]{j_58, l_58, r_58});
+        term = d_59;
+        if(t_58 == null || w_58 == null)
+          break Fail237;
+        term = termFactory.makeAppl(transform._consCompilationUnit_3, new IStrategoTerm[]{q_58, t_58, w_58});
         context.popOnSuccess();
         if(true)
           return term;
@@ -8039,7 +8075,7 @@ import java.lang.ref.WeakReference;
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("check_for_change_in_aspect_or_class_0_0");
-      Fail240:
+      Fail241:
       { 
         IStrategoTerm term183 = term;
         IStrategoConstructor cons25 = term.getTermType() == IStrategoTerm.APPL ? ((IStrategoAppl)term).getConstructor() : null;
@@ -8047,46 +8083,46 @@ import java.lang.ref.WeakReference;
         { 
           if(cons25 == transform._consClassDec_2)
           { 
-            Fail241:
+            Fail242:
             { 
-              IStrategoTerm q_59 = null;
-              IStrategoTerm r_59 = null;
-              IStrategoTerm s_59 = null;
+              IStrategoTerm u_59 = null;
               IStrategoTerm v_59 = null;
-              q_59 = term.getSubterm(0);
-              r_59 = term.getSubterm(1);
-              v_59 = term;
+              IStrategoTerm w_59 = null;
+              IStrategoTerm z_59 = null;
+              u_59 = term.getSubterm(0);
+              v_59 = term.getSubterm(1);
+              z_59 = term;
               IStrategoTerm term184 = term;
               Success176:
               { 
-                Fail242:
+                Fail243:
                 { 
-                  term = termFactory.makeAppl(transform._consClassDec_2, new IStrategoTerm[]{q_59, r_59});
+                  term = termFactory.makeAppl(transform._consClassDec_2, new IStrategoTerm[]{u_59, v_59});
                   term = topdown_1_0.instance.invoke(context, term, lifted82.instance);
                   if(term == null)
-                    break Fail242;
-                  s_59 = term;
+                    break Fail243;
+                  w_59 = term;
                   if(true)
                     break Success176;
                 }
                 term = term184;
-                IStrategoTerm t_59 = null;
-                IStrategoTerm u_59 = null;
                 IStrategoTerm x_59 = null;
-                t_59 = term;
+                IStrategoTerm y_59 = null;
+                IStrategoTerm b_60 = null;
+                x_59 = term;
                 term = context.invokePrimitive("SSL_stacktrace_get_all_frame_names", term, NO_STRATEGIES, NO_TERMS);
                 if(term == null)
-                  break Fail241;
-                u_59 = term;
-                x_59 = t_59;
-                term = report_with_failure_0_2.instance.invoke(context, x_59, transform.const111, u_59);
+                  break Fail242;
+                y_59 = term;
+                b_60 = x_59;
+                term = report_with_failure_0_2.instance.invoke(context, b_60, transform.const112, y_59);
                 if(term == null)
-                  break Fail241;
+                  break Fail242;
               }
-              term = v_59;
-              if(s_59 == null)
-                break Fail241;
-              term = s_59;
+              term = z_59;
+              if(w_59 == null)
+                break Fail242;
+              term = w_59;
               if(true)
                 break Success175;
             }
@@ -8094,48 +8130,48 @@ import java.lang.ref.WeakReference;
           }
           if(cons25 == transform._consAspectDec_2)
           { 
-            IStrategoTerm g_59 = null;
-            IStrategoTerm h_59 = null;
-            IStrategoTerm i_59 = null;
+            IStrategoTerm k_59 = null;
             IStrategoTerm l_59 = null;
-            g_59 = term.getSubterm(0);
-            h_59 = term.getSubterm(1);
-            l_59 = term;
+            IStrategoTerm m_59 = null;
+            IStrategoTerm p_59 = null;
+            k_59 = term.getSubterm(0);
+            l_59 = term.getSubterm(1);
+            p_59 = term;
             IStrategoTerm term186 = term;
             Success177:
             { 
-              Fail243:
+              Fail244:
               { 
-                term = termFactory.makeAppl(transform._consAspectDec_2, new IStrategoTerm[]{g_59, h_59});
+                term = termFactory.makeAppl(transform._consAspectDec_2, new IStrategoTerm[]{k_59, l_59});
                 term = topdown_1_0.instance.invoke(context, term, lifted84.instance);
                 if(term == null)
-                  break Fail243;
-                i_59 = term;
+                  break Fail244;
+                m_59 = term;
                 if(true)
                   break Success177;
               }
               term = term186;
-              IStrategoTerm j_59 = null;
-              IStrategoTerm k_59 = null;
               IStrategoTerm n_59 = null;
-              j_59 = term;
+              IStrategoTerm o_59 = null;
+              IStrategoTerm r_59 = null;
+              n_59 = term;
               term = context.invokePrimitive("SSL_stacktrace_get_all_frame_names", term, NO_STRATEGIES, NO_TERMS);
               if(term == null)
-                break Fail240;
-              k_59 = term;
-              n_59 = j_59;
-              term = report_with_failure_0_2.instance.invoke(context, n_59, transform.const111, k_59);
+                break Fail241;
+              o_59 = term;
+              r_59 = n_59;
+              term = report_with_failure_0_2.instance.invoke(context, r_59, transform.const112, o_59);
               if(term == null)
-                break Fail240;
+                break Fail241;
             }
-            term = l_59;
-            if(i_59 == null)
-              break Fail240;
-            term = i_59;
+            term = p_59;
+            if(m_59 == null)
+              break Fail241;
+            term = m_59;
           }
           else
           { 
-            break Fail240;
+            break Fail241;
           }
         }
         context.popOnSuccess();
@@ -8151,145 +8187,145 @@ import java.lang.ref.WeakReference;
   { 
     public static ejp_converter_aspect_or_class_0_1 instance = new ejp_converter_aspect_or_class_0_1();
 
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm ref_l_72)
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm ref_p_72)
     { 
       ITermFactory termFactory = context.getFactory();
-      TermReference l_72 = new TermReference(ref_l_72);
+      TermReference p_72 = new TermReference(ref_p_72);
       context.push("ejp_converter_aspect_or_class_0_1");
-      Fail244:
+      Fail245:
       { 
         IStrategoTerm term187 = term;
         Success178:
         { 
-          Fail245:
+          Fail246:
           { 
-            IStrategoTerm m_60 = null;
-            TermReference n_60 = new TermReference();
-            IStrategoTerm o_60 = null;
-            TermReference p_60 = new TermReference();
             IStrategoTerm q_60 = null;
-            IStrategoTerm t_60 = null;
+            TermReference r_60 = new TermReference();
+            IStrategoTerm s_60 = null;
+            TermReference t_60 = new TermReference();
+            IStrategoTerm u_60 = null;
+            IStrategoTerm x_60 = null;
             if(term.getTermType() != IStrategoTerm.APPL || transform._consAspectDec_2 != ((IStrategoAppl)term).getConstructor())
-              break Fail245;
-            m_60 = term.getSubterm(0);
+              break Fail246;
+            q_60 = term.getSubterm(0);
             IStrategoTerm arg166 = term.getSubterm(1);
             if(arg166.getTermType() != IStrategoTerm.APPL || transform._consAspectBody_1 != ((IStrategoAppl)arg166).getConstructor())
-              break Fail245;
-            o_60 = arg166.getSubterm(0);
-            t_60 = term;
+              break Fail246;
+            s_60 = arg166.getSubterm(0);
+            x_60 = term;
             IStrategoTerm term188 = term;
             Success179:
             { 
-              Fail246:
+              Fail247:
               { 
-                IStrategoTerm y_60 = null;
-                IStrategoTerm a_61 = null;
-                term = m_60;
+                IStrategoTerm c_61 = null;
+                IStrategoTerm e_61 = null;
+                term = q_60;
                 if(term.getTermType() != IStrategoTerm.APPL || transform._consAspectDecHead_6 != ((IStrategoAppl)term).getConstructor())
-                  break Fail246;
+                  break Fail247;
                 IStrategoTerm arg168 = term.getSubterm(1);
                 if(arg168.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg168).getConstructor())
-                  break Fail246;
-                if(n_60.value == null)
-                  n_60.value = arg168.getSubterm(0);
+                  break Fail247;
+                if(r_60.value == null)
+                  r_60.value = arg168.getSubterm(0);
                 else
-                  if(n_60.value != arg168.getSubterm(0) && !n_60.value.match(arg168.getSubterm(0)))
-                    break Fail246;
+                  if(r_60.value != arg168.getSubterm(0) && !r_60.value.match(arg168.getSubterm(0)))
+                    break Fail247;
                 term = new_iset_0_0.instance.invoke(context, term);
                 if(term == null)
-                  break Fail246;
-                if(p_60.value == null)
-                  p_60.value = term;
+                  break Fail247;
+                if(t_60.value == null)
+                  t_60.value = term;
                 else
-                  if(p_60.value != term && !p_60.value.match(term))
-                    break Fail246;
-                a_61 = term;
-                term = o_60;
+                  if(t_60.value != term && !t_60.value.match(term))
+                    break Fail247;
+                e_61 = term;
+                term = s_60;
                 lifted86 lifted860 = new lifted86();
-                lifted860.p_60 = p_60;
-                lifted860.l_72 = l_72;
-                lifted860.n_60 = n_60;
+                lifted860.t_60 = t_60;
+                lifted860.p_72 = p_72;
+                lifted860.r_60 = r_60;
                 term = topdown_1_0.instance.invoke(context, term, lifted860);
                 if(term == null)
-                  break Fail246;
-                y_60 = term;
-                term = a_61;
-                if(p_60.value == null)
-                  break Fail246;
-                term = iset_elements_0_0.instance.invoke(context, p_60.value);
+                  break Fail247;
+                c_61 = term;
+                term = e_61;
+                if(t_60.value == null)
+                  break Fail247;
+                term = iset_elements_0_0.instance.invoke(context, t_60.value);
                 if(term == null)
-                  break Fail246;
-                term = termFactory.makeTuple(y_60, term);
+                  break Fail247;
+                term = termFactory.makeTuple(c_61, term);
                 term = conc_0_0.instance.invoke(context, term);
                 if(term == null)
-                  break Fail246;
+                  break Fail247;
                 term = termFactory.makeAppl(transform._consAspectBody_1, new IStrategoTerm[]{term});
-                q_60 = term;
+                u_60 = term;
                 if(true)
                   break Success179;
               }
               term = term188;
-              IStrategoTerm r_60 = null;
-              IStrategoTerm s_60 = null;
-              IStrategoTerm d_61 = null;
-              r_60 = term;
+              IStrategoTerm v_60 = null;
+              IStrategoTerm w_60 = null;
+              IStrategoTerm h_61 = null;
+              v_60 = term;
               term = context.invokePrimitive("SSL_stacktrace_get_all_frame_names", term, NO_STRATEGIES, NO_TERMS);
               if(term == null)
-                break Fail245;
-              s_60 = term;
-              d_61 = r_60;
-              term = report_with_failure_0_2.instance.invoke(context, d_61, transform.const112, s_60);
+                break Fail246;
+              w_60 = term;
+              h_61 = v_60;
+              term = report_with_failure_0_2.instance.invoke(context, h_61, transform.const113, w_60);
               if(term == null)
-                break Fail245;
+                break Fail246;
             }
-            term = t_60;
-            if(q_60 == null)
-              break Fail245;
-            term = termFactory.makeAppl(transform._consAspectDec_2, new IStrategoTerm[]{m_60, q_60});
+            term = x_60;
+            if(u_60 == null)
+              break Fail246;
+            term = termFactory.makeAppl(transform._consAspectDec_2, new IStrategoTerm[]{q_60, u_60});
             if(true)
               break Success178;
           }
           term = term187;
-          IStrategoTerm b_60 = null;
-          IStrategoTerm c_60 = null;
-          IStrategoTerm d_60 = null;
+          IStrategoTerm f_60 = null;
           IStrategoTerm g_60 = null;
+          IStrategoTerm h_60 = null;
+          IStrategoTerm k_60 = null;
           if(term.getTermType() != IStrategoTerm.APPL || transform._consClassDec_2 != ((IStrategoAppl)term).getConstructor())
-            break Fail244;
-          b_60 = term.getSubterm(0);
-          c_60 = term.getSubterm(1);
-          g_60 = term;
+            break Fail245;
+          f_60 = term.getSubterm(0);
+          g_60 = term.getSubterm(1);
+          k_60 = term;
           IStrategoTerm term189 = term;
           Success180:
           { 
-            Fail247:
+            Fail248:
             { 
-              term = termFactory.makeAppl(transform._consClassDec_2, new IStrategoTerm[]{b_60, c_60});
+              term = termFactory.makeAppl(transform._consClassDec_2, new IStrategoTerm[]{f_60, g_60});
               term = ejp_to_java2_0_0.instance.invoke(context, term);
               if(term == null)
-                break Fail247;
-              d_60 = term;
+                break Fail248;
+              h_60 = term;
               if(true)
                 break Success180;
             }
             term = term189;
-            IStrategoTerm e_60 = null;
-            IStrategoTerm f_60 = null;
             IStrategoTerm i_60 = null;
-            e_60 = term;
+            IStrategoTerm j_60 = null;
+            IStrategoTerm m_60 = null;
+            i_60 = term;
             term = context.invokePrimitive("SSL_stacktrace_get_all_frame_names", term, NO_STRATEGIES, NO_TERMS);
             if(term == null)
-              break Fail244;
-            f_60 = term;
-            i_60 = e_60;
-            term = report_with_failure_0_2.instance.invoke(context, i_60, transform.const112, f_60);
+              break Fail245;
+            j_60 = term;
+            m_60 = i_60;
+            term = report_with_failure_0_2.instance.invoke(context, m_60, transform.const113, j_60);
             if(term == null)
-              break Fail244;
+              break Fail245;
           }
-          term = g_60;
-          if(d_60 == null)
-            break Fail244;
-          term = d_60;
+          term = k_60;
+          if(h_60 == null)
+            break Fail245;
+          term = h_60;
         }
         context.popOnSuccess();
         if(true)
@@ -8304,30 +8340,30 @@ import java.lang.ref.WeakReference;
   { 
     public static $Or$Comp_2_0 instance = new $Or$Comp_2_0();
 
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, Strategy g_62, Strategy h_62)
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, Strategy l_62, Strategy m_62)
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("OrComp_2_0");
-      Fail248:
+      Fail249:
       { 
-        IStrategoTerm p_200 = null;
-        IStrategoTerm n_200 = null;
-        IStrategoTerm o_200 = null;
-        IStrategoTerm q_200 = null;
+        IStrategoTerm t_200 = null;
+        IStrategoTerm r_200 = null;
+        IStrategoTerm s_200 = null;
+        IStrategoTerm u_200 = null;
         if(term.getTermType() != IStrategoTerm.APPL || transform._consOrComp_2 != ((IStrategoAppl)term).getConstructor())
-          break Fail248;
-        n_200 = term.getSubterm(0);
-        o_200 = term.getSubterm(1);
+          break Fail249;
+        r_200 = term.getSubterm(0);
+        s_200 = term.getSubterm(1);
         IStrategoList annos0 = term.getAnnotations();
-        p_200 = annos0;
-        term = g_62.invoke(context, n_200);
+        t_200 = annos0;
+        term = l_62.invoke(context, r_200);
         if(term == null)
-          break Fail248;
-        q_200 = term;
-        term = h_62.invoke(context, o_200);
+          break Fail249;
+        u_200 = term;
+        term = m_62.invoke(context, s_200);
         if(term == null)
-          break Fail248;
-        term = termFactory.annotateTerm(termFactory.makeAppl(transform._consOrComp_2, new IStrategoTerm[]{q_200, term}), checkListAnnos(termFactory, p_200));
+          break Fail249;
+        term = termFactory.annotateTerm(termFactory.makeAppl(transform._consOrComp_2, new IStrategoTerm[]{u_200, term}), checkListAnnos(termFactory, t_200));
         context.popOnSuccess();
         if(true)
           return term;
@@ -8341,30 +8377,30 @@ import java.lang.ref.WeakReference;
   { 
     public static $And$Comp_2_0 instance = new $And$Comp_2_0();
 
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, Strategy i_62, Strategy j_62)
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, Strategy n_62, Strategy o_62)
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("AndComp_2_0");
-      Fail249:
+      Fail250:
       { 
-        IStrategoTerm u_200 = null;
-        IStrategoTerm s_200 = null;
-        IStrategoTerm t_200 = null;
-        IStrategoTerm v_200 = null;
+        IStrategoTerm y_200 = null;
+        IStrategoTerm w_200 = null;
+        IStrategoTerm x_200 = null;
+        IStrategoTerm z_200 = null;
         if(term.getTermType() != IStrategoTerm.APPL || transform._consAndComp_2 != ((IStrategoAppl)term).getConstructor())
-          break Fail249;
-        s_200 = term.getSubterm(0);
-        t_200 = term.getSubterm(1);
+          break Fail250;
+        w_200 = term.getSubterm(0);
+        x_200 = term.getSubterm(1);
         IStrategoList annos1 = term.getAnnotations();
-        u_200 = annos1;
-        term = i_62.invoke(context, s_200);
+        y_200 = annos1;
+        term = n_62.invoke(context, w_200);
         if(term == null)
-          break Fail249;
-        v_200 = term;
-        term = j_62.invoke(context, t_200);
+          break Fail250;
+        z_200 = term;
+        term = o_62.invoke(context, x_200);
         if(term == null)
-          break Fail249;
-        term = termFactory.annotateTerm(termFactory.makeAppl(transform._consAndComp_2, new IStrategoTerm[]{v_200, term}), checkListAnnos(termFactory, u_200));
+          break Fail250;
+        term = termFactory.annotateTerm(termFactory.makeAppl(transform._consAndComp_2, new IStrategoTerm[]{z_200, term}), checkListAnnos(termFactory, y_200));
         context.popOnSuccess();
         if(true)
           return term;
@@ -8378,23 +8414,23 @@ import java.lang.ref.WeakReference;
   { 
     public static $Not$Comp_1_0 instance = new $Not$Comp_1_0();
 
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, Strategy l_62)
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, Strategy p_62)
     { 
       ITermFactory termFactory = context.getFactory();
       context.push("NotComp_1_0");
-      Fail250:
+      Fail251:
       { 
-        IStrategoTerm y_200 = null;
-        IStrategoTerm x_200 = null;
+        IStrategoTerm c_201 = null;
+        IStrategoTerm b_201 = null;
         if(term.getTermType() != IStrategoTerm.APPL || transform._consNotComp_1 != ((IStrategoAppl)term).getConstructor())
-          break Fail250;
-        x_200 = term.getSubterm(0);
+          break Fail251;
+        b_201 = term.getSubterm(0);
         IStrategoList annos2 = term.getAnnotations();
-        y_200 = annos2;
-        term = l_62.invoke(context, x_200);
+        c_201 = annos2;
+        term = p_62.invoke(context, b_201);
         if(term == null)
-          break Fail250;
-        term = termFactory.annotateTerm(termFactory.makeAppl(transform._consNotComp_1, new IStrategoTerm[]{term}), checkListAnnos(termFactory, y_200));
+          break Fail251;
+        term = termFactory.annotateTerm(termFactory.makeAppl(transform._consNotComp_1, new IStrategoTerm[]{term}), checkListAnnos(termFactory, c_201));
         context.popOnSuccess();
         if(true)
           return term;
@@ -8406,23 +8442,23 @@ import java.lang.ref.WeakReference;
 
   @SuppressWarnings("all") private static final class lifted86 extends Strategy 
   { 
-    TermReference p_60;
+    TermReference t_60;
 
-    TermReference l_72;
+    TermReference p_72;
 
-    TermReference n_60;
+    TermReference r_60;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail251:
+      Fail252:
       { 
         lifted87 lifted870 = new lifted87();
-        lifted870.p_60 = p_60;
-        lifted870.l_72 = l_72;
-        lifted870.n_60 = n_60;
+        lifted870.t_60 = t_60;
+        lifted870.p_72 = p_72;
+        lifted870.r_60 = r_60;
         term = try_1_0.instance.invoke(context, term, lifted870);
         if(term == null)
-          break Fail251;
+          break Fail252;
         if(true)
           return term;
       }
@@ -8432,19 +8468,19 @@ import java.lang.ref.WeakReference;
 
   @SuppressWarnings("all") private static final class lifted87 extends Strategy 
   { 
-    TermReference p_60;
+    TermReference t_60;
 
-    TermReference l_72;
+    TermReference p_72;
 
-    TermReference n_60;
+    TermReference r_60;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail252:
+      Fail253:
       { 
-        term = ejp_to_ajc_0_3.instance.invoke(context, term, p_60.value, l_72.value, n_60.value);
+        term = ejp_to_ajc_0_3.instance.invoke(context, term, t_60.value, p_72.value, r_60.value);
         if(term == null)
-          break Fail252;
+          break Fail253;
         if(true)
           return term;
       }
@@ -8458,11 +8494,11 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail253:
+      Fail254:
       { 
         term = try_1_0.instance.invoke(context, term, remove_ejp_decs_0_0.instance);
         if(term == null)
-          break Fail253;
+          break Fail254;
         if(true)
           return term;
       }
@@ -8476,11 +8512,11 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail254:
+      Fail255:
       { 
         term = try_1_0.instance.invoke(context, term, lifted83.instance);
         if(term == null)
-          break Fail254;
+          break Fail255;
         if(true)
           return term;
       }
@@ -8494,7 +8530,7 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail255:
+      Fail256:
       { 
         IStrategoTerm term185 = term;
         IStrategoConstructor cons26 = term.getTermType() == IStrategoTerm.APPL ? ((IStrategoAppl)term).getConstructor() : null;
@@ -8502,7 +8538,7 @@ import java.lang.ref.WeakReference;
         { 
           if(cons26 == transform._consScopedEJPCall_3)
           { 
-            Fail256:
+            Fail257:
             { 
               term = transform.constNone0;
               if(true)
@@ -8516,7 +8552,7 @@ import java.lang.ref.WeakReference;
           }
           else
           { 
-            break Fail255;
+            break Fail256;
           }
         }
         if(true)
@@ -8528,17 +8564,17 @@ import java.lang.ref.WeakReference;
 
   @SuppressWarnings("all") private static final class lifted80 extends Strategy 
   { 
-    TermReference m_58;
+    TermReference u_58;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail257:
+      Fail258:
       { 
         lifted81 lifted810 = new lifted81();
-        lifted810.m_58 = m_58;
+        lifted810.u_58 = u_58;
         term = try_1_0.instance.invoke(context, term, lifted810);
         if(term == null)
-          break Fail257;
+          break Fail258;
         if(true)
           return term;
       }
@@ -8548,15 +8584,15 @@ import java.lang.ref.WeakReference;
 
   @SuppressWarnings("all") private static final class lifted81 extends Strategy 
   { 
-    TermReference m_58;
+    TermReference u_58;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail258:
+      Fail259:
       { 
-        term = ejp_converter_aspect_or_class_0_1.instance.invoke(context, term, m_58.value);
+        term = ejp_converter_aspect_or_class_0_1.instance.invoke(context, term, u_58.value);
         if(term == null)
-          break Fail258;
+          break Fail259;
         if(true)
           return term;
       }
@@ -8570,11 +8606,11 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail259:
+      Fail260:
       { 
         term = try_1_0.instance.invoke(context, term, check_for_change_in_aspect_or_class_0_0.instance);
         if(term == null)
-          break Fail259;
+          break Fail260;
         if(true)
           return term;
       }
@@ -8588,22 +8624,22 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail260:
+      Fail261:
       { 
         IStrategoTerm term179 = term;
         Success182:
         { 
-          Fail261:
+          Fail262:
           { 
             term = aspectj_to_box_0_0.instance.invoke(context, term);
             if(term == null)
-              break Fail261;
+              break Fail262;
             if(true)
               break Success182;
           }
           term = java_to_box_0_0.instance.invoke(context, term179);
           if(term == null)
-            break Fail260;
+            break Fail261;
         }
         if(true)
           return term;
@@ -8612,22 +8648,22 @@ import java.lang.ref.WeakReference;
     }
   }
 
-  @SuppressWarnings("all") private static final class a_57 extends Strategy 
+  @SuppressWarnings("all") private static final class g_57 extends Strategy 
   { 
-    public static final a_57 instance = new a_57();
+    public static final g_57 instance = new g_57();
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail262:
+      Fail263:
       { 
         IStrategoTerm term176 = term;
         Success183:
         { 
-          Fail263:
+          Fail264:
           { 
             term = $Not$Comp_1_0.instance.invoke(context, term, _Id.instance);
             if(term == null)
-              break Fail263;
+              break Fail264;
             if(true)
               break Success183;
           }
@@ -8635,17 +8671,17 @@ import java.lang.ref.WeakReference;
           IStrategoTerm term177 = term;
           Success184:
           { 
-            Fail264:
+            Fail265:
             { 
               term = $And$Comp_2_0.instance.invoke(context, term, this, _Id.instance);
               if(term == null)
-                break Fail264;
+                break Fail265;
               if(true)
                 break Success184;
             }
             term = $Or$Comp_2_0.instance.invoke(context, term177, this, _Id.instance);
             if(term == null)
-              break Fail262;
+              break Fail263;
           }
         }
         if(true)
@@ -8662,15 +8698,15 @@ import java.lang.ref.WeakReference;
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       ITermFactory termFactory = context.getFactory();
-      Fail265:
+      Fail266:
       { 
-        IStrategoTerm r_45 = null;
+        IStrategoTerm v_45 = null;
         if(term.getTermType() != IStrategoTerm.APPL || transform._consClassType_2 != ((IStrategoAppl)term).getConstructor())
-          break Fail265;
-        r_45 = term.getSubterm(0);
-        term = pp_aspectj_string_0_0.instance.invoke(context, r_45);
+          break Fail266;
+        v_45 = term.getSubterm(0);
+        term = pp_aspectj_string_0_0.instance.invoke(context, v_45);
         if(term == null)
-          break Fail265;
+          break Fail266;
         term = termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{term}), (IStrategoList)transform.constNil0)})});
         if(true)
           return term;
@@ -8681,26 +8717,26 @@ import java.lang.ref.WeakReference;
 
   @SuppressWarnings("all") private static final class lifted71 extends Strategy 
   { 
-    TermReference k_45;
+    TermReference o_45;
 
-    TermReference i_45;
+    TermReference m_45;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail266:
+      Fail267:
       { 
         if(term.getTermType() != IStrategoTerm.APPL || transform._consScopedExplicitJoinPointPHeader_2 != ((IStrategoAppl)term).getConstructor())
-          break Fail266;
-        if(k_45.value == null)
-          k_45.value = term.getSubterm(0);
+          break Fail267;
+        if(o_45.value == null)
+          o_45.value = term.getSubterm(0);
         else
-          if(k_45.value != term.getSubterm(0) && !k_45.value.match(term.getSubterm(0)))
-            break Fail266;
-        if(i_45.value == null)
-          i_45.value = term.getSubterm(1);
+          if(o_45.value != term.getSubterm(0) && !o_45.value.match(term.getSubterm(0)))
+            break Fail267;
+        if(m_45.value == null)
+          m_45.value = term.getSubterm(1);
         else
-          if(i_45.value != term.getSubterm(1) && !i_45.value.match(term.getSubterm(1)))
-            break Fail266;
+          if(m_45.value != term.getSubterm(1) && !m_45.value.match(term.getSubterm(1)))
+            break Fail267;
         if(true)
           return term;
       }
@@ -8710,26 +8746,26 @@ import java.lang.ref.WeakReference;
 
   @SuppressWarnings("all") private static final class lifted70 extends Strategy 
   { 
-    TermReference k_45;
+    TermReference o_45;
 
-    TermReference i_45;
+    TermReference m_45;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail267:
+      Fail268:
       { 
         if(term.getTermType() != IStrategoTerm.APPL || transform._consNonScopedExplicitJoinPointPHeader_2 != ((IStrategoAppl)term).getConstructor())
-          break Fail267;
-        if(k_45.value == null)
-          k_45.value = term.getSubterm(0);
+          break Fail268;
+        if(o_45.value == null)
+          o_45.value = term.getSubterm(0);
         else
-          if(k_45.value != term.getSubterm(0) && !k_45.value.match(term.getSubterm(0)))
-            break Fail267;
-        if(i_45.value == null)
-          i_45.value = term.getSubterm(1);
+          if(o_45.value != term.getSubterm(0) && !o_45.value.match(term.getSubterm(0)))
+            break Fail268;
+        if(m_45.value == null)
+          m_45.value = term.getSubterm(1);
         else
-          if(i_45.value != term.getSubterm(1) && !i_45.value.match(term.getSubterm(1)))
-            break Fail267;
+          if(m_45.value != term.getSubterm(1) && !m_45.value.match(term.getSubterm(1)))
+            break Fail268;
         if(true)
           return term;
       }
@@ -8743,11 +8779,11 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail268:
+      Fail269:
       { 
         term = convet_pointcutarg_to_pointcut_0_0.instance.invoke(context, term);
         if(term == null)
-          break Fail268;
+          break Fail269;
         if(true)
           return term;
       }
@@ -8757,19 +8793,19 @@ import java.lang.ref.WeakReference;
 
   @SuppressWarnings("all") private static final class lifted68 extends Strategy 
   { 
-    TermReference s_44;
+    TermReference w_44;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail269:
+      Fail270:
       { 
         if(term.getTermType() != IStrategoTerm.APPL || transform._consScopedExplicitJoinPointPHeader_2 != ((IStrategoAppl)term).getConstructor())
-          break Fail269;
-        if(s_44.value == null)
-          s_44.value = term.getSubterm(1);
+          break Fail270;
+        if(w_44.value == null)
+          w_44.value = term.getSubterm(1);
         else
-          if(s_44.value != term.getSubterm(1) && !s_44.value.match(term.getSubterm(1)))
-            break Fail269;
+          if(w_44.value != term.getSubterm(1) && !w_44.value.match(term.getSubterm(1)))
+            break Fail270;
         if(true)
           return term;
       }
@@ -8779,19 +8815,19 @@ import java.lang.ref.WeakReference;
 
   @SuppressWarnings("all") private static final class lifted67 extends Strategy 
   { 
-    TermReference s_44;
+    TermReference w_44;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail270:
+      Fail271:
       { 
         if(term.getTermType() != IStrategoTerm.APPL || transform._consNonScopedExplicitJoinPointPHeader_2 != ((IStrategoAppl)term).getConstructor())
-          break Fail270;
-        if(s_44.value == null)
-          s_44.value = term.getSubterm(1);
+          break Fail271;
+        if(w_44.value == null)
+          w_44.value = term.getSubterm(1);
         else
-          if(s_44.value != term.getSubterm(1) && !s_44.value.match(term.getSubterm(1)))
-            break Fail270;
+          if(w_44.value != term.getSubterm(1) && !w_44.value.match(term.getSubterm(1)))
+            break Fail271;
         if(true)
           return term;
       }
@@ -8801,12 +8837,12 @@ import java.lang.ref.WeakReference;
 
   @SuppressWarnings("all") private static final class ejp_to_ajc_0_3_fragment_0 extends Strategy 
   { 
-    TermReference h_72;
+    TermReference l_72;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       ITermFactory termFactory = context.getFactory();
-      Fail271:
+      Fail272:
       { 
         IStrategoTerm term53 = term;
         IStrategoConstructor cons27 = term.getTermType() == IStrategoTerm.APPL ? ((IStrategoAppl)term).getConstructor() : null;
@@ -8814,40 +8850,40 @@ import java.lang.ref.WeakReference;
         { 
           if(cons27 == transform._consDecNoMatch_4)
           { 
-            Fail272:
+            Fail273:
             { 
-              IStrategoTerm v_40 = null;
-              IStrategoTerm w_40 = null;
-              IStrategoTerm x_40 = null;
-              IStrategoTerm y_40 = null;
-              IStrategoTerm b_41 = null;
               IStrategoTerm z_40 = null;
+              IStrategoTerm a_41 = null;
+              IStrategoTerm b_41 = null;
               IStrategoTerm c_41 = null;
+              IStrategoTerm f_41 = null;
+              IStrategoTerm d_41 = null;
+              IStrategoTerm g_41 = null;
               IStrategoTerm arg111 = term.getSubterm(0);
               if(arg111.getTermType() != IStrategoTerm.APPL || transform._consByPackageGranularity_0 != ((IStrategoAppl)arg111).getConstructor())
-                break Fail272;
-              x_40 = term.getSubterm(1);
-              v_40 = term.getSubterm(2);
-              w_40 = term.getSubterm(3);
-              b_41 = term;
-              term = pp_aspectj_string_0_0.instance.invoke(context, v_40);
+                break Fail273;
+              b_41 = term.getSubterm(1);
+              z_40 = term.getSubterm(2);
+              a_41 = term.getSubterm(3);
+              f_41 = term;
+              term = pp_aspectj_string_0_0.instance.invoke(context, z_40);
               if(term == null)
-                break Fail272;
-              y_40 = term;
-              c_41 = b_41;
-              term = pp_aspectj_string_0_0.instance.invoke(context, x_40);
+                break Fail273;
+              c_41 = term;
+              g_41 = f_41;
+              term = pp_aspectj_string_0_0.instance.invoke(context, b_41);
               if(term == null)
-                break Fail272;
+                break Fail273;
               term = (IStrategoTerm)termFactory.makeListCons(transform.const24, termFactory.makeListCons(term, (IStrategoList)transform.constNil0));
               term = concat_strings_0_0.instance.invoke(context, term);
               if(term == null)
-                break Fail272;
-              z_40 = term;
-              term = c_41;
+                break Fail273;
+              d_41 = term;
+              term = g_41;
               term = gen__nomatch__pointcut__name_0_0.instance.invoke(context, term);
               if(term == null)
-                break Fail272;
-              term = termFactory.makeAppl(transform._consMethodDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consMethodDecHead_6, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consAnno_2, new IStrategoTerm[]{transform.constTypeName9, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId7, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{y_40}), (IStrategoList)transform.constNil0)})})}), termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId20, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{w_40})}), (IStrategoList)transform.constCons13))}), termFactory.makeListCons(termFactory.makeAppl(transform._consSingleElemAnno_2, new IStrategoTerm[]{transform.constTypeName8, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{z_40}), (IStrategoList)transform.constNil0)})})}), (IStrategoList)transform.constCons11)), transform.constNone0, transform.constVoid0, termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{term}), transform.constCons14, transform.constNone0}), transform.constBlock0});
+                break Fail273;
+              term = termFactory.makeAppl(transform._consMethodDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consMethodDecHead_6, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consAnno_2, new IStrategoTerm[]{transform.constTypeName9, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId7, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{c_41}), (IStrategoList)transform.constNil0)})})}), termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId20, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{a_41})}), (IStrategoList)transform.constCons13))}), termFactory.makeListCons(termFactory.makeAppl(transform._consSingleElemAnno_2, new IStrategoTerm[]{transform.constTypeName8, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{d_41}), (IStrategoList)transform.constNil0)})})}), (IStrategoList)transform.constCons11)), transform.constNone0, transform.constVoid0, termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{term}), transform.constCons14, transform.constNone0}), transform.constBlock0});
               if(true)
                 break Success185;
             }
@@ -8857,40 +8893,40 @@ import java.lang.ref.WeakReference;
           { 
             if(cons27 == transform._consDecNoMatch_4)
             { 
-              Fail273:
+              Fail274:
               { 
-                IStrategoTerm h_40 = null;
-                IStrategoTerm i_40 = null;
-                IStrategoTerm j_40 = null;
-                IStrategoTerm k_40 = null;
-                IStrategoTerm n_40 = null;
                 IStrategoTerm l_40 = null;
+                IStrategoTerm m_40 = null;
+                IStrategoTerm n_40 = null;
                 IStrategoTerm o_40 = null;
+                IStrategoTerm r_40 = null;
+                IStrategoTerm p_40 = null;
+                IStrategoTerm s_40 = null;
                 IStrategoTerm arg112 = term.getSubterm(0);
                 if(arg112.getTermType() != IStrategoTerm.APPL || transform._consByClassGranularity_0 != ((IStrategoAppl)arg112).getConstructor())
-                  break Fail273;
-                j_40 = term.getSubterm(1);
-                h_40 = term.getSubterm(2);
-                i_40 = term.getSubterm(3);
-                n_40 = term;
-                term = pp_aspectj_string_0_0.instance.invoke(context, h_40);
+                  break Fail274;
+                n_40 = term.getSubterm(1);
+                l_40 = term.getSubterm(2);
+                m_40 = term.getSubterm(3);
+                r_40 = term;
+                term = pp_aspectj_string_0_0.instance.invoke(context, l_40);
                 if(term == null)
-                  break Fail273;
-                k_40 = term;
-                o_40 = n_40;
-                term = pp_aspectj_string_0_0.instance.invoke(context, j_40);
+                  break Fail274;
+                o_40 = term;
+                s_40 = r_40;
+                term = pp_aspectj_string_0_0.instance.invoke(context, n_40);
                 if(term == null)
-                  break Fail273;
+                  break Fail274;
                 term = (IStrategoTerm)termFactory.makeListCons(transform.const24, termFactory.makeListCons(term, (IStrategoList)transform.constNil0));
                 term = concat_strings_0_0.instance.invoke(context, term);
                 if(term == null)
-                  break Fail273;
-                l_40 = term;
-                term = o_40;
+                  break Fail274;
+                p_40 = term;
+                term = s_40;
                 term = gen__nomatch__pointcut__name_0_0.instance.invoke(context, term);
                 if(term == null)
-                  break Fail273;
-                term = termFactory.makeAppl(transform._consMethodDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consMethodDecHead_6, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consAnno_2, new IStrategoTerm[]{transform.constTypeName9, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId7, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{k_40}), (IStrategoList)transform.constNil0)})})}), termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId20, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{i_40})}), (IStrategoList)transform.constCons16))}), termFactory.makeListCons(termFactory.makeAppl(transform._consSingleElemAnno_2, new IStrategoTerm[]{transform.constTypeName8, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{l_40}), (IStrategoList)transform.constNil0)})})}), (IStrategoList)transform.constCons11)), transform.constNone0, transform.constVoid0, termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{term}), transform.constCons14, transform.constNone0}), transform.constBlock0});
+                  break Fail274;
+                term = termFactory.makeAppl(transform._consMethodDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consMethodDecHead_6, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consAnno_2, new IStrategoTerm[]{transform.constTypeName9, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId7, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{o_40}), (IStrategoList)transform.constNil0)})})}), termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId20, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{m_40})}), (IStrategoList)transform.constCons16))}), termFactory.makeListCons(termFactory.makeAppl(transform._consSingleElemAnno_2, new IStrategoTerm[]{transform.constTypeName8, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{p_40}), (IStrategoList)transform.constNil0)})})}), (IStrategoList)transform.constCons11)), transform.constNone0, transform.constVoid0, termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{term}), transform.constCons14, transform.constNone0}), transform.constBlock0});
                 if(true)
                   break Success186;
               }
@@ -8900,40 +8936,40 @@ import java.lang.ref.WeakReference;
             { 
               if(cons27 == transform._consDecNoMatch_4)
               { 
-                Fail274:
+                Fail275:
                 { 
-                  IStrategoTerm t_39 = null;
-                  IStrategoTerm u_39 = null;
-                  IStrategoTerm v_39 = null;
-                  IStrategoTerm w_39 = null;
-                  IStrategoTerm z_39 = null;
                   IStrategoTerm x_39 = null;
+                  IStrategoTerm y_39 = null;
+                  IStrategoTerm z_39 = null;
                   IStrategoTerm a_40 = null;
+                  IStrategoTerm d_40 = null;
+                  IStrategoTerm b_40 = null;
+                  IStrategoTerm e_40 = null;
                   IStrategoTerm arg113 = term.getSubterm(0);
                   if(arg113.getTermType() != IStrategoTerm.APPL || transform._consByEjpGranularity_0 != ((IStrategoAppl)arg113).getConstructor())
-                    break Fail274;
-                  v_39 = term.getSubterm(1);
-                  t_39 = term.getSubterm(2);
-                  u_39 = term.getSubterm(3);
-                  z_39 = term;
-                  term = pp_aspectj_string_0_0.instance.invoke(context, t_39);
+                    break Fail275;
+                  z_39 = term.getSubterm(1);
+                  x_39 = term.getSubterm(2);
+                  y_39 = term.getSubterm(3);
+                  d_40 = term;
+                  term = pp_aspectj_string_0_0.instance.invoke(context, x_39);
                   if(term == null)
-                    break Fail274;
-                  w_39 = term;
-                  a_40 = z_39;
-                  term = pp_aspectj_string_0_0.instance.invoke(context, v_39);
+                    break Fail275;
+                  a_40 = term;
+                  e_40 = d_40;
+                  term = pp_aspectj_string_0_0.instance.invoke(context, z_39);
                   if(term == null)
-                    break Fail274;
+                    break Fail275;
                   term = (IStrategoTerm)termFactory.makeListCons(transform.const37, termFactory.makeListCons(term, (IStrategoList)transform.constNil0));
                   term = concat_strings_0_0.instance.invoke(context, term);
                   if(term == null)
-                    break Fail274;
-                  x_39 = term;
-                  term = a_40;
+                    break Fail275;
+                  b_40 = term;
+                  term = e_40;
                   term = gen__nomatch__pointcut__name_0_0.instance.invoke(context, term);
                   if(term == null)
-                    break Fail274;
-                  term = termFactory.makeAppl(transform._consMethodDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consMethodDecHead_6, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consAnno_2, new IStrategoTerm[]{transform.constTypeName9, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId7, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{w_39}), (IStrategoList)transform.constNil0)})})}), termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId20, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{u_39})}), (IStrategoList)transform.constCons18))}), termFactory.makeListCons(termFactory.makeAppl(transform._consSingleElemAnno_2, new IStrategoTerm[]{transform.constTypeName8, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{x_39}), (IStrategoList)transform.constNil0)})})}), (IStrategoList)transform.constCons11)), transform.constNone0, transform.constVoid0, termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{term}), transform.constCons19, transform.constNone0}), transform.constBlock0});
+                    break Fail275;
+                  term = termFactory.makeAppl(transform._consMethodDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consMethodDecHead_6, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consAnno_2, new IStrategoTerm[]{transform.constTypeName9, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId7, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{a_40}), (IStrategoList)transform.constNil0)})})}), termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId20, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{y_39})}), (IStrategoList)transform.constCons18))}), termFactory.makeListCons(termFactory.makeAppl(transform._consSingleElemAnno_2, new IStrategoTerm[]{transform.constTypeName8, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{b_40}), (IStrategoList)transform.constNil0)})})}), (IStrategoList)transform.constCons11)), transform.constNone0, transform.constVoid0, termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{term}), transform.constCons19, transform.constNone0}), transform.constBlock0});
                   if(true)
                     break Success187;
                 }
@@ -8943,40 +8979,40 @@ import java.lang.ref.WeakReference;
               { 
                 if(cons27 == transform._consDecNoMatch_4)
                 { 
-                  Fail275:
+                  Fail276:
                   { 
-                    IStrategoTerm f_39 = null;
-                    IStrategoTerm g_39 = null;
-                    IStrategoTerm h_39 = null;
-                    IStrategoTerm i_39 = null;
-                    IStrategoTerm l_39 = null;
                     IStrategoTerm j_39 = null;
+                    IStrategoTerm k_39 = null;
+                    IStrategoTerm l_39 = null;
                     IStrategoTerm m_39 = null;
+                    IStrategoTerm p_39 = null;
+                    IStrategoTerm n_39 = null;
+                    IStrategoTerm q_39 = null;
                     IStrategoTerm arg114 = term.getSubterm(0);
                     if(arg114.getTermType() != IStrategoTerm.APPL || transform._consByMethodGranularity_0 != ((IStrategoAppl)arg114).getConstructor())
-                      break Fail275;
-                    h_39 = term.getSubterm(1);
-                    f_39 = term.getSubterm(2);
-                    g_39 = term.getSubterm(3);
-                    l_39 = term;
-                    term = pp_aspectj_string_0_0.instance.invoke(context, f_39);
+                      break Fail276;
+                    l_39 = term.getSubterm(1);
+                    j_39 = term.getSubterm(2);
+                    k_39 = term.getSubterm(3);
+                    p_39 = term;
+                    term = pp_aspectj_string_0_0.instance.invoke(context, j_39);
                     if(term == null)
-                      break Fail275;
-                    i_39 = term;
-                    m_39 = l_39;
-                    term = pp_aspectj_string_0_0.instance.invoke(context, h_39);
+                      break Fail276;
+                    m_39 = term;
+                    q_39 = p_39;
+                    term = pp_aspectj_string_0_0.instance.invoke(context, l_39);
                     if(term == null)
-                      break Fail275;
+                      break Fail276;
                     term = (IStrategoTerm)termFactory.makeListCons(transform.const40, termFactory.makeListCons(term, (IStrategoList)transform.constNil0));
                     term = concat_strings_0_0.instance.invoke(context, term);
                     if(term == null)
-                      break Fail275;
-                    j_39 = term;
-                    term = m_39;
+                      break Fail276;
+                    n_39 = term;
+                    term = q_39;
                     term = gen__nomatch__pointcut__name_0_0.instance.invoke(context, term);
                     if(term == null)
-                      break Fail275;
-                    term = termFactory.makeAppl(transform._consMethodDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consMethodDecHead_6, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consAnno_2, new IStrategoTerm[]{transform.constTypeName9, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId7, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{i_39}), (IStrategoList)transform.constNil0)})})}), termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId20, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{g_39})}), (IStrategoList)transform.constCons21))}), termFactory.makeListCons(termFactory.makeAppl(transform._consSingleElemAnno_2, new IStrategoTerm[]{transform.constTypeName8, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{j_39}), (IStrategoList)transform.constNil0)})})}), (IStrategoList)transform.constCons11)), transform.constNone0, transform.constVoid0, termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{term}), transform.constCons19, transform.constNone0}), transform.constBlock0});
+                      break Fail276;
+                    term = termFactory.makeAppl(transform._consMethodDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consMethodDecHead_6, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consAnno_2, new IStrategoTerm[]{transform.constTypeName9, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId7, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{m_39}), (IStrategoList)transform.constNil0)})})}), termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{transform.constId20, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{k_39})}), (IStrategoList)transform.constCons21))}), termFactory.makeListCons(termFactory.makeAppl(transform._consSingleElemAnno_2, new IStrategoTerm[]{transform.constTypeName8, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{n_39}), (IStrategoList)transform.constNil0)})})}), (IStrategoList)transform.constCons11)), transform.constNone0, transform.constVoid0, termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{term}), transform.constCons19, transform.constNone0}), transform.constBlock0});
                     if(true)
                       break Success188;
                   }
@@ -8984,69 +9020,69 @@ import java.lang.ref.WeakReference;
                 }
                 if(cons27 == transform._consExplicitJoinPointDeclaration_5)
                 { 
-                  IStrategoTerm l_38 = null;
-                  IStrategoTerm m_38 = null;
-                  IStrategoTerm n_38 = null;
-                  IStrategoTerm o_38 = null;
                   IStrategoTerm p_38 = null;
                   IStrategoTerm q_38 = null;
                   IStrategoTerm r_38 = null;
                   IStrategoTerm s_38 = null;
+                  IStrategoTerm t_38 = null;
+                  IStrategoTerm u_38 = null;
                   IStrategoTerm v_38 = null;
-                  m_38 = term.getSubterm(0);
-                  l_38 = term.getSubterm(1);
-                  n_38 = term.getSubterm(2);
-                  o_38 = term.getSubterm(3);
-                  q_38 = term.getSubterm(4);
-                  v_38 = term;
+                  IStrategoTerm w_38 = null;
+                  IStrategoTerm z_38 = null;
+                  q_38 = term.getSubterm(0);
+                  p_38 = term.getSubterm(1);
+                  r_38 = term.getSubterm(2);
+                  s_38 = term.getSubterm(3);
+                  u_38 = term.getSubterm(4);
+                  z_38 = term;
                   IStrategoTerm term57 = term;
                   Success189:
                   { 
-                    Fail276:
+                    Fail277:
                     { 
-                      IStrategoTerm w_38 = null;
-                      term = termFactory.makeTuple(l_38, m_38);
-                      term = gen_pointcutargs_pointcuts_0_1.instance.invoke(context, term, h_72.value);
+                      IStrategoTerm a_39 = null;
+                      term = termFactory.makeTuple(p_38, q_38);
+                      term = gen_pointcutargs_pointcuts_0_1.instance.invoke(context, term, l_72.value);
                       if(term == null)
-                        break Fail276;
-                      term = gen_method_head_0_3.instance.invoke(context, term, m_38, n_38, o_38);
+                        break Fail277;
+                      term = gen_method_head_0_3.instance.invoke(context, term, q_38, r_38, s_38);
                       if(term == null)
-                        break Fail276;
-                      w_38 = term;
-                      p_38 = term;
-                      term = w_38;
+                        break Fail277;
+                      a_39 = term;
+                      t_38 = term;
+                      term = a_39;
                       if(term.getTermType() != IStrategoTerm.APPL || transform._consMethodDecHead_6 != ((IStrategoAppl)term).getConstructor())
-                        break Fail276;
-                      r_38 = term.getSubterm(2);
-                      term = gen_method_body_0_2.instance.invoke(context, term, q_38, r_38);
+                        break Fail277;
+                      v_38 = term.getSubterm(2);
+                      term = gen_method_body_0_2.instance.invoke(context, term, u_38, v_38);
                       if(term == null)
-                        break Fail276;
-                      s_38 = term;
+                        break Fail277;
+                      w_38 = term;
                       if(true)
                         break Success189;
                     }
                     term = term57;
-                    IStrategoTerm t_38 = null;
-                    IStrategoTerm u_38 = null;
-                    IStrategoTerm b_39 = null;
-                    t_38 = term;
+                    IStrategoTerm x_38 = null;
+                    IStrategoTerm y_38 = null;
+                    IStrategoTerm f_39 = null;
+                    x_38 = term;
                     term = context.invokePrimitive("SSL_stacktrace_get_all_frame_names", term, NO_STRATEGIES, NO_TERMS);
                     if(term == null)
-                      break Fail271;
-                    u_38 = term;
-                    b_39 = t_38;
-                    term = report_with_failure_0_2.instance.invoke(context, b_39, transform.const42, u_38);
+                      break Fail272;
+                    y_38 = term;
+                    f_39 = x_38;
+                    term = report_with_failure_0_2.instance.invoke(context, f_39, transform.const42, y_38);
                     if(term == null)
-                      break Fail271;
+                      break Fail272;
                   }
-                  term = v_38;
-                  if(p_38 == null || s_38 == null)
-                    break Fail271;
-                  term = termFactory.makeAppl(transform._consMethodDec_2, new IStrategoTerm[]{p_38, s_38});
+                  term = z_38;
+                  if(t_38 == null || w_38 == null)
+                    break Fail272;
+                  term = termFactory.makeAppl(transform._consMethodDec_2, new IStrategoTerm[]{t_38, w_38});
                 }
                 else
                 { 
-                  break Fail271;
+                  break Fail272;
                 }
               }
             }
@@ -9065,13 +9101,13 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail277:
+      Fail278:
       { 
         if(term.getTermType() != IStrategoTerm.APPL || transform._consNotExplicitJoinPointScopePattern_1 != ((IStrategoAppl)term).getConstructor())
-          break Fail277;
+          break Fail278;
         IStrategoTerm arg108 = term.getSubterm(0);
         if(arg108.getTermType() != IStrategoTerm.APPL || transform._consMemberName_2 != ((IStrategoAppl)arg108).getConstructor())
-          break Fail277;
+          break Fail278;
         if(true)
           return term;
       }
@@ -9085,13 +9121,13 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail278:
+      Fail279:
       { 
         if(term.getTermType() != IStrategoTerm.APPL || transform._consNotExplicitJoinPointScopePattern_1 != ((IStrategoAppl)term).getConstructor())
-          break Fail278;
+          break Fail279;
         IStrategoTerm arg106 = term.getSubterm(0);
         if(arg106.getTermType() != IStrategoTerm.APPL || transform._consMemberName_1 != ((IStrategoAppl)arg106).getConstructor())
-          break Fail278;
+          break Fail279;
         if(true)
           return term;
       }
@@ -9105,13 +9141,13 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail279:
+      Fail280:
       { 
         if(term.getTermType() != IStrategoTerm.APPL || transform._consExplicitJoinPointScopePattern_1 != ((IStrategoAppl)term).getConstructor())
-          break Fail279;
+          break Fail280;
         IStrategoTerm arg101 = term.getSubterm(0);
         if(arg101.getTermType() != IStrategoTerm.APPL || transform._consMemberName_2 != ((IStrategoAppl)arg101).getConstructor())
-          break Fail279;
+          break Fail280;
         if(true)
           return term;
       }
@@ -9125,13 +9161,13 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail280:
+      Fail281:
       { 
         if(term.getTermType() != IStrategoTerm.APPL || transform._consExplicitJoinPointScopePattern_1 != ((IStrategoAppl)term).getConstructor())
-          break Fail280;
+          break Fail281;
         IStrategoTerm arg99 = term.getSubterm(0);
         if(arg99.getTermType() != IStrategoTerm.APPL || transform._consMemberName_1 != ((IStrategoAppl)arg99).getConstructor())
-          break Fail280;
+          break Fail281;
         if(true)
           return term;
       }
@@ -9145,13 +9181,13 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail281:
+      Fail282:
       { 
         if(term.getTermType() != IStrategoTerm.APPL || transform._consNotExplicitJoinPointPattern_1 != ((IStrategoAppl)term).getConstructor())
-          break Fail281;
+          break Fail282;
         IStrategoTerm arg94 = term.getSubterm(0);
         if(arg94.getTermType() != IStrategoTerm.APPL || transform._consMemberName_2 != ((IStrategoAppl)arg94).getConstructor())
-          break Fail281;
+          break Fail282;
         if(true)
           return term;
       }
@@ -9165,13 +9201,13 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail282:
+      Fail283:
       { 
         if(term.getTermType() != IStrategoTerm.APPL || transform._consNotExplicitJoinPointPattern_1 != ((IStrategoAppl)term).getConstructor())
-          break Fail282;
+          break Fail283;
         IStrategoTerm arg92 = term.getSubterm(0);
         if(arg92.getTermType() != IStrategoTerm.APPL || transform._consMemberName_1 != ((IStrategoAppl)arg92).getConstructor())
-          break Fail282;
+          break Fail283;
         if(true)
           return term;
       }
@@ -9185,13 +9221,13 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail283:
+      Fail284:
       { 
         if(term.getTermType() != IStrategoTerm.APPL || transform._consExplicitJoinPointPattern_1 != ((IStrategoAppl)term).getConstructor())
-          break Fail283;
+          break Fail284;
         IStrategoTerm arg86 = term.getSubterm(0);
         if(arg86.getTermType() != IStrategoTerm.APPL || transform._consMemberName_2 != ((IStrategoAppl)arg86).getConstructor())
-          break Fail283;
+          break Fail284;
         if(true)
           return term;
       }
@@ -9205,13 +9241,13 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail284:
+      Fail285:
       { 
         if(term.getTermType() != IStrategoTerm.APPL || transform._consExplicitJoinPointPattern_1 != ((IStrategoAppl)term).getConstructor())
-          break Fail284;
+          break Fail285;
         IStrategoTerm arg84 = term.getSubterm(0);
         if(arg84.getTermType() != IStrategoTerm.APPL || transform._consMemberName_1 != ((IStrategoAppl)arg84).getConstructor())
-          break Fail284;
+          break Fail285;
         if(true)
           return term;
       }
@@ -9221,35 +9257,15 @@ import java.lang.ref.WeakReference;
 
   @SuppressWarnings("all") private static final class lifted58 extends Strategy 
   { 
-    Strategy d_37;
+    Strategy h_37;
 
-    Strategy e_37;
-
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
-    { 
-      Fail285:
-      { 
-        term = allow_extends_helper_2_0.instance.invoke(context, term, d_37, e_37);
-        if(term == null)
-          break Fail285;
-        if(true)
-          return term;
-      }
-      return null;
-    }
-  }
-
-  @SuppressWarnings("all") private static final class lifted56 extends Strategy 
-  { 
-    TermReference y_35;
-
-    TermReference z_35;
+    Strategy i_37;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       Fail286:
       { 
-        term = my_hashtable_union_helper_0_2.instance.invoke(context, term, y_35.value, z_35.value);
+        term = allow_extends_helper_2_0.instance.invoke(context, term, h_37, i_37);
         if(term == null)
           break Fail286;
         if(true)
@@ -9259,21 +9275,41 @@ import java.lang.ref.WeakReference;
     }
   }
 
-  @SuppressWarnings("all") private static final class lifted55 extends Strategy 
+  @SuppressWarnings("all") private static final class lifted56 extends Strategy 
   { 
-    TermReference u_35;
+    TermReference c_36;
+
+    TermReference d_36;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       Fail287:
       { 
-        IStrategoTerm v_35 = null;
-        v_35 = term;
-        if(u_35.value == null)
-          break Fail287;
-        term = hashtable_remove_0_1.instance.invoke(context, u_35.value, v_35);
+        term = my_hashtable_union_helper_0_2.instance.invoke(context, term, c_36.value, d_36.value);
         if(term == null)
           break Fail287;
+        if(true)
+          return term;
+      }
+      return null;
+    }
+  }
+
+  @SuppressWarnings("all") private static final class lifted55 extends Strategy 
+  { 
+    TermReference y_35;
+
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
+    { 
+      Fail288:
+      { 
+        IStrategoTerm z_35 = null;
+        z_35 = term;
+        if(y_35.value == null)
+          break Fail288;
+        term = hashtable_remove_0_1.instance.invoke(context, y_35.value, z_35);
+        if(term == null)
+          break Fail288;
         if(true)
           return term;
       }
@@ -9288,34 +9324,14 @@ import java.lang.ref.WeakReference;
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       ITermFactory termFactory = context.getFactory();
-      Fail288:
-      { 
-        IStrategoTerm g_34 = null;
-        if(term.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)term).getConstructor())
-          break Fail288;
-        g_34 = term.getSubterm(0);
-        term = (IStrategoTerm)termFactory.makeListCons(g_34, (IStrategoList)transform.constCons3);
-        term = concat_strings_0_0.instance.invoke(context, term);
-        if(term == null)
-          break Fail288;
-        if(true)
-          return term;
-      }
-      return null;
-    }
-  }
-
-  @SuppressWarnings("all") private static final class lifted51 extends Strategy 
-  { 
-    TermReference u_28;
-
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
-    { 
       Fail289:
       { 
-        lifted52 lifted520 = new lifted52();
-        lifted520.u_28 = u_28;
-        term = try_1_0.instance.invoke(context, term, lifted520);
+        IStrategoTerm k_34 = null;
+        if(term.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)term).getConstructor())
+          break Fail289;
+        k_34 = term.getSubterm(0);
+        term = (IStrategoTerm)termFactory.makeListCons(k_34, (IStrategoList)transform.constCons3);
+        term = concat_strings_0_0.instance.invoke(context, term);
         if(term == null)
           break Fail289;
         if(true)
@@ -9325,15 +9341,15 @@ import java.lang.ref.WeakReference;
     }
   }
 
-  @SuppressWarnings("all") private static final class lifted52 extends Strategy 
+  @SuppressWarnings("all") private static final class lifted51 extends Strategy 
   { 
-    TermReference u_28;
+    TermReference i_28;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       Fail290:
       { 
-        term = add_local_vars_0_1.instance.invoke(context, term, u_28.value);
+        term = handle_pointcutarg_helper_0_1.instance.invoke(context, term, i_28.value);
         if(term == null)
           break Fail290;
         if(true)
@@ -9343,15 +9359,19 @@ import java.lang.ref.WeakReference;
     }
   }
 
-  @SuppressWarnings("all") private static final class lifted49 extends Strategy 
+  @SuppressWarnings("all") private static final class lifted52 extends Strategy 
   { 
-    TermReference z_27;
+    TermReference g_28;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       Fail291:
       { 
-        term = handle_pointcutarg_helper_0_1.instance.invoke(context, term, z_27.value);
+        IStrategoTerm k_28 = null;
+        k_28 = term;
+        if(g_28.value == null)
+          break Fail291;
+        term = iset_add_0_1.instance.invoke(context, g_28.value, k_28);
         if(term == null)
           break Fail291;
         if(true)
@@ -9361,19 +9381,17 @@ import java.lang.ref.WeakReference;
     }
   }
 
-  @SuppressWarnings("all") private static final class lifted50 extends Strategy 
+  @SuppressWarnings("all") private static final class lifted49 extends Strategy 
   { 
-    TermReference y_27;
+    TermReference b_28;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       Fail292:
       { 
-        IStrategoTerm b_28 = null;
-        b_28 = term;
-        if(y_27.value == null)
-          break Fail292;
-        term = iset_add_0_1.instance.invoke(context, y_27.value, b_28);
+        lifted50 lifted500 = new lifted50();
+        lifted500.b_28 = b_28;
+        term = try_1_0.instance.invoke(context, term, lifted500);
         if(term == null)
           break Fail292;
         if(true)
@@ -9383,7 +9401,63 @@ import java.lang.ref.WeakReference;
     }
   }
 
+  @SuppressWarnings("all") private static final class lifted50 extends Strategy 
+  { 
+    TermReference b_28;
+
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
+    { 
+      Fail293:
+      { 
+        term = add_local_vars_0_1.instance.invoke(context, term, b_28.value);
+        if(term == null)
+          break Fail293;
+        if(true)
+          return term;
+      }
+      return null;
+    }
+  }
+
+  @SuppressWarnings("all") private static final class lifted47 extends Strategy 
+  { 
+    TermReference v_27;
+
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
+    { 
+      Fail294:
+      { 
+        lifted48 lifted480 = new lifted48();
+        lifted480.v_27 = v_27;
+        term = try_1_0.instance.invoke(context, term, lifted480);
+        if(term == null)
+          break Fail294;
+        if(true)
+          return term;
+      }
+      return null;
+    }
+  }
+
   @SuppressWarnings("all") private static final class lifted48 extends Strategy 
+  { 
+    TermReference v_27;
+
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
+    { 
+      Fail295:
+      { 
+        term = fetch_0_1.instance.invoke(context, term, v_27.value);
+        if(term == null)
+          break Fail295;
+        if(true)
+          return term;
+      }
+      return null;
+    }
+  }
+
+  @SuppressWarnings("all") private static final class lifted46 extends Strategy 
   { 
     TermReference s_25;
 
@@ -9395,49 +9469,11 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail293:
+      Fail296:
       { 
         term = ejp_to_java_0_4.instance.invoke(context, term, s_25.value, a_25.value, b_25.value, c_25.value);
         if(term == null)
-          break Fail293;
-        if(true)
-          return term;
-      }
-      return null;
-    }
-  }
-
-  @SuppressWarnings("all") private static final class lifted46 extends Strategy 
-  { 
-    TermReference f_25;
-
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
-    { 
-      Fail294:
-      { 
-        lifted47 lifted470 = new lifted47();
-        lifted470.f_25 = f_25;
-        term = try_1_0.instance.invoke(context, term, lifted470);
-        if(term == null)
-          break Fail294;
-        if(true)
-          return term;
-      }
-      return null;
-    }
-  }
-
-  @SuppressWarnings("all") private static final class lifted47 extends Strategy 
-  { 
-    TermReference f_25;
-
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
-    { 
-      Fail295:
-      { 
-        term = fetch_0_1.instance.invoke(context, term, f_25.value);
-        if(term == null)
-          break Fail295;
+          break Fail296;
         if(true)
           return term;
       }
@@ -9453,11 +9489,11 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail296:
+      Fail297:
       { 
         term = handle_pointcutargs_0_2.instance.invoke(context, term, c_25.value, v_25.value);
         if(term == null)
-          break Fail296;
+          break Fail297;
         if(true)
           return term;
       }
@@ -9475,7 +9511,7 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail297:
+      Fail298:
       { 
         lifted44 lifted440 = new lifted44();
         lifted440.a_25 = a_25;
@@ -9483,7 +9519,7 @@ import java.lang.ref.WeakReference;
         lifted440.i_25 = i_25;
         term = try_1_0.instance.invoke(context, term, lifted440);
         if(term == null)
-          break Fail297;
+          break Fail298;
         if(true)
           return term;
       }
@@ -9501,11 +9537,11 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail298:
+      Fail299:
       { 
         term = pointcutarg_0_3.instance.invoke(context, term, a_25.value, b_25.value, i_25.value);
         if(term == null)
-          break Fail298;
+          break Fail299;
         if(true)
           return term;
       }
@@ -9521,11 +9557,11 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail299:
+      Fail300:
       { 
         term = handle_pointcutargs_0_2.instance.invoke(context, term, h_24.value, m_24.value);
         if(term == null)
-          break Fail299;
+          break Fail300;
         if(true)
           return term;
       }
@@ -9543,7 +9579,7 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail300:
+      Fail301:
       { 
         lifted41 lifted411 = new lifted41();
         lifted411.f_24 = f_24;
@@ -9551,7 +9587,7 @@ import java.lang.ref.WeakReference;
         lifted411.i_24 = i_24;
         term = try_1_0.instance.invoke(context, term, lifted411);
         if(term == null)
-          break Fail300;
+          break Fail301;
         if(true)
           return term;
       }
@@ -9569,11 +9605,11 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail301:
+      Fail302:
       { 
         term = pointcutarg_0_3.instance.invoke(context, term, f_24.value, g_24.value, i_24.value);
         if(term == null)
-          break Fail301;
+          break Fail302;
         if(true)
           return term;
       }
@@ -9590,7 +9626,7 @@ import java.lang.ref.WeakReference;
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       ITermFactory termFactory = context.getFactory();
-      Fail302:
+      Fail303:
       { 
         IStrategoTerm k_23 = null;
         IStrategoTerm l_23 = null;
@@ -9598,14 +9634,14 @@ import java.lang.ref.WeakReference;
         k_23 = term;
         m_23 = term;
         if(i_23.value == null)
-          break Fail302;
+          break Fail303;
         term = hashtable_get_0_1.instance.invoke(context, i_23.value, k_23);
         if(term == null)
-          break Fail302;
+          break Fail303;
         l_23 = term;
         term = m_23;
         if(j_23.value == null)
-          break Fail302;
+          break Fail303;
         term = termFactory.makeAppl(transform._consLocalVarDecStm_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consLocalVarDec_3, new IStrategoTerm[]{transform.constNil0, l_23, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consVarDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{k_23}), termFactory.makeAppl(transform._consExprName_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consAmbName_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{j_23.value})}), termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{k_23})})}), (IStrategoList)transform.constNil0)})});
         if(true)
           return term;
@@ -9621,12 +9657,12 @@ import java.lang.ref.WeakReference;
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       ITermFactory termFactory = context.getFactory();
-      Fail303:
+      Fail304:
       { 
         IStrategoTerm h_23 = null;
         h_23 = term;
         if(g_23.value == null)
-          break Fail303;
+          break Fail304;
         term = termFactory.makeAppl(transform._consExprStm_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consAssign_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consExprName_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{h_23})}), termFactory.makeAppl(transform._consExprName_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consAmbName_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{g_23.value})}), termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{h_23})})})});
         if(true)
           return term;
@@ -9642,12 +9678,12 @@ import java.lang.ref.WeakReference;
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       ITermFactory termFactory = context.getFactory();
-      Fail304:
+      Fail305:
       { 
         IStrategoTerm e_23 = null;
         e_23 = term;
         if(d_23.value == null)
-          break Fail304;
+          break Fail305;
         term = termFactory.makeAppl(transform._consExprStm_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consAssign_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consExprName_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consAmbName_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{d_23.value})}), termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{e_23})}), termFactory.makeAppl(transform._consExprName_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{e_23})})})});
         if(true)
           return term;
@@ -9664,23 +9700,23 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail305:
+      Fail306:
       { 
         IStrategoTerm t_22 = null;
         IStrategoTerm z_22 = null;
         t_22 = term;
         if(s_22.value == null)
-          break Fail305;
+          break Fail306;
         term = s_22.value;
         z_22 = s_22.value;
         if(r_22.value == null)
-          break Fail305;
+          break Fail306;
         term = hashtable_get_0_1.instance.invoke(context, r_22.value, t_22);
         if(term == null)
-          break Fail305;
+          break Fail306;
         term = add_key_to_multiple_values_table_0_2.instance.invoke(context, z_22, term, t_22);
         if(term == null)
-          break Fail305;
+          break Fail306;
         if(true)
           return term;
       }
@@ -9695,18 +9731,18 @@ import java.lang.ref.WeakReference;
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       ITermFactory termFactory = context.getFactory();
-      Fail306:
+      Fail307:
       { 
         IStrategoTerm u_22 = null;
         u_22 = term;
         if(s_22.value == null)
-          break Fail306;
+          break Fail307;
         term = hashtable_get_0_1.instance.invoke(context, s_22.value, u_22);
         if(term == null)
-          break Fail306;
+          break Fail307;
         term = map_1_0.instance.invoke(context, term, lifted35.instance);
         if(term == null)
-          break Fail306;
+          break Fail307;
         term = termFactory.makeAppl(transform._consFieldDec_3, new IStrategoTerm[]{transform.constNil0, u_22, term});
         if(true)
           return term;
@@ -9722,7 +9758,7 @@ import java.lang.ref.WeakReference;
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       ITermFactory termFactory = context.getFactory();
-      Fail307:
+      Fail308:
       { 
         term = termFactory.makeAppl(transform._consVarDec_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{term})});
         if(true)
@@ -9740,23 +9776,23 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail308:
+      Fail309:
       { 
         if(term.getTermType() != IStrategoTerm.APPL || transform._consVarArityParam_3 != ((IStrategoAppl)term).getConstructor())
-          break Fail308;
+          break Fail309;
         if(m_21.value == null)
           m_21.value = term.getSubterm(1);
         else
           if(m_21.value != term.getSubterm(1) && !m_21.value.match(term.getSubterm(1)))
-            break Fail308;
+            break Fail309;
         IStrategoTerm arg54 = term.getSubterm(2);
         if(arg54.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg54).getConstructor())
-          break Fail308;
+          break Fail309;
         if(l_21.value == null)
           l_21.value = arg54.getSubterm(0);
         else
           if(l_21.value != arg54.getSubterm(0) && !l_21.value.match(arg54.getSubterm(0)))
-            break Fail308;
+            break Fail309;
         if(true)
           return term;
       }
@@ -9772,23 +9808,23 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail309:
+      Fail310:
       { 
         if(term.getTermType() != IStrategoTerm.APPL || transform._consParam_3 != ((IStrategoAppl)term).getConstructor())
-          break Fail309;
+          break Fail310;
         if(m_21.value == null)
           m_21.value = term.getSubterm(1);
         else
           if(m_21.value != term.getSubterm(1) && !m_21.value.match(term.getSubterm(1)))
-            break Fail309;
+            break Fail310;
         IStrategoTerm arg52 = term.getSubterm(2);
         if(arg52.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg52).getConstructor())
-          break Fail309;
+          break Fail310;
         if(l_21.value == null)
           l_21.value = arg52.getSubterm(0);
         else
           if(l_21.value != arg52.getSubterm(0) && !l_21.value.match(arg52.getSubterm(0)))
-            break Fail309;
+            break Fail310;
         if(true)
           return term;
       }
@@ -9802,18 +9838,18 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail310:
+      Fail311:
       { 
         if(term.getTermType() != IStrategoTerm.APPL || transform._consVarDec_2 != ((IStrategoAppl)term).getConstructor())
-          break Fail310;
+          break Fail311;
         IStrategoTerm arg49 = term.getSubterm(0);
         if(arg49.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg49).getConstructor())
-          break Fail310;
+          break Fail311;
         if(g_21.value == null)
           g_21.value = arg49.getSubterm(0);
         else
           if(g_21.value != arg49.getSubterm(0) && !g_21.value.match(arg49.getSubterm(0)))
-            break Fail310;
+            break Fail311;
         if(true)
           return term;
       }
@@ -9827,18 +9863,18 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail311:
+      Fail312:
       { 
         if(term.getTermType() != IStrategoTerm.APPL || transform._consVarDec_1 != ((IStrategoAppl)term).getConstructor())
-          break Fail311;
+          break Fail312;
         IStrategoTerm arg48 = term.getSubterm(0);
         if(arg48.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg48).getConstructor())
-          break Fail311;
+          break Fail312;
         if(g_21.value == null)
           g_21.value = arg48.getSubterm(0);
         else
           if(g_21.value != arg48.getSubterm(0) && !g_21.value.match(arg48.getSubterm(0)))
-            break Fail311;
+            break Fail312;
         if(true)
           return term;
       }
@@ -9848,17 +9884,17 @@ import java.lang.ref.WeakReference;
 
   @SuppressWarnings("all") private static final class lifted26 extends Strategy 
   { 
-    TermReference b_72;
+    TermReference f_72;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail312:
+      Fail313:
       { 
         lifted27 lifted270 = new lifted27();
-        lifted270.b_72 = b_72;
+        lifted270.f_72 = f_72;
         term = try_1_0.instance.invoke(context, term, lifted270);
         if(term == null)
-          break Fail312;
+          break Fail313;
         if(true)
           return term;
       }
@@ -9868,15 +9904,15 @@ import java.lang.ref.WeakReference;
 
   @SuppressWarnings("all") private static final class lifted27 extends Strategy 
   { 
-    TermReference b_72;
+    TermReference f_72;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail313:
+      Fail314:
       { 
-        term = add_local_vars_0_1.instance.invoke(context, term, b_72.value);
+        term = add_local_vars_0_1.instance.invoke(context, term, f_72.value);
         if(term == null)
-          break Fail313;
+          break Fail314;
         if(true)
           return term;
       }
@@ -9890,21 +9926,21 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail314:
+      Fail315:
       { 
         if(term.getTermType() != IStrategoTerm.APPL || transform._consVarDec_2 != ((IStrategoAppl)term).getConstructor())
-          break Fail314;
+          break Fail315;
         IStrategoTerm arg44 = term.getSubterm(1);
         if(arg44.getTermType() != IStrategoTerm.APPL || transform._consScopedEJPCall_3 != ((IStrategoAppl)arg44).getConstructor())
-          break Fail314;
+          break Fail315;
         IStrategoTerm arg47 = arg44.getSubterm(2);
         if(arg47.getTermType() != IStrategoTerm.APPL || transform._consBlock_1 != ((IStrategoAppl)arg47).getConstructor())
-          break Fail314;
+          break Fail315;
         if(u_20.value == null)
           u_20.value = arg47.getSubterm(0);
         else
           if(u_20.value != arg47.getSubterm(0) && !u_20.value.match(arg47.getSubterm(0)))
-            break Fail314;
+            break Fail315;
         if(true)
           return term;
       }
@@ -9918,7 +9954,7 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail315:
+      Fail316:
       { 
         lifted24 lifted240 = new lifted24();
         lifted23 lifted230 = new lifted23();
@@ -9926,7 +9962,7 @@ import java.lang.ref.WeakReference;
         lifted230.u_20 = u_20;
         term = or_2_0.instance.invoke(context, term, lifted230, lifted240);
         if(term == null)
-          break Fail315;
+          break Fail316;
         if(true)
           return term;
       }
@@ -9940,24 +9976,24 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail316:
+      Fail317:
       { 
         if(term.getTermType() != IStrategoTerm.APPL || transform._consExprStm_1 != ((IStrategoAppl)term).getConstructor())
-          break Fail316;
+          break Fail317;
         IStrategoTerm arg37 = term.getSubterm(0);
         if(arg37.getTermType() != IStrategoTerm.APPL || transform._consAssign_2 != ((IStrategoAppl)arg37).getConstructor())
-          break Fail316;
+          break Fail317;
         IStrategoTerm arg39 = arg37.getSubterm(1);
         if(arg39.getTermType() != IStrategoTerm.APPL || transform._consScopedEJPCall_3 != ((IStrategoAppl)arg39).getConstructor())
-          break Fail316;
+          break Fail317;
         IStrategoTerm arg42 = arg39.getSubterm(2);
         if(arg42.getTermType() != IStrategoTerm.APPL || transform._consBlock_1 != ((IStrategoAppl)arg42).getConstructor())
-          break Fail316;
+          break Fail317;
         if(u_20.value == null)
           u_20.value = arg42.getSubterm(0);
         else
           if(u_20.value != arg42.getSubterm(0) && !u_20.value.match(arg42.getSubterm(0)))
-            break Fail316;
+            break Fail317;
         if(true)
           return term;
       }
@@ -9971,21 +10007,21 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail317:
+      Fail318:
       { 
         if(term.getTermType() != IStrategoTerm.APPL || transform._consExprStm_1 != ((IStrategoAppl)term).getConstructor())
-          break Fail317;
+          break Fail318;
         IStrategoTerm arg33 = term.getSubterm(0);
         if(arg33.getTermType() != IStrategoTerm.APPL || transform._consScopedEJPCall_3 != ((IStrategoAppl)arg33).getConstructor())
-          break Fail317;
+          break Fail318;
         IStrategoTerm arg36 = arg33.getSubterm(2);
         if(arg36.getTermType() != IStrategoTerm.APPL || transform._consBlock_1 != ((IStrategoAppl)arg36).getConstructor())
-          break Fail317;
+          break Fail318;
         if(u_20.value == null)
           u_20.value = arg36.getSubterm(0);
         else
           if(u_20.value != arg36.getSubterm(0) && !u_20.value.match(arg36.getSubterm(0)))
-            break Fail317;
+            break Fail318;
         if(true)
           return term;
       }
@@ -9995,20 +10031,20 @@ import java.lang.ref.WeakReference;
 
   @SuppressWarnings("all") private static final class lifted20 extends Strategy 
   { 
-    TermReference b_72;
+    TermReference f_72;
 
     TermReference a_21;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail318:
+      Fail319:
       { 
         lifted21 lifted211 = new lifted21();
-        lifted211.b_72 = b_72;
+        lifted211.f_72 = f_72;
         lifted211.a_21 = a_21;
         term = try_1_0.instance.invoke(context, term, lifted211);
         if(term == null)
-          break Fail318;
+          break Fail319;
         if(true)
           return term;
       }
@@ -10018,17 +10054,17 @@ import java.lang.ref.WeakReference;
 
   @SuppressWarnings("all") private static final class lifted21 extends Strategy 
   { 
-    TermReference b_72;
+    TermReference f_72;
 
     TermReference a_21;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail319:
+      Fail320:
       { 
-        term = add_local_var_0_2.instance.invoke(context, term, b_72.value, a_21.value);
+        term = add_local_var_0_2.instance.invoke(context, term, f_72.value, a_21.value);
         if(term == null)
-          break Fail319;
+          break Fail320;
         if(true)
           return term;
       }
@@ -10042,10 +10078,10 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail320:
+      Fail321:
       { 
         if(term.getTermType() != IStrategoTerm.APPL || transform._consEJPCall_2 != ((IStrategoAppl)term).getConstructor())
-          break Fail320;
+          break Fail321;
         if(true)
           return term;
       }
@@ -10059,10 +10095,10 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail321:
+      Fail322:
       { 
         if(term.getTermType() != IStrategoTerm.APPL || transform._consScopedEJPCall_3 != ((IStrategoAppl)term).getConstructor())
-          break Fail321;
+          break Fail322;
         if(true)
           return term;
       }
@@ -10074,18 +10110,18 @@ import java.lang.ref.WeakReference;
   { 
     TermReference d_15;
 
-    TermReference u_71;
+    TermReference y_71;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail322:
+      Fail323:
       { 
         lifted17 lifted170 = new lifted17();
         lifted170.d_15 = d_15;
-        lifted170.u_71 = u_71;
+        lifted170.y_71 = y_71;
         term = try_1_0.instance.invoke(context, term, lifted170);
         if(term == null)
-          break Fail322;
+          break Fail323;
         if(true)
           return term;
       }
@@ -10097,11 +10133,11 @@ import java.lang.ref.WeakReference;
   { 
     TermReference d_15;
 
-    TermReference u_71;
+    TermReference y_71;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail323:
+      Fail324:
       { 
         IStrategoTerm p_15 = null;
         IStrategoTerm r_15 = null;
@@ -10109,9 +10145,9 @@ import java.lang.ref.WeakReference;
         r_15 = term;
         p_15 = transform.constNone0;
         s_15 = r_15;
-        term = ejp_to_java_0_4.instance.invoke(context, s_15, d_15.value, p_15, transform.constNone0, u_71.value);
+        term = ejp_to_java_0_4.instance.invoke(context, s_15, d_15.value, p_15, transform.constNone0, y_71.value);
         if(term == null)
-          break Fail323;
+          break Fail324;
         if(true)
           return term;
       }
@@ -10123,18 +10159,18 @@ import java.lang.ref.WeakReference;
   { 
     TermReference y_15;
 
-    TermReference u_71;
+    TermReference y_71;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail324:
+      Fail325:
       { 
         lifted15 lifted150 = new lifted15();
         lifted150.y_15 = y_15;
-        lifted150.u_71 = u_71;
+        lifted150.y_71 = y_71;
         term = try_1_0.instance.invoke(context, term, lifted150);
         if(term == null)
-          break Fail324;
+          break Fail325;
         if(true)
           return term;
       }
@@ -10146,11 +10182,11 @@ import java.lang.ref.WeakReference;
   { 
     TermReference y_15;
 
-    TermReference u_71;
+    TermReference y_71;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail325:
+      Fail326:
       { 
         IStrategoTerm g_16 = null;
         IStrategoTerm j_16 = null;
@@ -10158,35 +10194,7 @@ import java.lang.ref.WeakReference;
         j_16 = term;
         g_16 = transform.constNone0;
         k_16 = j_16;
-        term = ejp_to_java_0_4.instance.invoke(context, k_16, y_15.value, g_16, transform.constNone0, u_71.value);
-        if(term == null)
-          break Fail325;
-        if(true)
-          return term;
-      }
-      return null;
-    }
-  }
-
-  @SuppressWarnings("all") private static final class lifted13 extends Strategy 
-  { 
-    TermReference r_71;
-
-    TermReference s_16;
-
-    TermReference u_16;
-
-    TermReference s_71;
-
-    TermReference t_71;
-
-    TermReference u_71;
-
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
-    { 
-      Fail326:
-      { 
-        term = convert_one_var_dec_0_6.instance.invokeDynamic(context, term, NO_STRATEGIES, new IStrategoTerm[]{r_71.value, s_16.value, u_16.value, s_71.value, t_71.value, u_71.value});
+        term = ejp_to_java_0_4.instance.invoke(context, k_16, y_15.value, g_16, transform.constNone0, y_71.value);
         if(term == null)
           break Fail326;
         if(true)
@@ -10196,26 +10204,25 @@ import java.lang.ref.WeakReference;
     }
   }
 
-  @SuppressWarnings("all") private static final class lifted11 extends Strategy 
+  @SuppressWarnings("all") private static final class lifted13 extends Strategy 
   { 
-    TermReference r_71;
+    TermReference v_71;
 
-    TermReference s_71;
+    TermReference s_16;
 
-    TermReference t_71;
+    TermReference u_16;
 
-    TermReference u_71;
+    TermReference w_71;
+
+    TermReference x_71;
+
+    TermReference y_71;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       Fail327:
       { 
-        lifted12 lifted120 = new lifted12();
-        lifted120.r_71 = r_71;
-        lifted120.s_71 = s_71;
-        lifted120.t_71 = t_71;
-        lifted120.u_71 = u_71;
-        term = try_1_0.instance.invoke(context, term, lifted120);
+        term = convert_one_var_dec_0_6.instance.invokeDynamic(context, term, NO_STRATEGIES, new IStrategoTerm[]{v_71.value, s_16.value, u_16.value, w_71.value, x_71.value, y_71.value});
         if(term == null)
           break Fail327;
         if(true)
@@ -10225,28 +10232,26 @@ import java.lang.ref.WeakReference;
     }
   }
 
-  @SuppressWarnings("all") private static final class lifted12 extends Strategy 
+  @SuppressWarnings("all") private static final class lifted11 extends Strategy 
   { 
-    TermReference r_71;
+    TermReference v_71;
 
-    TermReference s_71;
+    TermReference w_71;
 
-    TermReference t_71;
+    TermReference x_71;
 
-    TermReference u_71;
+    TermReference y_71;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       Fail328:
       { 
-        IStrategoTerm g_17 = null;
-        g_17 = term;
-        if(r_71.value == null)
-          break Fail328;
-        term = hashtable_copy_0_0.instance.invoke(context, r_71.value);
-        if(term == null)
-          break Fail328;
-        term = ejp_to_java_0_4.instance.invoke(context, g_17, term, s_71.value, t_71.value, u_71.value);
+        lifted12 lifted120 = new lifted12();
+        lifted120.v_71 = v_71;
+        lifted120.w_71 = w_71;
+        lifted120.x_71 = x_71;
+        lifted120.y_71 = y_71;
+        term = try_1_0.instance.invoke(context, term, lifted120);
         if(term == null)
           break Fail328;
         if(true)
@@ -10256,21 +10261,28 @@ import java.lang.ref.WeakReference;
     }
   }
 
-  @SuppressWarnings("all") private static final class lifted10 extends Strategy 
+  @SuppressWarnings("all") private static final class lifted12 extends Strategy 
   { 
-    TermReference r_71;
+    TermReference v_71;
 
-    TermReference s_71;
+    TermReference w_71;
 
-    TermReference s_17;
+    TermReference x_71;
 
-    TermReference u_71;
+    TermReference y_71;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       Fail329:
       { 
-        term = ejp_to_java_0_4.instance.invoke(context, term, r_71.value, s_71.value, s_17.value, u_71.value);
+        IStrategoTerm g_17 = null;
+        g_17 = term;
+        if(v_71.value == null)
+          break Fail329;
+        term = hashtable_copy_0_0.instance.invoke(context, v_71.value);
+        if(term == null)
+          break Fail329;
+        term = ejp_to_java_0_4.instance.invoke(context, g_17, term, w_71.value, x_71.value, y_71.value);
         if(term == null)
           break Fail329;
         if(true)
@@ -10280,23 +10292,47 @@ import java.lang.ref.WeakReference;
     }
   }
 
-  @SuppressWarnings("all") private static final class lifted9 extends Strategy 
+  @SuppressWarnings("all") private static final class lifted10 extends Strategy 
   { 
-    TermReference r_71;
+    TermReference v_71;
 
-    TermReference s_71;
+    TermReference w_71;
 
-    TermReference t_71;
+    TermReference s_17;
 
-    TermReference u_71;
+    TermReference y_71;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       Fail330:
       { 
-        term = ejp_to_java_0_4.instance.invoke(context, term, r_71.value, s_71.value, t_71.value, u_71.value);
+        term = ejp_to_java_0_4.instance.invoke(context, term, v_71.value, w_71.value, s_17.value, y_71.value);
         if(term == null)
           break Fail330;
+        if(true)
+          return term;
+      }
+      return null;
+    }
+  }
+
+  @SuppressWarnings("all") private static final class lifted9 extends Strategy 
+  { 
+    TermReference v_71;
+
+    TermReference w_71;
+
+    TermReference x_71;
+
+    TermReference y_71;
+
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
+    { 
+      Fail331:
+      { 
+        term = ejp_to_java_0_4.instance.invoke(context, term, v_71.value, w_71.value, x_71.value, y_71.value);
+        if(term == null)
+          break Fail331;
         if(true)
           return term;
       }
@@ -10310,19 +10346,19 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail331:
+      Fail332:
       { 
         if(term.getTermType() != IStrategoTerm.APPL || transform._consAnno_2 != ((IStrategoAppl)term).getConstructor())
-          break Fail331;
+          break Fail332;
         IStrategoTerm arg8 = term.getSubterm(0);
         if(arg8.getTermType() != IStrategoTerm.APPL || transform._consTypeName_1 != ((IStrategoAppl)arg8).getConstructor())
-          break Fail331;
+          break Fail332;
         IStrategoTerm arg9 = arg8.getSubterm(0);
         if(arg9.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg9).getConstructor())
-          break Fail331;
+          break Fail332;
         IStrategoTerm arg10 = arg9.getSubterm(0);
         if(arg10.getTermType() != IStrategoTerm.STRING || !"ExplicitScopedJoinPoint".equals(((IStrategoString)arg10).stringValue()))
-          break Fail331;
+          break Fail332;
         if(true)
           return term;
       }
@@ -10332,33 +10368,15 @@ import java.lang.ref.WeakReference;
 
   @SuppressWarnings("all") private static final class lifted6 extends Strategy 
   { 
-    TermReference r_71;
-
-    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
-    { 
-      Fail332:
-      { 
-        lifted7 lifted710 = new lifted7();
-        lifted710.r_71 = r_71;
-        term = try_1_0.instance.invoke(context, term, lifted710);
-        if(term == null)
-          break Fail332;
-        if(true)
-          return term;
-      }
-      return null;
-    }
-  }
-
-  @SuppressWarnings("all") private static final class lifted7 extends Strategy 
-  { 
-    TermReference r_71;
+    TermReference v_71;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       Fail333:
       { 
-        term = process_method_param_0_1.instance.invoke(context, term, r_71.value);
+        lifted7 lifted710 = new lifted7();
+        lifted710.v_71 = v_71;
+        term = try_1_0.instance.invoke(context, term, lifted710);
         if(term == null)
           break Fail333;
         if(true)
@@ -10368,26 +10386,15 @@ import java.lang.ref.WeakReference;
     }
   }
 
-  @SuppressWarnings("all") private static final class lifted4 extends Strategy 
+  @SuppressWarnings("all") private static final class lifted7 extends Strategy 
   { 
-    TermReference r_71;
-
-    TermReference p_18;
-
-    TermReference t_71;
-
-    TermReference u_71;
+    TermReference v_71;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       Fail334:
       { 
-        lifted5 lifted510 = new lifted5();
-        lifted510.r_71 = r_71;
-        lifted510.p_18 = p_18;
-        lifted510.t_71 = t_71;
-        lifted510.u_71 = u_71;
-        term = try_1_0.instance.invoke(context, term, lifted510);
+        term = process_method_param_0_1.instance.invoke(context, term, v_71.value);
         if(term == null)
           break Fail334;
         if(true)
@@ -10397,28 +10404,26 @@ import java.lang.ref.WeakReference;
     }
   }
 
-  @SuppressWarnings("all") private static final class lifted5 extends Strategy 
+  @SuppressWarnings("all") private static final class lifted4 extends Strategy 
   { 
-    TermReference r_71;
+    TermReference v_71;
 
     TermReference p_18;
 
-    TermReference t_71;
+    TermReference x_71;
 
-    TermReference u_71;
+    TermReference y_71;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       Fail335:
       { 
-        IStrategoTerm h_19 = null;
-        h_19 = term;
-        if(r_71.value == null)
-          break Fail335;
-        term = hashtable_copy_0_0.instance.invoke(context, r_71.value);
-        if(term == null)
-          break Fail335;
-        term = ejp_to_java_0_4.instance.invoke(context, h_19, term, p_18.value, t_71.value, u_71.value);
+        lifted5 lifted510 = new lifted5();
+        lifted510.v_71 = v_71;
+        lifted510.p_18 = p_18;
+        lifted510.x_71 = x_71;
+        lifted510.y_71 = y_71;
+        term = try_1_0.instance.invoke(context, term, lifted510);
         if(term == null)
           break Fail335;
         if(true)
@@ -10428,26 +10433,28 @@ import java.lang.ref.WeakReference;
     }
   }
 
-  @SuppressWarnings("all") private static final class lifted2 extends Strategy 
+  @SuppressWarnings("all") private static final class lifted5 extends Strategy 
   { 
-    TermReference r_71;
+    TermReference v_71;
 
-    TermReference s_71;
+    TermReference p_18;
 
-    TermReference t_71;
+    TermReference x_71;
 
-    TermReference u_71;
+    TermReference y_71;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       Fail336:
       { 
-        lifted3 lifted310 = new lifted3();
-        lifted310.r_71 = r_71;
-        lifted310.s_71 = s_71;
-        lifted310.t_71 = t_71;
-        lifted310.u_71 = u_71;
-        term = try_1_0.instance.invoke(context, term, lifted310);
+        IStrategoTerm h_19 = null;
+        h_19 = term;
+        if(v_71.value == null)
+          break Fail336;
+        term = hashtable_copy_0_0.instance.invoke(context, v_71.value);
+        if(term == null)
+          break Fail336;
+        term = ejp_to_java_0_4.instance.invoke(context, h_19, term, p_18.value, x_71.value, y_71.value);
         if(term == null)
           break Fail336;
         if(true)
@@ -10457,30 +10464,59 @@ import java.lang.ref.WeakReference;
     }
   }
 
-  @SuppressWarnings("all") private static final class lifted3 extends Strategy 
+  @SuppressWarnings("all") private static final class lifted2 extends Strategy 
   { 
-    TermReference r_71;
+    TermReference v_71;
 
-    TermReference s_71;
+    TermReference w_71;
 
-    TermReference t_71;
+    TermReference x_71;
 
-    TermReference u_71;
+    TermReference y_71;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
       Fail337:
       { 
+        lifted3 lifted310 = new lifted3();
+        lifted310.v_71 = v_71;
+        lifted310.w_71 = w_71;
+        lifted310.x_71 = x_71;
+        lifted310.y_71 = y_71;
+        term = try_1_0.instance.invoke(context, term, lifted310);
+        if(term == null)
+          break Fail337;
+        if(true)
+          return term;
+      }
+      return null;
+    }
+  }
+
+  @SuppressWarnings("all") private static final class lifted3 extends Strategy 
+  { 
+    TermReference v_71;
+
+    TermReference w_71;
+
+    TermReference x_71;
+
+    TermReference y_71;
+
+    @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
+    { 
+      Fail338:
+      { 
         IStrategoTerm a_19 = null;
         a_19 = term;
-        if(r_71.value == null)
-          break Fail337;
-        term = hashtable_copy_0_0.instance.invoke(context, r_71.value);
+        if(v_71.value == null)
+          break Fail338;
+        term = hashtable_copy_0_0.instance.invoke(context, v_71.value);
         if(term == null)
-          break Fail337;
-        term = ejp_to_java_0_4.instance.invoke(context, a_19, term, s_71.value, t_71.value, u_71.value);
+          break Fail338;
+        term = ejp_to_java_0_4.instance.invoke(context, a_19, term, w_71.value, x_71.value, y_71.value);
         if(term == null)
-          break Fail337;
+          break Fail338;
         if(true)
           return term;
       }
@@ -10496,14 +10532,14 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail338:
+      Fail339:
       { 
         lifted1 lifted110 = new lifted1();
         lifted110.g_12 = g_12;
         lifted110.j_12 = j_12;
         term = try_1_0.instance.invoke(context, term, lifted110);
         if(term == null)
-          break Fail338;
+          break Fail339;
         if(true)
           return term;
       }
@@ -10519,7 +10555,7 @@ import java.lang.ref.WeakReference;
 
     @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
     { 
-      Fail339:
+      Fail340:
       { 
         IStrategoTerm q_12 = null;
         IStrategoTerm s_12 = null;
@@ -10527,12 +10563,12 @@ import java.lang.ref.WeakReference;
         s_12 = term;
         term = new_hashtable_0_0.instance.invoke(context, term);
         if(term == null)
-          break Fail339;
+          break Fail340;
         q_12 = term;
         v_12 = s_12;
         term = ejp_to_java_0_4.instance.invoke(context, v_12, q_12, g_12.value, transform.constNone0, j_12.value);
         if(term == null)
-          break Fail339;
+          break Fail340;
         if(true)
           return term;
       }
@@ -10580,9 +10616,10 @@ import java.lang.ref.WeakReference;
       varScope.addSVar("remove_scoped_ejp_var_decs_0_0", new InteropSDefT(remove_scoped_ejp_var_decs_0_0.instance, context));
       varScope.addSVar("ejp_call_to_method_invokation_0_4", new InteropSDefT(ejp_call_to_method_invokation_0_4.instance, context));
       varScope.addSVar("scoped_ejp_to_java_0_4", new InteropSDefT(scoped_ejp_to_java_0_4.instance, context));
+      varScope.addSVar("get_vars_in_block_0_0", new InteropSDefT(get_vars_in_block_0_0.instance, context));
+      varScope.addSVar("get_inner_scoped_vars_0_0", new InteropSDefT(get_inner_scoped_vars_0_0.instance, context));
       varScope.addSVar("handle_pointcutargs_0_2", new InteropSDefT(handle_pointcutargs_0_2.instance, context));
       varScope.addSVar("handle_pointcutarg_helper_0_1", new InteropSDefT(handle_pointcutarg_helper_0_1.instance, context));
-      varScope.addSVar("get_inner_scoped_vars_0_1", new InteropSDefT(get_inner_scoped_vars_0_1.instance, context));
       varScope.addSVar("remove_vars_decs_from_local_var_dec_stm_0_0", new InteropSDefT(remove_vars_decs_from_local_var_dec_stm_0_0.instance, context));
       varScope.addSVar("remove_var_dec_0_0", new InteropSDefT(remove_var_dec_0_0.instance, context));
       varScope.addSVar("pointcutarg_0_3", new InteropSDefT(pointcutarg_0_3.instance, context));
@@ -10656,9 +10693,10 @@ import java.lang.ref.WeakReference;
       varScope.addSVar("remove_scoped_ejp_var_decs_0_0", new InteropSDefT(classLoader, "transform$remove_scoped_ejp_var_decs_0_0", context));
       varScope.addSVar("ejp_call_to_method_invokation_0_4", new InteropSDefT(classLoader, "transform$ejp_call_to_method_invokation_0_4", context));
       varScope.addSVar("scoped_ejp_to_java_0_4", new InteropSDefT(classLoader, "transform$scoped_ejp_to_java_0_4", context));
+      varScope.addSVar("get_vars_in_block_0_0", new InteropSDefT(classLoader, "transform$get_vars_in_block_0_0", context));
+      varScope.addSVar("get_inner_scoped_vars_0_0", new InteropSDefT(classLoader, "transform$get_inner_scoped_vars_0_0", context));
       varScope.addSVar("handle_pointcutargs_0_2", new InteropSDefT(classLoader, "transform$handle_pointcutargs_0_2", context));
       varScope.addSVar("handle_pointcutarg_helper_0_1", new InteropSDefT(classLoader, "transform$handle_pointcutarg_helper_0_1", context));
-      varScope.addSVar("get_inner_scoped_vars_0_1", new InteropSDefT(classLoader, "transform$get_inner_scoped_vars_0_1", context));
       varScope.addSVar("remove_vars_decs_from_local_var_dec_stm_0_0", new InteropSDefT(classLoader, "transform$remove_vars_decs_from_local_var_dec_stm_0_0", context));
       varScope.addSVar("remove_var_dec_0_0", new InteropSDefT(classLoader, "transform$remove_var_dec_0_0", context));
       varScope.addSVar("pointcutarg_0_3", new InteropSDefT(classLoader, "transform$pointcutarg_0_3", context));
