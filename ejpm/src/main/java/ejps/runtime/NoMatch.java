@@ -1,4 +1,4 @@
-package ejp.runtime;
+package ejps.runtime;
 
 public @interface NoMatch {
 	String expr();

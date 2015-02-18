@@ -1,15 +1,12 @@
-package ejp.runtime;
+package ejps.runtime;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Retention(RetentionPolicy.CLASS)
+@Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface Pointcutargs {
-	String aspect();
-	String joinpoint();
-	String pointcut();
-	String expr();
+public @interface EjpBlockAnno {
+	int value();
 }

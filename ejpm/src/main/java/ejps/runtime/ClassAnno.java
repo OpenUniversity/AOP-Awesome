@@ -1,4 +1,4 @@
-package ejp.runtime;
+package ejps.runtime;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.CLASS)
-@Target(ElementType.METHOD)
-public @interface ExplicitJoinPoint {
-	String[] handles() default {};
+@Target(ElementType.TYPE)
+public @interface ClassAnno {
+	int value();
 }

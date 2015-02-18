@@ -1,12 +1,12 @@
-package ejp.runtime;
+package ejps.runtime;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Retention(RetentionPolicy.RUNTIME)
+@Retention(RetentionPolicy.CLASS)
 @Target(ElementType.METHOD)
-public @interface EjpBlockAnno {
-	int value();
+public @interface ExplicitJoinPoint {
+	String[] handles() default {};
 }
