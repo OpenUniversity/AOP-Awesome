@@ -11,7 +11,7 @@
 
   <target name="weave_basics" depends="clean">
     <java fork="true" classname="org.aspectj.tools.ajc.Main" classpath="${classpath_for_weaving}">
-      <arg line="-1.5 -Xset:pipelineCompilation=false -outjar ${outjar} ex_base/Main.java ex_base/Aspect.aj"/>
+      <arg line="-1.5 -Xset:pipelineCompilation=false -outjar ${outjar} ex_base/src/Main.java ex_base/src/Aspect.aj"/>
     </java>
   </target>
 
