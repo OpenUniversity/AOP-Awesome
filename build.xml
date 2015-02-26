@@ -5,6 +5,42 @@
          </classpath>
        </taskdef>
 
+	<target name="runtime">
+		<mkdir dir="test"/>
+		<taskdef resource="net/sf/antcontrib/antlib.xml"/>
+
+		<copy file="libs/aspectjrt-1.7.4.jar" tofile="dist/org.aspectj.runtime_1.7.3.20130613144500-a.jar"/>
+		<jar destfile="dist/org.aspectj.runtime_1.7.3.20130613144500-a.jar" update="yes">
+			<manifest>
+				<attribute name="BManifest-Version" value="1.0"/>
+				<attribute name="Bundle-Vendor" value="Eclipse AspectJ Development Tools"/>
+				<attribute name="Ant-Version" value="Apache Ant 1.8.2" />
+				<attribute name="Bundle-ClassPath" value="."/>
+				<attribute name="Bundle-Version" value="1.7.3.20130613144500-a"/>
+				<attribute name="Eclipse-BundleShape" value="jar"/>
+				<attribute name="Bundle-Name" value="AspectJ Runtime"/>
+				<attribute name="Bundle-ManifestVersion" value="2"/>
+				<attribute name="Created-By" value="1.7.0_21-b11 (Oracle Corporation)"/>
+				<attribute name="Bundle-SymbolicName" value="org.aspectj.runtime"/>
+				<attribute name="Bundle-RequiredExecutionEnvironment" value="J2SE-1.5"/>
+				<attribute name="Export-Package" value='org.aspectj.internal.lang.annotation;version="1.7.3",org.aspectj.internal.lang.reflect;version="1.7.3",org.aspectj.lang;version="1.7.3",org.aspectj.lang.annotation;version="1.7.3",org.aspectj.lang.internal.lang;version="1.7.3",org.aspectj.lang.reflect;version="1.7.3",org.aspectj.runtime;version="1.7.3",org.aspectj.runtime.internal;version="1.7.3",org.aspectj.runtime.internal.cflowstack;version="1.7.3",org.aspectj.runtime.reflect;version="1.7.3"'/>
+			</manifest>
+		</jar>
+
+		<if>
+			<isset property="mechanisms"/>
+			<then>
+				<for list="${mechanisms}" param="mechanism">
+					<sequential>
+						<jar destfile="dist/org.aspectj.runtime_1.7.3.20130613144500-a.jar" update="yes">
+							<zipfileset src="@{mechanism}" includes="**/runtime/**"/>
+						</jar>
+					</sequential>
+				</for>
+			</then>
+		</if>
+	 </target>
+
 	<target name="weaver">
 		<mkdir dir="dist"/>
 		<taskdef resource="net/sf/antcontrib/antlib.xml"/>
