@@ -31,38 +31,6 @@ public abstract aspect FrontendAspect {
 
 	protected pointcut parseCommandLine(String[] args): call(void ConfigParser.parseCommandLine(String[])) && args(args);
 
-	void around(String[] originalArgs): parseCommandLine(originalArgs) {
-		int indexOfInpath = indexOfInPath(originalArgs);
-		if (indexOfInpath < 0) {
-			int length = originalArgs.length + 2;
-			String[] args = new String[length];
-			System.arraycopy(originalArgs, 0, args, 0, length-2);
-			args[length-2] = "-inpath";
-			args[length-1] = new StringBuilder()
-			.append(".")
-			.append(File.pathSeparator)
-			.append(getOutputDir().getAbsolutePath())
-			.toString();
-			proceed(args);
-		}
-		else {
-			if (indexOfInpath + 1 < originalArgs.length) {
-				originalArgs[indexOfInpath + 1] = new StringBuilder(originalArgs[indexOfInpath + 1])
-				.append(File.pathSeparator)
-				.append(getOutputDir().getAbsolutePath())
-				.toString();
-			}
-			proceed(originalArgs);
-		}
-	}
-
-	private int indexOfInPath(String[] args) {
-		for (int i=0; i<args.length; ++i)
-			if ("-inpath".equals(args[i]))
-				return i;
-		return -1;
-	}
-
 	protected File getOutputDir() {
 		if (outputDir == null) {
 			final File defaultTempDir = FileUtils.getTempDirectory();
