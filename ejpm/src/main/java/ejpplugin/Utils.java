@@ -14,13 +14,13 @@ import org.aspectj.weaver.bcel.UnwovenClassFile;
 public class Utils {
 
 	public final static UnresolvedType EJP_ExplicitJoinPoint =
-			UnresolvedType.forName("ejp.runtime.ExplicitJoinPoint");
+			UnresolvedType.forName("ejps.runtime.ExplicitJoinPoint");
 
 	public final static UnresolvedType EJP_ExplicitScopedJoinPoint =
-			UnresolvedType.forName("ejp.runtime.ExplicitScopedJoinPoint");
+			UnresolvedType.forName("ejps.runtime.ExplicitScopedJoinPoint");
 
 	public final static UnresolvedType EJP_Pointcutargs =
-			UnresolvedType.forName("ejp.runtime.Pointcutargs");
+			UnresolvedType.forName("ejps.runtime.Pointcutargs");
 	
 	public final static UnresolvedType AJ_Pointcut =
 			UnresolvedType.forName("org.aspectj.lang.annotation.Pointcut");
