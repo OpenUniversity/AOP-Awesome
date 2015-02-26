@@ -23,7 +23,7 @@
 
   <target name="weave_pointcutargs" depends="clean">
     <java fork="true" classname="org.aspectj.tools.ajc.Main" classpath="${classpath_for_weaving}:${libs}/commons-collections-3.2.1.jar">
-      <arg line="-1.5 -Xset:pipelineCompilation=false -outjar ${outjar} ex_pointcutargs/Main.java ex_pointcutargs/Aspect.aj"/>
+      <arg line="-1.5 -Xset:pipelineCompilation=false -outjar ${outjar} ex_pointcutargs/src/Main.java ex_pointcutargs/src/Aspect.aj"/>
     </java>
   </target>
 
