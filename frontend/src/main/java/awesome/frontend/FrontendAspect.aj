@@ -7,8 +7,6 @@ import org.aspectj.ajdt.ajc.ConfigParser;
 
 public abstract aspect FrontendAspect {
 
-	private File outputDir;
-
 	pointcut isSourceFile(String filename): call(boolean ConfigParser.isSourceFileName(String)) && args(filename);
 
 	boolean around(String filename): isSourceFile(filename) {
@@ -30,25 +28,6 @@ public abstract aspect FrontendAspect {
 	}
 
 	protected pointcut parseCommandLine(String[] args): call(void ConfigParser.parseCommandLine(String[])) && args(args);
-
-	protected File getOutputDir() {
-		if (outputDir == null) {
-			final File defaultTempDir = FileUtils.getTempDirectory();
-			try {
-				outputDir = File.createTempFile("awesome", "", defaultTempDir);
-				if (outputDir.exists()) {
-					FileUtils.forceDelete(outputDir);
-				}
-				FileUtils.forceMkdir(outputDir);
-				FileUtils.forceDeleteOnExit(outputDir);
-			}
-			catch (Exception ex) {
-				ex.printStackTrace();
-				outputDir = defaultTempDir;
-			}
-		}
-		return outputDir;
-	}
 
 	protected boolean isSourceForThisMechanism(String filename) {
 		for (String postfix : postfix())

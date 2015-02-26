@@ -124,7 +124,7 @@ public aspect ClosureFrontendAspect extends FrontendAspect {
 		logger.info("input path: " + inputPath);
 		String path = FilenameUtils.removeExtension(inputPath) + ".java";
 		String outputPath = FilenameUtils.concat(
-				getOutputDir().getAbsolutePath(),
+				"/tmp",
 				path.startsWith(File.separator) ? path.substring(1) : path);
 		logger.info("output path: " + outputPath);
 		File output = new File(outputPath);
