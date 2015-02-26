@@ -1023,10 +1023,6 @@ public class BcelWeaver {
 
 	private Set<IProgramElement> candidatesForRemoval = null;
 
-	private boolean isExternal(UnwovenClassFile classFile) {
-//		return true; 
-		return !classFile.getJavaClass().getPackageName().startsWith("ex_base");
-	}
 	// variation of "weave" that sources class files from an external source.
 	public Collection<String> weave(IClassFileProvider input) throws IOException {
 		if (trace.isTraceEnabled()) {
@@ -1043,7 +1039,6 @@ public class BcelWeaver {
 			AsmManager manager = world.getModelAsAsmManager();
 			for (Iterator<UnwovenClassFile> i = input.getClassFileIterator(); i.hasNext();) {
 				UnwovenClassFile classFile = i.next();
-				if (isExternal(classFile)) continue;
 				// remove all relationships where this file being woven is
 				// the target of the relationship
 				manager.removeRelationshipsTargettingThisType(classFile.getClassName());
@@ -1054,7 +1049,6 @@ public class BcelWeaver {
 		// repaired prior to weaving
 		for (Iterator<UnwovenClassFile> i = input.getClassFileIterator(); i.hasNext();) {
 			UnwovenClassFile classFile = i.next();
-			if (isExternal(classFile)) continue;
 			String className = classFile.getClassName();
 			ResolvedType theType = world.resolve(className);
 			if (theType != null) {
@@ -1071,7 +1065,6 @@ public class BcelWeaver {
 			CompilationAndWeavingContext.enteringPhase(CompilationAndWeavingContext.WEAVING_ASPECTS, "");
 			for (Iterator<UnwovenClassFile> i = input.getClassFileIterator(); i.hasNext();) {
 				UnwovenClassFile classFile = i.next();
-				if (isExternal(classFile)) continue;
 				String className = classFile.getClassName();
 				ResolvedType theType = world.resolve(className);
 				if (theType.isAnnotationStyleAspect()) {
@@ -1102,7 +1095,6 @@ public class BcelWeaver {
 		// clear all state from files we'll be reweaving
 		for (Iterator<UnwovenClassFile> i = input.getClassFileIterator(); i.hasNext();) {
 			UnwovenClassFile classFile = i.next();
-			if (isExternal(classFile)) continue;
 			String className = classFile.getClassName();
 			BcelObjectType classType = getClassType(className);
 
@@ -1134,7 +1126,6 @@ public class BcelWeaver {
 		List<String> typesToProcess = new ArrayList<String>();
 		for (Iterator<UnwovenClassFile> iter = input.getClassFileIterator(); iter.hasNext();) {
 			UnwovenClassFile clf = iter.next();
-			if (isExternal(clf)) continue;
 			typesToProcess.add(clf.getClassName());
 		}
 		while (typesToProcess.size() > 0) {
@@ -1143,7 +1134,6 @@ public class BcelWeaver {
 
 		for (Iterator<UnwovenClassFile> i = input.getClassFileIterator(); i.hasNext();) {
 			UnwovenClassFile classFile = i.next();
-			if (isExternal(classFile)) continue;
 			String className = classFile.getClassName();
 			addNormalTypeMungers(className);
 		}
@@ -1156,7 +1146,6 @@ public class BcelWeaver {
 		// first weave into aspects
 		for (Iterator<UnwovenClassFile> i = input.getClassFileIterator(); i.hasNext();) {
 			UnwovenClassFile classFile = i.next();
-			if (isExternal(classFile)) continue;
 			String className = classFile.getClassName();
 			ResolvedType theType = world.resolve(className);
 			if (theType.isAspect()) {
@@ -1189,7 +1178,6 @@ public class BcelWeaver {
 		// then weave into non-aspects
 		for (Iterator<UnwovenClassFile> i = input.getClassFileIterator(); i.hasNext();) {
 			UnwovenClassFile classFile = i.next();
-			if (isExternal(classFile)) continue;
 			String className = classFile.getClassName();
 			ResolvedType theType = world.resolve(className);
 			if (!theType.isAspect()) {

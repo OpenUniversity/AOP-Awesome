@@ -445,6 +445,9 @@ public class WeavingAdaptor implements IMessageContext {
 			if (name.startsWith("org.aspectj.")) {
 				return false;
 			}
+			if (name.startsWith("org.eclipse.")) {
+				return false;
+			}
 			if (name.startsWith("sun.reflect.")) {// JDK reflect
 				return false;
 			}
