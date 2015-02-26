@@ -18,9 +18,7 @@ import org.spoofax.terms.io.binary.TermReader;
 import org.strategoxt.lang.Context;
 
 import awesome.frontend.FrontendAspect;
-import ejp.transform;
-import ejp.transform.convert_0_0;
-import ejp.transform.pp_aspectj_string_0_0;
+import ejp.transform.transform_0_0;;
 
 public aspect EJPFrontendAspect extends FrontendAspect {
 
@@ -33,22 +31,13 @@ public aspect EJPFrontendAspect extends FrontendAspect {
 
 	@Override
 	protected File convert2java(File input) throws Exception {
-		final TermFactory factory = new TermFactory();
-		final IStrategoTerm tableTerm = new TermReader(factory).parseFromStream(getClass().getResourceAsStream("/ejp.tbl"));
-		final ParseTable pt = new ParseTable(tableTerm, factory);
-		final SGLR sglr = new SGLR(new TreeBuilder(new TermTreeFactory(new TermFactory()), true), pt);
-		sglr.setUseStructureRecovery(false);
-		final IStrategoTerm parsed = (IStrategoTerm) sglr.parse(new FileReader(input));
-
-		Context context = transform.init();
+            Context context = transform.init();
 	    context.setStandAlone(true);
 	    IStrategoTerm result = null;
+	    IStrategoTerm pathTerm = new TermFactory().makeString(input.getAbsolutePath());
 
 	    try {
-	    	logger.info("parsed: " + parsed);
-	    	IStrategoTerm transformed = convert_0_0.instance.invoke(context, parsed);
-	    	logger.info("transformed: " + transformed);
-	    	result = pp_aspectj_string_0_0.instance.invoke(context, transformed);
+	    	result = transform_0_0.instance.invoke(context, pathTerm);
 	    }
 	    finally {
 	    	context.setStandAlone(false);
