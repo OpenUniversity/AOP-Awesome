@@ -17,7 +17,7 @@
 
   <target name="weave_agent" depends="clean">
     <java fork="true" classname="org.aspectj.tools.ajc.Main" classpath="${classpath_for_weaving}">
-      <arg line="-1.5 -Xset:pipelineCompilation=false -outjar ${outjar} agent/CompensationRecord.java agent/Main.java agent/Agent.java agent/CardProcessor.java agent/TranConcern.aj agent/Person.java agent/Flight.java agent/Hotel.java"/>
+      <arg line="-1.5 -Xset:pipelineCompilation=false -outjar ${outjar} agent/src/CompensationRecord.java agent/src/Main.java agent/src/Agent.java agent/src/CardProcessor.java agent/src/TranConcern.aj agent/src/Person.java agent/src/Flight.java agent/src/Hotel.java"/>
     </java>
   </target> 
 
@@ -29,13 +29,13 @@
 
   <target name="weave_handles" depends="clean">
     <java fork="true" classname="org.aspectj.tools.ajc.Main" classpath="${classpath_for_weaving}">
-      <arg line="-1.5 -Xset:pipelineCompilation=false -outjar ${outjar} ex_handles/Main.java ex_handles/Aspect.aj"/>
+      <arg line="-1.5 -Xset:pipelineCompilation=false -outjar ${outjar} ex_handles/src/Main.java ex_handles/src/Aspect.aj"/>
     </java>
   </target>
 
   <target name="test_policy" depends="clean">
     <java fork="true" classname="org.aspectj.tools.ajc.Main" classpath="${classpath_for_weaving}">
-      <arg line="-1.5 -Xset:pipelineCompilation=false -outjar ${outjar} ex_policy/Main.java ex_policy/Aspect.aj"/>
+      <arg line="-1.5 -Xset:pipelineCompilation=false -outjar ${outjar} ex_policy/src/Main.java ex_policy/src/Aspect.aj"/>
     </java>
   </target>
 
