@@ -1,7 +1,6 @@
 package ejpplugin;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -15,21 +14,14 @@ import java.util.regex.Pattern;
 
 import org.apache.commons.collections.MultiHashMap;
 import org.apache.commons.collections.MultiMap;
-import org.aspectj.apache.bcel.classfile.Method;
 import org.aspectj.apache.bcel.classfile.annotation.AnnotationGen;
-import org.aspectj.apache.bcel.classfile.annotation.ArrayElementValue;
 import org.aspectj.apache.bcel.classfile.annotation.ElementValue;
-import org.aspectj.apache.bcel.classfile.annotation.NameValuePair;
-import org.aspectj.apache.bcel.generic.MethodGen;
-import org.aspectj.apache.bcel.generic.ObjectType;
 import org.aspectj.bridge.MessageUtil;
 import org.aspectj.weaver.AdviceKind;
 import org.aspectj.weaver.AjcMemberMaker;
 import org.aspectj.weaver.AnnotationAJ;
 import org.aspectj.weaver.BindingScope;
 import org.aspectj.weaver.IClassFileProvider;
-import org.aspectj.weaver.Member;
-import org.aspectj.weaver.MemberImpl;
 import org.aspectj.weaver.ResolvedMember;
 import org.aspectj.weaver.ResolvedMemberImpl;
 import org.aspectj.weaver.ResolvedPointcutDefinition;
@@ -69,8 +61,8 @@ public aspect EJPWeaver extends AbstractWeaver {
 	private List<NoMatchTuple> tuples = new ArrayList<NoMatchTuple>();
 
 	private List<RequiredAdvice> requiredAdvices = new ArrayList<RequiredAdvice>();
-	private UnresolvedType METHOD_ANNO_UTYPE = UnresolvedType.forName("ejp.runtime.MethodAnno");
-	private UnresolvedType EXPLICIT_JOINPOINT_UTYPE = UnresolvedType.forName("ejp.runtime.ExplicitJoinPoint");
+	private UnresolvedType METHOD_ANNO_UTYPE = UnresolvedType.forName("ejps.runtime.MethodAnno");
+	private UnresolvedType EXPLICIT_JOINPOINT_UTYPE = UnresolvedType.forName("ejps.runtime.ExplicitJoinPoint");
 
 	after(ResolvedType resolvedType): call(* *.collectCrosscuttingMembers(..)) && target(resolvedType) {
 		Iterator<ResolvedMember> methodIterator = resolvedType.getMethods(false, false);
@@ -81,7 +73,7 @@ public aspect EJPWeaver extends AbstractWeaver {
 				Pattern pattern = Pattern.compile("\\[(.+)\\]");
 				Matcher matcher = pattern.matcher(ann.getStringFormOfValue("handles"));
 				/*System.out.println("handles: " + Pointcut.fromString(
-						String.format("call(* *(..)) && withincode(@ejp.runtime.ExplicitScopedJoinPoint * ejp$%s$%s(..))",
+						String.format("call(* *(..)) && withincode(@ejps.runtime.ExplicitScopedJoinPoint * ejp$%s$%s(..))",
 								(rm.getDeclaringType().getPackageName() == null || rm.getDeclaringType().getPackageName().isEmpty() ?
 										"" : rm.getDeclaringType().getPackageName().replaceAll("\\.", "$") + "$") + 
 								rm.getDeclaringType().getClassName(),
@@ -92,7 +84,7 @@ public aspect EJPWeaver extends AbstractWeaver {
 						declareSofts.add(new DeclareSoft(
 								new ExactTypePattern(UnresolvedType.forName(exception), true, false),
 								Pointcut.fromString(
-										String.format("call(* *(..)) && withincode(@ejp.runtime.ExplicitScopedJoinPoint * ejp$%s$%s(..))",
+										String.format("call(* *(..)) && withincode(@ejps.runtime.ExplicitScopedJoinPoint * ejp$%s$%s(..))",
 												(rm.getDeclaringType().getPackageName() == null || rm.getDeclaringType().getPackageName().isEmpty() ?
 														"" : rm.getDeclaringType().getPackageName().replaceAll("\\.", "$") + "$") + 
 												rm.getDeclaringType().getClassName(),
@@ -234,7 +226,7 @@ public aspect EJPWeaver extends AbstractWeaver {
 				for (AnnotationAJ annotation : bcelMethod.getAnnotations()) {
 //					System.out.println("annotation name: " + annotation.getTypeName());
 
-					if ("ejp.runtime.Pointcutargs".equals(annotation.getTypeName())) {
+					if ("ejps.runtime.Pointcutargs".equals(annotation.getTypeName())) {
 //						System.out.println("found Pointcutargs annotation!");
 
 						Pointcut pointcutToAdd = Pointcut.fromString(annotation.getStringFormOfValue("expr"))
@@ -260,7 +252,7 @@ public aspect EJPWeaver extends AbstractWeaver {
 						continue;
 					}
 
-					if ("ejp.runtime.NoMatch".equals(annotation.getTypeName())) {
+					if ("ejps.runtime.NoMatch".equals(annotation.getTypeName())) {
 //						System.out.println("found NoMatch annotation!");
 
 						Pointcut resolvedPointcut =
@@ -497,7 +489,7 @@ public aspect EJPWeaver extends AbstractWeaver {
 		
 		ResolvedMemberImpl bcelMethod = tuple.getMethod();
 		Pointcut requiredShadowMunger = Pointcut.fromString(tuple.getRequiredShadowMunger());
-		String pattern = "@withincode(anno) && @withincode(ejp.runtime.ExplicitScopedJoinPoint)";
+		String pattern = "@withincode(anno) && @withincode(ejps.runtime.ExplicitScopedJoinPoint)";
 		Pointcut additionalShadowMunger = Pointcut.fromString(pattern);
 		
 		Pointcut finalPointcut = new AndPointcut(additionalShadowMunger, requiredShadowMunger)
