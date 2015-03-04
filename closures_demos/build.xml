@@ -11,7 +11,7 @@
 
   <target name="weave_bonusprogram" depends="clean">
     <java fork="true" classname="org.aspectj.tools.ajc.Main" classpath="${classpath_for_weaving}">
-      <arg line="-1.5 -Xset:pipelineCompilation=false -outjar ${outjar} /tmp/awesome5304235274886998034/home/ahadas/AOP-Awesome/closures_demos/abctests/cjp/shopping/ShoppingSession.java"/>
+      <arg line="-1.5 -Xset:pipelineCompilation=false -outjar ${outjar} bonusprogram/src/BonusProgram.aj bonusprogram/src/Main.java bonusprogram/src/ShoppingSession.java"/>
     </java>
   </target>
 
