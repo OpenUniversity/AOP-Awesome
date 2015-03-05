@@ -1,4 +1,4 @@
-package test;
+package research;
 
 aspect Impact {
   joinpoint void say(String message);
