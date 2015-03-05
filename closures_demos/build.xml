@@ -19,4 +19,14 @@
     <java classname="bonusprogram.Main" classpath=".:${outjar}:${aspectjrt}"/>
   </target>
 
+  <target name="weave_helloworld" depends="clean">
+    <java fork="true" classname="org.aspectj.tools.ajc.Main" classpath="${classpath_for_weaving}">
+      <arg line="-1.5 -Xset:pipelineCompilation=false -outjar ${outjar} helloworld/src/Impact.aj helloworld/src/HelloWorld.java"/>
+    </java>
+  </target>
+
+  <target name="test_helloworld" depends="weave_helloworld">
+    <java classname="test.HelloWorld" classpath=".:${outjar}:${aspectjrt}"/>
+  </target>
+
 </project>
