@@ -94,6 +94,19 @@
                         </manifest>
                 </jar>
 
+                <if>
+                        <isset property="deps"/>
+                        <then>
+                                <for list="${deps}" param="dep">
+                                        <sequential>
+                                                <jar destfile="dist/awesome_weaver.jar" update="yes">
+						         <zipfileset src="@{dep}"/>
+                                                </jar>
+                                        </sequential>
+                                </for>
+                        </then>
+                </if>
+
                 <copy file="dist/awesome_weaver.jar" tofile="dist/org.aspectj.weaver_1.7.3.20130613144500-a.jar"/>
 	</target>
 
