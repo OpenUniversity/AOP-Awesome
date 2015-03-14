@@ -79,7 +79,6 @@ public class EJPTypeMunger {
 	}
 
 	public String getExprForPointcutargs(UnresolvedType type, String method) {
-//		logger.info("getExprForPointcutargs " + type + " " + method);
 		List<String> exprs = pointcutargsHandler.getFor(type, method);
 		if (exprs == null)
 			return null;

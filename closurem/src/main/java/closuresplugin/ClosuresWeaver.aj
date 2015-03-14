@@ -64,7 +64,6 @@ public aspect ClosuresWeaver extends AbstractWeaver {
 				ResolvedMember methodGen = iter.next();
 
 				ResolvedMemberImpl bcelMethod = (ResolvedMemberImpl)methodGen;
-//				System.out.println("saw method:" + bcelMethod.toDebugString());
 				for (AnnotationAJ annotation : bcelMethod.getAnnotations()) {
 					if (Joinpoint.class.getName().equals(annotation.getTypeName())) {
 						jpToReturnType.put(
@@ -78,7 +77,6 @@ public aspect ClosuresWeaver extends AbstractWeaver {
 					if (AfterReturning.class.getName().equals(annotation.getTypeName())) {
 						AnnotationAJ ann = getJoinpointSignature(bcelMethod.getAnnotations());
 						if (ann != null) {
-//							System.out.println("saw joinpoint sig:" + bcelMethod.toDebugString() + ", " + getArgumentTypes(ann.getStringFormOfValue("args")) + ", " + ann.getStringFormOfValue("name") +", " + bcelMethod.getParameterTypes()[0]);
 							jpAndAfterReturningType.add(new Pair<NameAndArgumentType, UnresolvedType>(joinpointSignatureToNameAndArgumentType(ann), bcelMethod.getParameterTypes()[0]));
 						}
 					}
@@ -86,7 +84,6 @@ public aspect ClosuresWeaver extends AbstractWeaver {
 					if (AfterThrowing.class.getName().equals(annotation.getTypeName())) {
 						AnnotationAJ ann = getJoinpointSignature(bcelMethod.getAnnotations());
 						if (ann != null) {
-//							System.out.println("saw joinpoint sig:" + bcelMethod.toDebugString() + ", " + getArgumentTypes(ann.getStringFormOfValue("args")) + ", " + ann.getStringFormOfValue("name") +", " + bcelMethod.getParameterTypes()[0]);
 							jpAndAfterThrowingException.add(new Pair<NameAndArgumentType, UnresolvedType>(joinpointSignatureToNameAndArgumentType(ann), bcelMethod.getParameterTypes()[0]));
 						}
 					}
@@ -94,7 +91,6 @@ public aspect ClosuresWeaver extends AbstractWeaver {
 					if (Around.class.getName().equals(annotation.getTypeName())) {
 						AnnotationAJ ann = getJoinpointSignature(bcelMethod.getAnnotations());
 						if (ann != null) {
-//							System.out.println("saw joinpoint sig while looking for around advices:" + bcelMethod.toDebugString() + ", " + getArgumentTypes(ann.getStringFormOfValue("args")) + ", " + ann.getStringFormOfValue("name") +", " + bcelMethod.getParameterTypes()[0]);
 							jpAndAroundAdvice.add(new Pair<NameAndArgumentType, ResolvedMember>(joinpointSignatureToNameAndArgumentType(ann), bcelMethod));
 							jpAndAdvice.add(new Pair<NameAndArgumentType, ResolvedMember>(joinpointSignatureToNameAndArgumentType(ann), bcelMethod));
 						}

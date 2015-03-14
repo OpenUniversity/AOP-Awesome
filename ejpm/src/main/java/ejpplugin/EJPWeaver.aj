@@ -95,7 +95,6 @@ public aspect EJPWeaver extends AbstractWeaver {
 	}
 	
 	List<DeclareSoft> around(): execution(* World.getDeclareSoft()) {
-//		System.out.println("at my new advice23");
 		List<DeclareSoft> result = proceed();
 		result.addAll(declareSofts);
 		return result;
@@ -107,7 +106,6 @@ public aspect EJPWeaver extends AbstractWeaver {
 				if (requiredAdvice.getAdvice().match(shadow, world)) {
 
 					if (requiredAdvice.getId() == null) {
-//						System.out.println("found match!");
 						requiredAdvice.match();
 					}
 					else {
@@ -119,7 +117,6 @@ public aspect EJPWeaver extends AbstractWeaver {
 						String id = banno.getStringFormOfValue("value");
 
 						if (requiredAdvice.getId().equals(id)) {
-//							System.out.println("found match! " + shadow + ", " + id);
 							requiredAdvice.match();
 						}
 					}
@@ -140,7 +137,6 @@ public aspect EJPWeaver extends AbstractWeaver {
  	
 	after(): execution(void MultiMechanism.setInputFilesPreWeaving(..)) {
 		for (ResolvedType rt : type2method2pointcutarg.keySet()) {
-//			System.out.println("after! with " + rt.getName());
 			for (String pcName : (Set<String>)type2method2pointcutarg.get(rt).keySet()) {
 				ResolvedPointcutDefinition pcDef = getPointcutDef(rt, pcName);
 				if (pcDef == null) {
@@ -212,7 +208,6 @@ public aspect EJPWeaver extends AbstractWeaver {
 		UnresolvedType POINTCUT_UTYPE = UnresolvedType.forName("org.aspectj.lang.annotation.Pointcut");
 		
 		for (ResolvedType resolvedType : files) {
-//			System.out.println("^^^^^^^^ at setInputFilesPreWeaving [EJPWeaver]: " + resolvedType.getName() + "," + resolvedType.getClassName() + " " + resolvedType);
 
 			for (Iterator<ResolvedMember> iter = resolvedType.getMethods(true, true); iter.hasNext(); ) {
 				ResolvedMember methodGen = iter.next();
@@ -220,14 +215,11 @@ public aspect EJPWeaver extends AbstractWeaver {
 					continue;
 
 				visitedMethods.add(methodGen);
-//				System.out.println("method name: " + methodGen.getName());
 
 				ResolvedMemberImpl bcelMethod = (ResolvedMemberImpl)methodGen;
 				for (AnnotationAJ annotation : bcelMethod.getAnnotations()) {
-//					System.out.println("annotation name: " + annotation.getTypeName());
 
 					if ("ejps.runtime.Pointcutargs".equals(annotation.getTypeName())) {
-//						System.out.println("found Pointcutargs annotation!");
 
 						Pointcut pointcutToAdd = Pointcut.fromString(annotation.getStringFormOfValue("expr"))
 						.resolve(new BindingScope(
@@ -253,7 +245,6 @@ public aspect EJPWeaver extends AbstractWeaver {
 					}
 
 					if ("ejps.runtime.NoMatch".equals(annotation.getTypeName())) {
-//						System.out.println("found NoMatch annotation!");
 
 						Pointcut resolvedPointcut =
 								Pointcut.fromString(bcelMethod.getAnnotationOfType(POINTCUT_UTYPE).getStringFormOfValue("value"))
@@ -262,7 +253,6 @@ public aspect EJPWeaver extends AbstractWeaver {
 										bcelMethod.getSourceContext(),
 										extractBindings(bcelMethod.getParameterTypes(), bcelMethod.getParameterNames())));
 
-//						System.out.println("resolvedPointcut: " + resolvedPointcut);
 						tuples.add(new NoMatchTuple(
 								new BcelAdvice(AdviceKind.Before, resolvedPointcut, bcelMethod, 0, 0, 0, null, resolvedType),
 								annotation.getStringFormOfValue("error"),
@@ -291,7 +281,6 @@ public aspect EJPWeaver extends AbstractWeaver {
 	}
 
 	public void setInputFiles(IClassFileProvider input) {
-//		logger.info("setInputFiles " + input);
 
 		super.setInputFiles(input);
 		if (typeMunger == null)
@@ -304,21 +293,17 @@ public aspect EJPWeaver extends AbstractWeaver {
 			UnwovenClassFile classFile = (UnwovenClassFile) i.next();
 			UnresolvedType clazz = Utils.getUnresolvedType(classFile);
 			allClasses.add(clazz);
-//			logger.info("class file " + classFile + "; class '" + clazz + "'");
 		}
 
 		for (UnresolvedType classType : allClasses) {
 			typeMunger.process(world.resolve(classType));
 
 			ResolvedType res = world.resolve(classType);
-//			logger.info("debug: " + res.getDeclaredMethods().length);
 			for (ResolvedMember rm : res.getDeclaredMethods()) {
 				ResolvedMemberImpl enclMethod = (ResolvedMemberImpl) rm;
-//				logger.info("Hey! Matching a shadow "+ enclMethod.getSignature()+":");
 
 				AnnotationGen ann = getPointcutargsAnnotation(enclMethod);
 				if (ann == null) {
-//					logger.info("could not find pointcutargs extensions " + enclMethod.getName());
 					continue;
 				}
 				ElementValue aspectNameVal = Utils.getAnnotationElementValue(ann, "aspect");
@@ -330,9 +315,7 @@ public aspect EJPWeaver extends AbstractWeaver {
 
 				ResolvedType rt = world.resolve(UnresolvedType.forName(aspectNameVal.stringifyValue()));
 				for (ResolvedMember resolvedMember : rt.getDeclaredPointcuts()) {
-//					logger.info("checking " + resolvedMember.getName());
 					if (fullPointcutName.equals(resolvedMember.getName())) {
-//						logger.info("found!");
 						ResolvedPointcutDefinition rpd = (ResolvedPointcutDefinition) resolvedMember;
 						Pointcut originalPointcut = rpd.getPointcut();
 						if ("".equals(originalPointcut.toString())) {
@@ -344,29 +327,22 @@ public aspect EJPWeaver extends AbstractWeaver {
 									originalPointcut,
 									Pointcut.fromString(exprVal.stringifyValue())));
 						}
-//						logger.info("pointcut: " + rpd.getPointcut());
 						continue;
 					}
 				}
-//				logger.info("not found! " + rt.getName());
 			}
-			
 		}
 	}
 	
 	List<BcelShadow> around(MultiMechanism mm, LazyClassGen cg) : reifyClass(mm, cg) {
-//		System.out.println("inspecting " + cg.getName() + " methods:");
 			for (Object mg : cg.getMethodGens()) {
 				LazyMethodGen cmg = (LazyMethodGen) mg;
-//				logger.info("        mg: " + cmg.getName());
 				if (cmg.getMemberView() == null)
 					continue;
 				
 				for (AnnotationAJ aaj : cmg.getMemberView().getAnnotations()) {
-//					logger.info(aaj.getTypeName());
 					if ("org.aspectj.lang.annotation.Pointcut".equals(aaj.getTypeName())) {
 						String result = typeMunger.getExprForPointcutargs(cg.getType(), cmg.getName());
-//						logger.info("result = " + result);
 					}
 				}
 			}
@@ -375,11 +351,9 @@ public aspect EJPWeaver extends AbstractWeaver {
 
 	public List<IEffect> match(BcelShadow shadow) {
 		shadows.add(shadow);
-//		System.out.println("debug33: at match with " + tuples.size());
 		
 		for (NoMatchTuple tuple : tuples) {
 			BcelAdvice conditionalShadowMunger = tuple.getConditionalShadowMunger();
-//			System.out.println("debug33: checking: " + shadow);
 			if (conditionalShadowMunger.match(shadow, world)) {
 				conditionalShadowMunger.specializeOn(shadow);
 
@@ -406,7 +380,6 @@ public aspect EJPWeaver extends AbstractWeaver {
 	}
 
 	private void handleNoMatchByPackage(NoMatchTuple tuple, BcelAdvice conditionalShadowMunger) {
-//		System.out.println("by package");
 		BcelVar bc = conditionalShadowMunger.getExposedStateAsBcelVars(false)[0];
 
 		if ("".equals(bc.getType().getPackageName())) {
@@ -434,7 +407,6 @@ public aspect EJPWeaver extends AbstractWeaver {
 	}
 
 	private void handleNoMatchByClass(NoMatchTuple tuple, BcelAdvice conditionalShadowMunger) {
-//		System.out.println("by class");
 		BcelVar bc = conditionalShadowMunger.getExposedStateAsBcelVars(false)[0];
 
 		ResolvedMemberImpl bcelMethod = tuple.getMethod();
@@ -457,7 +429,6 @@ public aspect EJPWeaver extends AbstractWeaver {
 	}
 
 	private void handleNoMatchByMethod(NoMatchTuple tuple, BcelAdvice conditionalShadowMunger) {
-//		System.out.println("by method");
 		BcelVar bc = conditionalShadowMunger.getExposedStateAsBcelVars(false)[0];
 		AnnotationAccessVar accv = (AnnotationAccessVar) bc;
 		BcelAnnotation methodAnnoAnn = (BcelAnnotation) ((BcelMethod) accv.getMember()).getAnnotationOfType(METHOD_ANNO_UTYPE);
@@ -482,7 +453,6 @@ public aspect EJPWeaver extends AbstractWeaver {
 	}
 
 	private void handleNoMatchByEjp(NoMatchTuple tuple, BcelAdvice conditionalShadowMunger) {
-//		System.out.println("by ejp");
 		BcelVar bc = conditionalShadowMunger.getExposedStateAsBcelVars(false)[0];
 		AnnotationAccessVar accv = (AnnotationAccessVar) bc;
 		BcelAnnotation methodAnnoAnn = (BcelAnnotation) ((BcelMethod) accv.getMember()).getAnnotationOfType(METHOD_ANNO_UTYPE);
@@ -533,8 +503,6 @@ public aspect EJPWeaver extends AbstractWeaver {
 			this.requiredShadowMunger = requiredShadowMunger;
 			this.method = method;
 			this.granularity = granularity;
-			
-//			System.out.println("creating NoMatchTuple with: " + conditionalShadowMunger);
 		}
 		
 		public BcelAdvice getConditionalShadowMunger() { return conditionalShadowMunger; }
