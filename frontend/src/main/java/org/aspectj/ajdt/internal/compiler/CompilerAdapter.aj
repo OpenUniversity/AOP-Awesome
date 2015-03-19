@@ -95,7 +95,6 @@ public privileged aspect CompilerAdapter {
 	
 	// We want this to run even in the erroneous case to ensure 'compiled:' gets out...
 	after(CompilationUnitDeclaration unit, int index) : processing(unit, index) {
-		System.out.println("yeahhhhh123");
 		compilerAdapter.afterProcessing(unit,index);
 	}
 	
