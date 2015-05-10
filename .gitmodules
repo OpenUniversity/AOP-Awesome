@@ -1,0 +1,3 @@
+[submodule "org.aspectj"]
+	path = org.aspectj
+	url = https://github.com/OpenUniversity/org.aspectj.git
