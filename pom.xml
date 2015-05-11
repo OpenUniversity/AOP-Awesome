@@ -51,4 +51,32 @@
       </plugins>
     </pluginManagement>
   </build>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+	<artifactId>aspectjweaver</artifactId>
+	<groupId>org.aspectj</groupId>
+	<version>1.8.5</version>
+	<scope>system</scope>
+	<systemPath>${project.basedir}/../org.aspectj/aj-build/dist/tools/lib/aspectjweaver.jar</systemPath>
+      </dependency>
+
+      <dependency>
+	<artifactId>aspectjtools</artifactId>
+	<groupId>org.aspectj</groupId>
+	<version>1.8.5</version>
+	<scope>system</scope>
+	<systemPath>${project.basedir}/../org.aspectj/aj-build/dist/tools/lib/aspectjtools.jar</systemPath>
+      </dependency>
+
+      <dependency>
+	<artifactId>aspectjrt</artifactId>
+	<groupId>org.aspectj</groupId>
+	<version>1.8.5</version>
+	<scope>system</scope>
+	<systemPath>${project.basedir}/../org.aspectj/aj-build/dist/tools/lib/aspectjrt.jar</systemPath>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 </project>
