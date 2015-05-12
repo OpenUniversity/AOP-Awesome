@@ -16,6 +16,7 @@
   
   <modules>
     <module>platform</module>
+<!--
     <module>aspectjm</module>
     <module>coolm</module>
     <module>frontend</module>
@@ -26,6 +27,7 @@
     <module>closuref</module>
     <module>closurem</module>
     <module>testing</module>
+-->
   </modules>
 
   <build>
