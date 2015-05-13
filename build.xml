@@ -9,7 +9,7 @@
 		<mkdir dir="test"/>
 		<taskdef resource="net/sf/antcontrib/antlib.xml"/>
 
-		<copy file="libs/aspectjrt-1.7.4.jar" tofile="dist/awesome_runtime.jar"/>
+		<copy file="libs/aspectjrt.jar" tofile="dist/awesome_runtime.jar"/>
 		<jar destfile="dist/awesome_runtime.jar" update="yes">
 			<manifest>
 				<attribute name="BManifest-Version" value="1.0"/>
@@ -60,8 +60,8 @@
 
 		<java fork="true" classname="org.aspectj.tools.ajc.Main">
 			<classpath>
-				<pathelement path="libs/aspectjrt-1.7.4.jar"/>
-				<pathelement path="libs/aspectjtools-1.7.4.jar"/>
+				<pathelement path="libs/aspectjrt.jar"/>
+				<pathelement path="libs/aspectjtools.jar"/>
 				<fileset dir="libs">
                                         <include name="*.jar"/>
                                 </fileset>
