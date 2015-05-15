@@ -1,12 +1,10 @@
-
-package coolplugin;
+package org.aspectj.weaver.bcel;
 
 import java.lang.reflect.Modifier;
-import org.aspectj.weaver.*;
-import org.aspectj.weaver.bcel.BcelShadow;
-import org.aspectj.weaver.bcel.Utility;
 import org.aspectj.apache.bcel.Constants;
+import org.aspectj.weaver.*;
 import org.aspectj.apache.bcel.generic.*;
+
 /**
  * Associates coordinator and coordinated classes
  * by weaving into the coordinated's class constructor

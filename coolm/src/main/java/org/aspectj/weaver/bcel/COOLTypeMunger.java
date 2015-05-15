@@ -1,7 +1,6 @@
-package coolplugin;
+package org.aspectj.weaver.bcel;
 
 import org.aspectj.weaver.*;
-import org.aspectj.weaver.bcel.*;
 
 import java.util.*;
 import java.lang.reflect.Modifier;
@@ -143,7 +142,8 @@ public class COOLTypeMunger {
 			if (field == null)
 				throw new Exception(" field " + fieldName + " in class "
 						+ tgtType.getName() + " is not found!");
-			if (field.isStatic())
+			if (Modifier.isStatic(field.getModifiers()))
+
 				throw new Exception(
 						"Field "
 								+ field.getName()

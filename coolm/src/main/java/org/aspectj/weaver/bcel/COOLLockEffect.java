@@ -1,8 +1,6 @@
-package coolplugin;
+package org.aspectj.weaver.bcel;
 
 import org.aspectj.weaver.Member;
-import org.aspectj.weaver.bcel.BcelShadow;
-import org.aspectj.weaver.bcel.Range;
 
 public class COOLLockEffect extends COOLCoordEffect {
 

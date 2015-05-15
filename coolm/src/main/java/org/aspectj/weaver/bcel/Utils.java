@@ -1,4 +1,4 @@
-package coolplugin;
+package org.aspectj.weaver.bcel;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -9,7 +9,6 @@ import org.aspectj.weaver.ResolvedType;
 import org.aspectj.weaver.Member;
 import org.aspectj.weaver.UnresolvedType;
 import org.aspectj.apache.bcel.classfile.annotation.*;
-import org.aspectj.weaver.bcel.*;
 //import org.aspectj.apache.bcel.generic.*;
 import org.aspectj.weaver.AnnotationAJ;
 import org.aspectj.apache.bcel.generic.Type;

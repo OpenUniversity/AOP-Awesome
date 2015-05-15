@@ -1,4 +1,4 @@
-package coolplugin;
+package org.aspectj.weaver.bcel;
 
 import java.lang.reflect.Modifier;
 
@@ -9,9 +9,6 @@ import org.aspectj.weaver.MemberImpl;
 import org.aspectj.weaver.ResolvedType;
 import org.aspectj.weaver.Shadow;
 import org.aspectj.weaver.UnresolvedType;
-import org.aspectj.weaver.bcel.BcelShadow;
-import org.aspectj.weaver.bcel.BcelWorld;
-import org.aspectj.weaver.bcel.Utility;
 
 
 public abstract class COOLCoordEffect extends COOLEffect {
@@ -49,11 +46,11 @@ public abstract class COOLCoordEffect extends COOLEffect {
 				targetType,  Modifier.PRIVATE, aspectType, "_coord", UnresolvedType.NONE);
 		//System.err.println("Pushing the object in the "+coordField+" field");
 		//pushing the _coord field object on the stack
-		shadow.getThisVarField().appendLoad(il, fact);
+		((BcelVar)shadow.getThisVar()).appendLoad(il, fact);
 		il.append(Utility.createGet(fact, coordField));
 		//pushing this (argument of an advice method)
 		//System.err.println("Pushing This Var: ");
-		shadow.getThisVarField().appendLoad(il, fact);
+		((BcelVar)shadow.getThisVar()).appendLoad(il, fact);
 		//shadow.getThisVar().appendLoadAndConvert(il, fact, world.resolve(targetType));
 		Member adviceMethodMember = MemberImpl.method(aspectType, Modifier.PUBLIC, ResolvedType.VOID, 
 				adviceMethodName, new UnresolvedType[] {targetType});

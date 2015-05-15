@@ -1,4 +1,4 @@
-package coolplugin;
+package org.aspectj.weaver.bcel;
 
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.HashSet;
-import org.aspectj.weaver.bcel.*;
+
 import org.aspectj.weaver.Member;
 import org.aspectj.weaver.ResolvedMember;
 import org.aspectj.weaver.ResolvedMemberImpl;
@@ -16,22 +16,17 @@ import org.aspectj.weaver.MemberImpl;
 import org.aspectj.weaver.Shadow;
 import org.aspectj.weaver.UnresolvedType;
 import org.aspectj.weaver.ResolvedType;
-import org.aspectj.apache.bcel.classfile.annotation.*;
-import org.aspectj.weaver.AnnotationAJ;
-import org.aspectj.weaver.bcel.BcelMethod;
-import org.aspectj.weaver.bcel.BcelShadow;
-import org.aspectj.weaver.bcel.LazyClassGen;
-import org.aspectj.weaver.bcel.LazyMethodGen;
-import org.aspectj.weaver.IClassFileProvider;
-import org.aspectj.weaver.bcel.UnwovenClassFile;
-import org.aspectj.weaver.bcel.BcelWorld;
-import org.aspectj.weaver.bcel.BcelObjectType;
-import org.aspectj.apache.bcel.generic.*;
 import org.aspectj.apache.bcel.classfile.ConstantPool;
-
-import awesome.platform.AbstractWeaver;
-import awesome.platform.IEffect;
-import awesome.platform.MultiMechanism;
+import org.aspectj.apache.bcel.classfile.annotation.*;
+import org.aspectj.apache.bcel.generic.FieldInstruction;
+import org.aspectj.apache.bcel.generic.Instruction;
+import org.aspectj.apache.bcel.generic.InstructionHandle;
+import org.aspectj.apache.bcel.generic.InvokeInstruction;
+import org.aspectj.weaver.AnnotationAJ;
+import org.aspectj.weaver.IClassFileProvider;
+import org.openu.awesome.platform.AbstractWeaver;
+import org.openu.awesome.platform.IEffect;
+import org.openu.awesome.platform.MultiMechanism;
 
 import com.sun.org.apache.bcel.internal.Constants;
 

@@ -1,4 +1,4 @@
-package coolplugin;
+package org.aspectj.weaver.bcel;
 
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
@@ -6,17 +6,12 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.aspectj.weaver.*;
-import org.aspectj.weaver.bcel.BcelShadow;
-import org.aspectj.weaver.bcel.BcelVar;
-import org.aspectj.weaver.bcel.BcelWorld;
-import org.aspectj.weaver.bcel.Range;
-import org.aspectj.weaver.bcel.ShadowRange;
 
 import org.aspectj.weaver.bcel.Utility;
 import org.aspectj.apache.bcel.Constants;
 import org.aspectj.apache.bcel.generic.*;
 
-import awesome.platform.IEffect;
+import org.openu.awesome.platform.IEffect;
 
 
 public abstract class COOLEffect implements IEffect {	
