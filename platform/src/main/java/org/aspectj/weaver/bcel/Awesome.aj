@@ -1,9 +1,12 @@
 package org.aspectj.weaver.bcel;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import org.aspectj.weaver.ConcreteTypeMunger;
 import org.aspectj.weaver.IClassFileProvider;
+import org.aspectj.weaver.ResolvedType;
 import org.aspectj.weaver.ShadowMunger;
 import org.openu.awesome.platform.MultiMechanism;
 
@@ -23,5 +26,13 @@ public privileged aspect Awesome {
 
 	before(BcelWeaver weaver, IClassFileProvider input): execution(* BcelWeaver.weave(..)) && args(input) && this(weaver) {
 		weaver.MM.setInputFiles(input);
+	}
+
+	before(BcelWeaver weaver): execution(* BcelWeaver.prepareForWeave()) && this(weaver) {
+		List<ResolvedType> cgl = new ArrayList<ResolvedType>();
+		for (Iterator<UnwovenClassFile> i = weaver.addedClasses.iterator(); i.hasNext();) {
+			cgl.add(weaver.world.resolve(i.next().getClassName()));
+		}
+		weaver.MM.setInputFilesPreWeaving(cgl);
 	}
 }
