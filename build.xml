@@ -72,8 +72,6 @@
 		</java>
 
                 <jar destfile="dist/awesome_weaver.jar" update="yes">
-                        <zipfileset src="libs/asm-4.0.renamed.jar" includes="aj/**"/>
-
                         <manifest>
                                  <attribute name="Bundle-ClassPath" value="."/>
                                  <attribute name="Implementation-Version" value="1.7.2"/>
