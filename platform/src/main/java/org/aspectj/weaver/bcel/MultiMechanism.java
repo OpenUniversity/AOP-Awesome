@@ -1,4 +1,4 @@
-package org.openu.awesome.platform;
+package org.aspectj.weaver.bcel;
 
 import java.util.*;
 
@@ -19,6 +19,7 @@ import org.aspectj.weaver.bcel.LazyMethodGen;
 import org.aspectj.weaver.Member;
 import org.aspectj.weaver.ResolvedMember;
 import org.openu.awesome.platform.IEffect;
+import org.openu.awesome.platform.IMechanism;
 
 public class MultiMechanism {
 	

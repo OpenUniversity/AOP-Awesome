@@ -8,7 +8,6 @@ import org.aspectj.weaver.ConcreteTypeMunger;
 import org.aspectj.weaver.IClassFileProvider;
 import org.aspectj.weaver.ResolvedType;
 import org.aspectj.weaver.ShadowMunger;
-import org.openu.awesome.platform.MultiMechanism;
 
 public privileged aspect Awesome {
 

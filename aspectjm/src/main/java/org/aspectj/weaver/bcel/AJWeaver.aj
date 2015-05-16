@@ -39,10 +39,6 @@ import org.aspectj.weaver.WeaverMessages;
 import org.aspectj.weaver.WeaverStateInfo;
 import org.openu.awesome.platform.AbstractWeaver;
 import org.openu.awesome.platform.IEffect;
-import org.openu.awesome.platform.MultiMechanism;
-
-
-
 
 public privileged aspect AJWeaver extends AbstractWeaver {
 

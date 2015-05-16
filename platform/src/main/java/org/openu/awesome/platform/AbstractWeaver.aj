@@ -9,6 +9,7 @@ import org.aspectj.weaver.bcel.LazyClassGen;
 import org.aspectj.weaver.bcel.LazyMethodGen;
 import org.aspectj.weaver.bcel.BcelWorld;
 import org.aspectj.weaver.bcel.BcelShadow;
+import org.aspectj.weaver.bcel.MultiMechanism;
 
 public abstract aspect AbstractWeaver implements IMechanism {
 	protected MultiMechanism mm;

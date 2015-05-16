@@ -28,25 +28,14 @@ import org.aspectj.weaver.ResolvedPointcutDefinition;
 import org.aspectj.weaver.ResolvedType;
 import org.aspectj.weaver.UnresolvedType;
 import org.aspectj.weaver.World;
-import org.aspectj.weaver.bcel.AnnotationAccessVar;
-import org.aspectj.weaver.bcel.BcelAdvice;
-import org.aspectj.weaver.bcel.BcelAnnotation;
-import org.aspectj.weaver.bcel.BcelMethod;
-import org.aspectj.weaver.bcel.BcelShadow;
-import org.aspectj.weaver.bcel.BcelVar;
-import org.aspectj.weaver.bcel.LazyClassGen;
-import org.aspectj.weaver.bcel.LazyMethodGen;
-import org.aspectj.weaver.bcel.UnwovenClassFile;
 import org.aspectj.weaver.patterns.AndPointcut;
 import org.aspectj.weaver.patterns.DeclareSoft;
 import org.aspectj.weaver.patterns.ExactTypePattern;
 import org.aspectj.weaver.patterns.FormalBinding;
 import org.aspectj.weaver.patterns.OrPointcut;
 import org.aspectj.weaver.patterns.Pointcut;
-
 import org.openu.awesome.platform.AbstractWeaver;
 import org.openu.awesome.platform.IEffect;
-import org.openu.awesome.platform.MultiMechanism;
 
 public aspect EJPWeaver extends AbstractWeaver {
 

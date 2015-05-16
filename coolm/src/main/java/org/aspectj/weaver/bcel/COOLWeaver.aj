@@ -26,7 +26,6 @@ import org.aspectj.weaver.AnnotationAJ;
 import org.aspectj.weaver.IClassFileProvider;
 import org.openu.awesome.platform.AbstractWeaver;
 import org.openu.awesome.platform.IEffect;
-import org.openu.awesome.platform.MultiMechanism;
 
 import com.sun.org.apache.bcel.internal.Constants;
 
