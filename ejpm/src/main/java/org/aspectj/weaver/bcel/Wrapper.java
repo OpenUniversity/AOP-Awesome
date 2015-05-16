@@ -1,4 +1,4 @@
-package ejpplugin;
+package org.aspectj.weaver.bcel;
 
 import org.aspectj.weaver.UnresolvedType;
 import org.aspectj.weaver.bcel.LazyClassGen;

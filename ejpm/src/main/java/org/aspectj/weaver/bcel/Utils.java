@@ -1,4 +1,4 @@
-package ejpplugin;
+package org.aspectj.weaver.bcel;
 
 import org.aspectj.apache.bcel.classfile.annotation.AnnotationGen;
 import org.aspectj.apache.bcel.classfile.annotation.ElementValue;

@@ -1,4 +1,4 @@
-package ejpplugin;
+package org.aspectj.weaver.bcel;
 
 import java.util.ArrayList;
 import java.util.HashMap;

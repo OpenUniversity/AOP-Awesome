@@ -1,4 +1,4 @@
-package ejpplugin;
+package org.aspectj.weaver.bcel;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -44,9 +44,9 @@ import org.aspectj.weaver.patterns.FormalBinding;
 import org.aspectj.weaver.patterns.OrPointcut;
 import org.aspectj.weaver.patterns.Pointcut;
 
-import awesome.platform.AbstractWeaver;
-import awesome.platform.IEffect;
-import awesome.platform.MultiMechanism;
+import org.openu.awesome.platform.AbstractWeaver;
+import org.openu.awesome.platform.IEffect;
+import org.openu.awesome.platform.MultiMechanism;
 
 public aspect EJPWeaver extends AbstractWeaver {
 
