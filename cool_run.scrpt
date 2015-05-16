@@ -1,2 +1,2 @@
 
-java  -noverify -cp libs/aspectjrt-1.7.4.jar:dist/woven.jar base.Main
+java  -noverify -cp libs/aspectjrt.jar:dist/woven.jar base.Main
