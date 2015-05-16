@@ -1,24 +1,10 @@
 package org.aspectj.weaver.bcel;
 
-import java.util.Iterator;
 import java.util.List;
 
-import org.aspectj.apache.bcel.generic.FieldInstruction;
-import org.aspectj.apache.bcel.generic.InstructionConstants;
-import org.aspectj.apache.bcel.generic.InstructionFactory;
-import org.aspectj.apache.bcel.generic.InstructionHandle;
-import org.aspectj.apache.bcel.generic.InstructionList;
-import org.aspectj.apache.bcel.generic.InstructionTargeter;
-import org.aspectj.apache.bcel.generic.ObjectType;
-import org.aspectj.bridge.ISourceLocation;
-import org.aspectj.weaver.Advice;
-import org.aspectj.weaver.AdviceKind;
 import org.aspectj.weaver.ConcreteTypeMunger;
-import org.aspectj.weaver.Member;
-import org.aspectj.weaver.ResolvedMember;
+import org.aspectj.weaver.IClassFileProvider;
 import org.aspectj.weaver.ShadowMunger;
-import org.aspectj.weaver.UnresolvedType;
-import org.openu.awesome.platform.IEffect;
 import org.openu.awesome.platform.MultiMechanism;
 
 public privileged aspect Awesome {
@@ -35,4 +21,7 @@ public privileged aspect Awesome {
 		return weaver.MM.transform(clazz);
 	}
 
+	before(BcelWeaver weaver, IClassFileProvider input): execution(* BcelWeaver.weave(..)) && args(input) && this(weaver) {
+		weaver.MM.setInputFiles(input);
+	}
 }
