@@ -146,6 +146,7 @@
 				<pathelement path="${classpath}"/>
 			</classpath>
 
+			<arg line="-Xlint:ignore"/>
 			<arg line="-inpath ${inpath}"/>
 			<arg line="-outjar dist/awesome_tools.jar"/>
 		</java>
