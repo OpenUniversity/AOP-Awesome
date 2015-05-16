@@ -16,7 +16,7 @@ public abstract aspect FrontendAspect {
 
 	pointcut addFile(File file): call(void ConfigParser.addFile(File)) && args(file);
 
-	/*void around(File file): addFile(file) {
+	void around(File file): addFile(file) {
 //		System.out.println("got: " + file.getName());
 		try {
 			proceed(isSourceForThisMechanism(file.getName()) ? convert2java(file) : file);
@@ -25,7 +25,7 @@ public abstract aspect FrontendAspect {
 			ex.printStackTrace();
 			return;
 		}
-	}*/
+	}
 
 	protected pointcut parseCommandLine(String[] args): call(void ConfigParser.parseCommandLine(String[])) && args(args);
 
