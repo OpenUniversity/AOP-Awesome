@@ -112,7 +112,7 @@
 		<mkdir dir="dist"/>
 		<taskdef resource="net/sf/antcontrib/antlib.xml"/>
 
-		<var name="classpath" value="platform/libs/jrockit.jar"/>
+		<var name="classpath" value=""/>
                 <if>
                         <isset property="deps"/>
                         <then>
@@ -138,11 +138,8 @@
 
 		<java fork="true" classname="org.aspectj.tools.ajc.Main">
 			<classpath>
-                                <!-- see https://bugs.eclipse.org/bugs/show_bug.cgi?id=430930 -->
-				<pathelement path="libs/aspectjweaver-1.7.2.jar"/>
-                                <fileset dir="libs">
-				        <include name="*.jar"/>
-			        </fileset>
+				<pathelement path="libs/aspectjrt.jar"/>
+				<pathelement path="libs/aspectjtools.jar"/>
 				<pathelement path="${classpath}"/>
 			</classpath>
 
