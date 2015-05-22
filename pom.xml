@@ -25,9 +25,7 @@
     <module>ejpm</module>
     <module>cjpf</module>
     <module>cjpm</module>
-<!--
     <module>testing</module>
--->
   </modules>
 
   <build>
