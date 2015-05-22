@@ -20,26 +20,26 @@ import java.lang.ref.WeakReference;
     context.push("get_inner_scoped_vars_0_0");
     Fail41:
     { 
-      IStrategoTerm c_25 = null;
-      TermReference d_25 = new TermReference();
-      c_25 = term;
+      IStrategoTerm m_25 = null;
+      TermReference n_25 = new TermReference();
+      m_25 = term;
       term = new_hashtable_0_0.instance.invoke(context, term);
       if(term == null)
         break Fail41;
-      if(d_25.value == null)
-        d_25.value = term;
+      if(n_25.value == null)
+        n_25.value = term;
       else
-        if(d_25.value != term && !d_25.value.match(term))
+        if(n_25.value != term && !n_25.value.match(term))
           break Fail41;
-      term = c_25;
+      term = m_25;
       lifted49 lifted490 = new lifted49();
-      lifted490.d_25 = d_25;
+      lifted490.n_25 = n_25;
       term = SRTS_all.instance.invoke(context, term, lifted490);
       if(term == null)
         break Fail41;
-      if(d_25.value == null)
+      if(n_25.value == null)
         break Fail41;
-      term = d_25.value;
+      term = n_25.value;
       context.popOnSuccess();
       if(true)
         return term;

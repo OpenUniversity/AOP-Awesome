@@ -21,46 +21,46 @@ import java.lang.ref.WeakReference;
     context.push("handle_io_0_0");
     Fail235:
     { 
-      IStrategoTerm o_50 = null;
-      IStrategoTerm p_50 = null;
-      IStrategoTerm q_50 = null;
-      IStrategoTerm r_50 = null;
-      IStrategoTerm t_50 = null;
-      IStrategoTerm z_50 = null;
-      IStrategoTerm v_50 = null;
+      IStrategoTerm b_51 = null;
+      IStrategoTerm c_51 = null;
+      IStrategoTerm d_51 = null;
+      IStrategoTerm e_51 = null;
+      IStrategoTerm g_51 = null;
+      IStrategoTerm l_51 = null;
+      IStrategoTerm i_51 = null;
       if(term.getTermType() != IStrategoTerm.LIST || ((IStrategoList)term).isEmpty())
         break Fail235;
-      o_50 = ((IStrategoList)term).tail();
-      term = debug_0_0.instance.invoke(context, o_50);
+      b_51 = ((IStrategoList)term).tail();
+      term = debug_0_0.instance.invoke(context, b_51);
       if(term == null)
         break Fail235;
-      term = o_50;
+      term = b_51;
       if(term.getTermType() != IStrategoTerm.LIST || ((IStrategoList)term).isEmpty())
         break Fail235;
-      t_50 = ((IStrategoList)term).head();
-      term = t_50;
+      g_51 = ((IStrategoList)term).head();
+      term = g_51;
       term = $Read$From$File_0_0.instance.invoke(context, term);
       if(term == null)
         break Fail235;
-      p_50 = term;
-      term = o_50;
+      c_51 = term;
+      term = b_51;
       if(term.getTermType() != IStrategoTerm.LIST || ((IStrategoList)term).isEmpty())
         break Fail235;
-      z_50 = ((IStrategoList)term).tail();
-      term = z_50;
+      l_51 = ((IStrategoList)term).tail();
+      term = l_51;
       if(term.getTermType() != IStrategoTerm.LIST || ((IStrategoList)term).isEmpty())
         break Fail235;
-      v_50 = ((IStrategoList)term).head();
-      q_50 = v_50;
-      term = transform_0_0.instance.invoke(context, p_50);
+      i_51 = ((IStrategoList)term).head();
+      d_51 = i_51;
+      term = transform_0_0.instance.invoke(context, c_51);
       if(term == null)
         break Fail235;
-      r_50 = term;
-      term = termFactory.makeTuple(q_50, ejp.const108);
+      e_51 = term;
+      term = termFactory.makeTuple(d_51, ejp.const108);
       term = fopen_0_0.instance.invoke(context, term);
       if(term == null)
         break Fail235;
-      term = termFactory.makeTuple(r_50, term);
+      term = termFactory.makeTuple(e_51, term);
       term = fputs_0_0.instance.invoke(context, term);
       if(term == null)
         break Fail235;

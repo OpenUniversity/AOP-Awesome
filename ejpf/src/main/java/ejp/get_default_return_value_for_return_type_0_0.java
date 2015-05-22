@@ -17,26 +17,30 @@ import java.lang.ref.WeakReference;
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
+    context.push("get_default_return_value_for_return_type_0_0");
     Fail104:
     { 
-      IStrategoTerm b_40 = null;
-      IStrategoTerm c_40 = null;
-      IStrategoTerm d_40 = null;
-      b_40 = term;
-      d_40 = term;
-      c_40 = b_40;
-      term = d_40;
+      IStrategoTerm n_40 = null;
+      IStrategoTerm o_40 = null;
+      IStrategoTerm p_40 = null;
+      n_40 = term;
+      p_40 = term;
+      term = strip_annos_0_0.instance.invoke(context, n_40);
+      if(term == null)
+        break Fail104;
+      o_40 = term;
+      term = p_40;
       IStrategoTerm term60 = term;
       Success55:
       { 
         Fail105:
         { 
-          IStrategoTerm e_40 = null;
-          e_40 = term;
-          term = c_40;
+          IStrategoTerm q_40 = null;
+          q_40 = term;
+          term = o_40;
           if(term.getTermType() != IStrategoTerm.APPL || transform._consVoid_0 != ((IStrategoAppl)term).getConstructor())
             break Fail105;
-          term = e_40;
+          term = q_40;
           { 
             term = ejp.constNone0;
             if(true)
@@ -49,12 +53,12 @@ import java.lang.ref.WeakReference;
         { 
           Fail106:
           { 
-            IStrategoTerm f_40 = null;
-            f_40 = term;
-            term = c_40;
+            IStrategoTerm r_40 = null;
+            r_40 = term;
+            term = o_40;
             if(term.getTermType() != IStrategoTerm.APPL || transform._consInt_0 != ((IStrategoAppl)term).getConstructor())
               break Fail106;
-            term = f_40;
+            term = r_40;
             { 
               term = ejp.constSome0;
               if(true)
@@ -67,12 +71,12 @@ import java.lang.ref.WeakReference;
           { 
             Fail107:
             { 
-              IStrategoTerm g_40 = null;
-              g_40 = term;
-              term = c_40;
+              IStrategoTerm s_40 = null;
+              s_40 = term;
+              term = o_40;
               if(term.getTermType() != IStrategoTerm.APPL || transform._consLong_0 != ((IStrategoAppl)term).getConstructor())
                 break Fail107;
-              term = g_40;
+              term = s_40;
               { 
                 term = ejp.constSome0;
                 if(true)
@@ -85,12 +89,12 @@ import java.lang.ref.WeakReference;
             { 
               Fail108:
               { 
-                IStrategoTerm h_40 = null;
-                h_40 = term;
-                term = c_40;
+                IStrategoTerm t_40 = null;
+                t_40 = term;
+                term = o_40;
                 if(term.getTermType() != IStrategoTerm.APPL || transform._consShort_0 != ((IStrategoAppl)term).getConstructor())
                   break Fail108;
-                term = h_40;
+                term = t_40;
                 { 
                   term = ejp.constSome0;
                   if(true)
@@ -103,12 +107,12 @@ import java.lang.ref.WeakReference;
               { 
                 Fail109:
                 { 
-                  IStrategoTerm i_40 = null;
-                  i_40 = term;
-                  term = c_40;
+                  IStrategoTerm u_40 = null;
+                  u_40 = term;
+                  term = o_40;
                   if(term.getTermType() != IStrategoTerm.APPL || transform._consByte_0 != ((IStrategoAppl)term).getConstructor())
                     break Fail109;
-                  term = i_40;
+                  term = u_40;
                   { 
                     term = ejp.constSome0;
                     if(true)
@@ -121,12 +125,12 @@ import java.lang.ref.WeakReference;
                 { 
                   Fail110:
                   { 
-                    IStrategoTerm j_40 = null;
-                    j_40 = term;
-                    term = c_40;
+                    IStrategoTerm v_40 = null;
+                    v_40 = term;
+                    term = o_40;
                     if(term.getTermType() != IStrategoTerm.APPL || transform._consDouble_0 != ((IStrategoAppl)term).getConstructor())
                       break Fail110;
-                    term = j_40;
+                    term = v_40;
                     { 
                       term = ejp.constSome0;
                       if(true)
@@ -139,12 +143,12 @@ import java.lang.ref.WeakReference;
                   { 
                     Fail111:
                     { 
-                      IStrategoTerm k_40 = null;
-                      k_40 = term;
-                      term = c_40;
+                      IStrategoTerm w_40 = null;
+                      w_40 = term;
+                      term = o_40;
                       if(term.getTermType() != IStrategoTerm.APPL || transform._consFloat_0 != ((IStrategoAppl)term).getConstructor())
                         break Fail111;
-                      term = k_40;
+                      term = w_40;
                       { 
                         term = ejp.constSome0;
                         if(true)
@@ -156,12 +160,12 @@ import java.lang.ref.WeakReference;
                     { 
                       Fail112:
                       { 
-                        IStrategoTerm l_40 = null;
-                        l_40 = term;
-                        term = c_40;
+                        IStrategoTerm x_40 = null;
+                        x_40 = term;
+                        term = o_40;
                         if(term.getTermType() != IStrategoTerm.APPL || transform._consBoolean_0 != ((IStrategoAppl)term).getConstructor())
                           break Fail112;
-                        term = l_40;
+                        term = x_40;
                         { 
                           term = ejp.constSome1;
                           if(true)
@@ -177,10 +181,10 @@ import java.lang.ref.WeakReference;
           }
         }
       }
+      context.popOnSuccess();
       if(true)
         return term;
     }
-    context.push("get_default_return_value_for_return_type_0_0");
     context.popOnFailure();
     return null;
   }

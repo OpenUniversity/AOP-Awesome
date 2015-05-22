@@ -13,9 +13,9 @@ import java.lang.ref.WeakReference;
 
 @SuppressWarnings("all") final class lifted30 extends Strategy 
 { 
-  TermReference h_19;
+  TermReference n_19;
 
-  TermReference g_19;
+  TermReference m_19;
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
@@ -23,18 +23,18 @@ import java.lang.ref.WeakReference;
     { 
       if(term.getTermType() != IStrategoTerm.APPL || transform._consParam_3 != ((IStrategoAppl)term).getConstructor())
         break Fail315;
-      if(h_19.value == null)
-        h_19.value = term.getSubterm(1);
+      if(n_19.value == null)
+        n_19.value = term.getSubterm(1);
       else
-        if(h_19.value != term.getSubterm(1) && !h_19.value.match(term.getSubterm(1)))
+        if(n_19.value != term.getSubterm(1) && !n_19.value.match(term.getSubterm(1)))
           break Fail315;
       IStrategoTerm arg52 = term.getSubterm(2);
       if(arg52.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg52).getConstructor())
         break Fail315;
-      if(g_19.value == null)
-        g_19.value = arg52.getSubterm(0);
+      if(m_19.value == null)
+        m_19.value = arg52.getSubterm(0);
       else
-        if(g_19.value != arg52.getSubterm(0) && !g_19.value.match(arg52.getSubterm(0)))
+        if(m_19.value != arg52.getSubterm(0) && !m_19.value.match(arg52.getSubterm(0)))
           break Fail315;
       if(true)
         return term;

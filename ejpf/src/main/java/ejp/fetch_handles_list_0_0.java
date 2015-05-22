@@ -27,12 +27,12 @@ import java.lang.ref.WeakReference;
         { 
           Fail116:
           { 
-            IStrategoTerm p_40 = null;
+            IStrategoTerm b_41 = null;
             IStrategoTerm arg131 = term.getSubterm(0);
             if(arg131.getTermType() != IStrategoTerm.APPL || transform._consHandles_1 != ((IStrategoAppl)arg131).getConstructor())
               break Fail116;
-            p_40 = arg131.getSubterm(0);
-            term = p_40;
+            b_41 = arg131.getSubterm(0);
+            term = b_41;
             if(true)
               break Success64;
           }

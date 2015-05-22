@@ -15,13 +15,13 @@ import java.lang.ref.WeakReference;
 { 
   public static gen_ejp_annotation_0_1 instance = new gen_ejp_annotation_0_1();
 
-  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm o_39)
+  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm y_39)
   { 
     ITermFactory termFactory = context.getFactory();
     context.push("gen_ejp_annotation_0_1");
     Fail101:
     { 
-      term = fetch_handles_list_0_0.instance.invoke(context, o_39);
+      term = fetch_handles_list_0_0.instance.invoke(context, y_39);
       if(term == null)
         break Fail101;
       term = map_1_0.instance.invoke(context, term, lifted72.instance);

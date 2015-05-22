@@ -15,42 +15,42 @@ import java.lang.ref.WeakReference;
 { 
   public static convert_one_var_dec_0_6 instance = new convert_one_var_dec_0_6();
 
-  public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm g_17, IStrategoTerm h_17, IStrategoTerm i_17, IStrategoTerm j_17, IStrategoTerm k_17, IStrategoTerm l_17)
+  public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm i_17, IStrategoTerm j_17, IStrategoTerm k_17, IStrategoTerm l_17, IStrategoTerm m_17, IStrategoTerm n_17)
   { 
     ITermFactory termFactory = context.getFactory();
     context.push("convert_one_var_dec_0_6");
     Fail19:
     { 
-      IStrategoTerm m_17 = null;
-      IStrategoTerm n_17 = null;
+      IStrategoTerm o_17 = null;
+      IStrategoTerm p_17 = null;
       if(term.getTermType() != IStrategoTerm.APPL || transform._consVarDec_2 != ((IStrategoAppl)term).getConstructor())
         break Fail19;
-      m_17 = term.getSubterm(0);
-      n_17 = term.getSubterm(1);
-      term = termFactory.makeAppl(transform._consVarDec_2, new IStrategoTerm[]{m_17, ejp.constNone0});
-      term = add_local_var_0_2.instance.invoke(context, term, g_17, i_17);
+      o_17 = term.getSubterm(0);
+      p_17 = term.getSubterm(1);
+      term = termFactory.makeAppl(transform._consVarDec_2, new IStrategoTerm[]{o_17, ejp.constNone0});
+      term = add_local_var_0_2.instance.invoke(context, term, i_17, k_17);
       if(term == null)
         break Fail19;
       Success16:
       { 
         Fail20:
         { 
-          IStrategoTerm o_17 = null;
-          o_17 = term;
-          term = or_2_0.instance.invoke(context, n_17, lifted18.instance, lifted19.instance);
+          IStrategoTerm q_17 = null;
+          q_17 = term;
+          term = or_2_0.instance.invoke(context, p_17, lifted18.instance, lifted19.instance);
           if(term == null)
             break Fail20;
-          term = o_17;
+          term = q_17;
           { 
-            term = termFactory.makeAppl(transform._consVarDec_2, new IStrategoTerm[]{m_17, n_17});
-            term = convert_var_dec_by_ejp_call_0_6.instance.invokeDynamic(context, term, NO_STRATEGIES, new IStrategoTerm[]{g_17, h_17, i_17, j_17, k_17, l_17});
+            term = termFactory.makeAppl(transform._consVarDec_2, new IStrategoTerm[]{o_17, p_17});
+            term = convert_var_dec_by_ejp_call_0_6.instance.invokeDynamic(context, term, NO_STRATEGIES, new IStrategoTerm[]{i_17, j_17, k_17, l_17, m_17, n_17});
             if(term == null)
               break Fail19;
             if(true)
               break Success16;
           }
         }
-        term = (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consLocalVarDecStm_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consLocalVarDec_3, new IStrategoTerm[]{h_17, i_17, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consVarDec_2, new IStrategoTerm[]{m_17, n_17}), (IStrategoList)ejp.constNil0)})}), (IStrategoList)ejp.constNil0);
+        term = (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consLocalVarDecStm_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consLocalVarDec_3, new IStrategoTerm[]{j_17, k_17, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consVarDec_2, new IStrategoTerm[]{o_17, p_17}), (IStrategoList)ejp.constNil0)})}), (IStrategoList)ejp.constNil0);
       }
       context.popOnSuccess();
       if(true)

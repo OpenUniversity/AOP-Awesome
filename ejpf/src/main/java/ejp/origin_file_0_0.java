@@ -19,9 +19,9 @@ import java.lang.ref.WeakReference;
   { 
     Fail240:
     { 
-      IStrategoTerm b_52 = null;
-      b_52 = term;
-      term = context.invokePrimitive("SSL_EXT_origin_file", b_52, NO_STRATEGIES, new IStrategoTerm[]{term});
+      IStrategoTerm n_52 = null;
+      n_52 = term;
+      term = context.invokePrimitive("SSL_EXT_origin_file", n_52, NO_STRATEGIES, new IStrategoTerm[]{term});
       if(term == null)
         break Fail240;
       if(true)

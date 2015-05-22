@@ -15,7 +15,7 @@ import java.lang.ref.WeakReference;
 { 
   public static gen_pointcutargs_pointcuts_0_1 instance = new gen_pointcutargs_pointcuts_0_1();
 
-  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm w_77)
+  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm i_78)
   { 
     ITermFactory termFactory = context.getFactory();
     context.push("gen_pointcutargs_pointcuts_0_1");
@@ -26,12 +26,12 @@ import java.lang.ref.WeakReference;
       { 
         Fail98:
         { 
-          TermReference q_38 = new TermReference();
-          IStrategoTerm r_38 = null;
-          IStrategoTerm u_38 = null;
-          IStrategoTerm w_38 = null;
-          IStrategoTerm x_38 = null;
-          IStrategoTerm s_38 = null;
+          TermReference a_39 = new TermReference();
+          IStrategoTerm b_39 = null;
+          IStrategoTerm e_39 = null;
+          IStrategoTerm g_39 = null;
+          IStrategoTerm h_39 = null;
+          IStrategoTerm c_39 = null;
           if(term.getTermType() != IStrategoTerm.TUPLE || term.getSubtermCount() != 2)
             break Fail98;
           IStrategoTerm arg120 = term.getSubterm(0);
@@ -40,33 +40,33 @@ import java.lang.ref.WeakReference;
           IStrategoTerm arg121 = arg120.getSubterm(0);
           if(arg121.getTermType() != IStrategoTerm.APPL || transform._consPointcutargsDec_1 != ((IStrategoAppl)arg121).getConstructor())
             break Fail98;
-          r_38 = arg121.getSubterm(0);
-          u_38 = term.getSubterm(1);
-          term = u_38;
+          b_39 = arg121.getSubterm(0);
+          e_39 = term.getSubterm(1);
+          term = e_39;
           lifted68 lifted680 = new lifted68();
           lifted67 lifted670 = new lifted67();
-          lifted680.q_38 = q_38;
-          lifted670.q_38 = q_38;
+          lifted680.a_39 = a_39;
+          lifted670.a_39 = a_39;
           term = or_2_0.instance.invoke(context, term, lifted670, lifted680);
           if(term == null)
             break Fail98;
-          term = w_77;
-          w_38 = w_77;
-          if(q_38.value == null)
+          term = i_78;
+          g_39 = i_78;
+          if(a_39.value == null)
             break Fail98;
-          term = q_38.value;
+          term = a_39.value;
           if(term.getTermType() != IStrategoTerm.APPL || transform._consExplicitJoinPointDeclarator_3 != ((IStrategoAppl)term).getConstructor())
             break Fail98;
           IStrategoTerm arg125 = term.getSubterm(1);
           if(arg125.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg125).getConstructor())
             break Fail98;
-          s_38 = arg125.getSubterm(0);
-          x_38 = s_38;
-          term = map_1_0.instance.invoke(context, r_38, lifted69.instance);
+          c_39 = arg125.getSubterm(0);
+          h_39 = c_39;
+          term = map_1_0.instance.invoke(context, b_39, lifted69.instance);
           if(term == null)
             break Fail98;
-          term = termFactory.makeAppl(transform._consAspectDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consAspectDecHead_6, new IStrategoTerm[]{ejp.constCons23, termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{x_38}), ejp.constNone0, ejp.constNone0, ejp.constNone0, ejp.constNone0}), termFactory.makeAppl(transform._consAspectBody_1, new IStrategoTerm[]{term})});
-          term = iset_add_0_1.instance.invoke(context, w_38, term);
+          term = termFactory.makeAppl(transform._consAspectDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consAspectDecHead_6, new IStrategoTerm[]{ejp.constCons23, termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{h_39}), ejp.constNone0, ejp.constNone0, ejp.constNone0, ejp.constNone0}), termFactory.makeAppl(transform._consAspectBody_1, new IStrategoTerm[]{term})});
+          term = iset_add_0_1.instance.invoke(context, g_39, term);
           if(term == null)
             break Fail98;
           if(true)

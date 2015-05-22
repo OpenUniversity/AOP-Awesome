@@ -20,9 +20,9 @@ import java.lang.ref.WeakReference;
     context.push("remove_scoped_ejp_var_decs_0_0");
     Fail35:
     { 
-      IStrategoTerm s_21 = null;
-      s_21 = term;
-      term = allow_extends_1_1.instance.invoke(context, term, remove_vars_decs_from_local_var_dec_stm_0_0.instance, s_21);
+      IStrategoTerm c_22 = null;
+      c_22 = term;
+      term = allow_extends_1_1.instance.invoke(context, term, remove_vars_decs_from_local_var_dec_stm_0_0.instance, c_22);
       if(term == null)
         break Fail35;
       context.popOnSuccess();

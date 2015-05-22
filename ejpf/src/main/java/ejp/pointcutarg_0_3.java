@@ -15,7 +15,7 @@ import java.lang.ref.WeakReference;
 { 
   public static pointcutarg_0_3 instance = new pointcutarg_0_3();
 
-  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm o_77, IStrategoTerm p_77, IStrategoTerm q_77)
+  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm a_78, IStrategoTerm b_78, IStrategoTerm c_78)
   { 
     ITermFactory termFactory = context.getFactory();
     Fail48:
@@ -28,7 +28,7 @@ import java.lang.ref.WeakReference;
         { 
           Fail49:
           { 
-            term = termFactory.makeAppl(transform._consWithin_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consAnnoTypePattern_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consAnnoPattern_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consSimpleAnnoPatternValue_2, new IStrategoTerm[]{ejp.constTypeName4, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consDeci_1, new IStrategoTerm[]{o_77})})}), (IStrategoList)ejp.constNil0)}), ejp.constRefTypePattern0})});
+            term = termFactory.makeAppl(transform._consWithin_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consAnnoTypePattern_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consAnnoPattern_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consSimpleAnnoPatternValue_2, new IStrategoTerm[]{ejp.constTypeName4, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consDeci_1, new IStrategoTerm[]{a_78})})}), (IStrategoList)ejp.constNil0)}), ejp.constRefTypePattern0})});
             if(true)
               break Success23;
           }
@@ -40,7 +40,7 @@ import java.lang.ref.WeakReference;
           { 
             Fail50:
             { 
-              term = termFactory.makeAppl(transform._consMethodPattern_6, new IStrategoTerm[]{termFactory.makeAppl(transform._consAnnoPattern_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consSimpleAnnoPatternValue_2, new IStrategoTerm[]{ejp.constTypeName5, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consDeci_1, new IStrategoTerm[]{p_77})})}), (IStrategoList)ejp.constNil0)}), ejp.constModPattern0, ejp.constRefTypePattern0, ejp.constMemberName0, ejp.constCons2, ejp.constNone0});
+              term = termFactory.makeAppl(transform._consMethodPattern_6, new IStrategoTerm[]{termFactory.makeAppl(transform._consAnnoPattern_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consSimpleAnnoPatternValue_2, new IStrategoTerm[]{ejp.constTypeName5, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consDeci_1, new IStrategoTerm[]{b_78})})}), (IStrategoList)ejp.constNil0)}), ejp.constModPattern0, ejp.constRefTypePattern0, ejp.constMemberName0, ejp.constCons2, ejp.constNone0});
               if(true)
                 break Success24;
             }
@@ -48,7 +48,7 @@ import java.lang.ref.WeakReference;
           }
           if(cons5 == transform._consThisBlock_0)
           { 
-            term = termFactory.makeAppl(transform._consMethodPattern_6, new IStrategoTerm[]{termFactory.makeAppl(transform._consAnnoPattern_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consSimpleAnnoPatternValue_2, new IStrategoTerm[]{ejp.constTypeName6, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consDeci_1, new IStrategoTerm[]{q_77})})}), (IStrategoList)ejp.constNil0)}), ejp.constModPattern0, ejp.constRefTypePattern0, ejp.constMemberName0, ejp.constCons2, ejp.constNone0});
+            term = termFactory.makeAppl(transform._consMethodPattern_6, new IStrategoTerm[]{termFactory.makeAppl(transform._consAnnoPattern_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consSimpleAnnoPatternValue_2, new IStrategoTerm[]{ejp.constTypeName6, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consDeci_1, new IStrategoTerm[]{c_78})})}), (IStrategoList)ejp.constNil0)}), ejp.constModPattern0, ejp.constRefTypePattern0, ejp.constMemberName0, ejp.constCons2, ejp.constNone0});
           }
           else
           { 

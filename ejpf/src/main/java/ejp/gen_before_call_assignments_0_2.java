@@ -15,17 +15,17 @@ import java.lang.ref.WeakReference;
 { 
   public static gen_before_call_assignments_0_2 instance = new gen_before_call_assignments_0_2();
 
-  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm x_20, IStrategoTerm ref_y_20)
+  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm h_21, IStrategoTerm ref_i_21)
   { 
-    TermReference y_20 = new TermReference(ref_y_20);
+    TermReference i_21 = new TermReference(ref_i_21);
     context.push("gen_before_call_assignments_0_2");
     Fail30:
     { 
-      term = iset_elements_0_0.instance.invoke(context, x_20);
+      term = iset_elements_0_0.instance.invoke(context, h_21);
       if(term == null)
         break Fail30;
       lifted36 lifted360 = new lifted36();
-      lifted360.y_20 = y_20;
+      lifted360.i_21 = i_21;
       term = map_1_0.instance.invoke(context, term, lifted360);
       if(term == null)
         break Fail30;

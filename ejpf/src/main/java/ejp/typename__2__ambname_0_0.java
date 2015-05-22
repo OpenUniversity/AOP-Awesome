@@ -29,9 +29,9 @@ import java.lang.ref.WeakReference;
         { 
           Fail55:
           { 
-            IStrategoTerm r_27 = null;
-            r_27 = term.getSubterm(0);
-            term = termFactory.makeAppl(transform._consAmbName_1, new IStrategoTerm[]{r_27});
+            IStrategoTerm b_28 = null;
+            b_28 = term.getSubterm(0);
+            term = termFactory.makeAppl(transform._consAmbName_1, new IStrategoTerm[]{b_28});
             if(true)
               break Success27;
           }
@@ -43,14 +43,14 @@ import java.lang.ref.WeakReference;
           { 
             Fail56:
             { 
-              IStrategoTerm n_27 = null;
-              IStrategoTerm o_27 = null;
-              n_27 = term.getSubterm(0);
-              o_27 = term.getSubterm(1);
-              term = this.invoke(context, n_27);
+              IStrategoTerm x_27 = null;
+              IStrategoTerm y_27 = null;
+              x_27 = term.getSubterm(0);
+              y_27 = term.getSubterm(1);
+              term = this.invoke(context, x_27);
               if(term == null)
                 break Fail56;
-              term = termFactory.makeAppl(transform._consAmbName_2, new IStrategoTerm[]{term, o_27});
+              term = termFactory.makeAppl(transform._consAmbName_2, new IStrategoTerm[]{term, y_27});
               if(true)
                 break Success28;
             }
@@ -62,9 +62,9 @@ import java.lang.ref.WeakReference;
             { 
               Fail57:
               { 
-                IStrategoTerm m_27 = null;
-                m_27 = term.getSubterm(0);
-                term = termFactory.makeAppl(transform._consAmbName_1, new IStrategoTerm[]{m_27});
+                IStrategoTerm w_27 = null;
+                w_27 = term.getSubterm(0);
+                term = termFactory.makeAppl(transform._consAmbName_1, new IStrategoTerm[]{w_27});
                 if(true)
                   break Success29;
               }
@@ -72,14 +72,14 @@ import java.lang.ref.WeakReference;
             }
             if(cons7 == transform._consPackageOrTypeName_2)
             { 
-              IStrategoTerm i_27 = null;
-              IStrategoTerm j_27 = null;
-              i_27 = term.getSubterm(0);
-              j_27 = term.getSubterm(1);
-              term = this.invoke(context, i_27);
+              IStrategoTerm s_27 = null;
+              IStrategoTerm t_27 = null;
+              s_27 = term.getSubterm(0);
+              t_27 = term.getSubterm(1);
+              term = this.invoke(context, s_27);
               if(term == null)
                 break Fail54;
-              term = termFactory.makeAppl(transform._consAmbName_2, new IStrategoTerm[]{term, j_27});
+              term = termFactory.makeAppl(transform._consAmbName_2, new IStrategoTerm[]{term, t_27});
             }
             else
             { 

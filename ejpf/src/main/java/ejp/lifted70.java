@@ -13,9 +13,9 @@ import java.lang.ref.WeakReference;
 
 @SuppressWarnings("all") final class lifted70 extends Strategy 
 { 
-  TermReference i_39;
+  TermReference s_39;
 
-  TermReference g_39;
+  TermReference q_39;
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
@@ -23,15 +23,15 @@ import java.lang.ref.WeakReference;
     { 
       if(term.getTermType() != IStrategoTerm.APPL || transform._consNonScopedExplicitJoinPointPHeader_2 != ((IStrategoAppl)term).getConstructor())
         break Fail273;
-      if(i_39.value == null)
-        i_39.value = term.getSubterm(0);
+      if(s_39.value == null)
+        s_39.value = term.getSubterm(0);
       else
-        if(i_39.value != term.getSubterm(0) && !i_39.value.match(term.getSubterm(0)))
+        if(s_39.value != term.getSubterm(0) && !s_39.value.match(term.getSubterm(0)))
           break Fail273;
-      if(g_39.value == null)
-        g_39.value = term.getSubterm(1);
+      if(q_39.value == null)
+        q_39.value = term.getSubterm(1);
       else
-        if(g_39.value != term.getSubterm(1) && !g_39.value.match(term.getSubterm(1)))
+        if(q_39.value != term.getSubterm(1) && !q_39.value.match(term.getSubterm(1)))
           break Fail273;
       if(true)
         return term;

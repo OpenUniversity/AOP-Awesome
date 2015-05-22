@@ -20,12 +20,12 @@ import java.lang.ref.WeakReference;
     ITermFactory termFactory = context.getFactory();
     Fail265:
     { 
-      IStrategoTerm g_51 = null;
-      g_51 = term;
+      IStrategoTerm s_51 = null;
+      s_51 = term;
       term = try_1_0.instance.invoke(context, term, gen_source_location_0_0.instance);
       if(term == null)
         break Fail265;
-      term = termFactory.annotateTerm(g_51, checkListAnnos(termFactory, (IStrategoTerm)termFactory.makeListCons(term, (IStrategoList)ejp.constNil0)));
+      term = termFactory.annotateTerm(s_51, checkListAnnos(termFactory, (IStrategoTerm)termFactory.makeListCons(term, (IStrategoList)ejp.constNil0)));
       if(true)
         return term;
     }

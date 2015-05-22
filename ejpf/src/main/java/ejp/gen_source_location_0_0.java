@@ -21,17 +21,17 @@ import java.lang.ref.WeakReference;
     context.push("gen_source_location_0_0");
     Fail238:
     { 
-      IStrategoTerm r_51 = null;
-      IStrategoTerm s_51 = null;
-      r_51 = term;
-      term = origin_location_0_0.instance.invoke(context, r_51);
+      IStrategoTerm d_52 = null;
+      IStrategoTerm e_52 = null;
+      d_52 = term;
+      term = origin_location_0_0.instance.invoke(context, d_52);
       if(term == null)
         break Fail238;
-      s_51 = term;
-      term = origin_file_0_0.instance.invoke(context, r_51);
+      e_52 = term;
+      term = origin_file_0_0.instance.invoke(context, d_52);
       if(term == null)
         break Fail238;
-      term = (IStrategoTerm)termFactory.makeListCons(s_51, termFactory.makeListCons(term, (IStrategoList)ejp.constNil0));
+      term = (IStrategoTerm)termFactory.makeListCons(e_52, termFactory.makeListCons(term, (IStrategoList)ejp.constNil0));
       context.popOnSuccess();
       if(true)
         return term;

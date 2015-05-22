@@ -15,28 +15,28 @@ import java.lang.ref.WeakReference;
 { 
   public static my_hashtable_remove_0_1 instance = new my_hashtable_remove_0_1();
 
-  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm t_29)
+  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm d_30)
   { 
     context.push("my_hashtable_remove_0_1");
     Fail75:
     { 
-      TermReference u_29 = new TermReference();
-      if(u_29.value == null)
-        u_29.value = term;
+      TermReference e_30 = new TermReference();
+      if(e_30.value == null)
+        e_30.value = term;
       else
-        if(u_29.value != term && !u_29.value.match(term))
+        if(e_30.value != term && !e_30.value.match(term))
           break Fail75;
-      term = iset_elements_0_0.instance.invoke(context, t_29);
+      term = iset_elements_0_0.instance.invoke(context, d_30);
       if(term == null)
         break Fail75;
       lifted55 lifted550 = new lifted55();
-      lifted550.u_29 = u_29;
+      lifted550.e_30 = e_30;
       term = map_1_0.instance.invoke(context, term, lifted550);
       if(term == null)
         break Fail75;
-      if(u_29.value == null)
+      if(e_30.value == null)
         break Fail75;
-      term = u_29.value;
+      term = e_30.value;
       context.popOnSuccess();
       if(true)
         return term;

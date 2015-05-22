@@ -13,15 +13,15 @@ import java.lang.ref.WeakReference;
 
 @SuppressWarnings("all") final class lifted56 extends Strategy 
 { 
-  TermReference y_29;
+  TermReference i_30;
 
-  TermReference z_29;
+  TermReference j_30;
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
     Fail292:
     { 
-      term = my_hashtable_union_helper_0_2.instance.invoke(context, term, y_29.value, z_29.value);
+      term = my_hashtable_union_helper_0_2.instance.invoke(context, term, i_30.value, j_30.value);
       if(term == null)
         break Fail292;
       if(true)

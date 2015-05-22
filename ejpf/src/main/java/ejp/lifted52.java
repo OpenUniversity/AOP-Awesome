@@ -13,17 +13,17 @@ import java.lang.ref.WeakReference;
 
 @SuppressWarnings("all") final class lifted52 extends Strategy 
 { 
-  TermReference i_25;
+  TermReference s_25;
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
     Fail296:
     { 
-      IStrategoTerm l_25 = null;
-      l_25 = term;
-      if(i_25.value == null)
+      IStrategoTerm v_25 = null;
+      v_25 = term;
+      if(s_25.value == null)
         break Fail296;
-      term = iset_add_0_1.instance.invoke(context, i_25.value, l_25);
+      term = iset_add_0_1.instance.invoke(context, s_25.value, v_25);
       if(term == null)
         break Fail296;
       if(true)

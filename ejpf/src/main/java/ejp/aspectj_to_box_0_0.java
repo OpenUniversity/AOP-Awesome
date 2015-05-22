@@ -29,9 +29,9 @@ import java.lang.ref.WeakReference;
         { 
           Fail228:
           { 
-            IStrategoTerm a_50 = null;
-            a_50 = term.getSubterm(0);
-            term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{ejp.constCons25, (IStrategoTerm)termFactory.makeListCons(ejp.constFBOX46, termFactory.makeListCons(ejp.constS1, termFactory.makeListCons(a_50, (IStrategoList)ejp.constCons26)))});
+            IStrategoTerm o_50 = null;
+            o_50 = term.getSubterm(0);
+            term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{ejp.constCons25, (IStrategoTerm)termFactory.makeListCons(ejp.constFBOX46, termFactory.makeListCons(ejp.constS1, termFactory.makeListCons(o_50, (IStrategoList)ejp.constCons26)))});
             if(true)
               break Success169;
           }
@@ -43,9 +43,9 @@ import java.lang.ref.WeakReference;
           { 
             Fail229:
             { 
-              IStrategoTerm z_49 = null;
-              z_49 = term.getSubterm(0);
-              term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{ejp.constCons25, (IStrategoTerm)termFactory.makeListCons(ejp.constFBOX47, termFactory.makeListCons(ejp.constS1, termFactory.makeListCons(z_49, (IStrategoList)ejp.constCons26)))});
+              IStrategoTerm n_50 = null;
+              n_50 = term.getSubterm(0);
+              term = termFactory.makeAppl(transform._consH_2, new IStrategoTerm[]{ejp.constCons25, (IStrategoTerm)termFactory.makeListCons(ejp.constFBOX47, termFactory.makeListCons(ejp.constS1, termFactory.makeListCons(n_50, (IStrategoList)ejp.constCons26)))});
               if(true)
                 break Success170;
             }

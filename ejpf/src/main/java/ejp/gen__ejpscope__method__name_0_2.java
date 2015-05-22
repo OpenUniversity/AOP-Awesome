@@ -15,7 +15,7 @@ import java.lang.ref.WeakReference;
 { 
   public static gen__ejpscope__method__name_0_2 instance = new gen__ejpscope__method__name_0_2();
 
-  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm r_77, IStrategoTerm s_77)
+  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm d_78, IStrategoTerm e_78)
   { 
     ITermFactory termFactory = context.getFactory();
     context.push("gen__ejpscope__method__name_0_2");
@@ -29,39 +29,39 @@ import java.lang.ref.WeakReference;
         { 
           Fail60:
           { 
-            IStrategoTerm a_28 = null;
-            IStrategoTerm b_28 = null;
-            a_28 = term.getSubterm(0);
+            IStrategoTerm k_28 = null;
+            IStrategoTerm l_28 = null;
+            k_28 = term.getSubterm(0);
             Success31:
             { 
               Fail61:
               { 
-                IStrategoTerm c_28 = null;
-                c_28 = term;
-                term = r_77;
+                IStrategoTerm m_28 = null;
+                m_28 = term;
+                term = d_78;
                 if(term.getTermType() != IStrategoTerm.APPL || transform._consNone_0 != ((IStrategoAppl)term).getConstructor())
                   break Fail61;
-                term = c_28;
+                term = m_28;
                 { 
-                  term = (IStrategoTerm)termFactory.makeListCons(ejp.const20, termFactory.makeListCons(s_77, termFactory.makeListCons(ejp.const19, termFactory.makeListCons(a_28, (IStrategoList)ejp.constNil0))));
+                  term = (IStrategoTerm)termFactory.makeListCons(ejp.const20, termFactory.makeListCons(e_78, termFactory.makeListCons(ejp.const19, termFactory.makeListCons(k_28, (IStrategoList)ejp.constNil0))));
                   term = concat_strings_0_0.instance.invoke(context, term);
                   if(term == null)
                     break Fail60;
-                  b_28 = term;
+                  l_28 = term;
                   if(true)
                     break Success31;
                 }
               }
-              term = convert_package_name_0_0.instance.invoke(context, r_77);
+              term = convert_package_name_0_0.instance.invoke(context, d_78);
               if(term == null)
                 break Fail60;
-              term = (IStrategoTerm)termFactory.makeListCons(ejp.const20, termFactory.makeListCons(term, termFactory.makeListCons(s_77, termFactory.makeListCons(ejp.const19, termFactory.makeListCons(a_28, (IStrategoList)ejp.constNil0)))));
+              term = (IStrategoTerm)termFactory.makeListCons(ejp.const20, termFactory.makeListCons(term, termFactory.makeListCons(e_78, termFactory.makeListCons(ejp.const19, termFactory.makeListCons(k_28, (IStrategoList)ejp.constNil0)))));
               term = concat_strings_0_0.instance.invoke(context, term);
               if(term == null)
                 break Fail60;
-              b_28 = term;
+              l_28 = term;
             }
-            term = termFactory.makeAppl(transform._consMemberName_2, new IStrategoTerm[]{ejp.constRefTypePattern0, b_28});
+            term = termFactory.makeAppl(transform._consMemberName_2, new IStrategoTerm[]{ejp.constRefTypePattern0, l_28});
             if(true)
               break Success30;
           }

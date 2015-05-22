@@ -15,35 +15,35 @@ import java.lang.ref.WeakReference;
 { 
   public static gen_auxilery_class_0_5 instance = new gen_auxilery_class_0_5();
 
-  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm l_19, IStrategoTerm m_19, IStrategoTerm n_19, IStrategoTerm o_19, IStrategoTerm p_19)
+  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm v_19, IStrategoTerm w_19, IStrategoTerm x_19, IStrategoTerm y_19, IStrategoTerm z_19)
   { 
     ITermFactory termFactory = context.getFactory();
     context.push("gen_auxilery_class_0_5");
     Fail27:
     { 
-      IStrategoTerm t_19 = null;
-      IStrategoTerm y_19 = null;
-      IStrategoTerm z_19 = null;
-      t_19 = term;
-      term = n_19;
+      IStrategoTerm d_20 = null;
+      IStrategoTerm i_20 = null;
+      IStrategoTerm j_20 = null;
+      d_20 = term;
+      term = x_19;
       if(term.getTermType() != IStrategoTerm.APPL || transform._consExplicitJoinPoint_3 != ((IStrategoAppl)term).getConstructor())
         break Fail27;
-      term = gen_compact_var_declaration_0_2.instance.invoke(context, term, l_19, m_19);
+      term = gen_compact_var_declaration_0_2.instance.invoke(context, term, v_19, w_19);
       if(term == null)
         break Fail27;
-      y_19 = term;
-      term = gen_method_annotation_0_0.instance.invoke(context, n_19);
+      i_20 = term;
+      term = gen_method_annotation_0_0.instance.invoke(context, x_19);
       if(term == null)
         break Fail27;
-      z_19 = term;
-      term = gen__ejpscope__method__name_0_0.instance.invoke(context, n_19);
+      j_20 = term;
+      term = gen__ejpscope__method__name_0_0.instance.invoke(context, x_19);
       if(term == null)
         break Fail27;
-      term = (IStrategoTerm)termFactory.makeListCons(y_19, termFactory.makeListCons((IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consMethodDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consMethodDecHead_6, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consSingleElemAnno_2, new IStrategoTerm[]{ejp.constTypeName1, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consDeci_1, new IStrategoTerm[]{p_19})})}), termFactory.makeListCons(z_19, (IStrategoList)ejp.constNil0)), ejp.constNone0, ejp.constVoid0, termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{term}), ejp.constNil0, ejp.constNone0}), termFactory.makeAppl(transform._consBlock_1, new IStrategoTerm[]{t_19})}), (IStrategoList)ejp.constNil0), (IStrategoList)ejp.constNil0));
+      term = (IStrategoTerm)termFactory.makeListCons(i_20, termFactory.makeListCons((IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consMethodDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consMethodDecHead_6, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consSingleElemAnno_2, new IStrategoTerm[]{ejp.constTypeName1, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consDeci_1, new IStrategoTerm[]{z_19})})}), termFactory.makeListCons(j_20, (IStrategoList)ejp.constNil0)), ejp.constNone0, ejp.constVoid0, termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{term}), ejp.constNil0, ejp.constNone0}), termFactory.makeAppl(transform._consBlock_1, new IStrategoTerm[]{d_20})}), (IStrategoList)ejp.constNil0), (IStrategoList)ejp.constNil0));
       term = concat_0_0.instance.invoke(context, term);
       if(term == null)
         break Fail27;
-      term = termFactory.makeAppl(transform._consClassDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consClassDecHead_5, new IStrategoTerm[]{ejp.constNil0, termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{o_19}), ejp.constNone0, ejp.constNone0, ejp.constNone0}), termFactory.makeAppl(transform._consClassBody_1, new IStrategoTerm[]{term})});
+      term = termFactory.makeAppl(transform._consClassDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consClassDecHead_5, new IStrategoTerm[]{ejp.constNil0, termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{y_19}), ejp.constNone0, ejp.constNone0, ejp.constNone0}), termFactory.makeAppl(transform._consClassBody_1, new IStrategoTerm[]{term})});
       context.popOnSuccess();
       if(true)
         return term;

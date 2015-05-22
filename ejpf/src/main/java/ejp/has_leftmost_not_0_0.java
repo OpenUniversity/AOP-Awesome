@@ -20,7 +20,7 @@ import java.lang.ref.WeakReference;
     context.push("has_leftmost_not_0_0");
     Fail230:
     { 
-      term = b_50.instance.invoke(context, term);
+      term = p_50.instance.invoke(context, term);
       if(term == null)
         break Fail230;
       context.popOnSuccess();

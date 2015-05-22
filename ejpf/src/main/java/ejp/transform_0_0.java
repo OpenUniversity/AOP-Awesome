@@ -20,13 +20,13 @@ import java.lang.ref.WeakReference;
     context.push("transform_0_0");
     Fail236:
     { 
-      IStrategoTerm h_51 = null;
-      IStrategoTerm k_51 = null;
-      IStrategoTerm l_51 = null;
-      h_51 = term;
-      k_51 = h_51;
-      l_51 = ejp.constEjpTbl;
-      term = parse_file_0_1.instance.invoke(context, k_51, l_51);
+      IStrategoTerm t_51 = null;
+      IStrategoTerm w_51 = null;
+      IStrategoTerm x_51 = null;
+      t_51 = term;
+      w_51 = t_51;
+      x_51 = ejp.constEjpTbl;
+      term = parse_file_0_1.instance.invoke(context, w_51, x_51);
       if(term == null)
         break Fail236;
       term = topdown_1_0.instance.invoke(context, term, lifted77.instance);

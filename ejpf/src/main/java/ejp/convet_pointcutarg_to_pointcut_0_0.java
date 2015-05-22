@@ -20,13 +20,13 @@ import java.lang.ref.WeakReference;
     ITermFactory termFactory = context.getFactory();
     Fail99:
     { 
-      IStrategoTerm b_39 = null;
-      IStrategoTerm c_39 = null;
+      IStrategoTerm l_39 = null;
+      IStrategoTerm m_39 = null;
       if(term.getTermType() != IStrategoTerm.APPL || transform._consPointcutargDec_2 != ((IStrategoAppl)term).getConstructor())
         break Fail99;
-      b_39 = term.getSubterm(0);
-      c_39 = term.getSubterm(1);
-      term = termFactory.makeAppl(transform._consPointcutDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consPointcutDecHead_3, new IStrategoTerm[]{ejp.constCons24, b_39, c_39}), ejp.constNoPointcutBody0});
+      l_39 = term.getSubterm(0);
+      m_39 = term.getSubterm(1);
+      term = termFactory.makeAppl(transform._consPointcutDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consPointcutDecHead_3, new IStrategoTerm[]{ejp.constCons24, l_39, m_39}), ejp.constNoPointcutBody0});
       if(true)
         return term;
     }

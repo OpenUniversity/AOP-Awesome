@@ -15,7 +15,7 @@ import java.lang.ref.WeakReference;
 { 
   public static convert_var_dec_by_ejp_call_0_6 instance = new convert_var_dec_by_ejp_call_0_6();
 
-  public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm g_77, IStrategoTerm h_77, IStrategoTerm i_77, IStrategoTerm j_77, IStrategoTerm l_77, IStrategoTerm m_77)
+  public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm t_77, IStrategoTerm u_77, IStrategoTerm v_77, IStrategoTerm w_77, IStrategoTerm x_77, IStrategoTerm y_77)
   { 
     ITermFactory termFactory = context.getFactory();
     context.push("convert_var_dec_by_ejp_call_0_6");
@@ -29,20 +29,20 @@ import java.lang.ref.WeakReference;
         { 
           Fail22:
           { 
-            IStrategoTerm j_18 = null;
-            IStrategoTerm k_18 = null;
             IStrategoTerm l_18 = null;
-            j_18 = term.getSubterm(0);
+            IStrategoTerm m_18 = null;
+            IStrategoTerm n_18 = null;
+            l_18 = term.getSubterm(0);
             IStrategoTerm arg28 = term.getSubterm(1);
             if(arg28.getTermType() != IStrategoTerm.APPL || transform._consEJPCall_2 != ((IStrategoAppl)arg28).getConstructor())
               break Fail22;
-            k_18 = arg28.getSubterm(0);
-            l_18 = arg28.getSubterm(1);
-            term = termFactory.makeAppl(transform._consEJPCall_2, new IStrategoTerm[]{k_18, l_18});
-            term = ejp_call_to_method_invokation_0_4.instance.invoke(context, term, g_77, j_77, l_77, m_77);
+            m_18 = arg28.getSubterm(0);
+            n_18 = arg28.getSubterm(1);
+            term = termFactory.makeAppl(transform._consEJPCall_2, new IStrategoTerm[]{m_18, n_18});
+            term = ejp_call_to_method_invokation_0_4.instance.invoke(context, term, t_77, w_77, x_77, y_77);
             if(term == null)
               break Fail22;
-            term = (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consLocalVarDecStm_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consLocalVarDec_3, new IStrategoTerm[]{h_77, i_77, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consVarDec_2, new IStrategoTerm[]{j_18, term}), (IStrategoList)ejp.constNil0)})}), (IStrategoList)ejp.constNil0);
+            term = (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consLocalVarDecStm_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consLocalVarDec_3, new IStrategoTerm[]{u_77, v_77, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consVarDec_2, new IStrategoTerm[]{l_18, term}), (IStrategoList)ejp.constNil0)})}), (IStrategoList)ejp.constNil0);
             if(true)
               break Success17;
           }
@@ -50,31 +50,31 @@ import java.lang.ref.WeakReference;
         }
         if(cons3 == transform._consVarDec_2)
         { 
-          IStrategoTerm v_17 = null;
-          IStrategoTerm w_17 = null;
           IStrategoTerm x_17 = null;
           IStrategoTerm y_17 = null;
           IStrategoTerm z_17 = null;
-          v_17 = term.getSubterm(0);
+          IStrategoTerm a_18 = null;
+          IStrategoTerm b_18 = null;
+          x_17 = term.getSubterm(0);
           IStrategoTerm arg29 = term.getSubterm(1);
           if(arg29.getTermType() != IStrategoTerm.APPL || transform._consScopedEJPCall_3 != ((IStrategoAppl)arg29).getConstructor())
             break Fail21;
-          w_17 = arg29.getSubterm(0);
-          x_17 = arg29.getSubterm(1);
+          y_17 = arg29.getSubterm(0);
+          z_17 = arg29.getSubterm(1);
           IStrategoTerm arg30 = arg29.getSubterm(2);
           if(arg30.getTermType() != IStrategoTerm.APPL || transform._consBlock_1 != ((IStrategoAppl)arg30).getConstructor())
             break Fail21;
-          y_17 = arg30.getSubterm(0);
-          term = termFactory.makeAppl(transform._consEJPCall_2, new IStrategoTerm[]{w_17, x_17});
-          term = ejp_call_to_method_invokation_0_4.instance.invoke(context, term, g_77, j_77, l_77, m_77);
+          a_18 = arg30.getSubterm(0);
+          term = termFactory.makeAppl(transform._consEJPCall_2, new IStrategoTerm[]{y_17, z_17});
+          term = ejp_call_to_method_invokation_0_4.instance.invoke(context, term, t_77, w_77, x_77, y_77);
           if(term == null)
             break Fail21;
-          z_17 = term;
-          term = termFactory.makeAppl(transform._consScopedEJPCall_3, new IStrategoTerm[]{w_17, x_17, termFactory.makeAppl(transform._consBlock_1, new IStrategoTerm[]{y_17})});
-          term = scoped_ejp_to_java_0_4.instance.invoke(context, term, g_77, j_77, l_77, m_77);
+          b_18 = term;
+          term = termFactory.makeAppl(transform._consScopedEJPCall_3, new IStrategoTerm[]{y_17, z_17, termFactory.makeAppl(transform._consBlock_1, new IStrategoTerm[]{a_18})});
+          term = scoped_ejp_to_java_0_4.instance.invoke(context, term, t_77, w_77, x_77, y_77);
           if(term == null)
             break Fail21;
-          term = termFactory.makeTuple((IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consLocalVarDecStm_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consLocalVarDec_3, new IStrategoTerm[]{h_77, i_77, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consVarDec_2, new IStrategoTerm[]{v_17, z_17}), (IStrategoList)ejp.constNil0)})}), (IStrategoList)ejp.constNil0), term);
+          term = termFactory.makeTuple((IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consLocalVarDecStm_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consLocalVarDec_3, new IStrategoTerm[]{u_77, v_77, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consVarDec_2, new IStrategoTerm[]{x_17, b_18}), (IStrategoList)ejp.constNil0)})}), (IStrategoList)ejp.constNil0), term);
           term = conc_0_0.instance.invoke(context, term);
           if(term == null)
             break Fail21;

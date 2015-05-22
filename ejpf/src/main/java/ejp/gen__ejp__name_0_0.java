@@ -36,31 +36,31 @@ import java.lang.ref.WeakReference;
         }
         if(cons6 == transform._consMemberName_2)
         { 
-          IStrategoTerm v_26 = null;
-          IStrategoTerm w_26 = null;
+          IStrategoTerm f_27 = null;
+          IStrategoTerm g_27 = null;
           IStrategoTerm arg67 = term.getSubterm(0);
           if(arg67.getTermType() != IStrategoTerm.APPL || transform._consRefTypePattern_1 != ((IStrategoAppl)arg67).getConstructor())
             break Fail51;
-          v_26 = arg67.getSubterm(0);
-          w_26 = term.getSubterm(1);
+          f_27 = arg67.getSubterm(0);
+          g_27 = term.getSubterm(1);
           Success26:
           { 
             Fail53:
             { 
-              IStrategoTerm x_26 = null;
-              x_26 = term;
-              term = termFactory.makeTuple(ejp.constNamePattern0, v_26);
+              IStrategoTerm h_27 = null;
+              h_27 = term;
+              term = termFactory.makeTuple(ejp.constNamePattern0, f_27);
               term = equal_0_0.instance.invoke(context, term);
               if(term == null)
                 break Fail53;
-              term = x_26;
+              term = h_27;
               { 
-                term = termFactory.makeAppl(transform._consMemberName_1, new IStrategoTerm[]{w_26});
+                term = termFactory.makeAppl(transform._consMemberName_1, new IStrategoTerm[]{g_27});
                 if(true)
                   break Success26;
               }
             }
-            term = termFactory.makeAppl(transform._consMemberName_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consRefTypePattern_1, new IStrategoTerm[]{v_26}), w_26});
+            term = termFactory.makeAppl(transform._consMemberName_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consRefTypePattern_1, new IStrategoTerm[]{f_27}), g_27});
             term = pp_aspectj_string_0_0.instance.invoke(context, term);
             if(term == null)
               break Fail51;

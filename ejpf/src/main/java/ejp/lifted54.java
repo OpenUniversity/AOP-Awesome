@@ -20,11 +20,11 @@ import java.lang.ref.WeakReference;
     ITermFactory termFactory = context.getFactory();
     Fail294:
     { 
-      IStrategoTerm g_28 = null;
+      IStrategoTerm q_28 = null;
       if(term.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)term).getConstructor())
         break Fail294;
-      g_28 = term.getSubterm(0);
-      term = (IStrategoTerm)termFactory.makeListCons(g_28, (IStrategoList)ejp.constCons3);
+      q_28 = term.getSubterm(0);
+      term = (IStrategoTerm)termFactory.makeListCons(q_28, (IStrategoList)ejp.constCons3);
       term = concat_strings_0_0.instance.invoke(context, term);
       if(term == null)
         break Fail294;

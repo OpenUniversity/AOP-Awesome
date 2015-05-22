@@ -15,12 +15,12 @@ import java.lang.ref.WeakReference;
 { 
   public static allow_extends_1_1 instance = new allow_extends_1_1();
 
-  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, Strategy z_30, IStrategoTerm y_30)
+  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, Strategy j_31, IStrategoTerm i_31)
   { 
     context.push("allow_extends_1_1");
     Fail80:
     { 
-      term = allow_extends_2_1.instance.invoke(context, term, z_30, _Id.instance, y_30);
+      term = allow_extends_2_1.instance.invoke(context, term, j_31, _Id.instance, i_31);
       if(term == null)
         break Fail80;
       context.popOnSuccess();

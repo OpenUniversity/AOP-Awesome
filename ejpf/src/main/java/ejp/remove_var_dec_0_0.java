@@ -36,11 +36,11 @@ import java.lang.ref.WeakReference;
         }
         if(cons4 == transform._consVarDec_2)
         { 
-          IStrategoTerm k_26 = null;
-          IStrategoTerm l_26 = null;
-          k_26 = term.getSubterm(0);
-          l_26 = term.getSubterm(1);
-          term = termFactory.makeAppl(transform._consExprStm_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consAssign_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consExprName_1, new IStrategoTerm[]{k_26}), l_26})});
+          IStrategoTerm u_26 = null;
+          IStrategoTerm v_26 = null;
+          u_26 = term.getSubterm(0);
+          v_26 = term.getSubterm(1);
+          term = termFactory.makeAppl(transform._consExprStm_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consAssign_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consExprName_1, new IStrategoTerm[]{u_26}), v_26})});
         }
         else
         { 

@@ -13,7 +13,7 @@ import java.lang.ref.WeakReference;
 
 @SuppressWarnings("all") final class lifted67 extends Strategy 
 { 
-  TermReference q_38;
+  TermReference a_39;
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
@@ -21,10 +21,10 @@ import java.lang.ref.WeakReference;
     { 
       if(term.getTermType() != IStrategoTerm.APPL || transform._consNonScopedExplicitJoinPointPHeader_2 != ((IStrategoAppl)term).getConstructor())
         break Fail276;
-      if(q_38.value == null)
-        q_38.value = term.getSubterm(1);
+      if(a_39.value == null)
+        a_39.value = term.getSubterm(1);
       else
-        if(q_38.value != term.getSubterm(1) && !q_38.value.match(term.getSubterm(1)))
+        if(a_39.value != term.getSubterm(1) && !a_39.value.match(term.getSubterm(1)))
           break Fail276;
       if(true)
         return term;

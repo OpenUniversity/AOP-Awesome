@@ -20,11 +20,11 @@ import java.lang.ref.WeakReference;
     context.push("convert_package_name_0_0");
     Fail62:
     { 
-      IStrategoTerm f_28 = null;
+      IStrategoTerm p_28 = null;
       if(term.getTermType() != IStrategoTerm.APPL || transform._consPackageName_1 != ((IStrategoAppl)term).getConstructor())
         break Fail62;
-      f_28 = term.getSubterm(0);
-      term = map_1_0.instance.invoke(context, f_28, lifted54.instance);
+      p_28 = term.getSubterm(0);
+      term = map_1_0.instance.invoke(context, p_28, lifted54.instance);
       if(term == null)
         break Fail62;
       term = concat_strings_0_0.instance.invoke(context, term);

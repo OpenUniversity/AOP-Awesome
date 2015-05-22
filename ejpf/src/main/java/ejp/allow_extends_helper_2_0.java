@@ -15,50 +15,50 @@ import java.lang.ref.WeakReference;
 { 
   public static allow_extends_helper_2_0 instance = new allow_extends_helper_2_0();
 
-  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, Strategy j_31, Strategy k_31)
+  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, Strategy t_31, Strategy u_31)
   { 
     ITermFactory termFactory = context.getFactory();
     context.push("allow_extends_helper_2_0");
     Fail82:
     { 
-      IStrategoTerm f_31 = null;
-      IStrategoTerm g_31 = null;
-      g_31 = term;
+      IStrategoTerm p_31 = null;
+      IStrategoTerm q_31 = null;
+      q_31 = term;
       Success41:
       { 
         Fail83:
         { 
-          IStrategoTerm h_31 = null;
-          h_31 = term;
-          term = j_31.invoke(context, g_31);
+          IStrategoTerm r_31 = null;
+          r_31 = term;
+          term = t_31.invoke(context, q_31);
           if(term == null)
             break Fail83;
-          f_31 = term;
-          term = h_31;
+          p_31 = term;
+          term = r_31;
           { 
             Success42:
             { 
               Fail84:
               { 
-                IStrategoTerm i_31 = null;
-                i_31 = term;
-                term = is_list_0_0.instance.invoke(context, f_31);
+                IStrategoTerm s_31 = null;
+                s_31 = term;
+                term = is_list_0_0.instance.invoke(context, p_31);
                 if(term == null)
                   break Fail84;
-                term = i_31;
+                term = s_31;
                 { 
-                  term = f_31;
+                  term = p_31;
                   if(true)
                     break Success42;
                 }
               }
-              term = (IStrategoTerm)termFactory.makeListCons(f_31, (IStrategoList)ejp.constNil0);
+              term = (IStrategoTerm)termFactory.makeListCons(p_31, (IStrategoList)ejp.constNil0);
             }
             if(true)
               break Success41;
           }
         }
-        term = k_31.invoke(context, g_31);
+        term = u_31.invoke(context, q_31);
         if(term == null)
           break Fail82;
         term = (IStrategoTerm)termFactory.makeListCons(term, (IStrategoList)ejp.constNil0);

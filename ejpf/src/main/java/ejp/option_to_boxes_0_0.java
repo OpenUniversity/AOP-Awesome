@@ -28,9 +28,9 @@ import java.lang.ref.WeakReference;
         { 
           Fail232:
           { 
-            IStrategoTerm c_50 = null;
-            c_50 = term.getSubterm(0);
-            term = c_50;
+            IStrategoTerm q_50 = null;
+            q_50 = term.getSubterm(0);
+            term = q_50;
             term = (IStrategoTerm)termFactory.makeListCons(term, (IStrategoList)ejp.constNil0);
             if(true)
               break Success171;

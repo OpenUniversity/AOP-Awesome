@@ -15,7 +15,7 @@ import java.lang.ref.WeakReference;
 { 
   public static fetch_0_1 instance = new fetch_0_1();
 
-  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm b_77)
+  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm o_77)
   { 
     ITermFactory termFactory = context.getFactory();
     context.push("fetch_0_1");
@@ -29,9 +29,9 @@ import java.lang.ref.WeakReference;
         { 
           Fail1:
           { 
-            IStrategoTerm c_11 = null;
-            c_11 = term.getSubterm(0);
-            term = this.invoke(context, c_11, b_77);
+            IStrategoTerm e_11 = null;
+            e_11 = term.getSubterm(0);
+            term = this.invoke(context, e_11, o_77);
             if(term == null)
               break Fail1;
             if(true)
@@ -45,9 +45,9 @@ import java.lang.ref.WeakReference;
           { 
             Fail2:
             { 
-              IStrategoTerm a_11 = null;
-              a_11 = term.getSubterm(0);
-              term = this.invoke(context, a_11, b_77);
+              IStrategoTerm c_11 = null;
+              c_11 = term.getSubterm(0);
+              term = this.invoke(context, c_11, o_77);
               if(term == null)
                 break Fail2;
               if(true)
@@ -61,12 +61,12 @@ import java.lang.ref.WeakReference;
             { 
               Fail3:
               { 
-                IStrategoTerm x_10 = null;
-                IStrategoTerm y_10 = null;
-                x_10 = term.getSubterm(0);
-                y_10 = term.getSubterm(1);
-                term = termFactory.makeAppl(transform._consAmbName_2, new IStrategoTerm[]{x_10, y_10});
-                term = this.invoke(context, term, b_77);
+                IStrategoTerm z_10 = null;
+                IStrategoTerm a_11 = null;
+                z_10 = term.getSubterm(0);
+                a_11 = term.getSubterm(1);
+                term = termFactory.makeAppl(transform._consAmbName_2, new IStrategoTerm[]{z_10, a_11});
+                term = this.invoke(context, term, o_77);
                 if(term == null)
                   break Fail3;
                 if(true)
@@ -80,12 +80,12 @@ import java.lang.ref.WeakReference;
               { 
                 Fail4:
                 { 
-                  IStrategoTerm v_10 = null;
-                  v_10 = term.getSubterm(0);
+                  IStrategoTerm x_10 = null;
+                  x_10 = term.getSubterm(0);
                   IStrategoTerm arg1 = term.getSubterm(1);
                   if(arg1.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg1).getConstructor())
                     break Fail4;
-                  term = this.invoke(context, v_10, b_77);
+                  term = this.invoke(context, x_10, o_77);
                   if(term == null)
                     break Fail4;
                   if(true)
@@ -99,9 +99,9 @@ import java.lang.ref.WeakReference;
                 { 
                   Fail5:
                   { 
-                    IStrategoTerm s_10 = null;
-                    s_10 = term.getSubterm(0);
-                    term = this.invoke(context, s_10, b_77);
+                    IStrategoTerm u_10 = null;
+                    u_10 = term.getSubterm(0);
+                    term = this.invoke(context, u_10, o_77);
                     if(term == null)
                       break Fail5;
                     if(true)
@@ -112,8 +112,13 @@ import java.lang.ref.WeakReference;
                 if(cons0 == transform._consId_1)
                 { 
                   IStrategoTerm q_10 = null;
+                  IStrategoTerm s_10 = null;
                   q_10 = term.getSubterm(0);
-                  term = iset_add_0_1.instance.invoke(context, b_77, q_10);
+                  s_10 = o_77;
+                  term = strip_annos_0_0.instance.invoke(context, q_10);
+                  if(term == null)
+                    break Fail0;
+                  term = iset_add_0_1.instance.invoke(context, s_10, term);
                   if(term == null)
                     break Fail0;
                 }

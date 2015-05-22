@@ -20,26 +20,26 @@ import java.lang.ref.WeakReference;
     context.push("get_vars_in_block_0_0");
     Fail40:
     { 
-      IStrategoTerm w_24 = null;
-      TermReference x_24 = new TermReference();
-      w_24 = term;
+      IStrategoTerm g_25 = null;
+      TermReference h_25 = new TermReference();
+      g_25 = term;
       term = new_iset_0_0.instance.invoke(context, term);
       if(term == null)
         break Fail40;
-      if(x_24.value == null)
-        x_24.value = term;
+      if(h_25.value == null)
+        h_25.value = term;
       else
-        if(x_24.value != term && !x_24.value.match(term))
+        if(h_25.value != term && !h_25.value.match(term))
           break Fail40;
-      term = w_24;
+      term = g_25;
       lifted47 lifted470 = new lifted47();
-      lifted470.x_24 = x_24;
+      lifted470.h_25 = h_25;
       term = topdown_1_0.instance.invoke(context, term, lifted470);
       if(term == null)
         break Fail40;
-      if(x_24.value == null)
+      if(h_25.value == null)
         break Fail40;
-      term = x_24.value;
+      term = h_25.value;
       context.popOnSuccess();
       if(true)
         return term;

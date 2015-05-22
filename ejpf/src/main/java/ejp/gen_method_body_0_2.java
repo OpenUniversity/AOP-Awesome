@@ -15,7 +15,7 @@ import java.lang.ref.WeakReference;
 { 
   public static gen_method_body_0_2 instance = new gen_method_body_0_2();
 
-  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm u_39, IStrategoTerm v_39)
+  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm e_40, IStrategoTerm f_40)
   { 
     ITermFactory termFactory = context.getFactory();
     context.push("gen_method_body_0_2");
@@ -25,15 +25,18 @@ import java.lang.ref.WeakReference;
       { 
         Fail103:
         { 
-          IStrategoTerm w_39 = null;
-          w_39 = term;
-          term = termFactory.makeTuple(u_39, ejp.constNone0);
+          IStrategoTerm g_40 = null;
+          g_40 = term;
+          term = strip_annos_0_0.instance.invoke(context, e_40);
+          if(term == null)
+            break Fail103;
+          term = termFactory.makeTuple(term, ejp.constNone0);
           term = equal_0_0.instance.invoke(context, term);
           if(term == null)
             break Fail103;
-          term = w_39;
+          term = g_40;
           { 
-            term = get_default_return_value_for_return_type_0_0.instance.invoke(context, v_39);
+            term = get_default_return_value_for_return_type_0_0.instance.invoke(context, f_40);
             if(term == null)
               break Fail102;
             term = termFactory.makeAppl(transform._consBlock_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consReturn_1, new IStrategoTerm[]{term}), (IStrategoList)ejp.constNil0)});
@@ -41,7 +44,7 @@ import java.lang.ref.WeakReference;
               break Success54;
           }
         }
-        term = fetch_default_value_0_0.instance.invoke(context, u_39);
+        term = fetch_default_value_0_0.instance.invoke(context, e_40);
         if(term == null)
           break Fail102;
         term = termFactory.makeAppl(transform._consBlock_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consReturn_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consSome_1, new IStrategoTerm[]{term})}), (IStrategoList)ejp.constNil0)});
