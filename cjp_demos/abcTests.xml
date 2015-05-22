@@ -10731,48 +10731,48 @@
 		<run class="DoubleAssociate"/>
     </ajc-test>
 
-    <ajc-test num="1500" dir="abctests/cjp/shopping"
+    <ajc-test num="1500" dir="abctests/cjp/src/shopping"
         title="Shopping Session Example">
         <compile files="ShoppingSession.java" options="-ext,abc.ja.cjp"/>
     </ajc-test>    
 
-    <ajc-test num="1501" dir="abctests/cjp/matching"
+    <ajc-test num="1501" dir="abctests/cjp/src/matching"
         title="Don't match regular execution joinpoints on extracted method">
         <compile files="DontMatchExecution.java" options="-ext,abc.ja.cjp"/>
 		<run class="DontMatchExecution"/>
     </ajc-test>    
 
-    <ajc-test num="1502" dir="abctests/cjp/matching"
+    <ajc-test num="1502" dir="abctests/cjp/src/matching"
         title="Match on closure joinpoints">
         <compile files="MatchCJP.java" options="-ext,abc.ja.cjp"/>
 		<run class="MatchCJP"/>
     </ajc-test>  
     
-    <ajc-test num="1503" dir="abctests/cjp/matching"
+    <ajc-test num="1503" dir="abctests/cjp/src/matching"
         title="Match on closure joinpoints with arguments">
         <compile files="MatchCJPWithArgs.java" options="-ext,abc.ja.cjp"/>
 		<run class="MatchCJPWithArgs"/>
     </ajc-test>   
 
-    <ajc-test num="1504" dir="abctests/cjp/matching"
+    <ajc-test num="1504" dir="abctests/cjp/src/matching"
         title="Match on two closure joinpoints of the same type">
         <compile files="Match2CJP.java" options="-ext,abc.ja.cjp"/>
 		<run class="Match2CJP"/>
     </ajc-test>  
     
-    <ajc-test num="1505" dir="abctests/cjp/matching"
+    <ajc-test num="1505" dir="abctests/cjp/src/matching"
         title="Match on closure joinpoints with arguments">
         <compile files="Match2CJPWithDifferentArgs.java" options="-ext,abc.ja.cjp"/>
 		<run class="Match2CJPWithDifferentArgs"/>
     </ajc-test>   
     
-    <ajc-test num="1506" dir="abctests/cjp/simplesyntax"
+    <ajc-test num="1506" dir="abctests/cjp/src/simplesyntax"
         title="Test simple syntax">
         <compile files="SimpleSyntax.java" options="-ext,abc.ja.cjp"/>
 		<run class="SimpleSyntax"/>
     </ajc-test>  
 
-    <ajc-test num="1507" dir="abctests/cjp/typechecks"
+    <ajc-test num="1507" dir="abctests/cjp/src/typechecks"
         title="Dont allow capture of break and continue">
         <compile files="CheckBreakContinueCapture.java" options="-ext,abc.ja.cjp">
 	        <message kind="error" line="19"/>
@@ -10780,7 +10780,7 @@
         </compile>
     </ajc-test>  
 
-    <ajc-test num="1508" dir="abctests/cjp/typechecks"
+    <ajc-test num="1508" dir="abctests/cjp/src/typechecks"
         title="Only allow access to final locals">
         <compile files="CheckFinalAccess.java" options="-ext,abc.ja.cjp">
 	        <message kind="error" line="4"/>
@@ -10790,14 +10790,14 @@
         </compile>
     </ajc-test>  
     
-    <ajc-test num="1509" dir="abctests/cjp/typechecks"
+    <ajc-test num="1509" dir="abctests/cjp/src/typechecks"
         title="Check field accesses">
         <compile files="CheckFieldAccess.java" options="-ext,abc.ja.cjp">
 	        <message kind="error" line="15"/>
         </compile>
     </ajc-test>     
 
-    <ajc-test num="1510" dir="abctests/cjp/typechecks"
+    <ajc-test num="1510" dir="abctests/cjp/src/typechecks"
         title="Check access to 'this'">
         <compile files="CheckThisAccess.java" options="-ext,abc.ja.cjp">
 	        <message kind="error" line="11"/>
@@ -10805,31 +10805,31 @@
         </compile>
     </ajc-test>   
 
-    <ajc-test num="1511" dir="abctests/cjp/matching"
+    <ajc-test num="1511" dir="abctests/cjp/src/matching"
         title="Check thisJoinPoint.getThis()">
         <compile files="CheckThisExposure.java" options="-ext,abc.ja.cjp"/>
 		<run class="CheckThisExposure"/>
     </ajc-test>   
 
-    <ajc-test num="1512" dir="abctests/cjp/matching"
+    <ajc-test num="1512" dir="abctests/cjp/src/matching"
         title="Check thisJoinPoint.getTarget()">
         <compile files="CheckTargetExposure.java" options="-ext,abc.ja.cjp"/>
 		<run class="CheckTargetExposure"/>
     </ajc-test>   
 
-    <ajc-test num="1513" dir="abctests/cjp/matching"
+    <ajc-test num="1513" dir="abctests/cjp/src/matching"
         title="Check thisJoinPoint.getArgs()">
         <compile files="CheckArgsExposure.java" options="-ext,abc.ja.cjp"/>
 		<run class="CheckArgsExposure"/>
     </ajc-test>   
 
-    <ajc-test num="1514" dir="abctests/cjp/typechecks"
+    <ajc-test num="1514" dir="abctests/cjp/src/typechecks"
         title="Check return types and casts at runtime">
         <compile files="CheckReturnTypesCorrect.java" options="-ext,abc.ja.cjp"/>
     	<run class="CheckReturnTypesCorrect"/>
     </ajc-test>   
 
-    <ajc-test num="1515" dir="abctests/cjp/typechecks"
+    <ajc-test num="1515" dir="abctests/cjp/src/typechecks"
         title="Check return types at compile time">
         <compile files="CheckReturnTypesIncorrect.java" options="-ext,abc.ja.cjp">
 	        <message kind="error" line="7"/>
@@ -10837,14 +10837,14 @@
         </compile>
     </ajc-test>   
 
-    <ajc-test num="1516" dir="abctests/cjp/typechecks"
+    <ajc-test num="1516" dir="abctests/cjp/src/typechecks"
         title="Check return types at compile time (2)">
         <compile files="CheckReturnTypesIncorrect2.java" options="-ext,abc.ja.cjp">
 	        <message kind="error" line="17"/>
         </compile>
     </ajc-test>   
 
-    <ajc-test num="1517" dir="abctests/cjp/typechecks"
+    <ajc-test num="1517" dir="abctests/cjp/src/typechecks"
         title="Check that CJP type is declared">
         <compile files="CheckCJPDeclared.java" options="-ext,abc.ja.cjp">
 	        <message kind="error" line="4"/>
@@ -10853,7 +10853,7 @@
         </compile>
     </ajc-test>   
 
-    <ajc-test num="1518" dir="abctests/cjp/typechecks"
+    <ajc-test num="1518" dir="abctests/cjp/src/typechecks"
         title="Check argument types">
         <compile files="CheckArgumentTypes.java" options="-ext,abc.ja.cjp">
 	        <message kind="error" line="10"/>
@@ -10861,7 +10861,7 @@
         </compile>
     </ajc-test>   
 
-    <ajc-test num="1519" dir="abctests/cjp/typechecks"
+    <ajc-test num="1519" dir="abctests/cjp/src/typechecks"
         title="Check exception types in advice">
         <compile files="CheckExceptions.java" options="-ext,abc.ja.cjp">
 	        <message kind="error" line="11"/>
@@ -10869,7 +10869,7 @@
         </compile>
     </ajc-test>   
 
-    <ajc-test num="1520" dir="abctests/cjp/typechecks"
+    <ajc-test num="1520" dir="abctests/cjp/src/typechecks"
         title="Check exception types in base code">
         <compile files="CheckExceptions2.java" options="-ext,abc.ja.cjp">
 	        <message kind="error" line="14"/>
@@ -10877,33 +10877,33 @@
         </compile>
     </ajc-test>   
 
-	<ajc-test num="1521" dir="abctests/cjp/matching"
+	<ajc-test num="1521" dir="abctests/cjp/src/matching"
         title="Correct semantics for within pointcuts">
         <abckeywords><skip/></abckeywords>
         <compile files="CorrectWithinSemantics.java" options="-ext,abc.ja.cjp"/>
     	<run class="CorrectWithinSemantics"/>
     </ajc-test>    
 
-    <ajc-test num="1522" dir="abctests/cjp/matching"
+    <ajc-test num="1522" dir="abctests/cjp/src/matching"
         title="Check after-returning value">
         <compile files="MatchAfterReturning.java" options="-ext,abc.ja.cjp"/>
     	<run class="MatchAfterReturning"/>
     </ajc-test>   
 
-    <ajc-test num="1523" dir="abctests/cjp/matching"
+    <ajc-test num="1523" dir="abctests/cjp/src/matching"
         title="Check after-throwing value">
         <compile files="MatchAfterThrowing.java" options="-ext,abc.ja.cjp"/>
     	<run class="MatchAfterThrowing"/>
     </ajc-test>   
 
-    <ajc-test num="1524" dir="abctests/cjp/typechecks"
+    <ajc-test num="1524" dir="abctests/cjp/src/typechecks"
         title="Check after-returning">
         <compile files="CheckAfterReturning.java" options="-ext,abc.ja.cjp">
 	        <message kind="error" line="9"/>
         </compile>
     </ajc-test>   
 
-    <ajc-test num="1525" dir="abctests/cjp/typechecks"
+    <ajc-test num="1525" dir="abctests/cjp/src/typechecks"
         title="Check after-throwing">
         <compile files="CheckAfterThrowing.java" options="-ext,abc.ja.cjp">	        
 	        <message kind="error" line="18"/>
