@@ -18,7 +18,7 @@ import org.spoofax.terms.io.binary.TermReader;
 import org.strategoxt.lang.Context;
 
 import org.openu.awesome.frontend.FrontendAspect;
-import ejp.transform.transform_0_0;;
+import ejp.transform_0_0;;
 
 public aspect EJPFrontendAspect extends FrontendAspect {
 
