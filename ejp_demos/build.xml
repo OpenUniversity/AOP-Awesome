@@ -1,7 +1,7 @@
 <project>
   <property name="libs"                  location="../libs"/>
   <property name="dist"                  location="../dist"/>
-  <property name="aspectjrt"             value="${libs}/aspectjrt-1.7.4.jar"/>
+  <property name="aspectjrt"             value="${dist}/awesome_runtime.jar"/>
   <property name="classpath_for_weaving" value="${aspectjrt}:${libs}/jdtcore-for-aspectj.jar:${libs}/commons.jar:${dist}/awesome_weaver.jar:${dist}/awesome_tools.jar:${libs}/commons-io-2.4.jar:${libs}/strategoxt.jar"/>
   <property name="outjar"                value="woven.jar"/>
 
