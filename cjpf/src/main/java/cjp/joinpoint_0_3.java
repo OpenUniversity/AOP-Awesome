@@ -7,8 +7,6 @@ import org.spoofax.interpreter.terms.IStrategoTerm;
 import org.strategoxt.lang.Context;
 import org.strategoxt.lang.Strategy;
 
-import cjp.transform.pp_aspectj_string_0_0;
-
 public class joinpoint_0_3 extends Strategy {
 	Map<String, String> name2returnType = new HashMap<String, String>();
 	Map<String, String> name2exceptions = new HashMap<String, String>();

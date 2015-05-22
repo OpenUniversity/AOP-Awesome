@@ -20,14 +20,23 @@ import org.spoofax.jsglr.io.SGLR;
 import org.spoofax.terms.TermFactory;
 import org.spoofax.terms.io.binary.TermReader;
 import org.strategoxt.lang.Context;
+import org.strategoxt.lang.JavaInteropRegisterer;
+import org.strategoxt.lang.Strategy;
 import org.openu.awesome.frontend.FrontendAspect;
 
-import cjp.transform.transform_0_0;
+import cjp.transform_0_0;
+import cjp.joinpoint_0_3;
 
 public aspect ClosureFrontendAspect extends FrontendAspect {
 	private static Logger logger = Logger.getLogger(ClosureFrontendAspect.class.getName());
 
 	List<File> convertedFiles = new ArrayList<File>();
+
+	private class InteropRegisterer extends JavaInteropRegisterer {
+		public InteropRegisterer(Strategy ... strategies) {
+			super(strategies);
+		}
+	}
 
 	ClosureFrontendAspect() {
 		new InteropRegisterer(joinpoint_0_3.instance);

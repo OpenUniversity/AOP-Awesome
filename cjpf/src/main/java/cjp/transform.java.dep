@@ -1,0 +1,25 @@
+CJP/dist/transform.java: \
+	 \
+	CJP/trans/aspectj/pp/pointcut/Expression.str \
+	CJP/trans/Stratego-Box.tbl \
+	CJP/trans/aspectj/pp/pointcut/Declaration.str \
+	CJP/trans/aspectj/pp/pattern/Type.str \
+	CJP/trans/aspectj/pp/pattern/Name.str \
+	CJP/trans/aspectj/pp/pattern/FormalParameter.str \
+	CJP/trans/aspectj/pp/pattern/ClassName.str \
+	CJP/trans/aspectj/pp/pattern/ClassMember.str \
+	CJP/trans/aspectj/pp/pattern/Annotation.str \
+	CJP/trans/aspectj/pp/common/BooleanComposition.str \
+	CJP/trans/aspectj/pp/aspect/IntertypeMemberDeclaration.str \
+	CJP/trans/aspectj/pp/aspect/AdviceDeclaration.str \
+	CJP/trans/aspectj/pp/aspect/DeclareDeclaration.str \
+	CJP/trans/aspectj/pp/aspect/Declaration.str \
+	CJP/trans/aspectj/pp/JavaExtension.str \
+	CJP/trans/aspectj/signature.str \
+	CJP/trans/aspectj/pp/Main.str \
+	CJP/trans/aspectj/pretty-print.str \
+	CJP/trans/aspect-converter.str \
+	CJP/trans/utils.str \
+	CJP/trans/java-converter.str \
+	CJP/include/cjp.str \
+	./CJP/trans/transform.str
