@@ -1,0 +1,6 @@
+COOL/dist/transform.java: \
+	 \
+	COOL/trans/tools.str \
+	COOL/trans/externals.str \
+	COOL/include/cool.str \
+	./COOL/trans/transform.str

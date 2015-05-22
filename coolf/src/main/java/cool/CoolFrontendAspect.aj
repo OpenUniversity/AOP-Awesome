@@ -11,7 +11,7 @@ import org.spoofax.interpreter.terms.IStrategoTerm;
 import org.spoofax.terms.TermFactory;
 import org.strategoxt.lang.Context;
 
-import cool.transform.transform_0_0;
+import cool.transform_0_0;
 
 public privileged aspect CoolFrontendAspect extends FrontendAspect {
 
