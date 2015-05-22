@@ -1,4 +1,4 @@
-package awesome.testing;
+package org.openu.awesome.testing;
 
 import java.util.List;
 
