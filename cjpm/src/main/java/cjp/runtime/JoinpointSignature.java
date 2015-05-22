@@ -1,4 +1,4 @@
-package closures.runtime;
+package cjp.runtime;
 
 public @interface JoinpointSignature {
 	Class<?>[] args();

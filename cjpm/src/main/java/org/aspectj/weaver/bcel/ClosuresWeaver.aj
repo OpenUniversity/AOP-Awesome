@@ -24,10 +24,10 @@ import org.aspectj.weaver.UnresolvedType;
 import org.openu.awesome.platform.AbstractWeaver;
 import org.openu.awesome.platform.IEffect;
 
-import closures.runtime.Closure;
-import closures.runtime.Joinpoint;
-import closures.runtime.JoinpointSignature;
-import closures.runtime.JoinpointWrapper;
+import cjp.runtime.Closure;
+import cjp.runtime.Joinpoint;
+import cjp.runtime.JoinpointSignature;
+import cjp.runtime.JoinpointWrapper;
 
 
 public aspect ClosuresWeaver extends AbstractWeaver {

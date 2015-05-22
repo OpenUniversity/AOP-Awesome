@@ -1,4 +1,4 @@
-package closures.runtime;
+package cjp.runtime;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
