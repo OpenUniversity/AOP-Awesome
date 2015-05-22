@@ -5,8 +5,8 @@
     <artifactId>awesome</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>closurem</artifactId>
-  <name>closurem</name>
+  <artifactId>cjpm</artifactId>
+  <name>cjpm</name>
 
   <build>
 	<plugins>

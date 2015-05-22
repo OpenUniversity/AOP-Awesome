@@ -1,0 +1,4 @@
+ant clean
+ant tools -Ddeps=libs/strategoxt.jar -Dfrontends=cjpf/target/cjpf-1.0-SNAPSHOT.jar
+ant weaver -Dmechanisms=cjpm/target/cjpm-1.0-SNAPSHOT.jar,aspectjm/target/aspectjm-1.0-SNAPSHOT.jar
+ant runtime -Dmechanisms=cjpm/target/cjpm-1.0-SNAPSHOT.jar
