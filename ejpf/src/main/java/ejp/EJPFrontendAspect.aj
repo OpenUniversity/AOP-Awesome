@@ -1,24 +1,15 @@
 package ejp;
 
 import java.io.File;
-import java.io.FileReader;
 import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Logger;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.FilenameUtils;
-import org.spoofax.interpreter.terms.IStrategoTerm;
-import org.spoofax.jsglr.client.ParseTable;
-import org.spoofax.jsglr.client.imploder.TermTreeFactory;
-import org.spoofax.jsglr.client.imploder.TreeBuilder;
-import org.spoofax.jsglr.io.SGLR;
-import org.spoofax.terms.TermFactory;
-import org.spoofax.terms.io.binary.TermReader;
-import org.strategoxt.lang.Context;
-
 import org.openu.awesome.frontend.FrontendAspect;
-import ejp.transform_0_0;;
+import org.spoofax.interpreter.terms.IStrategoTerm;
+import org.spoofax.terms.TermFactory;
+import org.strategoxt.lang.Context;
 
 public aspect EJPFrontendAspect extends FrontendAspect {
 
