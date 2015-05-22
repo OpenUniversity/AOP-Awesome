@@ -21,7 +21,7 @@ import org.spoofax.terms.TermFactory;
 import org.spoofax.terms.io.binary.TermReader;
 import org.strategoxt.lang.Context;
 
-import awesome.frontend.FrontendAspect;
+import org.openu.awesome.frontend.FrontendAspect;
 import closure.transform.transform_0_0;
 
 public aspect ClosureFrontendAspect extends FrontendAspect {
