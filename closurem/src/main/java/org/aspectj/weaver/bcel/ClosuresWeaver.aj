@@ -1,4 +1,4 @@
-package closuresplugin;
+package org.aspectj.weaver.bcel;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -21,12 +21,9 @@ import org.aspectj.weaver.ResolvedType;
 import org.aspectj.weaver.Shadow;
 import org.aspectj.weaver.ShadowMunger;
 import org.aspectj.weaver.UnresolvedType;
-import org.aspectj.weaver.bcel.BcelShadow;
-import org.aspectj.weaver.bcel.LazyClassGen;
+import org.openu.awesome.platform.AbstractWeaver;
+import org.openu.awesome.platform.IEffect;
 
-import awesome.platform.AbstractWeaver;
-import awesome.platform.IEffect;
-import awesome.platform.MultiMechanism;
 import closures.runtime.Closure;
 import closures.runtime.Joinpoint;
 import closures.runtime.JoinpointSignature;

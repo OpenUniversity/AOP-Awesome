@@ -24,8 +24,8 @@
     <module>ejpf</module>
     <module>ejpm</module>
     <module>closuref</module>
-<!--
     <module>closurem</module>
+<!--
     <module>testing</module>
 -->
   </modules>

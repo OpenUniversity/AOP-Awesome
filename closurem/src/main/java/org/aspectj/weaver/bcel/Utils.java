@@ -1,4 +1,4 @@
-package closuresplugin;
+package org.aspectj.weaver.bcel;
 
 import java.util.Iterator;
 

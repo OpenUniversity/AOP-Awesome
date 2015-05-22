@@ -1,4 +1,4 @@
-package closuresplugin;
+package org.aspectj.weaver.bcel;
 
 
 public class NameAndArgumentType {
