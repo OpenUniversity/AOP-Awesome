@@ -896,7 +896,6 @@ public privileged aspect AJWeaver extends AbstractWeaver {
 	boolean around(MultiMechanism mm, LazyClassGen clazz):
 		transformClass(mm, clazz) {
 //		itdWeaver = new BcelClassWeaver(world, clazz);
-		System.out.println("KOBI!");
 		itdWeaver = new BcelClassWeaver(world, clazz, null,
 				clazz.getBcelObjectType().getResolvedTypeX().getInterTypeMungers(),
 				world.getCrosscuttingMembersSet().getLateTypeMungers());
