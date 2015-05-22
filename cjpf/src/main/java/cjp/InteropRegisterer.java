@@ -1,4 +1,4 @@
-package closure;
+package cjp;
 
 import org.strategoxt.lang.JavaInteropRegisterer;
 import org.strategoxt.lang.Strategy;

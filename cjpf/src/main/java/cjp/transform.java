@@ -1,4 +1,4 @@
-package closure;
+package cjp;
 
 import org.strategoxt.stratego_lib.*;
 import org.strategoxt.java_front.*;

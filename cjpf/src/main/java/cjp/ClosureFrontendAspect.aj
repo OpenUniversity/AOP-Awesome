@@ -1,4 +1,4 @@
-package closure;
+package cjp;
 
 import java.io.File;
 import java.io.FileReader;
@@ -20,9 +20,9 @@ import org.spoofax.jsglr.io.SGLR;
 import org.spoofax.terms.TermFactory;
 import org.spoofax.terms.io.binary.TermReader;
 import org.strategoxt.lang.Context;
-
 import org.openu.awesome.frontend.FrontendAspect;
-import closure.transform.transform_0_0;
+
+import cjp.transform.transform_0_0;
 
 public aspect ClosureFrontendAspect extends FrontendAspect {
 	private static Logger logger = Logger.getLogger(ClosureFrontendAspect.class.getName());
