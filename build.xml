@@ -71,6 +71,7 @@
                                 </fileset>
 			</classpath>
 
+                        <arg line="-Xlint:ignore"/>
 			<arg line="-inpath ${inpath}"/>
                         <arg line="-outjar dist/awesome_weaver.jar"/>
 		</java>
