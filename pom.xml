@@ -50,28 +50,29 @@
 	</plugin>
       </plugins>
     </pluginManagement>
+
     <plugins>
       <plugin>
-        <artifactId>maven-antrun-plugin</artifactId>
-        <version>1.8</version>
+	<artifactId>exec-maven-plugin</artifactId>
+	<groupId>org.codehaus.mojo</groupId>
 	<inherited>false</inherited>
-        <executions>
-          <execution>
-            <phase>generate-resources</phase>
-            <configuration>
-              <tasks>
-		<exec
-		    dir="org.aspectj/"
-		    executable="ant"
-		    failonerror="true">
-		</exec>
-              </tasks>
-            </configuration>
-            <goals>
-              <goal>run</goal>
-            </goals>
-          </execution>
-        </executions>
+	<executions>
+	  <execution>
+	    <id>Compiling AspectJ</id>
+	    <phase>generate-sources</phase>
+	    <goals>
+              <goal>exec</goal>
+	    </goals>
+	    <configuration>
+              <executable>org.aspectj/lib/ant/bin/ant</executable>
+	      <arguments>
+		<argument>-f</argument>
+		<argument>org.aspectj/build.xml</argument>
+		<argument>jar</argument>
+	      </arguments>
+	    </configuration>
+	  </execution>
+	</executions>
       </plugin>
     </plugins>
   </build>
