@@ -5,11 +5,15 @@
          </classpath>
        </taskdef>
 
+       <property name="aspectjrt" value="org.aspectj/aj-build/dist/tools/lib/aspectjrt.jar"/>
+       <property name="aspectjtools" value="org.aspectj/aj-build/dist/tools/lib/aspectjtools.jar"/>
+       <property name="aspectjweaver" value="org.aspectj/aj-build/dist/tools/lib/aspectjweaver.jar"/>
+
 	<target name="runtime">
 		<mkdir dir="test"/>
 		<taskdef resource="net/sf/antcontrib/antlib.xml"/>
 
-		<copy file="libs/aspectjrt.jar" tofile="dist/awesome_runtime.jar"/>
+		<copy file="${aspectjrt}" tofile="dist/awesome_runtime.jar"/>
 		<jar destfile="dist/awesome_runtime.jar" update="yes">
 			<manifest>
 				<attribute name="BManifest-Version" value="1.0"/>
@@ -60,8 +64,8 @@
 
 		<java fork="true" classname="org.aspectj.tools.ajc.Main">
 			<classpath>
-				<pathelement path="libs/aspectjrt.jar"/>
-				<pathelement path="libs/aspectjtools.jar"/>
+				<pathelement path="${aspectjrt}"/>
+				<pathelement path="${aspectjtools}"/>
 				<fileset dir="libs">
                                         <include name="*.jar"/>
                                 </fileset>
@@ -138,8 +142,8 @@
 
 		<java fork="true" classname="org.aspectj.tools.ajc.Main">
 			<classpath>
-				<pathelement path="libs/aspectjrt.jar"/>
-				<pathelement path="libs/aspectjtools.jar"/>
+				<pathelement path="${aspectjrt}"/>
+				<pathelement path="${aspectjtools}"/>
 				<pathelement path="${classpath}"/>
 			</classpath>
 
