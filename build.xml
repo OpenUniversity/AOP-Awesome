@@ -43,7 +43,7 @@
 				</for>
 			</then>
 		</if>
-		<copy file="dist/awesome_runtime.jar" tofile="dist/org.aspectj.runtime_1.7.3.20130613144500-a.jar"/>
+		<copy file="dist/awesome_runtime.jar" tofile="dist/org.aspectj.runtime_1.8.5.20150128171000.jar"/>
 	 </target>
 
 	<target name="weaver">
@@ -110,7 +110,7 @@
                         </then>
                 </if>
 
-                <copy file="dist/awesome_weaver.jar" tofile="dist/org.aspectj.weaver_1.7.3.20130613144500-a.jar"/>
+                <copy file="dist/awesome_weaver.jar" tofile="dist/org.aspectj.weaver_1.8.5.20150128171000.jar"/>
 	</target>
 
 	<target name="tools">
@@ -175,7 +175,7 @@
                         </manifest>
                 </jar>
 
-                <copy file="dist/awesome_tools.jar" tofile="dist/org.aspectj.ajde_1.7.3.20130613144500-a.jar"/>
+                <copy file="dist/awesome_tools.jar" tofile="dist/org.aspectj.ajde_1.8.5.20150128171000.jar"/>
 	</target> 
 
 	<target name="clean">
