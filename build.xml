@@ -73,10 +73,10 @@
 
                         <arg line="-Xlint:ignore"/>
 			<arg line="-inpath ${inpath}"/>
-                        <arg line="-outjar dist/awesome_weaver.jar"/>
+                        <arg line="-outjar dist/awesomeweaver.jar"/>
 		</java>
 
-                <jar destfile="dist/awesome_weaver.jar" update="yes">
+                <jar destfile="dist/awesomeweaver.jar" update="yes">
                         <manifest>
                                  <attribute name="Bundle-ClassPath" value="."/>
                                  <attribute name="Implementation-Version" value="1.7.2"/>
@@ -102,7 +102,7 @@
                         <then>
                                 <for list="${deps}" param="dep">
                                         <sequential>
-                                                <jar destfile="dist/awesome_weaver.jar" update="yes">
+                                                <jar destfile="dist/awesomeweaver.jar" update="yes">
 						         <zipfileset src="@{dep}"/>
                                                 </jar>
                                         </sequential>
@@ -110,7 +110,7 @@
                         </then>
                 </if>
 
-                <copy file="dist/awesome_weaver.jar" tofile="dist/org.aspectj.weaver_1.8.5.20150128171000.jar"/>
+                <copy file="dist/awesomeweaver.jar" tofile="dist/org.aspectj.weaver_1.8.5.20150128171000.jar"/>
 	</target>
 
 	<target name="tools">
