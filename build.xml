@@ -13,8 +13,8 @@
 		<mkdir dir="test"/>
 		<taskdef resource="net/sf/antcontrib/antlib.xml"/>
 
-		<copy file="${aspectjrt}" tofile="dist/awesome_runtime.jar"/>
-		<jar destfile="dist/awesome_runtime.jar" update="yes">
+		<copy file="${aspectjrt}" tofile="dist/awesomert.jar"/>
+		<jar destfile="dist/awesomert.jar" update="yes">
 			<manifest>
 				<attribute name="BManifest-Version" value="1.0"/>
 				<attribute name="Bundle-Vendor" value="Eclipse AspectJ Development Tools"/>
@@ -36,14 +36,14 @@
 			<then>
 				<for list="${mechanisms}" param="mechanism">
 					<sequential>
-						<jar destfile="dist/awesome_runtime.jar" update="yes">
+						<jar destfile="dist/awesomert.jar" update="yes">
 							<zipfileset src="@{mechanism}" includes="**/runtime/**"/>
 						</jar>
 					</sequential>
 				</for>
 			</then>
 		</if>
-		<copy file="dist/awesome_runtime.jar" tofile="dist/org.aspectj.runtime_1.8.5.20150128171000.jar"/>
+		<copy file="dist/awesomert.jar" tofile="dist/org.aspectj.runtime_1.8.5.20150128171000.jar"/>
 	 </target>
 
 	<target name="weaver">

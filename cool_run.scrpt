@@ -1,2 +1,1 @@
-
-java  -noverify -cp dist/awesome_runtime.jar:dist/woven.jar base.Main
+java  -noverify -cp dist/awesomert.jar:dist/woven.jar base.Main
