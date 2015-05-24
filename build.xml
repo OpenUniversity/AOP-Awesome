@@ -150,10 +150,10 @@
 
 			<arg line="-Xlint:ignore"/>
 			<arg line="-inpath ${inpath}"/>
-			<arg line="-outjar dist/awesome_tools.jar"/>
+			<arg line="-outjar dist/awesometools.jar"/>
 		</java>
 
-                <jar destfile="dist/awesome_tools.jar" update="yes">
+                <jar destfile="dist/awesometools.jar" update="yes">
                         <zipfileset src="libs/strategoxt.jar" includes="org/**"/>
                         <zipfileset src="libs/org.objectweb.asm_3.3.1.v201105211655.jar" includes="org/**"/>
                         <zipfileset src="libs/commons-io-2.4.jar" includes="org/**"/>
@@ -175,7 +175,7 @@
                         </manifest>
                 </jar>
 
-                <copy file="dist/awesome_tools.jar" tofile="dist/org.aspectj.ajde_1.8.5.20150128171000.jar"/>
+                <copy file="dist/awesometools.jar" tofile="dist/org.aspectj.ajde_1.8.5.20150128171000.jar"/>
 	</target> 
 
 	<target name="clean">

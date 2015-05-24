@@ -2,7 +2,7 @@
   <property name="libs"                  location="../libs"/>
   <property name="dist"                  location="../dist"/>
   <property name="aspectjrt"             value="${dist}/awesomert.jar"/>
-  <property name="classpath_for_weaving" value="${aspectjrt}:${libs}/commons.jar:${dist}/awesome_weaver.jar:${dist}/awesome_tools.jar:${libs}/commons-io-2.4.jar:${libs}/strategoxt.jar"/>
+  <property name="classpath_for_weaving" value="${aspectjrt}:${libs}/commons.jar:${dist}/awesome_weaver.jar:${dist}/awesometools.jar:${libs}/commons-io-2.4.jar:${libs}/strategoxt.jar"/>
   <property name="outjar"                value="woven.jar"/>
 
   <target name="clean">
