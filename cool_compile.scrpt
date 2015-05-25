@@ -2,5 +2,3 @@ ant clean
 ant tools -Ddeps=libs/strategoxt.jar -Dfrontends=coolf/target/coolf-1.0-SNAPSHOT.jar
 ant weaver -Dmechanisms=coolm/target/coolm-1.0-SNAPSHOT.jar
 ant runtime -Dmechanisms=coolm/target/coolm-1.0-SNAPSHOT.jar
-rm -r boundedstack/generated
-java -cp dist/awesomeweaver.jar:dist/awesomert.jar:dist/awesometools.jar org.aspectj.tools.ajc.Main -inpath boundedstack/target/boundedstack-1.0-SNAPSHOT.jar boundedstack/src/main/resources/BoundedStackCoord.cool -outjar dist/woven.jar -1.8
