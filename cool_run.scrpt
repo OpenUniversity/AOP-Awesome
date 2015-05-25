@@ -1,1 +1,0 @@
-java  -noverify -cp dist/awesomert.jar:dist/woven.jar base.Main
