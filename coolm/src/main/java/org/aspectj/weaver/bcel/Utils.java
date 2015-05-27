@@ -104,25 +104,24 @@ public final static UnresolvedType[] COOL_Method_Annotations = new UnresolvedTyp
 	 * @param mg
 	 * @return
 	 */
-	public static AnnotationGen getCOOLAnnotation(LazyMethodGen mg) {
-		AnnotationGen result = null;
+	public static AnnotationAJ getCOOLAnnotation(LazyMethodGen mg) {
 		if (mg == null)
-			return result;
+			return null;
 		return getCOOLAnnotation(mg.getMemberView());
 	}
 	
-	public static AnnotationGen getCOOLAnnotation(ResolvedMember method) {
-		AnnotationGen result = null;
+	public static AnnotationAJ getCOOLAnnotation(ResolvedMember method) {
 		if (method == null)
-			return result;
+			return null;;
 		AnnotationAJ[] anns = method.getAnnotations();
-		for (AnnotationAJ ann : anns)
-			for (UnresolvedType type : COOL_Method_Annotations)
-				if (ann.getTypeName().equals(type.getName())) {
-					result = ((BcelAnnotation) ann).getBcelAnnotation();
-					break;
-				}
-		return result;
+		if (anns != null) { 
+			for (AnnotationAJ ann : anns)
+				for (UnresolvedType type : COOL_Method_Annotations)
+					if (ann.getTypeName().equals(type.getName())) {
+						return ann;
+					}
+		}
+		return null;
 	}
 
 	public static AnnotationGen getCOOLFieldAnnotation(ResolvedMember field) {

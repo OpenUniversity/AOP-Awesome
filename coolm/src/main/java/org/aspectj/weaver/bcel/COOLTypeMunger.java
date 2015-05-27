@@ -117,13 +117,12 @@ public class COOLTypeMunger {
 		extRefTypes.put(aspectUType, aspExtRefTypes);
 
 		for (ResolvedMember method : aspectType.getDeclaredMethods()) {
-			AnnotationGen ann = Utils.getCOOLAnnotation(method);
+			AnnotationAJ ann = Utils.getCOOLAnnotation(method);
 			if (ann == null)
 				continue;
 			String typeName = ann.getTypeName();
 			if (typeName.equals(Utils.COOL_ExternalRef_ANNOTATION.getName())) {
-				String exprStr = Utils.getAnnotationElementValue(ann, "expr")
-						.stringifyValue();
+				String exprStr = ann.getStringFormOfValue("expr");
 				//System.out.println("Found extRef method " + method.getName()
 				//		+ " that targets field: " + getFieldName(exprStr));
 				aspExtRefs.put(method.getName(), exprStr);
@@ -189,7 +188,7 @@ public class COOLTypeMunger {
 		// calls to external reference methods with
 		// actual external variable reference expressions
 		for (LazyMethodGen method : methods) {
-			AnnotationGen ann = Utils.getCOOLAnnotation(method);
+			AnnotationAJ ann = Utils.getCOOLAnnotation(method);
 			if (ann == null)
 				continue;
 			String typeName = ann.getTypeName();

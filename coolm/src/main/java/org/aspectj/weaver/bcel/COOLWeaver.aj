@@ -227,7 +227,7 @@ public privileged aspect COOLWeaver extends AbstractWeaver {
 
 		// first lock and unlock advice execution shadows are created
 		for (LazyMethodGen mg : methods) {
-			AnnotationGen ann = Utils.getCOOLAnnotation(mg);
+			AnnotationAJ ann = Utils.getCOOLAnnotation(mg);
 			if (ann == null)
 				continue;
 			String typeName = ann.getTypeName();
@@ -262,7 +262,7 @@ public privileged aspect COOLWeaver extends AbstractWeaver {
 			if (mg.getName() == "<init>") {
 				result.addAll(mm.reify(mg.getBody(), mg, null));
 			}
-			AnnotationGen ann = Utils.getCOOLAnnotation(mg);
+			AnnotationAJ ann = Utils.getCOOLAnnotation(mg);
 			if (ann == null)
 				continue;
 			String typeName = ann.getTypeName();
@@ -359,7 +359,7 @@ public privileged aspect COOLWeaver extends AbstractWeaver {
 private void mapAdvice(ResolvedType clazz, UnresolvedType targetType) {
 		ResolvedMember[] methods = clazz.getDeclaredMethods();
 		for (ResolvedMember mg : methods) {
-			AnnotationGen ann = Utils.getCOOLAnnotation(mg);
+			AnnotationAJ ann = Utils.getCOOLAnnotation(mg);
 			if (ann == null)
 				continue;
 			String typeName = ann.getTypeName();
@@ -376,23 +376,19 @@ private void mapAdvice(ResolvedType clazz, UnresolvedType targetType) {
 			}
 		}
 	}	/** Builds a target member of a COOL's advice */
-	private Member buildTargetMember(AnnotationGen ann, UnresolvedType targetType) {
-		ElementValue methodNameVal = Utils.getAnnotationElementValue(ann,
-				"methodName");
-		ElementValue paramTypesVal = Utils.getAnnotationElementValue(ann,
-				"parameterTypes");
+	private Member buildTargetMember(AnnotationAJ ann, UnresolvedType targetType) {
+		String methodName = ann.getStringFormOfValue("methodName");
+		String paramTypesVal = ann.getStringFormOfValue("parameterTypes");
 		// ElementValue returnTypeVal = getAnnotationElementValue(ann,
 		// "returnType");
-		if (methodNameVal == null || paramTypesVal == null
-				|| paramTypesVal.getElementValueType() != ElementValue.ARRAY)
+		if (methodName == null || paramTypesVal == null
+				|| !paramTypesVal.startsWith("[")) {
 			return null;
-		String methodName = methodNameVal.stringifyValue();
-		ElementValue[] paramTypeVals = ((ArrayElementValue) paramTypesVal)
-				.getElementValuesArray();
-		UnresolvedType[] paramTypes = new UnresolvedType[paramTypeVals.length];
+		}
+		String[] paramTypeNames = "[]".equals(paramTypesVal) ? new String[0] : paramTypesVal.substring(1, paramTypesVal.length()-1).split(",");
+		UnresolvedType[] paramTypes = new UnresolvedType[paramTypeNames.length];
 		for (int i = 0; i < paramTypes.length; i++)
-			paramTypes[i] = UnresolvedType.forName(paramTypeVals[i]
-					.stringifyValue());
+			paramTypes[i] = UnresolvedType.forName(paramTypeNames[i]);
 		// UnresolvedType returnType = UnresolvedType.forName(returnTypeVal
 		// .stringifyValue());
 		UnresolvedType returnType = UnresolvedType.forName("java.lang.Object");
