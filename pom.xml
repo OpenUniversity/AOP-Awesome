@@ -18,6 +18,7 @@
     <module>platform</module>
     <module>aspectjm</module>
     <module>coolm</module>
+    <module>acoolm</module>
     <module>frontend</module>
     <module>coolf</module>
     <module>boundedstack</module>
