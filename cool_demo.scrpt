@@ -1,3 +1,3 @@
 rm -r boundedstack/generated
-java -cp dist/awesomeweaver.jar:dist/awesomert.jar:dist/awesometools.jar org.aspectj.tools.ajc.Main -inpath boundedstack/target/boundedstack-1.0-SNAPSHOT.jar boundedstack/src/main/resources/BoundedStackCoord.cool -outjar dist/woven.jar -1.8
+java -cp dist/awesomeweaver.jar:dist/awesomert.jar:dist/awesometools.jar org.aspectj.tools.ajc.Main -inpath boundedstack/target/boundedstack-1.0-SNAPSHOT.jar boundedstack/src/main/java/base/BoundedStackCoord.cool -outjar dist/woven.jar -1.8
 java  -noverify -cp dist/awesomert.jar:dist/woven.jar base.Main
