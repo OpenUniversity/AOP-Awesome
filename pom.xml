@@ -22,6 +22,7 @@
     <module>frontend</module>
     <module>coolf</module>
     <module>boundedstack</module>
+    <module>aboundedstack</module>
     <module>ejpf</module>
     <module>ejpm</module>
     <module>cjpf</module>
@@ -83,7 +84,7 @@
       <dependency>
 	<artifactId>aspectjweaver</artifactId>
 	<groupId>org.aspectj</groupId>
-	<version>1.8.5</version>
+	<version>1.8.6</version>
 	<scope>system</scope>
 	<systemPath>${project.basedir}/../org.aspectj/aj-build/dist/tools/lib/aspectjweaver.jar</systemPath>
       </dependency>
@@ -91,7 +92,7 @@
       <dependency>
 	<artifactId>aspectjtools</artifactId>
 	<groupId>org.aspectj</groupId>
-	<version>1.8.5</version>
+	<version>1.8.6</version>
 	<scope>system</scope>
 	<systemPath>${project.basedir}/../org.aspectj/aj-build/dist/tools/lib/aspectjtools.jar</systemPath>
       </dependency>
@@ -99,7 +100,7 @@
       <dependency>
 	<artifactId>aspectjrt</artifactId>
 	<groupId>org.aspectj</groupId>
-	<version>1.8.5</version>
+	<version>1.8.6</version>
 	<scope>system</scope>
 	<systemPath>${project.basedir}/../org.aspectj/aj-build/dist/tools/lib/aspectjrt.jar</systemPath>
       </dependency>

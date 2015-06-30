@@ -1,0 +1,24 @@
+package base;
+
+coordinator base.BoundedStack { 
+
+  condition full = false, empty = true; 
+  int top = 0; 
+  
+  push:
+  	  requires (!full);
+      on_entry {top = top + 1;} 
+      on_exit  {
+        empty = false;
+        if (top == buffer.length) full = true; 
+      }
+
+  pop: 
+  	  requires (!empty); 
+      on_entry {top = top - 1;} 
+      on_exit  {
+        full = false; 
+        if (top == 0) empty = true; 
+      }
+}
+  
