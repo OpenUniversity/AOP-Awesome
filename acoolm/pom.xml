@@ -9,14 +9,12 @@
 	<artifactId>acoolm</artifactId>
 
 	<build>
-	  <pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>aspectj-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-	  </pluginManagement>
 	</build>
 
 	<dependencies>
