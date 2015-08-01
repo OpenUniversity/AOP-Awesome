@@ -13,26 +13,26 @@ import java.lang.ref.WeakReference;
 
 @SuppressWarnings("all") final class lifted32 extends Strategy 
 { 
-  TermReference y_10;
+  TermReference r_36;
 
-  TermReference z_10;
+  TermReference q_36;
+
+  TermReference p_36;
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
-    Fail377:
+    ITermFactory termFactory = context.getFactory();
+    Fail183:
     { 
-      if(term.getTermType() != IStrategoTerm.APPL || transform._consPlus_2 != ((IStrategoAppl)term).getConstructor())
-        break Fail377;
-      if(y_10.value == null)
-        y_10.value = term.getSubterm(0);
-      else
-        if(y_10.value != term.getSubterm(0) && !y_10.value.match(term.getSubterm(0)))
-          break Fail377;
-      if(z_10.value == null)
-        z_10.value = term.getSubterm(1);
-      else
-        if(z_10.value != term.getSubterm(1) && !z_10.value.match(term.getSubterm(1)))
-          break Fail377;
+      IStrategoTerm s_36 = null;
+      s_36 = term;
+      if(r_36.value == null || (q_36.value == null || p_36.value == null))
+        break Fail183;
+      IStrategoList list9;
+      list9 = checkListTail(r_36.value);
+      if(list9 == null)
+        break Fail183;
+      term = termFactory.makeAppl(transform._consIntertypeFieldDec_5, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(cool.constPrivate0, list9), q_36.value, p_36.value, cool.constNone0, s_36});
       if(true)
         return term;
     }

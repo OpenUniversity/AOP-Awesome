@@ -15,14 +15,14 @@ import java.lang.ref.WeakReference;
 { 
   public static get_coordinator_0_1 instance = new get_coordinator_0_1();
 
-  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm w_42)
+  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm s_26)
   { 
     context.push("get_coordinator_0_1");
-    Fail200:
+    Fail146:
     { 
-      term = getfirst_1_0.instance.invoke(context, w_42, lifted111.instance);
+      term = getfirst_1_0.instance.invoke(context, s_26, lifted7.instance);
       if(term == null)
-        break Fail200;
+        break Fail146;
       context.popOnSuccess();
       if(true)
         return term;

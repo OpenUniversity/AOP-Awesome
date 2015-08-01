@@ -15,324 +15,325 @@ import java.lang.ref.WeakReference;
 { 
   public static gen_coordinator_body_0_1 instance = new gen_coordinator_body_0_1();
 
-  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm ref_p_43)
+  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm ref_k_27)
   { 
     ITermFactory termFactory = context.getFactory();
-    TermReference p_43 = new TermReference(ref_p_43);
+    TermReference k_27 = new TermReference(ref_k_27);
     context.push("gen_coordinator_body_0_1");
-    Fail205:
+    Fail150:
     { 
-      TermReference q_43 = new TermReference();
-      TermReference r_43 = new TermReference();
-      TermReference s_43 = new TermReference();
-      IStrategoTerm t_43 = null;
-      TermReference u_43 = new TermReference();
-      TermReference v_43 = new TermReference();
-      IStrategoTerm w_43 = null;
-      IStrategoTerm x_43 = null;
-      TermReference y_43 = new TermReference();
-      TermReference z_43 = new TermReference();
-      IStrategoTerm a_44 = null;
-      IStrategoTerm b_44 = null;
-      TermReference c_44 = new TermReference();
-      IStrategoTerm d_44 = null;
-      TermReference e_44 = new TermReference();
-      TermReference f_44 = new TermReference();
-      TermReference g_44 = new TermReference();
-      TermReference h_44 = new TermReference();
-      IStrategoTerm o_44 = null;
-      IStrategoTerm t_45 = null;
-      IStrategoTerm b_46 = null;
-      IStrategoTerm u_45 = null;
-      IStrategoTerm c_46 = null;
-      IStrategoTerm v_45 = null;
-      IStrategoTerm d_46 = null;
-      IStrategoTerm w_45 = null;
-      IStrategoTerm e_46 = null;
-      IStrategoTerm x_45 = null;
-      IStrategoTerm f_46 = null;
-      IStrategoTerm y_45 = null;
-      IStrategoTerm g_46 = null;
-      IStrategoTerm z_45 = null;
-      IStrategoTerm h_46 = null;
+      TermReference l_27 = new TermReference();
+      TermReference m_27 = new TermReference();
+      TermReference n_27 = new TermReference();
+      IStrategoTerm o_27 = null;
+      TermReference p_27 = new TermReference();
+      TermReference q_27 = new TermReference();
+      IStrategoTerm r_27 = null;
+      IStrategoTerm s_27 = null;
+      TermReference t_27 = new TermReference();
+      TermReference u_27 = new TermReference();
+      IStrategoTerm v_27 = null;
+      IStrategoTerm w_27 = null;
+      TermReference x_27 = new TermReference();
+      IStrategoTerm y_27 = null;
+      TermReference z_27 = new TermReference();
+      TermReference a_28 = new TermReference();
+      TermReference b_28 = new TermReference();
+      TermReference c_28 = new TermReference();
+      IStrategoTerm j_28 = null;
+      IStrategoTerm o_29 = null;
+      IStrategoTerm w_29 = null;
+      IStrategoTerm p_29 = null;
+      IStrategoTerm x_29 = null;
+      IStrategoTerm q_29 = null;
+      IStrategoTerm y_29 = null;
+      IStrategoTerm r_29 = null;
+      IStrategoTerm z_29 = null;
+      IStrategoTerm s_29 = null;
+      IStrategoTerm a_30 = null;
+      IStrategoTerm t_29 = null;
+      IStrategoTerm b_30 = null;
+      IStrategoTerm u_29 = null;
+      IStrategoTerm c_30 = null;
       if(term.getTermType() != IStrategoTerm.APPL || transform._consCoordinatorBody_1 != ((IStrategoAppl)term).getConstructor())
-        break Fail205;
-      b_44 = term.getSubterm(0);
-      o_44 = term;
-      IStrategoTerm term191 = term;
-      Success149:
+        break Fail150;
+      w_27 = term.getSubterm(0);
+      j_28 = term;
+      IStrategoTerm term113 = term;
+      Success110:
       { 
-        Fail206:
+        Fail151:
         { 
           term = new_hashtable_0_0.instance.invoke(context, term);
           if(term == null)
-            break Fail206;
-          if(e_44.value == null)
-            e_44.value = term;
+            break Fail151;
+          if(z_27.value == null)
+            z_27.value = term;
           else
-            if(e_44.value != term && !e_44.value.match(term))
-              break Fail206;
+            if(z_27.value != term && !z_27.value.match(term))
+              break Fail151;
           term = new_hashtable_0_0.instance.invoke(context, term);
           if(term == null)
-            break Fail206;
-          if(f_44.value == null)
-            f_44.value = term;
+            break Fail151;
+          if(a_28.value == null)
+            a_28.value = term;
           else
-            if(f_44.value != term && !f_44.value.match(term))
-              break Fail206;
+            if(a_28.value != term && !a_28.value.match(term))
+              break Fail151;
           term = new_hashtable_0_0.instance.invoke(context, term);
           if(term == null)
-            break Fail206;
-          if(g_44.value == null)
-            g_44.value = term;
+            break Fail151;
+          if(b_28.value == null)
+            b_28.value = term;
           else
-            if(g_44.value != term && !g_44.value.match(term))
-              break Fail206;
+            if(b_28.value != term && !b_28.value.match(term))
+              break Fail151;
           term = new_hashtable_0_0.instance.invoke(context, term);
           if(term == null)
-            break Fail206;
-          if(q_43.value == null)
-            q_43.value = term;
+            break Fail151;
+          if(l_27.value == null)
+            l_27.value = term;
           else
-            if(q_43.value != term && !q_43.value.match(term))
-              break Fail206;
+            if(l_27.value != term && !l_27.value.match(term))
+              break Fail151;
           term = new_hashtable_0_0.instance.invoke(context, term);
           if(term == null)
-            break Fail206;
-          if(r_43.value == null)
-            r_43.value = term;
+            break Fail151;
+          if(m_27.value == null)
+            m_27.value = term;
           else
-            if(r_43.value != term && !r_43.value.match(term))
-              break Fail206;
+            if(m_27.value != term && !m_27.value.match(term))
+              break Fail151;
           term = new_hashtable_0_0.instance.invoke(context, term);
           if(term == null)
-            break Fail206;
-          if(s_43.value == null)
-            s_43.value = term;
+            break Fail151;
+          if(n_27.value == null)
+            n_27.value = term;
           else
-            if(s_43.value != term && !s_43.value.match(term))
-              break Fail206;
+            if(n_27.value != term && !n_27.value.match(term))
+              break Fail151;
           term = new_hashtable_0_0.instance.invoke(context, term);
           if(term == null)
-            break Fail206;
-          if(h_44.value == null)
-            h_44.value = term;
+            break Fail151;
+          if(c_28.value == null)
+            c_28.value = term;
           else
-            if(h_44.value != term && !h_44.value.match(term))
-              break Fail206;
+            if(c_28.value != term && !c_28.value.match(term))
+              break Fail151;
           term = new_hashtable_0_0.instance.invoke(context, term);
           if(term == null)
-            break Fail206;
-          if(c_44.value == null)
-            c_44.value = term;
+            break Fail151;
+          if(x_27.value == null)
+            x_27.value = term;
           else
-            if(c_44.value != term && !c_44.value.match(term))
-              break Fail206;
+            if(x_27.value != term && !x_27.value.match(term))
+              break Fail151;
           term = new_hashtable_0_0.instance.invoke(context, term);
           if(term == null)
-            break Fail206;
-          if(u_43.value == null)
-            u_43.value = term;
+            break Fail151;
+          if(p_27.value == null)
+            p_27.value = term;
           else
-            if(u_43.value != term && !u_43.value.match(term))
-              break Fail206;
+            if(p_27.value != term && !p_27.value.match(term))
+              break Fail151;
           term = new_hashtable_0_0.instance.invoke(context, term);
           if(term == null)
-            break Fail206;
-          if(v_43.value == null)
-            v_43.value = term;
+            break Fail151;
+          if(q_27.value == null)
+            q_27.value = term;
           else
-            if(v_43.value != term && !v_43.value.match(term))
-              break Fail206;
-          term = getfirst_1_0.instance.invoke(context, b_44, lifted112.instance);
+            if(q_27.value != term && !q_27.value.match(term))
+              break Fail151;
+          term = getfirst_1_0.instance.invoke(context, w_27, lifted8.instance);
           if(term == null)
-            break Fail206;
-          t_43 = term;
-          term = getfirst_1_0.instance.invoke(context, b_44, lifted113.instance);
+            break Fail151;
+          o_27 = term;
+          term = getfirst_1_0.instance.invoke(context, w_27, lifted9.instance);
           if(term == null)
-            break Fail206;
+            break Fail151;
           term = get_methods_list_0_0.instance.invoke(context, term);
           if(term == null)
-            break Fail206;
-          w_43 = term;
-          term = getfirst_1_0.instance.invoke(context, b_44, lifted114.instance);
+            break Fail151;
+          r_27 = term;
+          term = getfirst_1_0.instance.invoke(context, w_27, lifted10.instance);
           if(term == null)
-            break Fail206;
+            break Fail151;
           term = get_methods_list_0_0.instance.invoke(context, term);
           if(term == null)
-            break Fail206;
-          x_43 = term;
-          term = w_43;
-          lifted115 lifted1150 = new lifted115();
-          lifted1150.u_43 = u_43;
-          term = map_1_0.instance.invoke(context, term, lifted1150);
+            break Fail151;
+          s_27 = term;
+          term = r_27;
+          lifted11 lifted110 = new lifted11();
+          lifted110.p_27 = p_27;
+          term = map_1_0.instance.invoke(context, term, lifted110);
           if(term == null)
-            break Fail206;
-          term = x_43;
-          lifted116 lifted1160 = new lifted116();
-          lifted1160.v_43 = v_43;
-          term = map_1_0.instance.invoke(context, term, lifted1160);
+            break Fail151;
+          term = s_27;
+          lifted12 lifted120 = new lifted12();
+          lifted120.q_27 = q_27;
+          term = map_1_0.instance.invoke(context, term, lifted120);
           if(term == null)
-            break Fail206;
-          term = map_1_0.instance.invoke(context, w_43, lifted117.instance);
+            break Fail151;
+          term = map_1_0.instance.invoke(context, r_27, lifted13.instance);
           if(term == null)
-            break Fail206;
-          if(y_43.value == null)
-            y_43.value = term;
+            break Fail151;
+          if(t_27.value == null)
+            t_27.value = term;
           else
-            if(y_43.value != term && !y_43.value.match(term))
-              break Fail206;
-          term = map_1_0.instance.invoke(context, x_43, lifted118.instance);
+            if(t_27.value != term && !t_27.value.match(term))
+              break Fail151;
+          term = map_1_0.instance.invoke(context, s_27, lifted14.instance);
           if(term == null)
-            break Fail206;
-          if(z_43.value == null)
-            z_43.value = term;
+            break Fail151;
+          if(u_27.value == null)
+            u_27.value = term;
           else
-            if(z_43.value != term && !z_43.value.match(term))
-              break Fail206;
-          if(y_43.value == null || z_43.value == null)
-            break Fail206;
-          term = termFactory.makeTuple(y_43.value, z_43.value);
+            if(u_27.value != term && !u_27.value.match(term))
+              break Fail151;
+          if(t_27.value == null || u_27.value == null)
+            break Fail151;
+          term = termFactory.makeTuple(t_27.value, u_27.value);
           term = union_0_0.instance.invoke(context, term);
           if(term == null)
-            break Fail206;
-          a_44 = term;
-          lifted119 lifted1190 = new lifted119();
-          lifted1190.h_44 = h_44;
-          term = map_1_0.instance.invoke(context, term, lifted1190);
+            break Fail151;
+          v_27 = term;
+          lifted15 lifted150 = new lifted15();
+          lifted150.c_28 = c_28;
+          term = map_1_0.instance.invoke(context, term, lifted150);
           if(term == null)
-            break Fail206;
-          term = retain_all_1_0.instance.invoke(context, b_44, lifted120.instance);
+            break Fail151;
+          term = retain_all_1_0.instance.invoke(context, w_27, lifted16.instance);
           if(term == null)
-            break Fail206;
-          d_44 = term;
-          lifted121 lifted1211 = new lifted121();
-          lifted1211.c_44 = c_44;
-          term = map_1_0.instance.invoke(context, term, lifted1211);
+            break Fail151;
+          y_27 = term;
+          lifted17 lifted170 = new lifted17();
+          lifted170.x_27 = x_27;
+          term = map_1_0.instance.invoke(context, term, lifted170);
           if(term == null)
-            break Fail206;
-          term = d_44;
-          lifted122 lifted1220 = new lifted122();
-          lifted1220.e_44 = e_44;
-          lifted1220.f_44 = f_44;
-          lifted1220.g_44 = g_44;
-          lifted1220.h_44 = h_44;
-          term = map_1_0.instance.invoke(context, term, lifted1220);
+            break Fail151;
+          term = y_27;
+          lifted18 lifted180 = new lifted18();
+          lifted180.z_27 = z_27;
+          lifted180.a_28 = a_28;
+          lifted180.b_28 = b_28;
+          lifted180.c_28 = c_28;
+          term = map_1_0.instance.invoke(context, term, lifted180);
           if(term == null)
-            break Fail206;
+            break Fail151;
           if(true)
-            break Success149;
+            break Success110;
         }
-        term = term191;
-        IStrategoTerm q_45 = null;
-        q_45 = term;
-        term = report_with_failure_0_1.instance.invoke(context, q_45, cool.const58);
+        term = term113;
+        IStrategoTerm l_29 = null;
+        l_29 = term;
+        term = report_with_failure_0_1.instance.invoke(context, l_29, cool.const99);
         if(term == null)
-          break Fail205;
+          break Fail150;
       }
-      term = o_44;
-      b_46 = term;
-      if(t_43 == null)
-        break Fail205;
-      term = add_condition_fields_0_0.instance.invoke(context, t_43);
+      term = j_28;
+      w_29 = term;
+      if(o_27 == null)
+        break Fail150;
+      term = add_condition_fields_0_1.instance.invoke(context, o_27, k_27.value);
       if(term == null)
-        break Fail205;
-      t_45 = term;
-      c_46 = b_46;
-      term = add_coordinator_fields_0_0.instance.invoke(context, b_44);
+        break Fail150;
+      o_29 = term;
+      x_29 = w_29;
+      term = add_coordinator_fields_0_1.instance.invoke(context, w_27, k_27.value);
       if(term == null)
-        break Fail205;
-      u_45 = term;
-      term = c_46;
-      d_46 = c_46;
-      if(a_44 == null)
-        break Fail205;
-      term = a_44;
-      lifted123 lifted1230 = new lifted123();
-      lifted1230.h_44 = h_44;
-      term = map_1_0.instance.invoke(context, term, lifted1230);
+        break Fail150;
+      p_29 = term;
+      term = x_29;
+      y_29 = x_29;
+      if(v_27 == null)
+        break Fail150;
+      term = v_27;
+      lifted19 lifted190 = new lifted19();
+      lifted190.c_28 = c_28;
+      term = map_1_0.instance.invoke(context, term, lifted190);
       if(term == null)
-        break Fail205;
-      v_45 = term;
-      term = d_46;
-      e_46 = d_46;
+        break Fail150;
+      q_29 = term;
+      term = y_29;
+      z_29 = y_29;
       term = gen_is$Run$By$Others_method_0_0.instance.invoke(context, term);
       if(term == null)
-        break Fail205;
-      w_45 = term;
-      term = e_46;
-      f_46 = e_46;
-      if(e_44.value == null)
-        break Fail205;
-      term = hashtable_keys_0_0.instance.invoke(context, e_44.value);
+        break Fail150;
+      r_29 = term;
+      term = z_29;
+      a_30 = z_29;
+      if(z_27.value == null)
+        break Fail150;
+      term = hashtable_keys_0_0.instance.invoke(context, z_27.value);
       if(term == null)
-        break Fail205;
-      lifted124 lifted1240 = new lifted124();
-      lifted1240.e_44 = e_44;
-      lifted1240.q_43 = q_43;
-      lifted1240.h_44 = h_44;
-      term = map_1_0.instance.invoke(context, term, lifted1240);
+        break Fail150;
+      lifted20 lifted200 = new lifted20();
+      lifted200.k_27 = k_27;
+      lifted200.z_27 = z_27;
+      lifted200.l_27 = l_27;
+      lifted200.c_28 = c_28;
+      term = map_1_0.instance.invoke(context, term, lifted200);
       if(term == null)
-        break Fail205;
-      x_45 = term;
-      term = f_46;
-      g_46 = f_46;
-      if(g_44.value == null)
-        break Fail205;
-      term = hashtable_keys_0_0.instance.invoke(context, g_44.value);
+        break Fail150;
+      s_29 = term;
+      term = a_30;
+      b_30 = a_30;
+      if(b_28.value == null)
+        break Fail150;
+      term = hashtable_keys_0_0.instance.invoke(context, b_28.value);
       if(term == null)
-        break Fail205;
-      lifted125 lifted1250 = new lifted125();
-      lifted1250.g_44 = g_44;
-      lifted1250.p_43 = p_43;
-      lifted1250.s_43 = s_43;
-      lifted1250.h_44 = h_44;
-      term = map_1_0.instance.invoke(context, term, lifted1250);
+        break Fail150;
+      lifted21 lifted210 = new lifted21();
+      lifted210.k_27 = k_27;
+      lifted210.b_28 = b_28;
+      lifted210.n_27 = n_27;
+      lifted210.c_28 = c_28;
+      term = map_1_0.instance.invoke(context, term, lifted210);
       if(term == null)
-        break Fail205;
-      y_45 = term;
-      term = g_46;
-      h_46 = g_46;
-      if(f_44.value == null)
-        break Fail205;
-      term = hashtable_keys_0_0.instance.invoke(context, f_44.value);
+        break Fail150;
+      t_29 = term;
+      term = b_30;
+      c_30 = b_30;
+      if(a_28.value == null)
+        break Fail150;
+      term = hashtable_keys_0_0.instance.invoke(context, a_28.value);
       if(term == null)
-        break Fail205;
-      lifted126 lifted1260 = new lifted126();
-      lifted1260.f_44 = f_44;
-      lifted1260.p_43 = p_43;
-      lifted1260.r_43 = r_43;
-      lifted1260.h_44 = h_44;
-      term = map_1_0.instance.invoke(context, term, lifted1260);
+        break Fail150;
+      lifted22 lifted220 = new lifted22();
+      lifted220.k_27 = k_27;
+      lifted220.a_28 = a_28;
+      lifted220.m_27 = m_27;
+      lifted220.c_28 = c_28;
+      term = map_1_0.instance.invoke(context, term, lifted220);
       if(term == null)
-        break Fail205;
-      z_45 = term;
-      term = h_46;
-      if(a_44 == null)
-        break Fail205;
-      term = a_44;
-      lifted127 lifted1270 = new lifted127();
-      lifted1270.p_43 = p_43;
-      lifted1270.r_43 = r_43;
-      lifted1270.q_43 = q_43;
-      lifted1270.s_43 = s_43;
-      lifted1270.y_43 = y_43;
-      lifted1270.z_43 = z_43;
-      lifted1270.h_44 = h_44;
-      lifted1270.u_43 = u_43;
-      lifted1270.v_43 = v_43;
-      lifted1270.c_44 = c_44;
-      term = map_1_0.instance.invoke(context, term, lifted1270);
+        break Fail150;
+      u_29 = term;
+      term = c_30;
+      if(v_27 == null)
+        break Fail150;
+      term = v_27;
+      lifted23 lifted230 = new lifted23();
+      lifted230.k_27 = k_27;
+      lifted230.m_27 = m_27;
+      lifted230.l_27 = l_27;
+      lifted230.n_27 = n_27;
+      lifted230.t_27 = t_27;
+      lifted230.u_27 = u_27;
+      lifted230.c_28 = c_28;
+      lifted230.p_27 = p_27;
+      lifted230.q_27 = q_27;
+      lifted230.x_27 = x_27;
+      term = map_1_0.instance.invoke(context, term, lifted230);
       if(term == null)
-        break Fail205;
+        break Fail150;
       term = concat_0_0.instance.invoke(context, term);
       if(term == null)
-        break Fail205;
-      term = termFactory.makeTuple(t_45, u_45, v_45, (IStrategoTerm)termFactory.makeListCons(w_45, (IStrategoList)cool.constNil0), x_45, y_45, z_45, term);
+        break Fail150;
+      term = termFactory.makeTuple(o_29, p_29, q_29, (IStrategoTerm)termFactory.makeListCons(r_29, (IStrategoList)cool.constNil0), s_29, t_29, u_29, term);
       term = conc_0_0.instance.invoke(context, term);
       if(term == null)
-        break Fail205;
-      term = termFactory.makeAppl(transform._consClassBody_1, new IStrategoTerm[]{term});
+        break Fail150;
+      term = termFactory.makeAppl(transform._consAspectBody_1, new IStrategoTerm[]{term});
       context.popOnSuccess();
       if(true)
         return term;

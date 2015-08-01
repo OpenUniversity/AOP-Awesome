@@ -18,11 +18,11 @@ import java.lang.ref.WeakReference;
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
     context.push("transform_ast_0_0");
-    Fail172:
+    Fail118:
     { 
       term = convert_0_0.instance.invoke(context, term);
       if(term == null)
-        break Fail172;
+        break Fail118;
       context.popOnSuccess();
       if(true)
         return term;

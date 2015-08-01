@@ -13,31 +13,38 @@ import java.lang.ref.WeakReference;
 
 @SuppressWarnings("all") final class lifted29 extends Strategy 
 { 
-  TermReference c_10;
-
-  TermReference d_10;
-
-  TermReference e_10;
-
-  TermReference f_10;
-
-  TermReference g_10;
-
-  TermReference h_10;
-
-  TermReference j_10;
-
-  TermReference k_10;
+  TermReference a_36;
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
-    Fail378:
+    Fail185:
     { 
-      IStrategoTerm l_14 = null;
-      l_14 = term;
-      term = add_external_impl_0_9.instance.invokeDynamic(context, l_14, NO_STRATEGIES, new IStrategoTerm[]{c_10.value, d_10.value, e_10.value, f_10.value, g_10.value, h_10.value, cool.constDouble0, j_10.value, k_10.value});
+      IStrategoTerm f_36 = null;
+      IStrategoTerm g_36 = null;
+      IStrategoTerm h_36 = null;
+      IStrategoTerm l_36 = null;
+      IStrategoTerm n_36 = null;
+      IStrategoTerm o_36 = null;
+      if(term.getTermType() != IStrategoTerm.APPL || transform._consFieldDec_3 != ((IStrategoAppl)term).getConstructor())
+        break Fail185;
+      f_36 = term.getSubterm(0);
+      g_36 = term.getSubterm(1);
+      h_36 = term.getSubterm(2);
+      term = h_36;
+      n_36 = h_36;
+      if(a_36.value == null)
+        break Fail185;
+      term = topdown_1_0.instance.invoke(context, a_36.value, strip_annos_0_0.instance);
       if(term == null)
-        break Fail378;
+        break Fail185;
+      l_36 = term;
+      o_36 = n_36;
+      term = topdown_1_0.instance.invoke(context, g_36, strip_annos_0_0.instance);
+      if(term == null)
+        break Fail185;
+      term = add_coordinator_fields2_0_3.instance.invoke(context, o_36, l_36, term, f_36);
+      if(term == null)
+        break Fail185;
       if(true)
         return term;
     }

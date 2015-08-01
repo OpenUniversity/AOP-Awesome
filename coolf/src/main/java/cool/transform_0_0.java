@@ -18,26 +18,26 @@ import java.lang.ref.WeakReference;
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
     context.push("transform_0_0");
-    Fail171:
+    Fail117:
     { 
-      IStrategoTerm a_36 = null;
-      IStrategoTerm d_36 = null;
-      IStrategoTerm e_36 = null;
-      a_36 = term;
-      d_36 = a_36;
-      e_36 = cool.constCoolTbl;
-      term = parse_file_0_1.instance.invoke(context, d_36, e_36);
+      IStrategoTerm a_20 = null;
+      IStrategoTerm d_20 = null;
+      IStrategoTerm e_20 = null;
+      a_20 = term;
+      d_20 = a_20;
+      e_20 = cool.constCoolTbl;
+      term = parse_file_0_1.instance.invoke(context, d_20, e_20);
       if(term == null)
-        break Fail171;
-      term = topdown_1_0.instance.invoke(context, term, lifted102.instance);
+        break Fail117;
+      term = topdown_1_0.instance.invoke(context, term, lifted4.instance);
       if(term == null)
-        break Fail171;
+        break Fail117;
       term = transform_ast_0_0.instance.invoke(context, term);
       if(term == null)
-        break Fail171;
-      term = pp_java5_to_string_0_0.instance.invoke(context, term);
+        break Fail117;
+      term = pp_aspectj_string_0_0.instance.invoke(context, term);
       if(term == null)
-        break Fail171;
+        break Fail117;
       context.popOnSuccess();
       if(true)
         return term;

@@ -17,13 +17,13 @@ import java.lang.ref.WeakReference;
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
-    Fail193:
+    Fail139:
     { 
-      IStrategoTerm x_40 = null;
+      IStrategoTerm x_24 = null;
       if(term.getTermType() != IStrategoTerm.TUPLE || term.getSubtermCount() != 4)
-        break Fail193;
-      x_40 = term.getSubterm(1);
-      term = x_40;
+        break Fail139;
+      x_24 = term.getSubterm(1);
+      term = x_24;
       if(true)
         return term;
     }

@@ -15,16 +15,16 @@ import java.lang.ref.WeakReference;
 { 
   public static generate_imports_0_2 instance = new generate_imports_0_2();
 
-  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm u_42, IStrategoTerm v_42)
+  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm q_26, IStrategoTerm r_26)
   { 
     ITermFactory termFactory = context.getFactory();
     context.push("generate_imports_0_2");
-    Fail199:
+    Fail145:
     { 
-      term = termFactory.makeTuple(u_42, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consTypeImportDec_1, new IStrategoTerm[]{v_42}), (IStrategoList)cool.constNil0), cool.constCons14, cool.constCons17);
+      term = termFactory.makeTuple(q_26, cool.constCons34);
       term = conc_0_0.instance.invoke(context, term);
       if(term == null)
-        break Fail199;
+        break Fail145;
       context.popOnSuccess();
       if(true)
         return term;

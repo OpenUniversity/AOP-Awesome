@@ -15,82 +15,47 @@ import java.lang.ref.WeakReference;
 { 
   public static convert_coordinator_declaration_0_1 instance = new convert_coordinator_declaration_0_1();
 
-  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm c_43)
+  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm y_26)
   { 
     ITermFactory termFactory = context.getFactory();
     context.push("convert_coordinator_declaration_0_1");
-    Fail202:
+    Fail148:
     { 
-      IStrategoTerm e_43 = null;
-      IStrategoTerm f_43 = null;
-      IStrategoTerm g_43 = null;
-      IStrategoTerm j_43 = null;
+      IStrategoTerm a_27 = null;
+      IStrategoTerm b_27 = null;
+      IStrategoTerm c_27 = null;
+      IStrategoTerm d_27 = null;
       if(term.getTermType() != IStrategoTerm.APPL || transform._consCoordinatorDec_2 != ((IStrategoAppl)term).getConstructor())
-        break Fail202;
-      e_43 = term.getSubterm(1);
-      g_43 = term;
-      IStrategoTerm term189 = term;
-      Success147:
+        break Fail148;
+      b_27 = term.getSubterm(1);
+      d_27 = term;
+      IStrategoTerm term112 = term;
+      Success109:
       { 
-        Fail203:
+        Fail149:
         { 
-          term = c_43;
-          IStrategoTerm term190 = term;
-          IStrategoConstructor cons7 = term.getTermType() == IStrategoTerm.APPL ? ((IStrategoAppl)term).getConstructor() : null;
-          Success148:
-          { 
-            if(cons7 == transform._consTypeName_2)
-            { 
-              Fail204:
-              { 
-                IStrategoTerm n_171 = null;
-                IStrategoTerm arg168 = term.getSubterm(1);
-                if(arg168.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg168).getConstructor())
-                  break Fail204;
-                n_171 = arg168.getSubterm(0);
-                term = n_171;
-                if(true)
-                  break Success148;
-              }
-              term = term190;
-            }
-            if(cons7 == transform._consTypeName_1)
-            { 
-              IStrategoTerm o_171 = null;
-              IStrategoTerm arg169 = term.getSubterm(0);
-              if(arg169.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg169).getConstructor())
-                break Fail203;
-              o_171 = arg169.getSubterm(0);
-              term = o_171;
-            }
-            else
-            { 
-              break Fail203;
-            }
-          }
-          f_43 = term;
+          term = gen_coordinator_head_0_1.instance.invoke(context, term, y_26);
+          if(term == null)
+            break Fail149;
+          a_27 = term;
+          term = gen_coordinator_body_0_1.instance.invoke(context, b_27, y_26);
+          if(term == null)
+            break Fail149;
+          c_27 = term;
           if(true)
-            break Success147;
+            break Success109;
         }
-        term = term189;
-        IStrategoTerm i_43 = null;
-        i_43 = term;
-        term = report_with_failure_0_1.instance.invoke(context, i_43, cool.const57);
+        term = term112;
+        IStrategoTerm h_27 = null;
+        h_27 = term;
+        term = report_with_failure_0_1.instance.invoke(context, h_27, cool.const98);
         if(term == null)
-          break Fail202;
+          break Fail148;
       }
-      term = g_43;
-      term = gen_class_head_0_1.instance.invoke(context, term, c_43);
-      if(term == null)
-        break Fail202;
-      j_43 = term;
-      term = gen_coordinator_body_0_1.instance.invoke(context, e_43, f_43);
-      if(term == null)
-        break Fail202;
-      term = termFactory.makeAppl(transform._consClassDec_2, new IStrategoTerm[]{j_43, term});
-      term = add__externals_0_1.instance.invoke(context, term, f_43);
-      if(term == null)
-        break Fail202;
+      term = d_27;
+      if(a_27 == null || c_27 == null)
+        break Fail148;
+      term = termFactory.makeAppl(transform._consAspectDec_2, new IStrategoTerm[]{a_27, c_27});
       context.popOnSuccess();
       if(true)
         return term;
