@@ -12,12 +12,7 @@ public class WriterThread extends BufferClientThread {
 	}
 
 	protected void accessBuffer() {
-		try {
-			shared.push(new Object());
-		} catch (Exception e) {
-			System.out.println("Exception while writing to the buffer:"
-					+ e.getMessage());
-		}
+		shared.push(new Object());
 	}
 
 }
