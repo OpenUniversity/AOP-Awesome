@@ -12,6 +12,7 @@
   
   <modules>
     <module>platform</module>
+    <module>lom</module>
     <module>aspectjm</module>
     <module>coolm</module>
     <module>acoolm</module>
