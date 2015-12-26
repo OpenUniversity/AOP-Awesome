@@ -39,6 +39,7 @@ import org.aspectj.weaver.WeaverMessages;
 import org.aspectj.weaver.WeaverStateInfo;
 import org.openu.awesome.platform.AbstractWeaver;
 import org.openu.awesome.platform.IEffect;
+import org.aspectj.weaver.model.AsmRelationshipProvider;
 
 public privileged aspect AJWeaver extends AbstractWeaver {
 
@@ -801,32 +802,32 @@ public privileged aspect AJWeaver extends AbstractWeaver {
 	}
 
 	private void BcelAdvice.reportAfterWeaving(BcelShadow shadow) {
-//		BcelWorld world = shadow.getWorld();
-//		if (world.getCrossReferenceHandler() != null) {
-//			world.getCrossReferenceHandler().addCrossReference(
-//					this.getSourceLocation(), // What is being applied
-//					shadow.getSourceLocation(), // Where is it being												// applied
-//					determineRelKind().getName(), // What kind of advice?
-//					((BcelAdvice) this).hasDynamicTests() // Is a
-//					// runtime
-//					// test
-//					// being
-//					// stuffed
-//					// in the
-//					// code?
-//					);
-//		}
-//
-//		// TAG: WeavingMessage
+		BcelWorld world = shadow.getWorld();
+		if (world.getCrossReferenceHandler() != null) {
+			world.getCrossReferenceHandler().addCrossReference(
+					this.getSourceLocation(), // What is being applied
+					shadow.getSourceLocation(), // Where is it being												// applied
+					world.determineRelKind(this).getName(), // What kind of advice?
+					((BcelAdvice) this).hasDynamicTests() // Is a
+					// runtime
+					// test
+					// being
+					// stuffed
+					// in the
+					// code?
+					);
+		}
+
+		// TAG: WeavingMessage
 //		if (!world.getMessageHandler().isIgnoring(
 //				IMessage.WEAVEINFO)) {
 //			reportWeavingMessage(shadow);
 //		}
-//
-//		if (world.getModel() != null) {
-//			// System.err.println("munger: " + munger + " on " + this);
-//			AsmRelationshipProvider.addAdvisedRelationship(world.getModelAsAsmManager(), shadow, this);
-//		}
+
+		if (world.getModel() != null) {
+			// System.err.println("munger: " + munger + " on " + this);
+			AsmRelationshipProvider.addAdvisedRelationship(world.getModelAsAsmManager(), shadow, this);
+		}
 	}
 
 	public void BcelClassWeaver.getShadowsAfter(LazyMethodGen mg, BcelShadow enclosingShadow) {
