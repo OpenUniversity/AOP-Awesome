@@ -27,7 +27,23 @@
 				</for>
 			</then>
 		</if>
-		<copy file="dist/awesomert.jar" tofile="dist/org.aspectj.runtime_1.8.5.20150128171000.jar"/>
+                <jar destfile="dist/awesomert.jar" update="yes">
+                       <manifest>
+                               <attribute name="Manifest-Version" value="1.0"/>
+                               <attribute name="Bundle-Vendor" value="Eclipse AspectJ Development Tools"/>
+                               <attribute name="Ant-Version" value="Apache Ant 1.9.4" />
+                               <attribute name="Bundle-ClassPath" value="."/>
+                               <attribute name="Bundle-Version" value="1.8.7.20150910082200"/>
+                               <attribute name="Eclipse-BundleShape" value="jar"/>
+                               <attribute name="Bundle-Name" value="AspectJ Runtime"/>
+                               <attribute name="Bundle-ManifestVersion" value="2"/>
+                               <attribute name="Created-By" value="1.7.0_21-b11 (Oracle Corporation)"/>
+                               <attribute name="Bundle-SymbolicName" value="org.aspectj.runtime"/>
+                               <attribute name="Bundle-RequiredExecutionEnvironment" value="J2SE-1.5"/>
+                               <attribute name="Export-Package" value='org.aspectj.internal.lang.annotation;version="1.8.3",org.aspectj.internal.lang.reflect;version="1.8.3",org.aspectj.lang;version="1.8.3",org.aspectj.lang.annotation;version="1.8.3",org.aspectj.lang.internal.lang;version="1.8.3",org.aspectj.lang.reflect;version="1.8.3",org.aspectj.runtime;version="1.8.3",org.aspectj.runtime.internal;version="1.8.3",org.aspectj.runtime.internal.cflowstack;version="1.8.3",org.aspectj.runtime.reflect;version="1.8.3"'/>
+                       </manifest>
+               </jar>
+               <copy file="dist/awesomert.jar" tofile="dist/org.aspectj.runtime_1.8.7.20150910082200.jar"/>
 	 </target>
 
 	<target name="weaver">
@@ -73,7 +89,28 @@
                         </then>
                 </if>
 
-                <copy file="dist/awesomeweaver.jar" tofile="dist/org.aspectj.weaver_1.8.5.20150128171000.jar"/>
+                <jar destfile="dist/awesomeweaver.jar" update="yes">
+                       <manifest>
+                                 <attribute name="Manifest-Version" value="1.0"/>
+                                 <attribute name="Bundle-ClassPath" value="."/>
+                                 <attribute name="Implementation-Version" value="1.7.2"/>
+                                 <attribute name="Eclipse-BundleShape" value="jar"/>
+                                 <attribute name="Bundle-Name" value="AspectJ Weaver"/>
+                                 <attribute name="Created-By" value="1.7.0_21-b11 (Oracle Corporation)"/>
+                                 <attribute name="Premain-Class" value="org.aspectj.weaver.loadtime.Agent"/>
+                                 <attribute name="Bundle-RequiredExecutionEnvironment" value="J2SE-1.5"/>
+                                 <attribute name="Require-Bundle" value='org.aspectj.runtime;bundle-version="1.8.3";visibility:=reexport'/>
+                                 <attribute name="Bundle-Vendor" value="Eclipse AspectJ Development Tools"/>
+                                 <attribute name="Ant-Version" value="Apache Ant 1.9.4"/>
+                                 <attribute name="Implementation-Vendor" value="aspectj.org"/>
+                                 <attribute name="Bundle-Version" value="1.8.7.20150910082200"/>
+                                 <attribute name="Bundle-ManifestVersion" value="2"/>
+                                 <attribute name="Bundle-SymbolicName" value="org.aspectj.weaver"/>
+                                 <attribute name="Can-Redefine-Classes" value="true"/>
+                                 <attribute name="Export-Package" value='Export-Package: org.aspectj.apache.bcel;version="1.8.3",org.aspectj.apache.bcel.classfile;version="1.8.3",org.aspectj.apache.bcel.classfile.annotation;version="1.8.3",org.aspectj.apache.bcel.generic;version="1.8.3",org.aspectj.apache.bcel.util;version="1.8.3",org.aspectj.asm;version="1.8.3",org.aspectj.asm.internal;version="1.8.3",org.aspectj.bridge;version="1.8.3",org.aspectj.bridge.context;version="1.8.3",org.aspectj.util;version="1.8.3",org.aspectj.weaver;version="1.8.3",org.aspectj.weaver.ast;version="1.8.3",org.aspectj.weaver.bcel;version="1.8.3",org.aspectj.weaver.internal.tools;version="1.8.3",org.aspectj.weaver.loadtime;version="1.8.3",org.aspectj.weaver.loadtime.definition;version="1.8.3",org.aspectj.weaver.model;version="1.8.3",org.aspectj.weaver.patterns;version="1.8.3",org.aspectj.weaver.reflect;version="1.8.3",org.aspectj.weaver.tools;version="1.8.3"'/>
+                       </manifest>
+                </jar>
+                <copy file="dist/awesomeweaver.jar" tofile="dist/org.aspectj.weaver_1.8.7.20150910082200.jar"/>
 	</target>
 
 	<target name="tools">
@@ -120,9 +157,25 @@
                         <zipfileset src="libs/strategoxt.jar" includes="org/**"/>
                         <zipfileset src="libs/org.objectweb.asm_3.3.1.v201105211655.jar" includes="org/**"/>
                         <zipfileset src="libs/commons-io-2.4.jar" includes="org/**"/>
+
+                        <manifest>
+                                <attribute name="Bundle-ActivationPolicy" value="lazy"/>
+                                <attribute name="Bundle-ClassPath" value="."/>
+                                <attribute name="Eclipse-BundleShape" value="jar"/>
+                                <attribute name="Bundle-Name" value="AspectJ"/>
+                                <attribute name="Created-By" value="1.7.0_21-b11 (Oracle Corporation)"/>
+                                <attribute name="Require-Bundle" value='org.apache.ant,org.eclipse.core.resources,org.eclipse.core.runtime,org.eclipse.core.runtime.compatibility,org.eclipse.text,org.aspectj.weaver;bundle-version="1.8.3";visibility :=reexport'/>
+                                <attribute name="Ant-Version" value="Apache Ant 1.9.4"/>
+                                <attribute name="Bundle-Vendor" value="Eclipse AspectJ Development Tools"/>
+                                <attribute name="Bundle-Version" value="1.8.7.20150910082200"/>
+                                <attribute name="Bundle-ManifestVersion" value="2"/>
+                                <attribute name="Bundle-Activator" value="org.eclipse.core.internal.compatibility.PluginActivator"/>
+                                <attribute name="Bundle-SymbolicName" value="org.aspectj.ajde; singleton:=true"/>
+                                <attribute name="Export-Package" value="org.aspectj.ajde.core,org.aspectj.ajde.core.internal,org.aspectj.ajdt.ajc,org.aspectj.ajdt.compiler,org.aspectj.ajdt.core,org.aspectj.ajdt.core.dom,org.aspectj.ajdt.internal.compiler,org.aspectj.ajdt.internal.compiler.ast,org.aspectj.ajdt.internal.compiler.lookup,org.aspectj.ajdt.internal.compiler.parser,org.aspectj.ajdt.internal.compiler.problem,org.aspectj.ajdt.internal.core.builder,org.aspectj.org.eclipse.jdt.core,org.aspectj.org.eclipse.jdt.core.compiler,org.aspectj.org.eclipse.jdt.core.dom,org.aspectj.org.eclipse.jdt.core.dom.rewrite,org.aspectj.org.eclipse.jdt.core.eval,org.aspectj.org.eclipse.jdt.core.formatter,org.aspectj.org.eclipse.jdt.core.jdom,org.aspectj.org.eclipse.jdt.core.search,org.aspectj.org.eclipse.jdt.core.util,org.aspectj.org.eclipse.jdt.internal.codeassist,org.aspectj.org.eclipse.jdt.internal.codeassist.complete,org.aspectj.org.eclipse.jdt.internal.codeassist.impl,org.aspectj.org.eclipse.jdt.internal.codeassist.select,org.aspectj.org.eclipse.jdt.internal.compiler,org.aspectj.org.eclipse.jdt.internal.compiler.ast,org.aspectj.org.eclipse.jdt.internal.compiler.batch,org.aspectj.org.eclipse.jdt.internal.compiler.classfmt,org.aspectj.org.eclipse.jdt.internal.compiler.codegen,org.aspectj.org.eclipse.jdt.internal.compiler.env,org.aspectj.org.eclipse.jdt.internal.compiler.flow,org.aspectj.org.eclipse.jdt.internal.compiler.impl,org.aspectj.org.eclipse.jdt.internal.compiler.lookup,org.aspectj.org.eclipse.jdt.internal.compiler.parser,org.aspectj.org.eclipse.jdt.internal.compiler.parser.diagnose,org.aspectj.org.eclipse.jdt.internal.compiler.problem,org.aspectj.org.eclipse.jdt.internal.compiler.util,org.aspectj.org.eclipse.jdt.internal.core,org.aspectj.org.eclipse.jdt.internal.core.builder,org.aspectj.org.eclipse.jdt.internal.core.dom.rewrite,org.aspectj.org.eclipse.jdt.internal.core.eval,org.aspectj.org.eclipse.jdt.internal.core.hierarchy,org.aspectj.org.eclipse.jdt.internal.core.index,org.aspectj.org.eclipse.jdt.internal.core.jdom,org.aspectj.org.eclipse.jdt.internal.core.search,org.aspectj.org.eclipse.jdt.internal.core.search.indexing,org.aspectj.org.eclipse.jdt.internal.core.search.matching,org.aspectj.org.eclipse.jdt.internal.core.search.processing,org.aspectj.org.eclipse.jdt.internal.core.util,org.aspectj.org.eclipse.jdt.internal.eval,org.aspectj.org.eclipse.jdt.internal.formatter,org.aspectj.org.eclipse.jdt.internal.formatter.old,org.aspectj.tools.ajc,org.aspectj.tools.ajdoc,org.aspectj.tools.ant.taskdefs,org.aspectj.tools.ant.taskdefs.compilers"/>
+                        </manifest>
                 </jar>
 
-                <copy file="dist/awesometools.jar" tofile="dist/org.aspectj.ajde_1.8.5.20150128171000.jar"/>
+                <copy file="dist/awesometools.jar" tofile="dist/org.aspectj.ajde_1.8.7.20150910082200.jar"/>
 	</target> 
 
 	<target name="clean">
