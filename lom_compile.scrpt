@@ -1,0 +1,4 @@
+ant clean
+ant tools
+ant weaver -Dmechanisms=aspectjm/target/aspectjm-1.0-SNAPSHOT.jar,lom/target/lom-1.0-SNAPSHOT.jar
+ant runtime -Dmechanisms=lom/target/lom-1.0-SNAPSHOT.jar
