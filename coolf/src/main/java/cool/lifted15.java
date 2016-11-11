@@ -13,30 +13,26 @@ import java.lang.ref.WeakReference;
 
 @SuppressWarnings("all") final class lifted15 extends Strategy 
 { 
-  TermReference c_28;
+  TermReference f_27;
+
+  TermReference q_26;
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
-    Fail196:
+    Fail500:
     { 
-      IStrategoTerm h_28 = null;
-      IStrategoTerm j_29 = null;
-      h_28 = term;
-      if(c_28.value == null)
-        break Fail196;
-      term = c_28.value;
-      j_29 = c_28.value;
-      if(c_28.value == null)
-        break Fail196;
-      term = hashtable_keys_0_0.instance.invoke(context, c_28.value);
-      if(term == null)
-        break Fail196;
-      term = length_0_0.instance.invoke(context, term);
-      if(term == null)
-        break Fail196;
-      term = hashtable_put_0_2.instance.invoke(context, j_29, h_28, term);
-      if(term == null)
-        break Fail196;
+      if(term.getTermType() != IStrategoTerm.APPL || transform._consFieldDec_3 != ((IStrategoAppl)term).getConstructor())
+        break Fail500;
+      if(f_27.value == null)
+        f_27.value = term.getSubterm(1);
+      else
+        if(f_27.value != term.getSubterm(1) && !f_27.value.match(term.getSubterm(1)))
+          break Fail500;
+      if(q_26.value == null)
+        q_26.value = term.getSubterm(2);
+      else
+        if(q_26.value != term.getSubterm(2) && !q_26.value.match(term.getSubterm(2)))
+          break Fail500;
       if(true)
         return term;
     }

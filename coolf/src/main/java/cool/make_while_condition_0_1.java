@@ -15,77 +15,77 @@ import java.lang.ref.WeakReference;
 { 
   public static make_while_condition_0_1 instance = new make_while_condition_0_1();
 
-  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm i_22)
+  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm z_52)
   { 
     ITermFactory termFactory = context.getFactory();
     context.push("make_while_condition_0_1");
-    Fail128:
+    Fail292:
     { 
-      IStrategoTerm j_22 = null;
-      IStrategoTerm k_22 = null;
-      IStrategoTerm l_22 = null;
-      IStrategoTerm m_22 = null;
-      m_22 = term;
-      term = length_0_0.instance.invoke(context, i_22);
+      IStrategoTerm a_53 = null;
+      IStrategoTerm b_53 = null;
+      IStrategoTerm c_53 = null;
+      IStrategoTerm d_53 = null;
+      d_53 = term;
+      term = length_0_0.instance.invoke(context, z_52);
       if(term == null)
-        break Fail128;
-      l_22 = term;
-      term = m_22;
-      IStrategoTerm term108 = term;
-      Success105:
+        break Fail292;
+      c_53 = term;
+      term = d_53;
+      IStrategoTerm term291 = term;
+      Success246:
       { 
-        Fail129:
+        Fail293:
         { 
-          IStrategoTerm n_22 = null;
-          IStrategoTerm r_22 = null;
-          n_22 = term;
-          r_22 = l_22;
-          term = equal_0_1.instance.invoke(context, r_22, cool.const87);
+          IStrategoTerm e_53 = null;
+          IStrategoTerm i_53 = null;
+          e_53 = term;
+          i_53 = c_53;
+          term = equal_0_1.instance.invoke(context, i_53, cool.const85);
           if(term == null)
-            break Fail129;
-          term = n_22;
+            break Fail293;
+          term = e_53;
           { 
             term = cool.constFalse0;
             if(true)
-              break Success105;
+              break Success246;
           }
         }
-        term = term108;
-        Success106:
+        term = term291;
+        Success247:
         { 
-          Fail130:
+          Fail294:
           { 
-            IStrategoTerm o_22 = null;
-            IStrategoTerm t_22 = null;
-            o_22 = term;
-            t_22 = l_22;
-            term = equal_0_1.instance.invoke(context, t_22, cool.const88);
+            IStrategoTerm f_53 = null;
+            IStrategoTerm k_53 = null;
+            f_53 = term;
+            k_53 = c_53;
+            term = equal_0_1.instance.invoke(context, k_53, cool.const83);
             if(term == null)
-              break Fail130;
-            term = o_22;
+              break Fail294;
+            term = f_53;
             { 
-              IStrategoTerm p_22 = null;
-              term = i_22;
+              IStrategoTerm g_53 = null;
+              term = z_52;
               if(term.getTermType() != IStrategoTerm.LIST || ((IStrategoList)term).isEmpty())
-                break Fail128;
-              p_22 = ((IStrategoList)term).head();
-              IStrategoTerm arg25 = ((IStrategoList)term).tail();
-              if(arg25.getTermType() != IStrategoTerm.LIST || !((IStrategoList)arg25).isEmpty())
-                break Fail128;
-              term = p_22;
+                break Fail292;
+              g_53 = ((IStrategoList)term).head();
+              IStrategoTerm arg152 = ((IStrategoList)term).tail();
+              if(arg152.getTermType() != IStrategoTerm.LIST || !((IStrategoList)arg152).isEmpty())
+                break Fail292;
+              term = g_53;
               if(true)
-                break Success106;
+                break Success247;
             }
           }
-          term = i_22;
+          term = z_52;
           if(term.getTermType() != IStrategoTerm.LIST || ((IStrategoList)term).isEmpty())
-            break Fail128;
-          k_22 = ((IStrategoList)term).head();
-          j_22 = ((IStrategoList)term).tail();
-          term = this.invoke(context, term, j_22);
+            break Fail292;
+          b_53 = ((IStrategoList)term).head();
+          a_53 = ((IStrategoList)term).tail();
+          term = this.invoke(context, term, a_53);
           if(term == null)
-            break Fail128;
-          term = termFactory.makeAppl(transform._consLazyOr_2, new IStrategoTerm[]{term, k_22});
+            break Fail292;
+          term = termFactory.makeAppl(transform._consLazyOr_2, new IStrategoTerm[]{term, b_53});
         }
       }
       context.popOnSuccess();

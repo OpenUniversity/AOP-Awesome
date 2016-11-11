@@ -17,11 +17,10 @@ import java.lang.ref.WeakReference;
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
-    Fail198:
+    Fail502:
     { 
-      term = strip_annos_0_0.instance.invoke(context, term);
-      if(term == null)
-        break Fail198;
+      if(term.getTermType() != IStrategoTerm.APPL || transform._consExprName_2 != ((IStrategoAppl)term).getConstructor())
+        break Fail502;
       if(true)
         return term;
     }

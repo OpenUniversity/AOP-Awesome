@@ -15,174 +15,174 @@ import java.lang.ref.WeakReference;
 { 
   public static fill$Method$Maps_0_4 instance = new fill$Method$Maps_0_4();
 
-  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm r_34, IStrategoTerm s_34, IStrategoTerm t_34, IStrategoTerm u_34)
+  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm c_79, IStrategoTerm d_79, IStrategoTerm e_79, IStrategoTerm f_79)
   { 
     ITermFactory termFactory = context.getFactory();
     context.push("fillMethodMaps_0_4");
-    Fail164:
+    Fail319:
     { 
-      IStrategoTerm v_34 = null;
-      IStrategoTerm w_34 = null;
-      IStrategoTerm x_34 = null;
-      IStrategoTerm y_34 = null;
+      IStrategoTerm g_79 = null;
+      IStrategoTerm h_79 = null;
+      IStrategoTerm i_79 = null;
+      IStrategoTerm j_79 = null;
       if(term.getTermType() != IStrategoTerm.APPL || transform._consMethodAdditions_4 != ((IStrategoAppl)term).getConstructor())
-        break Fail164;
-      x_34 = term.getSubterm(0);
-      v_34 = term.getSubterm(1);
-      w_34 = term.getSubterm(2);
-      y_34 = term.getSubterm(3);
-      IStrategoTerm term123 = term;
-      Success120:
+        break Fail319;
+      i_79 = term.getSubterm(0);
+      g_79 = term.getSubterm(1);
+      h_79 = term.getSubterm(2);
+      j_79 = term.getSubterm(3);
+      IStrategoTerm term304 = term;
+      Success259:
       { 
-        Fail165:
+        Fail320:
         { 
-          IStrategoTerm term124 = term;
-          Success121:
+          IStrategoTerm term305 = term;
+          Success260:
           { 
-            Fail166:
+            Fail321:
             { 
-              IStrategoTerm z_34 = null;
-              z_34 = term;
-              IStrategoTerm term125 = term;
-              Success122:
+              IStrategoTerm l_79 = null;
+              l_79 = term;
+              IStrategoTerm term306 = term;
+              Success261:
               { 
-                Fail167:
+                Fail322:
                 { 
-                  term = termFactory.makeTuple(v_34, cool.constNone0);
+                  term = termFactory.makeTuple(g_79, cool.constNone0);
                   term = equal_0_0.instance.invoke(context, term);
                   if(term == null)
-                    break Fail167;
+                    break Fail322;
                   { 
                     if(true)
-                      break Fail166;
+                      break Fail321;
                     if(true)
-                      break Success122;
+                      break Success261;
                   }
                 }
-                term = term125;
+                term = term306;
               }
-              term = z_34;
+              term = l_79;
               { 
-                IStrategoTerm h_35 = null;
-                IStrategoTerm a_35 = null;
-                h_35 = r_34;
-                term = v_34;
+                IStrategoTerm t_79 = null;
+                IStrategoTerm m_79 = null;
+                t_79 = c_79;
+                term = g_79;
                 if(term.getTermType() != IStrategoTerm.APPL || transform._consSome_1 != ((IStrategoAppl)term).getConstructor())
-                  break Fail165;
-                IStrategoTerm arg66 = term.getSubterm(0);
-                if(arg66.getTermType() != IStrategoTerm.APPL || transform._consRequires_1 != ((IStrategoAppl)arg66).getConstructor())
-                  break Fail165;
-                a_35 = arg66.getSubterm(0);
-                term = hashtable_put_0_2.instance.invoke(context, h_35, x_34, a_35);
+                  break Fail320;
+                IStrategoTerm arg172 = term.getSubterm(0);
+                if(arg172.getTermType() != IStrategoTerm.APPL || transform._consRequires_1 != ((IStrategoAppl)arg172).getConstructor())
+                  break Fail320;
+                m_79 = arg172.getSubterm(0);
+                term = hashtable_put_0_2.instance.invoke(context, t_79, i_79, m_79);
                 if(term == null)
-                  break Fail165;
+                  break Fail320;
                 if(true)
-                  break Success121;
+                  break Success260;
               }
             }
-            term = term124;
+            term = term305;
           }
-          IStrategoTerm term126 = term;
-          Success123:
+          IStrategoTerm term307 = term;
+          Success262:
           { 
-            Fail168:
+            Fail323:
             { 
-              IStrategoTerm b_35 = null;
-              b_35 = term;
-              IStrategoTerm term127 = term;
-              Success124:
+              IStrategoTerm n_79 = null;
+              n_79 = term;
+              IStrategoTerm term308 = term;
+              Success263:
               { 
-                Fail169:
+                Fail324:
                 { 
-                  term = termFactory.makeTuple(w_34, cool.constNone0);
+                  term = termFactory.makeTuple(h_79, cool.constNone0);
                   term = equal_0_0.instance.invoke(context, term);
                   if(term == null)
-                    break Fail169;
+                    break Fail324;
                   { 
                     if(true)
-                      break Fail168;
+                      break Fail323;
                     if(true)
-                      break Success124;
+                      break Success263;
                   }
                 }
-                term = term127;
+                term = term308;
               }
-              term = b_35;
+              term = n_79;
               { 
-                IStrategoTerm j_35 = null;
-                IStrategoTerm c_35 = null;
-                j_35 = t_34;
-                term = w_34;
+                IStrategoTerm v_79 = null;
+                IStrategoTerm o_79 = null;
+                v_79 = e_79;
+                term = h_79;
                 if(term.getTermType() != IStrategoTerm.APPL || transform._consSome_1 != ((IStrategoAppl)term).getConstructor())
-                  break Fail165;
-                IStrategoTerm arg67 = term.getSubterm(0);
-                if(arg67.getTermType() != IStrategoTerm.APPL || transform._consOnEntry_1 != ((IStrategoAppl)arg67).getConstructor())
-                  break Fail165;
-                c_35 = arg67.getSubterm(0);
-                term = hashtable_put_0_2.instance.invoke(context, j_35, x_34, c_35);
+                  break Fail320;
+                IStrategoTerm arg173 = term.getSubterm(0);
+                if(arg173.getTermType() != IStrategoTerm.APPL || transform._consOnEntry_1 != ((IStrategoAppl)arg173).getConstructor())
+                  break Fail320;
+                o_79 = arg173.getSubterm(0);
+                term = hashtable_put_0_2.instance.invoke(context, v_79, i_79, o_79);
                 if(term == null)
-                  break Fail165;
+                  break Fail320;
                 if(true)
-                  break Success123;
+                  break Success262;
               }
             }
-            term = term126;
+            term = term307;
           }
-          IStrategoTerm term128 = term;
-          Success125:
+          IStrategoTerm term309 = term;
+          Success264:
           { 
-            Fail170:
+            Fail325:
             { 
-              IStrategoTerm d_35 = null;
-              d_35 = term;
-              IStrategoTerm term129 = term;
-              Success126:
+              IStrategoTerm p_79 = null;
+              p_79 = term;
+              IStrategoTerm term310 = term;
+              Success265:
               { 
-                Fail171:
+                Fail326:
                 { 
-                  term = termFactory.makeTuple(y_34, cool.constNone0);
+                  term = termFactory.makeTuple(j_79, cool.constNone0);
                   term = equal_0_0.instance.invoke(context, term);
                   if(term == null)
-                    break Fail171;
+                    break Fail326;
                   { 
                     if(true)
-                      break Fail170;
+                      break Fail325;
                     if(true)
-                      break Success126;
+                      break Success265;
                   }
                 }
-                term = term129;
+                term = term310;
               }
-              term = d_35;
+              term = p_79;
               { 
-                IStrategoTerm l_35 = null;
-                IStrategoTerm e_35 = null;
-                l_35 = s_34;
-                term = y_34;
+                IStrategoTerm x_79 = null;
+                IStrategoTerm q_79 = null;
+                x_79 = d_79;
+                term = j_79;
                 if(term.getTermType() != IStrategoTerm.APPL || transform._consSome_1 != ((IStrategoAppl)term).getConstructor())
-                  break Fail165;
-                IStrategoTerm arg68 = term.getSubterm(0);
-                if(arg68.getTermType() != IStrategoTerm.APPL || transform._consOnExit_1 != ((IStrategoAppl)arg68).getConstructor())
-                  break Fail165;
-                e_35 = arg68.getSubterm(0);
-                term = hashtable_put_0_2.instance.invoke(context, l_35, x_34, e_35);
+                  break Fail320;
+                IStrategoTerm arg174 = term.getSubterm(0);
+                if(arg174.getTermType() != IStrategoTerm.APPL || transform._consOnExit_1 != ((IStrategoAppl)arg174).getConstructor())
+                  break Fail320;
+                q_79 = arg174.getSubterm(0);
+                term = hashtable_put_0_2.instance.invoke(context, x_79, i_79, q_79);
                 if(term == null)
-                  break Fail165;
+                  break Fail320;
                 if(true)
-                  break Success125;
+                  break Success264;
               }
             }
-            term = term128;
+            term = term309;
           }
           if(true)
-            break Success120;
+            break Success259;
         }
-        term = term123;
-        IStrategoTerm n_35 = null;
-        n_35 = term;
-        term = report_with_failure_0_1.instance.invoke(context, n_35, cool.const124);
+        term = term304;
+        IStrategoTerm z_79 = null;
+        z_79 = term;
+        term = report_with_failure_0_1.instance.invoke(context, z_79, cool.const133);
         if(term == null)
-          break Fail164;
+          break Fail319;
       }
       term = cool.constNone0;
       context.popOnSuccess();

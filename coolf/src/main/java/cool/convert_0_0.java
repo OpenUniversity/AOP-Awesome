@@ -19,61 +19,61 @@ import java.lang.ref.WeakReference;
   { 
     ITermFactory termFactory = context.getFactory();
     context.push("convert_0_0");
-    Fail143:
+    Fail299:
     { 
-      IStrategoTerm b_26 = null;
-      IStrategoTerm c_26 = null;
-      IStrategoTerm d_26 = null;
-      IStrategoTerm e_26 = null;
-      IStrategoTerm f_26 = null;
-      IStrategoTerm g_26 = null;
-      IStrategoTerm h_26 = null;
-      IStrategoTerm i_26 = null;
+      IStrategoTerm u_55 = null;
+      IStrategoTerm v_55 = null;
+      IStrategoTerm w_55 = null;
+      IStrategoTerm x_55 = null;
+      IStrategoTerm y_55 = null;
+      IStrategoTerm z_55 = null;
+      IStrategoTerm a_56 = null;
+      IStrategoTerm b_56 = null;
       if(term.getTermType() != IStrategoTerm.APPL || transform._consCompilationUnit_3 != ((IStrategoAppl)term).getConstructor())
-        break Fail143;
-      d_26 = term.getSubterm(0);
-      e_26 = term.getSubterm(1);
-      c_26 = term.getSubterm(2);
-      i_26 = term;
-      Success108:
+        break Fail299;
+      w_55 = term.getSubterm(0);
+      x_55 = term.getSubterm(1);
+      v_55 = term.getSubterm(2);
+      b_56 = term;
+      Success248:
       { 
-        Fail144:
+        Fail300:
         { 
-          IStrategoTerm j_26 = null;
-          j_26 = term;
-          term = get_coordinator_0_1.instance.invoke(context, i_26, c_26);
+          IStrategoTerm c_56 = null;
+          c_56 = term;
+          term = get_coordinator_0_1.instance.invoke(context, b_56, v_55);
           if(term == null)
-            break Fail144;
-          b_26 = term;
-          term = j_26;
+            break Fail300;
+          u_55 = term;
+          term = c_56;
           { 
-            IStrategoTerm m_26 = null;
-            term = fetch_coordinator_type_0_0.instance.invoke(context, b_26);
+            IStrategoTerm i_56 = null;
+            term = fetch_coordinator_type_0_0.instance.invoke(context, u_55);
             if(term == null)
-              break Fail143;
-            f_26 = term;
-            term = convert_coordinator_declaration_0_1.instance.invoke(context, b_26, term);
+              break Fail299;
+            y_55 = term;
+            term = convert_coordinator_declaration_0_1.instance.invoke(context, u_55, term);
             if(term == null)
-              break Fail143;
-            g_26 = term;
-            term = remove_all_1_0.instance.invoke(context, c_26, lifted6.instance);
+              break Fail299;
+            z_55 = term;
+            term = remove_all_1_0.instance.invoke(context, v_55, lifted112.instance);
             if(term == null)
-              break Fail143;
-            h_26 = term;
-            term = generate_imports_0_2.instance.invoke(context, term, e_26, f_26);
+              break Fail299;
+            a_56 = term;
+            term = generate_imports_0_2.instance.invoke(context, term, x_55, y_55);
             if(term == null)
-              break Fail143;
-            m_26 = term;
-            term = termFactory.makeTuple((IStrategoTerm)termFactory.makeListCons(g_26, (IStrategoList)cool.constNil0), h_26);
+              break Fail299;
+            i_56 = term;
+            term = termFactory.makeTuple((IStrategoTerm)termFactory.makeListCons(z_55, (IStrategoList)cool.constNil0), a_56);
             term = conc_0_0.instance.invoke(context, term);
             if(term == null)
-              break Fail143;
-            term = termFactory.makeAppl(transform._consCompilationUnit_3, new IStrategoTerm[]{d_26, m_26, term});
+              break Fail299;
+            term = termFactory.makeAppl(transform._consCompilationUnit_3, new IStrategoTerm[]{w_55, i_56, term});
             if(true)
-              break Success108;
+              break Success248;
           }
         }
-        term = i_26;
+        term = b_56;
       }
       context.popOnSuccess();
       if(true)

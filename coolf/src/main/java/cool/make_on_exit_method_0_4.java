@@ -15,38 +15,49 @@ import java.lang.ref.WeakReference;
 { 
   public static make_on_exit_method_0_4 instance = new make_on_exit_method_0_4();
 
-  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm n_25, IStrategoTerm o_25, IStrategoTerm p_25, IStrategoTerm q_25)
+  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm c_55, IStrategoTerm d_55, IStrategoTerm e_55, IStrategoTerm f_55)
   { 
     ITermFactory termFactory = context.getFactory();
     context.push("make_on_exit_method_0_4");
-    Fail142:
+    Fail298:
     { 
-      IStrategoTerm t_25 = null;
-      IStrategoTerm u_25 = null;
-      IStrategoTerm v_25 = null;
-      IStrategoTerm y_25 = null;
+      IStrategoTerm g_55 = null;
+      IStrategoTerm h_55 = null;
+      IStrategoTerm i_55 = null;
+      IStrategoTerm j_55 = null;
+      IStrategoTerm k_55 = null;
+      IStrategoTerm r_55 = null;
       if(term.getTermType() != IStrategoTerm.APPL || transform._consMethodSignature_2 != ((IStrategoAppl)term).getConstructor())
-        break Fail142;
-      IStrategoTerm arg49 = term.getSubterm(0);
-      if(arg49.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg49).getConstructor())
-        break Fail142;
-      v_25 = term;
-      u_25 = term;
-      term = gen_on_exit_method_name_0_1.instance.invoke(context, v_25, q_25);
+        break Fail298;
+      IStrategoTerm arg155 = term.getSubterm(0);
+      if(arg155.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg155).getConstructor())
+        break Fail298;
+      g_55 = arg155.getSubterm(0);
+      h_55 = term.getSubterm(1);
+      k_55 = term;
+      term = map_1_0.instance.invoke(context, h_55, pp_type_0_0.instance);
       if(term == null)
-        break Fail142;
-      t_25 = term;
-      y_25 = p_25;
-      term = strip_annos_0_0.instance.invoke(context, u_25);
+        break Fail298;
+      term = map_1_0.instance.invoke(context, term, lifted111.instance);
       if(term == null)
-        break Fail142;
-      term = hashtable_put_0_2.instance.invoke(context, y_25, term, t_25);
+        break Fail298;
+      term = (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consAnno_2, new IStrategoTerm[]{cool.constTypeName7, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{cool.constId19, termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{g_55}), (IStrategoList)cool.constNil0)})})}), termFactory.makeListCons(cool.constElemValPair0, termFactory.makeListCons(termFactory.makeAppl(transform._consElemValPair_2, new IStrategoTerm[]{cool.constId18, termFactory.makeAppl(transform._consElemValArrayInit_1, new IStrategoTerm[]{term})}), (IStrategoList)cool.constNil0)))}), (IStrategoList)cool.constCons20);
+      i_55 = term;
+      term = gen_on_exit_method_name_0_1.instance.invoke(context, k_55, f_55);
       if(term == null)
-        break Fail142;
-      term = hashtable_get_0_1.instance.invoke(context, o_25, u_25);
+        break Fail298;
+      j_55 = term;
+      r_55 = e_55;
+      term = strip_annos_0_0.instance.invoke(context, k_55);
       if(term == null)
-        break Fail142;
-      term = termFactory.makeAppl(transform._consIntertypeMethodDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consIntertypeMethodDecHead_8, new IStrategoTerm[]{cool.constCons31, cool.constNone0, cool.constVoid0, n_25, cool.constNone0, termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{t_25}), cool.constNil0, cool.constNone0}), term});
+        break Fail298;
+      term = hashtable_put_0_2.instance.invoke(context, r_55, term, j_55);
+      if(term == null)
+        break Fail298;
+      term = hashtable_get_0_1.instance.invoke(context, c_55, k_55);
+      if(term == null)
+        break Fail298;
+      term = termFactory.makeAppl(transform._consMethodDec_2, new IStrategoTerm[]{termFactory.makeAppl(transform._consMethodDecHead_6, new IStrategoTerm[]{i_55, cool.constNone0, cool.constVoid0, termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{j_55}), (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consParam_3, new IStrategoTerm[]{cool.constNil0, termFactory.makeAppl(transform._consTypeName_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consId_1, new IStrategoTerm[]{d_55})}), cool.constId0}), (IStrategoList)cool.constNil0), cool.constNone0}), term});
       context.popOnSuccess();
       if(true)
         return term;

@@ -13,25 +13,38 @@ import java.lang.ref.WeakReference;
 
 @SuppressWarnings("all") final class lifted26 extends Strategy 
 { 
-  TermReference q_35;
+  TermReference h_26;
+
+  TermReference b_26;
+
+  TermReference c_26;
+
+  TermReference d_26;
+
+  TermReference e_26;
+
+  TermReference f_26;
+
+  TermReference g_26;
+
+  TermReference i_26;
+
+  TermReference j_26;
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
-    ITermFactory termFactory = context.getFactory();
-    Fail186:
+    Fail489:
     { 
-      IStrategoTerm t_35 = null;
-      IStrategoTerm u_35 = null;
-      if(term.getTermType() != IStrategoTerm.APPL || transform._consAssign_2 != ((IStrategoAppl)term).getConstructor())
-        break Fail186;
-      IStrategoTerm arg69 = term.getSubterm(0);
-      if(arg69.getTermType() != IStrategoTerm.APPL || transform._consExprName_1 != ((IStrategoAppl)arg69).getConstructor())
-        break Fail186;
-      t_35 = arg69.getSubterm(0);
-      u_35 = term.getSubterm(1);
-      if(q_35.value == null)
-        break Fail186;
-      term = termFactory.makeAppl(transform._consIntertypeFieldDec_5, new IStrategoTerm[]{cool.constCons24, cool.constBoolean0, q_35.value, cool.constNone0, termFactory.makeAppl(transform._consVarDec_2, new IStrategoTerm[]{t_35, u_35})});
+      IStrategoTerm i_30 = null;
+      i_30 = term;
+      if(h_26.value == null)
+        break Fail489;
+      term = cast_bounded_conditional_type_0_0.instance.invoke(context, h_26.value);
+      if(term == null)
+        break Fail489;
+      term = add_external_impl_0_9.instance.invokeDynamic(context, i_30, NO_STRATEGIES, new IStrategoTerm[]{b_26.value, c_26.value, d_26.value, e_26.value, f_26.value, g_26.value, term, i_26.value, j_26.value});
+      if(term == null)
+        break Fail489;
       if(true)
         return term;
     }

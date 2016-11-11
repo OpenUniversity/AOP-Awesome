@@ -19,89 +19,89 @@ import java.lang.ref.WeakReference;
   { 
     ITermFactory termFactory = context.getFactory();
     context.push("fetch__full__class__name_0_0");
-    Fail111:
+    Fail114:
     { 
-      IStrategoTerm term105 = term;
-      IStrategoConstructor cons7 = term.getTermType() == IStrategoTerm.APPL ? ((IStrategoAppl)term).getConstructor() : null;
-      Success102:
+      IStrategoTerm term106 = term;
+      IStrategoConstructor cons8 = term.getTermType() == IStrategoTerm.APPL ? ((IStrategoAppl)term).getConstructor() : null;
+      Success103:
       { 
-        if(cons7 == transform._consTypeName_2)
+        if(cons8 == transform._consTypeName_2)
         { 
-          Fail112:
+          Fail115:
           { 
-            IStrategoTerm x_17 = null;
-            IStrategoTerm y_17 = null;
-            x_17 = term.getSubterm(0);
-            IStrategoTerm arg11 = term.getSubterm(1);
-            if(arg11.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg11).getConstructor())
-              break Fail112;
-            y_17 = arg11.getSubterm(0);
-            term = this.invoke(context, x_17);
+            IStrategoTerm k_23 = null;
+            IStrategoTerm l_23 = null;
+            k_23 = term.getSubterm(0);
+            IStrategoTerm arg14 = term.getSubterm(1);
+            if(arg14.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg14).getConstructor())
+              break Fail115;
+            l_23 = arg14.getSubterm(0);
+            term = this.invoke(context, k_23);
             if(term == null)
-              break Fail112;
-            term = (IStrategoTerm)termFactory.makeListCons(term, termFactory.makeListCons(cool.const24, termFactory.makeListCons(y_17, (IStrategoList)cool.constNil0)));
+              break Fail115;
+            term = (IStrategoTerm)termFactory.makeListCons(term, termFactory.makeListCons(cool.const24, termFactory.makeListCons(l_23, (IStrategoList)cool.constNil0)));
             term = concat_strings_0_0.instance.invoke(context, term);
             if(term == null)
-              break Fail112;
+              break Fail115;
             if(true)
-              break Success102;
+              break Success103;
           }
-          term = term105;
+          term = term106;
         }
-        Success103:
+        Success104:
         { 
-          if(cons7 == transform._consTypeName_1)
+          if(cons8 == transform._consTypeName_1)
           { 
-            Fail113:
+            Fail116:
             { 
-              IStrategoTerm w_17 = null;
-              IStrategoTerm arg12 = term.getSubterm(0);
-              if(arg12.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg12).getConstructor())
-                break Fail113;
-              w_17 = arg12.getSubterm(0);
-              term = w_17;
+              IStrategoTerm j_23 = null;
+              IStrategoTerm arg15 = term.getSubterm(0);
+              if(arg15.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg15).getConstructor())
+                break Fail116;
+              j_23 = arg15.getSubterm(0);
+              term = j_23;
               if(true)
-                break Success103;
+                break Success104;
             }
-            term = term105;
+            term = term106;
           }
-          Success104:
+          Success105:
           { 
-            if(cons7 == transform._consPackageOrTypeName_1)
+            if(cons8 == transform._consPackageOrTypeName_1)
             { 
-              Fail114:
+              Fail117:
               { 
-                IStrategoTerm v_17 = null;
-                IStrategoTerm arg13 = term.getSubterm(0);
-                if(arg13.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg13).getConstructor())
-                  break Fail114;
-                v_17 = arg13.getSubterm(0);
-                term = v_17;
+                IStrategoTerm i_23 = null;
+                IStrategoTerm arg16 = term.getSubterm(0);
+                if(arg16.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg16).getConstructor())
+                  break Fail117;
+                i_23 = arg16.getSubterm(0);
+                term = i_23;
                 if(true)
-                  break Success104;
+                  break Success105;
               }
-              term = term105;
+              term = term106;
             }
-            if(cons7 == transform._consPackageOrTypeName_2)
+            if(cons8 == transform._consPackageOrTypeName_2)
             { 
-              IStrategoTerm r_17 = null;
-              IStrategoTerm s_17 = null;
-              r_17 = term.getSubterm(0);
-              IStrategoTerm arg14 = term.getSubterm(1);
-              if(arg14.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg14).getConstructor())
-                break Fail111;
-              s_17 = arg14.getSubterm(0);
-              term = this.invoke(context, r_17);
+              IStrategoTerm e_23 = null;
+              IStrategoTerm f_23 = null;
+              e_23 = term.getSubterm(0);
+              IStrategoTerm arg17 = term.getSubterm(1);
+              if(arg17.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg17).getConstructor())
+                break Fail114;
+              f_23 = arg17.getSubterm(0);
+              term = this.invoke(context, e_23);
               if(term == null)
-                break Fail111;
-              term = (IStrategoTerm)termFactory.makeListCons(term, termFactory.makeListCons(cool.const24, termFactory.makeListCons(s_17, (IStrategoList)cool.constNil0)));
+                break Fail114;
+              term = (IStrategoTerm)termFactory.makeListCons(term, termFactory.makeListCons(cool.const24, termFactory.makeListCons(f_23, (IStrategoList)cool.constNil0)));
               term = concat_strings_0_0.instance.invoke(context, term);
               if(term == null)
-                break Fail111;
+                break Fail114;
             }
             else
             { 
-              break Fail111;
+              break Fail114;
             }
           }
         }
