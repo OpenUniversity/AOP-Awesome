@@ -24,7 +24,9 @@ public privileged aspect CoolFrontendAspect extends FrontendAspect {
 
 	@Override
 	protected File convert2java(File input) throws Exception {
-		Context context = transform.init();
+	    String path = input.getPath();
+	    logger.info("input path: " + path);
+	    Context context = transform.init();
 	    context.setStandAlone(true);
 	    IStrategoTerm result = null;
 	    IStrategoTerm pathTerm = new TermFactory().makeString(input.getAbsolutePath());
@@ -37,19 +39,17 @@ public privileged aspect CoolFrontendAspect extends FrontendAspect {
 	    	context.getIOAgent().closeAllFiles();
 	    }
 
-		String path = input.getPath();
-		logger.info("input path: " + path);
-		String outputPath = path.replaceFirst("resources", "java").replaceFirst("src", "generated").replaceFirst(".cool", ".java");
-		logger.info("output path: " + outputPath);
-		File output = new File(outputPath);
-		if (output.exists())
-			FileUtils.forceDelete(output);
+	    String outputPath = path.replaceFirst("resources", "java").replaceFirst("src", "generated").replaceFirst(".cool", ".java");
+	    logger.info("output path: " + outputPath);
+	    File output = new File(outputPath);
+	    if (output.exists())
+	    	FileUtils.forceDelete(output);
 		
-		FileUtils.forceMkdir(output.getParentFile());
-		output.createNewFile();
-		FileUtils.writeStringToFile(output, aa(result.toString())); 
+	    FileUtils.forceMkdir(output.getParentFile());
+	    output.createNewFile();
+	    FileUtils.writeStringToFile(output, aa(result.toString())); 
 
-		return output;
+	    return output;
 	}
 
 	private String aa(String  input) {
