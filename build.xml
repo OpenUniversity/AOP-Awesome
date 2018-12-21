@@ -5,7 +5,7 @@
          </classpath>
        </taskdef>
 
-       <property name="ajdt_ver" value="1.8.7.20150910082200"/>
+       <property name="ajdt_ver" value="1.8.6.20150608154244"/>
        <property name="aspectjrt" value="org.aspectj/aj-build/dist/tools/lib/aspectjrt.jar"/>
        <property name="aspectjtools" value="org.aspectj/aj-build/dist/tools/lib/aspectjtools.jar"/>
        <property name="aspectjweaver" value="org.aspectj/aj-build/dist/tools/lib/aspectjweaver.jar"/>
