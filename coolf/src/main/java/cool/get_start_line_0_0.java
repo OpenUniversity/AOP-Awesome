@@ -11,24 +11,24 @@ import org.spoofax.interpreter.library.AbstractPrimitive;
 import java.util.ArrayList;
 import java.lang.ref.WeakReference;
 
-@SuppressWarnings("all") final class lifted104 extends Strategy 
+@SuppressWarnings("all") public class get_start_line_0_0 extends Strategy 
 { 
-  TermReference e_49;
+  public static get_start_line_0_0 instance = new get_start_line_0_0();
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
-    Fail368:
+    Fail191:
     { 
-      if(term.getTermType() != IStrategoTerm.APPL || transform._consPostIncr_1 != ((IStrategoAppl)term).getConstructor())
-        break Fail368;
-      if(e_49.value == null)
-        e_49.value = term.getSubterm(0);
-      else
-        if(e_49.value != term.getSubterm(0) && !e_49.value.match(term.getSubterm(0)))
-          break Fail368;
+      IStrategoTerm x_40 = null;
+      if(term.getTermType() != IStrategoTerm.TUPLE || term.getSubtermCount() != 4)
+        break Fail191;
+      x_40 = term.getSubterm(0);
+      term = x_40;
       if(true)
         return term;
     }
+    context.push("get_start_line_0_0");
+    context.popOnFailure();
     return null;
   }
 }

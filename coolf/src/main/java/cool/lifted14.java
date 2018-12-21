@@ -13,31 +13,26 @@ import java.lang.ref.WeakReference;
 
 @SuppressWarnings("all") final class lifted14 extends Strategy 
 { 
-  TermReference b_26;
+  TermReference y_10;
 
-  TermReference c_26;
-
-  TermReference d_26;
-
-  TermReference e_26;
-
-  TermReference f_26;
-
-  TermReference g_26;
-
-  TermReference h_26;
-
-  TermReference i_26;
-
-  TermReference j_26;
+  TermReference z_10;
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
-    Fail501:
+    Fail394:
     { 
-      term = add_external_impl_0_9.instance.invokeDynamic(context, term, NO_STRATEGIES, new IStrategoTerm[]{b_26.value, c_26.value, d_26.value, e_26.value, f_26.value, g_26.value, h_26.value, i_26.value, j_26.value});
-      if(term == null)
-        break Fail501;
+      if(term.getTermType() != IStrategoTerm.APPL || transform._consEq_2 != ((IStrategoAppl)term).getConstructor())
+        break Fail394;
+      if(y_10.value == null)
+        y_10.value = term.getSubterm(0);
+      else
+        if(y_10.value != term.getSubterm(0) && !y_10.value.match(term.getSubterm(0)))
+          break Fail394;
+      if(z_10.value == null)
+        z_10.value = term.getSubterm(1);
+      else
+        if(z_10.value != term.getSubterm(1) && !z_10.value.match(term.getSubterm(1)))
+          break Fail394;
       if(true)
         return term;
     }

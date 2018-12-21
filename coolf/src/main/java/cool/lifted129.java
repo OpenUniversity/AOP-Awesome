@@ -13,33 +13,14 @@ import java.lang.ref.WeakReference;
 
 @SuppressWarnings("all") final class lifted129 extends Strategy 
 { 
-  TermReference z_57;
-
-  TermReference o_71;
-
-  TermReference a_58;
-
-  TermReference p_71;
-
-  TermReference v_71;
-
-  TermReference z_71;
-
-  TermReference j_72;
-
-  TermReference r_71;
-
-  TermReference s_71;
-
-  TermReference d_72;
+  public static final lifted129 instance = new lifted129();
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
-    Fail345:
+    ITermFactory termFactory = context.getFactory();
+    Fail240:
     { 
-      term = make_lock_and_unlock_methods_0_10.instance.invokeDynamic(context, term, NO_STRATEGIES, new IStrategoTerm[]{z_57.value, o_71.value, a_58.value, p_71.value, v_71.value, z_71.value, j_72.value, r_71.value, s_71.value, d_72.value});
-      if(term == null)
-        break Fail345;
+      term = termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{term}), (IStrategoList)cool.constNil0)})});
       if(true)
         return term;
     }

@@ -13,26 +13,31 @@ import java.lang.ref.WeakReference;
 
 @SuppressWarnings("all") final class lifted40 extends Strategy 
 { 
-  TermReference x_26;
+  TermReference c_10;
 
-  TermReference y_26;
+  TermReference d_10;
+
+  TermReference e_10;
+
+  TermReference f_10;
+
+  TermReference g_10;
+
+  TermReference h_10;
+
+  TermReference j_10;
+
+  TermReference k_10;
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
-    Fail477:
+    Fail368:
     { 
-      if(term.getTermType() != IStrategoTerm.APPL || transform._consDiv_2 != ((IStrategoAppl)term).getConstructor())
-        break Fail477;
-      if(x_26.value == null)
-        x_26.value = term.getSubterm(0);
-      else
-        if(x_26.value != term.getSubterm(0) && !x_26.value.match(term.getSubterm(0)))
-          break Fail477;
-      if(y_26.value == null)
-        y_26.value = term.getSubterm(1);
-      else
-        if(y_26.value != term.getSubterm(1) && !y_26.value.match(term.getSubterm(1)))
-          break Fail477;
+      IStrategoTerm r_15 = null;
+      r_15 = term;
+      term = add_external_impl_0_9.instance.invokeDynamic(context, r_15, NO_STRATEGIES, new IStrategoTerm[]{c_10.value, d_10.value, e_10.value, f_10.value, g_10.value, h_10.value, cool.constBoolean0, j_10.value, k_10.value});
+      if(term == null)
+        break Fail368;
       if(true)
         return term;
     }

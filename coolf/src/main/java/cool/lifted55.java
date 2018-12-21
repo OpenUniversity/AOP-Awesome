@@ -13,19 +13,23 @@ import java.lang.ref.WeakReference;
 
 @SuppressWarnings("all") final class lifted55 extends Strategy 
 { 
-  TermReference l_37;
+  public static final lifted55 instance = new lifted55();
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
-    Fail416:
+    Fail310:
     { 
-      if(term.getTermType() != IStrategoTerm.APPL || transform._consDeprMethodDecHead_7 != ((IStrategoAppl)term).getConstructor())
-        break Fail416;
-      if(l_37.value == null)
-        l_37.value = term.getSubterm(0);
-      else
-        if(l_37.value != term.getSubterm(0) && !l_37.value.match(term.getSubterm(0)))
-          break Fail416;
+      if(term.getTermType() != IStrategoTerm.APPL || transform._consAnno_2 != ((IStrategoAppl)term).getConstructor())
+        break Fail310;
+      IStrategoTerm arg51 = term.getSubterm(0);
+      if(arg51.getTermType() != IStrategoTerm.APPL || transform._consTypeName_1 != ((IStrategoAppl)arg51).getConstructor())
+        break Fail310;
+      IStrategoTerm arg52 = arg51.getSubterm(0);
+      if(arg52.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg52).getConstructor())
+        break Fail310;
+      IStrategoTerm arg53 = arg52.getSubterm(0);
+      if(arg53.getTermType() != IStrategoTerm.STRING || !"COOLOnExit".equals(((IStrategoString)arg53).stringValue()))
+        break Fail310;
       if(true)
         return term;
     }

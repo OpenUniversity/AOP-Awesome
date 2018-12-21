@@ -15,34 +15,34 @@ import java.lang.ref.WeakReference;
 { 
   public static gen_method_state_name_0_1 instance = new gen_method_state_name_0_1();
 
-  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm v_51)
+  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm e_37)
   { 
     ITermFactory termFactory = context.getFactory();
     context.push("gen_method_state_name_0_1");
-    Fail287:
+    Fail178:
     { 
-      IStrategoTerm w_51 = null;
-      IStrategoTerm x_51 = null;
+      IStrategoTerm f_37 = null;
+      IStrategoTerm g_37 = null;
       if(term.getTermType() != IStrategoTerm.APPL || transform._consMethodSignature_2 != ((IStrategoAppl)term).getConstructor())
-        break Fail287;
-      IStrategoTerm arg144 = term.getSubterm(0);
-      if(arg144.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg144).getConstructor())
-        break Fail287;
-      w_51 = arg144.getSubterm(0);
+        break Fail178;
+      IStrategoTerm arg130 = term.getSubterm(0);
+      if(arg130.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg130).getConstructor())
+        break Fail178;
+      f_37 = arg130.getSubterm(0);
       term = strip_annos_0_0.instance.invoke(context, term);
       if(term == null)
-        break Fail287;
-      x_51 = term;
-      term = hashtable_get_0_1.instance.invoke(context, v_51, x_51);
+        break Fail178;
+      g_37 = term;
+      term = hashtable_get_0_1.instance.invoke(context, e_37, g_37);
       if(term == null)
-        break Fail287;
+        break Fail178;
       term = int_to_string_0_0.instance.invoke(context, term);
       if(term == null)
-        break Fail287;
-      term = (IStrategoTerm)termFactory.makeListCons(w_51, termFactory.makeListCons(term, (IStrategoList)cool.constCons27));
+        break Fail178;
+      term = (IStrategoTerm)termFactory.makeListCons(f_37, termFactory.makeListCons(term, (IStrategoList)cool.constCons10));
       term = concat_strings_0_0.instance.invoke(context, term);
       if(term == null)
-        break Fail287;
+        break Fail178;
       context.popOnSuccess();
       if(true)
         return term;

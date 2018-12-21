@@ -11,21 +11,17 @@ import org.spoofax.interpreter.library.AbstractPrimitive;
 import java.util.ArrayList;
 import java.lang.ref.WeakReference;
 
-@SuppressWarnings("all") final class lifted103 extends Strategy 
+@SuppressWarnings("all") final class lifted130 extends Strategy 
 { 
-  TermReference e_49;
+  TermReference h_49;
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
-    Fail366:
+    Fail239:
     { 
-      lifted105 lifted1050 = new lifted105();
-      lifted104 lifted1040 = new lifted104();
-      lifted1050.e_49 = e_49;
-      lifted1040.e_49 = e_49;
-      term = or_2_0.instance.invoke(context, term, lifted1040, lifted1050);
+      term = equal_0_1.instance.invoke(context, term, h_49.value);
       if(term == null)
-        break Fail366;
+        break Fail239;
       if(true)
         return term;
     }

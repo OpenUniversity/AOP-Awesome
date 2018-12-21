@@ -11,23 +11,19 @@ import org.spoofax.interpreter.library.AbstractPrimitive;
 import java.util.ArrayList;
 import java.lang.ref.WeakReference;
 
-@SuppressWarnings("all") public class has_leftmost_not_0_0 extends Strategy 
+@SuppressWarnings("all") final class lifted110 extends Strategy 
 { 
-  public static has_leftmost_not_0_0 instance = new has_leftmost_not_0_0();
+  public static final lifted110 instance = new lifted110();
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
-    context.push("has_leftmost_not_0_0");
-    Fail107:
+    Fail258:
     { 
-      term = t_22.instance.invoke(context, term);
-      if(term == null)
-        break Fail107;
-      context.popOnSuccess();
+      if(term.getTermType() != IStrategoTerm.APPL || transform._consCoordinatorDec_2 != ((IStrategoAppl)term).getConstructor())
+        break Fail258;
       if(true)
         return term;
     }
-    context.popOnFailure();
     return null;
   }
 }

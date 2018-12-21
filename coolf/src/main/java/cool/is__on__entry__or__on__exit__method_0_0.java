@@ -18,42 +18,42 @@ import java.lang.ref.WeakReference;
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
     context.push("is__on__entry__or__on__exit__method_0_0");
-    Fail150:
+    Fail36:
     { 
-      TermReference l_37 = new TermReference();
-      lifted55 lifted550 = new lifted55();
-      lifted54 lifted540 = new lifted54();
-      lifted550.l_37 = l_37;
-      lifted540.l_37 = l_37;
-      term = or_2_0.instance.invoke(context, term, lifted540, lifted550);
+      TermReference m_21 = new TermReference();
+      lifted51 lifted511 = new lifted51();
+      lifted50 lifted500 = new lifted50();
+      lifted511.m_21 = m_21;
+      lifted500.m_21 = m_21;
+      term = or_2_0.instance.invoke(context, term, lifted500, lifted511);
       if(term == null)
-        break Fail150;
-      IStrategoTerm term179 = term;
-      Success134:
+        break Fail36;
+      IStrategoTerm term73 = term;
+      Success31:
       { 
-        Fail151:
+        Fail37:
         { 
-          IStrategoTerm m_37 = null;
-          m_37 = term;
-          lifted58 lifted580 = new lifted58();
-          lifted56 lifted560 = new lifted56();
-          lifted580.l_37 = l_37;
-          lifted560.l_37 = l_37;
-          term = or_2_0.instance.invoke(context, term, lifted560, lifted580);
+          IStrategoTerm n_21 = null;
+          n_21 = term;
+          lifted54 lifted540 = new lifted54();
+          lifted52 lifted520 = new lifted52();
+          lifted540.m_21 = m_21;
+          lifted520.m_21 = m_21;
+          term = or_2_0.instance.invoke(context, term, lifted520, lifted540);
           if(term == null)
-            break Fail151;
-          term = m_37;
+            break Fail37;
+          term = n_21;
           { 
             term = true_0_0.instance.invoke(context, term);
             if(term == null)
-              break Fail150;
+              break Fail36;
             if(true)
-              break Success134;
+              break Success31;
           }
         }
-        term = false_0_0.instance.invoke(context, term179);
+        term = false_0_0.instance.invoke(context, term73);
         if(term == null)
-          break Fail150;
+          break Fail36;
       }
       context.popOnSuccess();
       if(true)

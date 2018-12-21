@@ -13,19 +13,14 @@ import java.lang.ref.WeakReference;
 
 @SuppressWarnings("all") final class lifted105 extends Strategy 
 { 
-  TermReference e_49;
+  public static final lifted105 instance = new lifted105();
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
-    Fail367:
+    ITermFactory termFactory = context.getFactory();
+    Fail261:
     { 
-      if(term.getTermType() != IStrategoTerm.APPL || transform._consPostDecr_1 != ((IStrategoAppl)term).getConstructor())
-        break Fail367;
-      if(e_49.value == null)
-        e_49.value = term.getSubterm(0);
-      else
-        if(e_49.value != term.getSubterm(0) && !e_49.value.match(term.getSubterm(0)))
-          break Fail367;
+      term = termFactory.makeAppl(transform._consLit_1, new IStrategoTerm[]{termFactory.makeAppl(transform._consString_1, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consChars_1, new IStrategoTerm[]{term}), (IStrategoList)cool.constNil0)})});
       if(true)
         return term;
     }

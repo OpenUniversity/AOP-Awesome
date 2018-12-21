@@ -18,184 +18,184 @@ import java.lang.ref.WeakReference;
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
     context.push("cast_equality_type_0_0");
-    Fail159:
+    Fail45:
     { 
-      IStrategoTerm k_38 = null;
-      IStrategoTerm l_38 = null;
-      IStrategoTerm m_38 = null;
-      k_38 = term;
-      m_38 = term;
-      l_38 = k_38;
-      term = m_38;
-      IStrategoTerm term184 = term;
-      Success139:
+      IStrategoTerm l_22 = null;
+      IStrategoTerm m_22 = null;
+      IStrategoTerm n_22 = null;
+      l_22 = term;
+      n_22 = term;
+      m_22 = l_22;
+      term = n_22;
+      IStrategoTerm term78 = term;
+      Success36:
       { 
-        Fail160:
+        Fail46:
         { 
-          IStrategoTerm n_38 = null;
-          n_38 = term;
-          term = l_38;
+          IStrategoTerm o_22 = null;
+          o_22 = term;
+          term = m_22;
           if(term.getTermType() != IStrategoTerm.APPL || transform._consByte_0 != ((IStrategoAppl)term).getConstructor())
-            break Fail160;
-          term = n_38;
+            break Fail46;
+          term = o_22;
           { 
             term = cool.constDouble0;
             if(true)
-              break Success139;
+              break Success36;
           }
         }
-        term = term184;
-        IStrategoTerm term185 = term;
-        Success140:
+        term = term78;
+        IStrategoTerm term79 = term;
+        Success37:
         { 
-          Fail161:
+          Fail47:
           { 
-            IStrategoTerm o_38 = null;
-            o_38 = term;
-            term = l_38;
+            IStrategoTerm p_22 = null;
+            p_22 = term;
+            term = m_22;
             if(term.getTermType() != IStrategoTerm.APPL || transform._consInt_0 != ((IStrategoAppl)term).getConstructor())
-              break Fail161;
-            term = o_38;
+              break Fail47;
+            term = p_22;
             { 
               term = cool.constDouble0;
               if(true)
-                break Success140;
+                break Success37;
             }
           }
-          term = term185;
-          IStrategoTerm term186 = term;
-          Success141:
+          term = term79;
+          IStrategoTerm term80 = term;
+          Success38:
           { 
-            Fail162:
+            Fail48:
             { 
-              IStrategoTerm p_38 = null;
-              p_38 = term;
-              term = l_38;
+              IStrategoTerm q_22 = null;
+              q_22 = term;
+              term = m_22;
               if(term.getTermType() != IStrategoTerm.APPL || transform._consShort_0 != ((IStrategoAppl)term).getConstructor())
-                break Fail162;
-              term = p_38;
+                break Fail48;
+              term = q_22;
               { 
                 term = cool.constDouble0;
                 if(true)
-                  break Success141;
+                  break Success38;
               }
             }
-            term = term186;
-            IStrategoTerm term187 = term;
-            Success142:
+            term = term80;
+            IStrategoTerm term81 = term;
+            Success39:
             { 
-              Fail163:
+              Fail49:
               { 
-                IStrategoTerm q_38 = null;
-                q_38 = term;
-                term = or_2_0.instance.invoke(context, l_38, lifted62.instance, lifted63.instance);
+                IStrategoTerm r_22 = null;
+                r_22 = term;
+                term = or_2_0.instance.invoke(context, m_22, lifted58.instance, lifted59.instance);
                 if(term == null)
-                  break Fail163;
-                term = q_38;
+                  break Fail49;
+                term = r_22;
                 { 
                   term = cool.constDouble0;
                   if(true)
-                    break Success142;
+                    break Success39;
                 }
               }
-              term = term187;
-              IStrategoTerm term188 = term;
-              Success143:
+              term = term81;
+              IStrategoTerm term82 = term;
+              Success40:
               { 
-                Fail164:
+                Fail50:
                 { 
-                  IStrategoTerm r_38 = null;
-                  r_38 = term;
-                  term = or_2_0.instance.invoke(context, l_38, lifted64.instance, lifted65.instance);
+                  IStrategoTerm s_22 = null;
+                  s_22 = term;
+                  term = or_2_0.instance.invoke(context, m_22, lifted60.instance, lifted61.instance);
                   if(term == null)
-                    break Fail164;
-                  term = r_38;
+                    break Fail50;
+                  term = s_22;
                   { 
                     term = cool.constDouble0;
                     if(true)
-                      break Success143;
+                      break Success40;
                   }
                 }
-                term = term188;
-                IStrategoTerm term189 = term;
-                Success144:
+                term = term82;
+                IStrategoTerm term83 = term;
+                Success41:
                 { 
-                  Fail165:
+                  Fail51:
                   { 
-                    IStrategoTerm s_38 = null;
-                    s_38 = term;
-                    term = l_38;
+                    IStrategoTerm t_22 = null;
+                    t_22 = term;
+                    term = m_22;
                     if(term.getTermType() != IStrategoTerm.APPL || transform._consLong_0 != ((IStrategoAppl)term).getConstructor())
-                      break Fail165;
-                    term = s_38;
+                      break Fail51;
+                    term = t_22;
                     { 
                       term = cool.constDouble0;
                       if(true)
-                        break Success144;
+                        break Success41;
                     }
                   }
-                  term = term189;
-                  IStrategoTerm term190 = term;
-                  Success145:
+                  term = term83;
+                  IStrategoTerm term84 = term;
+                  Success42:
                   { 
-                    Fail166:
+                    Fail52:
                     { 
-                      IStrategoTerm t_38 = null;
-                      t_38 = term;
-                      term = l_38;
+                      IStrategoTerm u_22 = null;
+                      u_22 = term;
+                      term = m_22;
                       if(term.getTermType() != IStrategoTerm.APPL || transform._consDouble_0 != ((IStrategoAppl)term).getConstructor())
-                        break Fail166;
-                      term = t_38;
+                        break Fail52;
+                      term = u_22;
                       { 
                         term = cool.constDouble0;
                         if(true)
-                          break Success145;
+                          break Success42;
                       }
                     }
-                    term = term190;
-                    IStrategoTerm term191 = term;
-                    Success146:
+                    term = term84;
+                    IStrategoTerm term85 = term;
+                    Success43:
                     { 
-                      Fail167:
+                      Fail53:
                       { 
-                        IStrategoTerm u_38 = null;
-                        u_38 = term;
-                        term = l_38;
+                        IStrategoTerm v_22 = null;
+                        v_22 = term;
+                        term = m_22;
                         if(term.getTermType() != IStrategoTerm.APPL || transform._consDeci_1 != ((IStrategoAppl)term).getConstructor())
-                          break Fail167;
-                        term = u_38;
+                          break Fail53;
+                        term = v_22;
                         { 
                           term = cool.constDouble0;
                           if(true)
-                            break Success146;
+                            break Success43;
                         }
                       }
-                      term = term191;
-                      Success147:
+                      term = term85;
+                      Success44:
                       { 
-                        Fail168:
+                        Fail54:
                         { 
-                          IStrategoTerm v_38 = null;
-                          v_38 = term;
-                          term = or_2_0.instance.invoke(context, l_38, lifted66.instance, lifted67.instance);
+                          IStrategoTerm w_22 = null;
+                          w_22 = term;
+                          term = or_2_0.instance.invoke(context, m_22, lifted62.instance, lifted63.instance);
                           if(term == null)
-                            break Fail168;
-                          term = v_38;
+                            break Fail54;
+                          term = w_22;
                           { 
                             term = cool.constBoolean0;
                             if(true)
-                              break Success147;
+                              break Success44;
                           }
                         }
-                        term = debug_0_0.instance.invoke(context, cool.const80);
+                        term = debug_0_0.instance.invoke(context, cool.const12);
                         if(term == null)
-                          break Fail159;
-                        term = debug_0_0.instance.invoke(context, k_38);
+                          break Fail45;
+                        term = debug_0_0.instance.invoke(context, l_22);
                         if(term == null)
-                          break Fail159;
-                        term = cool.const77;
+                          break Fail45;
+                        term = cool.const9;
                         if(true)
-                          break Fail159;
+                          break Fail45;
                       }
                     }
                   }

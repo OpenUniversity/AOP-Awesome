@@ -15,30 +15,30 @@ import java.lang.ref.WeakReference;
 { 
   public static add__externals_0_1 instance = new add__externals_0_1();
 
-  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm o_24)
+  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm p_8)
   { 
     context.push("add__externals_0_1");
-    Fail132:
+    Fail18:
     { 
-      IStrategoTerm p_24 = null;
-      TermReference s_24 = new TermReference();
-      p_24 = term;
+      IStrategoTerm q_8 = null;
+      TermReference t_8 = new TermReference();
+      q_8 = term;
       term = new_iset_0_0.instance.invoke(context, term);
       if(term == null)
-        break Fail132;
-      if(s_24.value == null)
-        s_24.value = term;
+        break Fail18;
+      if(t_8.value == null)
+        t_8.value = term;
       else
-        if(s_24.value != term && !s_24.value.match(term))
-          break Fail132;
-      term = add_external_impl_0_2.instance.invoke(context, p_24, s_24.value, o_24);
+        if(t_8.value != term && !t_8.value.match(term))
+          break Fail18;
+      term = add_external_impl_0_2.instance.invoke(context, q_8, t_8.value, p_8);
       if(term == null)
-        break Fail132;
-      lifted4 lifted410 = new lifted4();
-      lifted410.s_24 = s_24;
-      term = topdown_1_0.instance.invoke(context, term, lifted410);
+        break Fail18;
+      lifted0 lifted00 = new lifted0();
+      lifted00.t_8 = t_8;
+      term = topdown_1_0.instance.invoke(context, term, lifted00);
       if(term == null)
-        break Fail132;
+        break Fail18;
       context.popOnSuccess();
       if(true)
         return term;

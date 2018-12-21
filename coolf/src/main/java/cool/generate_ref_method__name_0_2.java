@@ -15,73 +15,73 @@ import java.lang.ref.WeakReference;
 { 
   public static generate_ref_method__name_0_2 instance = new generate_ref_method__name_0_2();
 
-  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm r_42, IStrategoTerm s_42)
+  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm s_26, IStrategoTerm t_26)
   { 
     ITermFactory termFactory = context.getFactory();
     context.push("generate_ref_method__name_0_2");
-    Fail217:
+    Fail103:
     { 
-      IStrategoTerm t_42 = null;
-      IStrategoTerm term232 = term;
-      Success187:
+      IStrategoTerm u_26 = null;
+      IStrategoTerm term126 = term;
+      Success84:
       { 
-        Fail218:
+        Fail104:
         { 
-          IStrategoTerm v_42 = null;
-          v_42 = term;
-          IStrategoTerm term233 = term;
-          Success188:
+          IStrategoTerm w_26 = null;
+          w_26 = term;
+          IStrategoTerm term127 = term;
+          Success85:
           { 
-            Fail219:
+            Fail105:
             { 
-              term = hashtable_keys_0_0.instance.invoke(context, s_42);
+              term = hashtable_keys_0_0.instance.invoke(context, t_26);
               if(term == null)
-                break Fail219;
-              term = termFactory.makeTuple(r_42, term);
+                break Fail105;
+              term = termFactory.makeTuple(s_26, term);
               term = elem_0_0.instance.invoke(context, term);
               if(term == null)
-                break Fail219;
+                break Fail105;
               { 
                 if(true)
-                  break Fail218;
+                  break Fail104;
                 if(true)
-                  break Success188;
+                  break Success85;
               }
             }
-            term = term233;
+            term = term127;
           }
-          term = v_42;
+          term = w_26;
           { 
-            term = hashtable_keys_0_0.instance.invoke(context, s_42);
+            term = hashtable_keys_0_0.instance.invoke(context, t_26);
             if(term == null)
-              break Fail217;
+              break Fail103;
             term = length_0_0.instance.invoke(context, term);
             if(term == null)
-              break Fail217;
-            term = termFactory.makeTuple(term, cool.const83);
+              break Fail103;
+            term = termFactory.makeTuple(term, cool.const16);
             term = add_0_0.instance.invoke(context, term);
             if(term == null)
-              break Fail217;
-            t_42 = term;
-            term = int_to_string_0_0.instance.invoke(context, t_42);
+              break Fail103;
+            u_26 = term;
+            term = int_to_string_0_0.instance.invoke(context, u_26);
             if(term == null)
-              break Fail217;
-            term = (IStrategoTerm)termFactory.makeListCons(cool.const84, termFactory.makeListCons(term, (IStrategoList)cool.constNil0));
+              break Fail103;
+            term = (IStrategoTerm)termFactory.makeListCons(cool.const17, termFactory.makeListCons(term, (IStrategoList)cool.constNil0));
             term = concat_strings_0_0.instance.invoke(context, term);
             if(term == null)
-              break Fail217;
-            term = hashtable_put_0_2.instance.invoke(context, s_42, r_42, term);
+              break Fail103;
+            term = hashtable_put_0_2.instance.invoke(context, t_26, s_26, term);
             if(term == null)
-              break Fail217;
+              break Fail103;
             if(true)
-              break Success187;
+              break Success84;
           }
         }
-        term = term232;
+        term = term126;
       }
-      term = hashtable_get_0_1.instance.invoke(context, s_42, r_42);
+      term = hashtable_get_0_1.instance.invoke(context, t_26, s_26);
       if(term == null)
-        break Fail217;
+        break Fail103;
       context.popOnSuccess();
       if(true)
         return term;

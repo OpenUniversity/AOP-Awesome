@@ -13,31 +13,23 @@ import java.lang.ref.WeakReference;
 
 @SuppressWarnings("all") final class lifted53 extends Strategy 
 { 
-  TermReference b_26;
-
-  TermReference c_26;
-
-  TermReference d_26;
-
-  TermReference e_26;
-
-  TermReference f_26;
-
-  TermReference g_26;
-
-  TermReference h_26;
-
-  TermReference i_26;
-
-  TermReference j_26;
+  public static final lifted53 instance = new lifted53();
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
-    Fail462:
+    Fail312:
     { 
-      term = add_external_impl_0_9.instance.invokeDynamic(context, term, NO_STRATEGIES, new IStrategoTerm[]{b_26.value, c_26.value, d_26.value, e_26.value, f_26.value, g_26.value, h_26.value, i_26.value, j_26.value});
-      if(term == null)
-        break Fail462;
+      if(term.getTermType() != IStrategoTerm.APPL || transform._consAnno_2 != ((IStrategoAppl)term).getConstructor())
+        break Fail312;
+      IStrategoTerm arg47 = term.getSubterm(0);
+      if(arg47.getTermType() != IStrategoTerm.APPL || transform._consTypeName_1 != ((IStrategoAppl)arg47).getConstructor())
+        break Fail312;
+      IStrategoTerm arg48 = arg47.getSubterm(0);
+      if(arg48.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg48).getConstructor())
+        break Fail312;
+      IStrategoTerm arg49 = arg48.getSubterm(0);
+      if(arg49.getTermType() != IStrategoTerm.STRING || !"COOLOnEntry".equals(((IStrategoString)arg49).stringValue()))
+        break Fail312;
       if(true)
         return term;
     }

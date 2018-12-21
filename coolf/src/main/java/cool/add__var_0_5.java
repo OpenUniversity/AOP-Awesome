@@ -15,20 +15,20 @@ import java.lang.ref.WeakReference;
 { 
   public static add__var_0_5 instance = new add__var_0_5();
 
-  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm u_37, IStrategoTerm v_37, IStrategoTerm w_37, IStrategoTerm x_37, IStrategoTerm y_37)
+  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm v_21, IStrategoTerm w_21, IStrategoTerm x_21, IStrategoTerm y_21, IStrategoTerm z_21)
   { 
     context.push("add__var_0_5");
-    Fail153:
+    Fail39:
     { 
-      term = hashtable_put_0_2.instance.invoke(context, x_37, u_37, y_37);
+      term = hashtable_put_0_2.instance.invoke(context, y_21, v_21, z_21);
       if(term == null)
-        break Fail153;
-      term = increament_0_2.instance.invoke(context, v_37, u_37, v_37);
+        break Fail39;
+      term = increament_0_2.instance.invoke(context, w_21, v_21, w_21);
       if(term == null)
-        break Fail153;
-      term = increament_0_2.instance.invoke(context, w_37, u_37, w_37);
+        break Fail39;
+      term = increament_0_2.instance.invoke(context, x_21, v_21, x_21);
       if(term == null)
-        break Fail153;
+        break Fail39;
       context.popOnSuccess();
       if(true)
         return term;

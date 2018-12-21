@@ -13,40 +13,31 @@ import java.lang.ref.WeakReference;
 
 @SuppressWarnings("all") final class lifted49 extends Strategy 
 { 
-  TermReference h_27;
+  TermReference c_10;
 
-  TermReference h_26;
+  TermReference d_10;
 
-  TermReference b_26;
+  TermReference e_10;
 
-  TermReference c_26;
+  TermReference f_10;
 
-  TermReference d_26;
+  TermReference g_10;
 
-  TermReference e_26;
+  TermReference h_10;
 
-  TermReference f_26;
+  TermReference i_10;
 
-  TermReference g_26;
+  TermReference j_10;
 
-  TermReference i_26;
-
-  TermReference j_26;
+  TermReference k_10;
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
-    Fail466:
+    Fail359:
     { 
-      IStrategoTerm s_31 = null;
-      s_31 = term;
-      if(h_27.value == null)
-        break Fail466;
-      term = type_of_0_3.instance.invoke(context, h_27.value, h_26.value, b_26.value, c_26.value);
+      term = add_external_impl_0_9.instance.invokeDynamic(context, term, NO_STRATEGIES, new IStrategoTerm[]{c_10.value, d_10.value, e_10.value, f_10.value, g_10.value, h_10.value, i_10.value, j_10.value, k_10.value});
       if(term == null)
-        break Fail466;
-      term = add_external_impl_0_9.instance.invokeDynamic(context, s_31, NO_STRATEGIES, new IStrategoTerm[]{b_26.value, c_26.value, d_26.value, e_26.value, f_26.value, g_26.value, term, i_26.value, j_26.value});
-      if(term == null)
-        break Fail466;
+        break Fail359;
       if(true)
         return term;
     }

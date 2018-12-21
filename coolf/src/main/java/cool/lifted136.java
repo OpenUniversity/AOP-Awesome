@@ -18,18 +18,21 @@ import java.lang.ref.WeakReference;
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
     ITermFactory termFactory = context.getFactory();
-    Fail340:
+    Fail235:
     { 
-      IStrategoTerm f_80 = null;
-      IStrategoTerm g_80 = null;
-      if(term.getTermType() != IStrategoTerm.APPL || transform._consAssign_2 != ((IStrategoAppl)term).getConstructor())
-        break Fail340;
-      IStrategoTerm arg175 = term.getSubterm(0);
-      if(arg175.getTermType() != IStrategoTerm.APPL || transform._consExprName_1 != ((IStrategoAppl)arg175).getConstructor())
-        break Fail340;
-      f_80 = arg175.getSubterm(0);
-      g_80 = term.getSubterm(1);
-      term = termFactory.makeAppl(transform._consFieldDec_3, new IStrategoTerm[]{cool.constCons44, cool.constBoolean0, (IStrategoTerm)termFactory.makeListCons(termFactory.makeAppl(transform._consVarDec_2, new IStrategoTerm[]{f_80, g_80}), (IStrategoList)cool.constNil0)});
+      IStrategoTerm v_52 = null;
+      IStrategoTerm w_52 = null;
+      IStrategoTerm x_52 = null;
+      if(term.getTermType() != IStrategoTerm.APPL || transform._consFieldDec_3 != ((IStrategoAppl)term).getConstructor())
+        break Fail235;
+      v_52 = term.getSubterm(0);
+      w_52 = term.getSubterm(1);
+      x_52 = term.getSubterm(2);
+      IStrategoList list1;
+      list1 = checkListTail(v_52);
+      if(list1 == null)
+        break Fail235;
+      term = termFactory.makeAppl(transform._consFieldDec_3, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(cool.constPrivate0, termFactory.makeListCons(cool.constMarkerAnno1, list1)), w_52, x_52});
       if(true)
         return term;
     }

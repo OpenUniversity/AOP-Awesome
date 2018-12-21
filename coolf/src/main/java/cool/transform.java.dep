@@ -1,24 +1,6 @@
-COOL.old/dist/transform.java: \
-	COOL.old/trans/aspectj/pp/pointcut/Expression.str \
-	COOL.old/trans/Stratego-Box.tbl \
-	COOL.old/trans/aspectj/pp/pointcut/Declaration.str \
-	COOL.old/trans/aspectj/pp/pattern/Type.str \
-	COOL.old/trans/aspectj/pp/pattern/Name.str \
-	COOL.old/trans/aspectj/pp/pattern/FormalParameter.str \
-	COOL.old/trans/aspectj/pp/pattern/ClassName.str \
-	COOL.old/trans/aspectj/pp/pattern/ClassMember.str \
-	COOL.old/trans/aspectj/pp/pattern/Annotation.str \
-	COOL.old/trans/aspectj/pp/common/BooleanComposition.str \
-	COOL.old/trans/aspectj/pp/aspect/IntertypeMemberDeclaration.str \
-	COOL.old/trans/aspectj/pp/aspect/AdviceDeclaration.str \
-	COOL.old/trans/aspectj/pp/aspect/DeclareDeclaration.str \
-	COOL.old/trans/aspectj/pp/aspect/Declaration.str \
-	COOL.old/trans/aspectj/pp/JavaExtension.str \
-	COOL.old/trans/aspectj/signature.str \
-	COOL.old/trans/aspectj/pp/Main.str \
-	COOL.old/trans/aspectj/pretty-print.str \
+COOL/dist/transform.java: \
 	 \
-	COOL.old/trans/tools.str \
-	COOL.old/trans/externals.str \
-	COOL.old/include/cool.str \
-	./COOL.old/trans/transform.str
+	COOL/trans/tools.str \
+	COOL/trans/externals.str \
+	COOL/include/cool.str \
+	./COOL/trans/transform.str

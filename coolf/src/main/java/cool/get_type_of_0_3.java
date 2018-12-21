@@ -15,54 +15,54 @@ import java.lang.ref.WeakReference;
 { 
   public static get_type_of_0_3 instance = new get_type_of_0_3();
 
-  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm n_41, IStrategoTerm o_41, IStrategoTerm p_41)
+  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm o_25, IStrategoTerm p_25, IStrategoTerm q_25)
   { 
     context.push("get_type_of_0_3");
-    Fail210:
+    Fail96:
     { 
-      IStrategoTerm q_41 = null;
-      IStrategoTerm term228 = term;
-      Success183:
+      IStrategoTerm r_25 = null;
+      IStrategoTerm term122 = term;
+      Success80:
       { 
-        Fail211:
+        Fail97:
         { 
-          IStrategoTerm r_41 = null;
-          r_41 = term;
-          IStrategoTerm term229 = term;
-          Success184:
+          IStrategoTerm s_25 = null;
+          s_25 = term;
+          IStrategoTerm term123 = term;
+          Success81:
           { 
-            Fail212:
+            Fail98:
             { 
-              term = type_of_0_3.instance.invoke(context, term, n_41, o_41, p_41);
+              term = type_of_0_3.instance.invoke(context, term, o_25, p_25, q_25);
               if(term == null)
-                break Fail212;
-              q_41 = term;
+                break Fail98;
+              r_25 = term;
               { 
                 if(true)
-                  break Fail211;
+                  break Fail97;
                 if(true)
-                  break Success184;
+                  break Success81;
               }
             }
-            term = term229;
+            term = term123;
           }
-          term = r_41;
+          term = s_25;
           { 
             term = cool.constNone0;
-            if(q_41 == null)
-              q_41 = term;
+            if(r_25 == null)
+              r_25 = term;
             else
-              if(q_41 != term && !q_41.match(term))
-                break Fail210;
+              if(r_25 != term && !r_25.match(term))
+                break Fail96;
             if(true)
-              break Success183;
+              break Success80;
           }
         }
-        term = term228;
+        term = term122;
       }
-      if(q_41 == null)
-        break Fail210;
-      term = q_41;
+      if(r_25 == null)
+        break Fail96;
+      term = r_25;
       context.popOnSuccess();
       if(true)
         return term;

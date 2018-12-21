@@ -11,20 +11,24 @@ import org.spoofax.interpreter.library.AbstractPrimitive;
 import java.util.ArrayList;
 import java.lang.ref.WeakReference;
 
-@SuppressWarnings("all") final class lifted132 extends Strategy 
+@SuppressWarnings("all") public class origin_file_0_0 extends Strategy 
 { 
-  TermReference n_77;
+  public static origin_file_0_0 instance = new origin_file_0_0();
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
-    Fail343:
+    Fail175:
     { 
-      term = equal_0_1.instance.invoke(context, term, n_77.value);
+      IStrategoTerm u_36 = null;
+      u_36 = term;
+      term = context.invokePrimitive("SSL_EXT_origin_file", u_36, NO_STRATEGIES, new IStrategoTerm[]{term});
       if(term == null)
-        break Fail343;
+        break Fail175;
       if(true)
         return term;
     }
+    context.push("origin_file_0_0");
+    context.popOnFailure();
     return null;
   }
 }
