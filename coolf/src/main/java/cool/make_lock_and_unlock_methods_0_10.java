@@ -15,51 +15,51 @@ import java.lang.ref.WeakReference;
 { 
   public static make_lock_and_unlock_methods_0_10 instance = new make_lock_and_unlock_methods_0_10();
 
-  public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm r_46, IStrategoTerm s_46, IStrategoTerm t_46, IStrategoTerm u_46, IStrategoTerm v_46, IStrategoTerm w_46, IStrategoTerm x_46, IStrategoTerm y_46, IStrategoTerm z_46, IStrategoTerm a_47)
+  public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm j_45, IStrategoTerm k_45, IStrategoTerm l_45, IStrategoTerm m_45, IStrategoTerm n_45, IStrategoTerm o_45, IStrategoTerm p_45, IStrategoTerm q_45, IStrategoTerm r_45, IStrategoTerm s_45)
   { 
     ITermFactory termFactory = context.getFactory();
     context.push("make_lock_and_unlock_methods_0_10");
-    Fail207:
+    Fail200:
     { 
-      IStrategoTerm c_47 = null;
-      IStrategoTerm d_47 = null;
-      IStrategoTerm i_47 = null;
-      IStrategoTerm k_47 = null;
-      d_47 = term;
+      IStrategoTerm u_45 = null;
+      IStrategoTerm v_45 = null;
+      IStrategoTerm a_46 = null;
+      IStrategoTerm c_46 = null;
+      v_45 = term;
       IStrategoTerm term192 = term;
       Success150:
       { 
-        Fail208:
+        Fail201:
         { 
           term = strip_annos_0_0.instance.invoke(context, term);
           if(term == null)
-            break Fail208;
-          c_47 = term;
+            break Fail201;
+          u_45 = term;
           if(true)
             break Success150;
         }
         term = term192;
-        IStrategoTerm h_47 = null;
-        h_47 = term;
-        term = report_with_failure_0_1.instance.invoke(context, h_47, cool.const60);
+        IStrategoTerm z_45 = null;
+        z_45 = term;
+        term = report_with_failure_0_1.instance.invoke(context, z_45, cool.const59);
         if(term == null)
-          break Fail207;
+          break Fail200;
       }
-      term = d_47;
-      k_47 = d_47;
-      if(c_47 == null)
-        break Fail207;
-      term = make_lock_method_0_9.instance.invokeDynamic(context, c_47, NO_STRATEGIES, new IStrategoTerm[]{r_46, t_46, u_46, v_46, w_46, x_46, y_46, z_46, a_47});
+      term = v_45;
+      c_46 = v_45;
+      if(u_45 == null)
+        break Fail200;
+      term = make_lock_method_0_9.instance.invokeDynamic(context, u_45, NO_STRATEGIES, new IStrategoTerm[]{j_45, l_45, m_45, n_45, o_45, p_45, q_45, r_45, s_45});
       if(term == null)
-        break Fail207;
-      i_47 = term;
-      term = k_47;
-      if(c_47 == null)
-        break Fail207;
-      term = make_unlock_method_0_3.instance.invoke(context, c_47, r_46, s_46, x_46);
+        break Fail200;
+      a_46 = term;
+      term = c_46;
+      if(u_45 == null)
+        break Fail200;
+      term = make_unlock_method_0_3.instance.invoke(context, u_45, j_45, k_45, p_45);
       if(term == null)
-        break Fail207;
-      term = (IStrategoTerm)termFactory.makeListCons(i_47, termFactory.makeListCons(term, (IStrategoList)cool.constNil0));
+        break Fail200;
+      term = (IStrategoTerm)termFactory.makeListCons(a_46, termFactory.makeListCons(term, (IStrategoList)cool.constNil0));
       context.popOnSuccess();
       if(true)
         return term;

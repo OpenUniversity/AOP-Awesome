@@ -19,20 +19,20 @@ import java.lang.ref.WeakReference;
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
-    Fail391:
+    Fail388:
     { 
       if(term.getTermType() != IStrategoTerm.APPL || transform._consOr_2 != ((IStrategoAppl)term).getConstructor())
-        break Fail391;
+        break Fail388;
       if(y_10.value == null)
         y_10.value = term.getSubterm(0);
       else
         if(y_10.value != term.getSubterm(0) && !y_10.value.match(term.getSubterm(0)))
-          break Fail391;
+          break Fail388;
       if(z_10.value == null)
         z_10.value = term.getSubterm(1);
       else
         if(z_10.value != term.getSubterm(1) && !z_10.value.match(term.getSubterm(1)))
-          break Fail391;
+          break Fail388;
       if(true)
         return term;
     }

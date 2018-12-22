@@ -18,21 +18,21 @@ import java.lang.ref.WeakReference;
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
     ITermFactory termFactory = context.getFactory();
-    Fail235:
+    Fail232:
     { 
-      IStrategoTerm v_52 = null;
-      IStrategoTerm w_52 = null;
-      IStrategoTerm x_52 = null;
+      IStrategoTerm n_51 = null;
+      IStrategoTerm o_51 = null;
+      IStrategoTerm p_51 = null;
       if(term.getTermType() != IStrategoTerm.APPL || transform._consFieldDec_3 != ((IStrategoAppl)term).getConstructor())
-        break Fail235;
-      v_52 = term.getSubterm(0);
-      w_52 = term.getSubterm(1);
-      x_52 = term.getSubterm(2);
+        break Fail232;
+      n_51 = term.getSubterm(0);
+      o_51 = term.getSubterm(1);
+      p_51 = term.getSubterm(2);
       IStrategoList list1;
-      list1 = checkListTail(v_52);
+      list1 = checkListTail(n_51);
       if(list1 == null)
-        break Fail235;
-      term = termFactory.makeAppl(transform._consFieldDec_3, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(cool.constPrivate0, termFactory.makeListCons(cool.constMarkerAnno1, list1)), w_52, x_52});
+        break Fail232;
+      term = termFactory.makeAppl(transform._consFieldDec_3, new IStrategoTerm[]{(IStrategoTerm)termFactory.makeListCons(cool.constPrivate0, termFactory.makeListCons(cool.constMarkerAnno1, list1)), o_51, p_51});
       if(true)
         return term;
     }

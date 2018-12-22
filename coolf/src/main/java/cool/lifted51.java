@@ -17,15 +17,15 @@ import java.lang.ref.WeakReference;
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
-    Fail313:
+    Fail310:
     { 
       if(term.getTermType() != IStrategoTerm.APPL || transform._consDeprMethodDecHead_7 != ((IStrategoAppl)term).getConstructor())
-        break Fail313;
+        break Fail310;
       if(m_21.value == null)
         m_21.value = term.getSubterm(0);
       else
         if(m_21.value != term.getSubterm(0) && !m_21.value.match(term.getSubterm(0)))
-          break Fail313;
+          break Fail310;
       if(true)
         return term;
     }

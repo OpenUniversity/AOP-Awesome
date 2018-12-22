@@ -15,7 +15,7 @@ import java.lang.ref.WeakReference;
 { 
   public static type_of_0_3 instance = new type_of_0_3();
 
-  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm t_53, IStrategoTerm u_53, IStrategoTerm v_53)
+  @Override public IStrategoTerm invoke(Context context, IStrategoTerm term, IStrategoTerm x_52, IStrategoTerm y_52, IStrategoTerm z_52)
   { 
     ITermFactory termFactory = context.getFactory();
     context.push("type_of_0_3");
@@ -34,7 +34,7 @@ import java.lang.ref.WeakReference;
             { 
               IStrategoTerm r_34 = null;
               r_34 = term;
-              term = termFactory.makeTuple(t_53, cool.constNone0);
+              term = termFactory.makeTuple(x_52, cool.constNone0);
               term = equal_0_0.instance.invoke(context, term);
               if(term == null)
                 break Fail123;
@@ -45,7 +45,7 @@ import java.lang.ref.WeakReference;
                   break Success98;
               }
             }
-            term = t_53;
+            term = x_52;
           }
           if(true)
             break Success97;
@@ -65,7 +65,7 @@ import java.lang.ref.WeakReference;
               { 
                 IStrategoTerm n_34 = null;
                 n_34 = term;
-                term = termFactory.makeTuple(t_53, cool.constNone0);
+                term = termFactory.makeTuple(x_52, cool.constNone0);
                 term = equal_0_0.instance.invoke(context, term);
                 if(term == null)
                   break Fail125;
@@ -76,7 +76,7 @@ import java.lang.ref.WeakReference;
                     break Success100;
                 }
               }
-              term = t_53;
+              term = x_52;
             }
             if(true)
               break Success99;
@@ -96,7 +96,7 @@ import java.lang.ref.WeakReference;
                 { 
                   IStrategoTerm j_34 = null;
                   j_34 = term;
-                  term = termFactory.makeTuple(t_53, cool.constNone0);
+                  term = termFactory.makeTuple(x_52, cool.constNone0);
                   term = equal_0_0.instance.invoke(context, term);
                   if(term == null)
                     break Fail127;
@@ -107,7 +107,7 @@ import java.lang.ref.WeakReference;
                       break Success102;
                   }
                 }
-                term = cast_bounded_arithmetic_type_0_0.instance.invoke(context, t_53);
+                term = cast_bounded_arithmetic_type_0_0.instance.invoke(context, x_52);
                 if(term == null)
                   break Fail126;
               }
@@ -134,7 +134,7 @@ import java.lang.ref.WeakReference;
                   { 
                     IStrategoTerm f_34 = null;
                     f_34 = term;
-                    term = termFactory.makeTuple(t_53, cool.constNone0);
+                    term = termFactory.makeTuple(x_52, cool.constNone0);
                     term = equal_0_0.instance.invoke(context, term);
                     if(term == null)
                       break Fail129;
@@ -142,7 +142,7 @@ import java.lang.ref.WeakReference;
                     { 
                       if(e_34.value == null)
                         break Fail128;
-                      term = get_type_of_0_3.instance.invoke(context, e_34.value, t_53, u_53, v_53);
+                      term = get_type_of_0_3.instance.invoke(context, e_34.value, x_52, y_52, z_52);
                       if(term == null)
                         break Fail128;
                       term = cast_shift_type_0_0.instance.invoke(context, term);
@@ -152,7 +152,7 @@ import java.lang.ref.WeakReference;
                         break Success104;
                     }
                   }
-                  term = cast_shift_type_0_0.instance.invoke(context, t_53);
+                  term = cast_shift_type_0_0.instance.invoke(context, x_52);
                   if(term == null)
                     break Fail128;
                 }
@@ -178,14 +178,14 @@ import java.lang.ref.WeakReference;
                       { 
                         IStrategoTerm a_34 = null;
                         a_34 = term;
-                        term = termFactory.makeTuple(t_53, cool.constNone0);
+                        term = termFactory.makeTuple(x_52, cool.constNone0);
                         term = equal_0_0.instance.invoke(context, term);
                         if(term == null)
                           break Fail131;
                         term = a_34;
                         { 
                           term = termFactory.makeTuple(y_33, z_33);
-                          term = try_to_get_type_0_3.instance.invoke(context, term, t_53, u_53, v_53);
+                          term = try_to_get_type_0_3.instance.invoke(context, term, x_52, y_52, z_52);
                           if(term == null)
                             break Fail130;
                           term = cast_conditional_type_0_0.instance.invoke(context, term);
@@ -195,7 +195,7 @@ import java.lang.ref.WeakReference;
                             break Success106;
                         }
                       }
-                      term = cast_bounded_conditional_type_0_0.instance.invoke(context, t_53);
+                      term = cast_bounded_conditional_type_0_0.instance.invoke(context, x_52);
                       if(term == null)
                         break Fail130;
                     }
@@ -220,14 +220,14 @@ import java.lang.ref.WeakReference;
                         { 
                           IStrategoTerm u_33 = null;
                           u_33 = term;
-                          term = termFactory.makeTuple(t_53, cool.constNone0);
+                          term = termFactory.makeTuple(x_52, cool.constNone0);
                           term = equal_0_0.instance.invoke(context, term);
                           if(term == null)
                             break Fail133;
                           term = u_33;
                           { 
                             term = termFactory.makeTuple(s_33, t_33);
-                            term = try_to_get_type_0_3.instance.invoke(context, term, t_53, u_53, v_53);
+                            term = try_to_get_type_0_3.instance.invoke(context, term, x_52, y_52, z_52);
                             if(term == null)
                               break Fail132;
                             term = cast_conditional_type_0_0.instance.invoke(context, term);
@@ -237,7 +237,7 @@ import java.lang.ref.WeakReference;
                               break Success108;
                           }
                         }
-                        term = cast_bounded_conditional_type_0_0.instance.invoke(context, t_53);
+                        term = cast_bounded_conditional_type_0_0.instance.invoke(context, x_52);
                         if(term == null)
                           break Fail132;
                       }
@@ -262,14 +262,14 @@ import java.lang.ref.WeakReference;
                           { 
                             IStrategoTerm o_33 = null;
                             o_33 = term;
-                            term = termFactory.makeTuple(t_53, cool.constNone0);
+                            term = termFactory.makeTuple(x_52, cool.constNone0);
                             term = equal_0_0.instance.invoke(context, term);
                             if(term == null)
                               break Fail135;
                             term = o_33;
                             { 
                               term = termFactory.makeTuple(m_33, n_33);
-                              term = try_to_get_type_0_3.instance.invoke(context, term, t_53, u_53, v_53);
+                              term = try_to_get_type_0_3.instance.invoke(context, term, x_52, y_52, z_52);
                               if(term == null)
                                 break Fail134;
                               term = cast_conditional_type_0_0.instance.invoke(context, term);
@@ -279,7 +279,7 @@ import java.lang.ref.WeakReference;
                                 break Success110;
                             }
                           }
-                          term = cast_bounded_conditional_type_0_0.instance.invoke(context, t_53);
+                          term = cast_bounded_conditional_type_0_0.instance.invoke(context, x_52);
                           if(term == null)
                             break Fail134;
                         }
@@ -304,7 +304,7 @@ import java.lang.ref.WeakReference;
                           break Fail136;
                         if(f_33.value == null)
                           break Fail136;
-                        term = get_type_of_0_3.instance.invoke(context, f_33.value, t_53, u_53, v_53);
+                        term = get_type_of_0_3.instance.invoke(context, f_33.value, x_52, y_52, z_52);
                         if(term == null)
                           break Fail136;
                         g_33 = term;
@@ -326,7 +326,7 @@ import java.lang.ref.WeakReference;
                                 { 
                                   IStrategoTerm i_33 = null;
                                   i_33 = term;
-                                  term = termFactory.makeTuple(t_53, cool.constNone0);
+                                  term = termFactory.makeTuple(x_52, cool.constNone0);
                                   term = equal_0_0.instance.invoke(context, term);
                                   if(term == null)
                                     break Fail138;
@@ -337,7 +337,7 @@ import java.lang.ref.WeakReference;
                                       break Success113;
                                   }
                                 }
-                                term = ensure__number_0_0.instance.invoke(context, t_53);
+                                term = ensure__number_0_0.instance.invoke(context, x_52);
                                 if(term == null)
                                   break Fail136;
                               }
@@ -366,7 +366,7 @@ import java.lang.ref.WeakReference;
                             term = fetch_0_0.instance.invoke(context, term);
                             if(term == null)
                               break Fail139;
-                            term = get_expr_type_0_3.instance.invoke(context, z_32, term, u_53, v_53);
+                            term = get_expr_type_0_3.instance.invoke(context, z_32, term, y_52, z_52);
                             if(term == null)
                               break Fail139;
                             if(true)
@@ -385,7 +385,7 @@ import java.lang.ref.WeakReference;
                               term = fetch_0_0.instance.invoke(context, term);
                               if(term == null)
                                 break Fail140;
-                              term = get_expr_type_0_3.instance.invoke(context, p_32, term, u_53, v_53);
+                              term = get_expr_type_0_3.instance.invoke(context, p_32, term, y_52, z_52);
                               if(term == null)
                                 break Fail140;
                               if(true)
@@ -523,7 +523,7 @@ import java.lang.ref.WeakReference;
                                                   { 
                                                     IStrategoTerm b_31 = null;
                                                     b_31 = term.getSubterm(0);
-                                                    term = this.invoke(context, b_31, t_53, u_53, v_53);
+                                                    term = this.invoke(context, b_31, x_52, y_52, z_52);
                                                     if(term == null)
                                                       break Fail151;
                                                     if(true)
@@ -539,7 +539,7 @@ import java.lang.ref.WeakReference;
                                                     { 
                                                       IStrategoTerm x_30 = null;
                                                       x_30 = term.getSubterm(0);
-                                                      term = this.invoke(context, x_30, t_53, u_53, v_53);
+                                                      term = this.invoke(context, x_30, x_52, y_52, z_52);
                                                       if(term == null)
                                                         break Fail152;
                                                       if(true)
@@ -555,7 +555,7 @@ import java.lang.ref.WeakReference;
                                                       { 
                                                         IStrategoTerm t_30 = null;
                                                         t_30 = term.getSubterm(0);
-                                                        term = this.invoke(context, t_30, t_53, u_53, v_53);
+                                                        term = this.invoke(context, t_30, x_52, y_52, z_52);
                                                         if(term == null)
                                                           break Fail153;
                                                         if(true)
@@ -571,7 +571,7 @@ import java.lang.ref.WeakReference;
                                                         { 
                                                           IStrategoTerm p_30 = null;
                                                           p_30 = term.getSubterm(0);
-                                                          term = this.invoke(context, p_30, t_53, u_53, v_53);
+                                                          term = this.invoke(context, p_30, x_52, y_52, z_52);
                                                           if(term == null)
                                                             break Fail154;
                                                           if(true)
@@ -587,7 +587,7 @@ import java.lang.ref.WeakReference;
                                                           { 
                                                             IStrategoTerm l_30 = null;
                                                             l_30 = term.getSubterm(0);
-                                                            term = this.invoke(context, l_30, t_53, u_53, v_53);
+                                                            term = this.invoke(context, l_30, x_52, y_52, z_52);
                                                             if(term == null)
                                                               break Fail155;
                                                             if(true)
@@ -603,7 +603,7 @@ import java.lang.ref.WeakReference;
                                                             { 
                                                               IStrategoTerm h_30 = null;
                                                               h_30 = term.getSubterm(0);
-                                                              term = this.invoke(context, h_30, t_53, u_53, v_53);
+                                                              term = this.invoke(context, h_30, x_52, y_52, z_52);
                                                               if(term == null)
                                                                 break Fail156;
                                                               if(true)
@@ -619,7 +619,7 @@ import java.lang.ref.WeakReference;
                                                               { 
                                                                 IStrategoTerm d_30 = null;
                                                                 d_30 = term.getSubterm(0);
-                                                                term = this.invoke(context, d_30, t_53, u_53, v_53);
+                                                                term = this.invoke(context, d_30, x_52, y_52, z_52);
                                                                 if(term == null)
                                                                   break Fail157;
                                                                 if(true)
@@ -635,7 +635,7 @@ import java.lang.ref.WeakReference;
                                                                 { 
                                                                   IStrategoTerm z_29 = null;
                                                                   z_29 = term.getSubterm(0);
-                                                                  term = this.invoke(context, z_29, t_53, u_53, v_53);
+                                                                  term = this.invoke(context, z_29, x_52, y_52, z_52);
                                                                   if(term == null)
                                                                     break Fail158;
                                                                   if(true)
@@ -651,7 +651,7 @@ import java.lang.ref.WeakReference;
                                                                   { 
                                                                     IStrategoTerm v_29 = null;
                                                                     v_29 = term.getSubterm(0);
-                                                                    term = this.invoke(context, v_29, t_53, u_53, v_53);
+                                                                    term = this.invoke(context, v_29, x_52, y_52, z_52);
                                                                     if(term == null)
                                                                       break Fail159;
                                                                     if(true)
@@ -667,7 +667,7 @@ import java.lang.ref.WeakReference;
                                                                     { 
                                                                       IStrategoTerm r_29 = null;
                                                                       r_29 = term.getSubterm(0);
-                                                                      term = this.invoke(context, r_29, t_53, u_53, v_53);
+                                                                      term = this.invoke(context, r_29, x_52, y_52, z_52);
                                                                       if(term == null)
                                                                         break Fail160;
                                                                       if(true)
@@ -683,7 +683,7 @@ import java.lang.ref.WeakReference;
                                                                       { 
                                                                         IStrategoTerm n_29 = null;
                                                                         n_29 = term.getSubterm(0);
-                                                                        term = this.invoke(context, n_29, t_53, u_53, v_53);
+                                                                        term = this.invoke(context, n_29, x_52, y_52, z_52);
                                                                         if(term == null)
                                                                           break Fail161;
                                                                         if(true)
@@ -699,7 +699,7 @@ import java.lang.ref.WeakReference;
                                                                         { 
                                                                           IStrategoTerm j_29 = null;
                                                                           j_29 = term.getSubterm(0);
-                                                                          term = this.invoke(context, j_29, t_53, u_53, v_53);
+                                                                          term = this.invoke(context, j_29, x_52, y_52, z_52);
                                                                           if(term == null)
                                                                             break Fail162;
                                                                           if(true)

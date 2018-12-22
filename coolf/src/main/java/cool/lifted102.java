@@ -18,13 +18,13 @@ import java.lang.ref.WeakReference;
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
     ITermFactory termFactory = context.getFactory();
-    Fail262:
+    Fail259:
     { 
       IStrategoTerm z_35 = null;
       z_35 = term;
       term = try_1_0.instance.invoke(context, term, gen_source_location_0_0.instance);
       if(term == null)
-        break Fail262;
+        break Fail259;
       term = termFactory.annotateTerm(z_35, checkListAnnos(termFactory, (IStrategoTerm)termFactory.makeListCons(term, (IStrategoList)cool.constNil0)));
       if(true)
         return term;

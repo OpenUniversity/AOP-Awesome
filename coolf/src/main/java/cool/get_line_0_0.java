@@ -11,23 +11,23 @@ import org.spoofax.interpreter.library.AbstractPrimitive;
 import java.util.ArrayList;
 import java.lang.ref.WeakReference;
 
-@SuppressWarnings("all") public class get_start_line_0_0 extends Strategy 
+@SuppressWarnings("all") public class get_line_0_0 extends Strategy 
 { 
-  public static get_start_line_0_0 instance = new get_start_line_0_0();
+  public static get_line_0_0 instance = new get_line_0_0();
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
-    Fail191:
+    Fail230:
     { 
-      IStrategoTerm x_40 = null;
+      IStrategoTerm g_52 = null;
       if(term.getTermType() != IStrategoTerm.TUPLE || term.getSubtermCount() != 4)
-        break Fail191;
-      x_40 = term.getSubterm(0);
-      term = x_40;
+        break Fail230;
+      g_52 = term.getSubterm(0);
+      term = g_52;
       if(true)
         return term;
     }
-    context.push("get_start_line_0_0");
+    context.push("get_line_0_0");
     context.popOnFailure();
     return null;
   }

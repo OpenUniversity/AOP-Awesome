@@ -17,11 +17,11 @@ import java.lang.ref.WeakReference;
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
-    Fail383:
+    Fail380:
     { 
       term = or_2_0.instance.invoke(context, term, lifted24.instance, lifted25.instance);
       if(term == null)
-        break Fail383;
+        break Fail380;
       if(true)
         return term;
     }

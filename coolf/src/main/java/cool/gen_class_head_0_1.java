@@ -32,12 +32,12 @@ import java.lang.ref.WeakReference;
         { 
           Fail186:
           { 
-            IStrategoTerm z_171 = null;
+            IStrategoTerm d_171 = null;
             IStrategoTerm arg140 = term.getSubterm(1);
             if(arg140.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg140).getConstructor())
               break Fail186;
-            z_171 = arg140.getSubterm(0);
-            term = z_171;
+            d_171 = arg140.getSubterm(0);
+            term = d_171;
             if(true)
               break Success145;
           }
@@ -45,12 +45,12 @@ import java.lang.ref.WeakReference;
         }
         if(cons6 == transform._consTypeName_1)
         { 
-          IStrategoTerm a_172 = null;
+          IStrategoTerm e_171 = null;
           IStrategoTerm arg141 = term.getSubterm(0);
           if(arg141.getTermType() != IStrategoTerm.APPL || transform._consId_1 != ((IStrategoAppl)arg141).getConstructor())
             break Fail185;
-          a_172 = arg141.getSubterm(0);
-          term = a_172;
+          e_171 = arg141.getSubterm(0);
+          term = e_171;
         }
         else
         { 

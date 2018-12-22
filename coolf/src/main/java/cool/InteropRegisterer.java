@@ -69,13 +69,6 @@ import java.lang.ref.WeakReference;
     varScope.addSVar("make_while_condition_0_1", new InteropSDefT(make_while_condition_0_1.instance, context));
     varScope.addSVar("gen_class_head_0_1", new InteropSDefT(gen_class_head_0_1.instance, context));
     varScope.addSVar("make_requires_method_0_3", new InteropSDefT(make_requires_method_0_3.instance, context));
-    varScope.addSVar("gen_source_location_ann_0_1", new InteropSDefT(gen_source_location_ann_0_1.instance, context));
-    varScope.addSVar("get_location_0_0", new InteropSDefT(get_location_0_0.instance, context));
-    varScope.addSVar("get_file_0_0", new InteropSDefT(get_file_0_0.instance, context));
-    varScope.addSVar("get_start_line_0_0", new InteropSDefT(get_start_line_0_0.instance, context));
-    varScope.addSVar("get_end_line_0_0", new InteropSDefT(get_end_line_0_0.instance, context));
-    varScope.addSVar("get_column_0_0", new InteropSDefT(get_column_0_0.instance, context));
-    varScope.addSVar("get_offset_0_0", new InteropSDefT(get_offset_0_0.instance, context));
     varScope.addSVar("make_on_entry_method_0_4", new InteropSDefT(make_on_entry_method_0_4.instance, context));
     varScope.addSVar("make_on_exit_method_0_4", new InteropSDefT(make_on_exit_method_0_4.instance, context));
     varScope.addSVar("convert_0_0", new InteropSDefT(convert_0_0.instance, context));
@@ -91,6 +84,10 @@ import java.lang.ref.WeakReference;
     varScope.addSVar("add_condition_fields_0_0", new InteropSDefT(add_condition_fields_0_0.instance, context));
     varScope.addSVar("add_coordinator_fields_0_0", new InteropSDefT(add_coordinator_fields_0_0.instance, context));
     varScope.addSVar("get_methods_list_0_0", new InteropSDefT(get_methods_list_0_0.instance, context));
+    varScope.addSVar("gen_source_location_ann_0_0", new InteropSDefT(gen_source_location_ann_0_0.instance, context));
+    varScope.addSVar("get_location_0_0", new InteropSDefT(get_location_0_0.instance, context));
+    varScope.addSVar("get_file_0_0", new InteropSDefT(get_file_0_0.instance, context));
+    varScope.addSVar("get_line_0_0", new InteropSDefT(get_line_0_0.instance, context));
   }
 
   private void registerLazy(org.spoofax.interpreter.core.IContext context, Context compiledContext, ClassLoader classLoader, org.spoofax.interpreter.core.VarScope varScope)
@@ -139,13 +136,6 @@ import java.lang.ref.WeakReference;
     varScope.addSVar("make_while_condition_0_1", new InteropSDefT(classLoader, "cool.make_while_condition_0_1", context));
     varScope.addSVar("gen_class_head_0_1", new InteropSDefT(classLoader, "cool.gen_class_head_0_1", context));
     varScope.addSVar("make_requires_method_0_3", new InteropSDefT(classLoader, "cool.make_requires_method_0_3", context));
-    varScope.addSVar("gen_source_location_ann_0_1", new InteropSDefT(classLoader, "cool.gen_source_location_ann_0_1", context));
-    varScope.addSVar("get_location_0_0", new InteropSDefT(classLoader, "cool.get_location_0_0", context));
-    varScope.addSVar("get_file_0_0", new InteropSDefT(classLoader, "cool.get_file_0_0", context));
-    varScope.addSVar("get_start_line_0_0", new InteropSDefT(classLoader, "cool.get_start_line_0_0", context));
-    varScope.addSVar("get_end_line_0_0", new InteropSDefT(classLoader, "cool.get_end_line_0_0", context));
-    varScope.addSVar("get_column_0_0", new InteropSDefT(classLoader, "cool.get_column_0_0", context));
-    varScope.addSVar("get_offset_0_0", new InteropSDefT(classLoader, "cool.get_offset_0_0", context));
     varScope.addSVar("make_on_entry_method_0_4", new InteropSDefT(classLoader, "cool.make_on_entry_method_0_4", context));
     varScope.addSVar("make_on_exit_method_0_4", new InteropSDefT(classLoader, "cool.make_on_exit_method_0_4", context));
     varScope.addSVar("convert_0_0", new InteropSDefT(classLoader, "cool.convert_0_0", context));
@@ -161,5 +151,9 @@ import java.lang.ref.WeakReference;
     varScope.addSVar("add_condition_fields_0_0", new InteropSDefT(classLoader, "cool.add_condition_fields_0_0", context));
     varScope.addSVar("add_coordinator_fields_0_0", new InteropSDefT(classLoader, "cool.add_coordinator_fields_0_0", context));
     varScope.addSVar("get_methods_list_0_0", new InteropSDefT(classLoader, "cool.get_methods_list_0_0", context));
+    varScope.addSVar("gen_source_location_ann_0_0", new InteropSDefT(classLoader, "cool.gen_source_location_ann_0_0", context));
+    varScope.addSVar("get_location_0_0", new InteropSDefT(classLoader, "cool.get_location_0_0", context));
+    varScope.addSVar("get_file_0_0", new InteropSDefT(classLoader, "cool.get_file_0_0", context));
+    varScope.addSVar("get_line_0_0", new InteropSDefT(classLoader, "cool.get_line_0_0", context));
   }
 }

@@ -31,13 +31,13 @@ import java.lang.ref.WeakReference;
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
-    Fail370:
+    Fail367:
     { 
       IStrategoTerm n_14 = null;
       n_14 = term;
       term = add_external_impl_0_9.instance.invokeDynamic(context, n_14, NO_STRATEGIES, new IStrategoTerm[]{c_10.value, d_10.value, e_10.value, f_10.value, g_10.value, h_10.value, cool.constDouble0, j_10.value, k_10.value});
       if(term == null)
-        break Fail370;
+        break Fail367;
       if(true)
         return term;
     }

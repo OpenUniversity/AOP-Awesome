@@ -18,21 +18,21 @@ import java.lang.ref.WeakReference;
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
     ITermFactory termFactory = context.getFactory();
-    Fail408:
+    Fail405:
     { 
       IStrategoTerm u_8 = null;
       if(term.getTermType() != IStrategoTerm.APPL || transform._consClassBody_1 != ((IStrategoAppl)term).getConstructor())
-        break Fail408;
+        break Fail405;
       u_8 = term.getSubterm(0);
       if(t_8.value == null)
-        break Fail408;
+        break Fail405;
       term = iset_elements_0_0.instance.invoke(context, t_8.value);
       if(term == null)
-        break Fail408;
+        break Fail405;
       term = termFactory.makeTuple(u_8, term);
       term = conc_0_0.instance.invoke(context, term);
       if(term == null)
-        break Fail408;
+        break Fail405;
       term = termFactory.makeAppl(transform._consClassBody_1, new IStrategoTerm[]{term});
       if(true)
         return term;

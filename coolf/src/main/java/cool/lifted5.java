@@ -23,11 +23,11 @@ import java.lang.ref.WeakReference;
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
-    Fail404:
+    Fail401:
     { 
       term = add__params_0_4.instance.invoke(context, term, c_10.value, o_10.value, d_10.value, i_10.value);
       if(term == null)
-        break Fail404;
+        break Fail401;
       if(true)
         return term;
     }

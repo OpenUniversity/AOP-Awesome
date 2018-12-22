@@ -18,38 +18,38 @@ import java.lang.ref.WeakReference;
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
     context.push("add_coordinator_fields_0_0");
-    Fail229:
+    Fail222:
     { 
-      IStrategoTerm t_52 = null;
-      IStrategoTerm u_52 = null;
-      IStrategoTerm y_52 = null;
-      t_52 = term;
-      y_52 = term;
+      IStrategoTerm l_51 = null;
+      IStrategoTerm m_51 = null;
+      IStrategoTerm q_51 = null;
+      l_51 = term;
+      q_51 = term;
       IStrategoTerm term209 = term;
       Success167:
       { 
-        Fail230:
+        Fail223:
         { 
-          term = retain_all_1_0.instance.invoke(context, t_52, lifted135.instance);
+          term = retain_all_1_0.instance.invoke(context, l_51, lifted135.instance);
           if(term == null)
-            break Fail230;
-          u_52 = term;
+            break Fail223;
+          m_51 = term;
           if(true)
             break Success167;
         }
         term = term209;
-        IStrategoTerm a_53 = null;
-        a_53 = term;
-        term = report_with_failure_0_1.instance.invoke(context, a_53, cool.const81);
+        IStrategoTerm s_51 = null;
+        s_51 = term;
+        term = report_with_failure_0_1.instance.invoke(context, s_51, cool.const77);
         if(term == null)
-          break Fail229;
+          break Fail222;
       }
-      term = y_52;
-      if(u_52 == null)
-        break Fail229;
-      term = map_1_0.instance.invoke(context, u_52, lifted136.instance);
+      term = q_51;
+      if(m_51 == null)
+        break Fail222;
+      term = map_1_0.instance.invoke(context, m_51, lifted136.instance);
       if(term == null)
-        break Fail229;
+        break Fail222;
       context.popOnSuccess();
       if(true)
         return term;

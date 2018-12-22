@@ -17,18 +17,18 @@ import java.lang.ref.WeakReference;
 
   @Override public IStrategoTerm invoke(Context context, IStrategoTerm term)
   { 
-    Fail201:
+    Fail194:
     { 
-      IStrategoTerm e_43 = null;
-      IStrategoTerm f_43 = null;
+      IStrategoTerm w_41 = null;
+      IStrategoTerm x_41 = null;
       if(term.getTermType() != IStrategoTerm.APPL || transform._consCoordinatorDec_2 != ((IStrategoAppl)term).getConstructor())
-        break Fail201;
-      e_43 = term.getSubterm(0);
-      term = e_43;
+        break Fail194;
+      w_41 = term.getSubterm(0);
+      term = w_41;
       if(term.getTermType() != IStrategoTerm.APPL || transform._consCoordinatorDecHead_1 != ((IStrategoAppl)term).getConstructor())
-        break Fail201;
-      f_43 = term.getSubterm(0);
-      term = f_43;
+        break Fail194;
+      x_41 = term.getSubterm(0);
+      term = x_41;
       if(true)
         return term;
     }
