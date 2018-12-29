@@ -117,7 +117,6 @@
 		</java>
 
                 <jar destfile="dist/awesometools.jar" update="yes">
-                        <zipfileset src="libs/strategoxt.jar" includes="org/**"/>
                         <zipfileset src="libs/org.objectweb.asm_3.3.1.v201105211655.jar" includes="org/**"/>
                         <zipfileset src="libs/commons-io-2.4.jar" includes="org/**"/>
                 </jar>
